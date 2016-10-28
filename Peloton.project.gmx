@@ -21,18 +21,21 @@
     </sounds>
   </sounds>
   <sprites name="sprites">
-    <sprite>sprites\spr_char</sprite>
+    <sprite>sprites\spr_dummy_hand2</sprite>
+    <sprite>sprites\spr_dummy</sprite>
+    <sprite>sprites\spr_dummy_hand1</sprite>
     <sprites name="pl">
       <sprites name="pl01">
-        <sprite>sprites\spr_pl01</sprite>
-        <sprite>sprites\spr_pl01_hand01</sprite>
-        <sprite>sprites\spr_pl01_hand02</sprite>
+        <sprite>sprites\spr_char01</sprite>
+        <sprite>sprites\spr_char01_hand01</sprite>
+        <sprite>sprites\spr_char01_hand02</sprite>
       </sprites>
     </sprites>
     <sprites name="wep">
       <sprite>sprites\spr_wep01</sprite>
       <sprite>sprites\spr_bullet</sprite>
       <sprite>sprites\spr_shell</sprite>
+      <sprite>sprites\spr_wep02</sprite>
     </sprites>
   </sprites>
   <backgrounds name="background"/>
@@ -42,7 +45,6 @@
     <scripts name="weapon">
       <scripts name="wep01">
         <script>scripts\scp_wep01.gml</script>
-        <script>scripts\scp_wep01_animations.gml</script>
       </scripts>
     </scripts>
     <scripts name="common">

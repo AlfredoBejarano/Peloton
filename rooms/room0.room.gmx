@@ -11,8 +11,10 @@
   <colour>12632256</colour>
   <showcolour>-1</showcolour>
   <code>global.control = "keyboard";
+global.pl01_character = 1;
 global.keybindings = ds_list_create();
 global.gamepadbuttons = ds_list_create();
+instance_create(356,356, obj_pl01);
 
 ds_list_add(global.keybindings,
     ord('W'),
@@ -73,9 +75,7 @@ ds_list_add(global.gamepadbuttons,
     <view visible="0" objName="&lt;undefined&gt;" xview="0" yview="0" wview="1024" hview="768" xport="0" yport="0" wport="1024" hport="768" hborder="32" vborder="32" hspeed="-1" vspeed="-1"/>
     <view visible="0" objName="&lt;undefined&gt;" xview="0" yview="0" wview="1024" hview="768" xport="0" yport="0" wport="1024" hport="768" hborder="32" vborder="32" hspeed="-1" vspeed="-1"/>
   </views>
-  <instances>
-    <instance objName="obj_pl01" x="192" y="384" name="inst_2BCBE3E2" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
-  </instances>
+  <instances/>
   <tiles/>
   <PhysicsWorld>0</PhysicsWorld>
   <PhysicsWorldTop>0</PhysicsWorldTop>

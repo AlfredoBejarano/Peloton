@@ -1,7 +1,7 @@
 //argument0 - The Keybindings for player1 (as DS_list)
 //argument1 - The gamepad buttons for player1 (as DS_list)
 //argument2 - Character's speed movement
-//argument3 - Fire Speed
+//argument3 - Player equiped weapon
 
 var up, left, down, right, aim, shoot, action, reload;
 
@@ -36,32 +36,32 @@ if(global.control == "keyboard") {
         
         // Weapon firing
         if(keyboard_check(shoot) && is_shooting == 0 && is_reloading == 0) {
-            if(ammo > 0) {
+            if(argument3.ammo > 0) {
                 is_shooting = 1;
-                create_projectile(obj_wep01.x + (image_xscale * 59), obj_wep01.y - 31, obj_bullet, 60 * image_xscale, 0, 1, 120, image_xscale, 1);
-                argument4.recoil = true;
-                argument4.alarm[0] = argument3 - (argument3/2);
-                ammo --;
-                audio_play_sound(snd_wep01_shot, 0, false);
-                alarm[0] = argument3;
-
+                create_projectile(argument3.x + (image_xscale * 59), argument3.y - 31, obj_bullet, 60 * image_xscale, 0, 1, 120, image_xscale, 1);
+                argument3.recoil = true;
+                argument3.alarm[0] = argument3.fire_speed - (argument3.fire_speed/2);
+                argument3.ammo --;
+                audio_play_sound(argument3.firing_sound, 0, false);
+                alarm[0] = argument3.fire_speed;
             } else {
                 is_shooting = 1;
                 audio_play_sound(snd_wep01_empty, 0, false);
-                alarm[0] = argument3;
+                alarm[0] = argument3.fire_speed;
             }
         }
     } 
 
     //Weapon switch
-    if(keyboard_check_pressed(weaponnext) && weapon < 5)        { weapon ++;              audio_play_sound(snd_wep_switch, 0, false); }
-    if(keyboard_check_pressed(weaponprevious) && weapon > 1)    { weapon --;              audio_play_sound(snd_wep_switch, 0, false); }
+    if(keyboard_check_pressed(weaponnext) && weapon < 5)        { audio_play_sound(snd_wep_switch, 0, false); }
+    if(keyboard_check_pressed(weaponprevious) && weapon > 1)    { audio_play_sound(snd_wep_switch, 0, false); }
 
     // Weapon reload
-    if(keyboard_check_pressed(reload) && is_reloading == 0 && is_shooting = 0 && ammo < max_ammo) {
+    if(keyboard_check_pressed(reload) && is_reloading == 0 && is_shooting = 0 && argument3.ammo < argument3.max_ammo) {
         is_reloading = 1;
-        obj_wep01.alarm[1] = 1;        
-        alarm[1] = 60;
+        argument3.alarm[1] = 1;        
+        alarm[1] = argument3.reload_speed;
+        argument3.alarm[2] = argument3.reload_speed;
     }        
 } else {
     x = argument1;
