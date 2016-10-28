@@ -63,6 +63,7 @@
       <object>objects\obj_wep01</object>
       <object>objects\obj_bullet</object>
       <object>objects\obj_shell</object>
+      <object>objects\obj_magazine</object>
     </objects>
   </objects>
   <timelines name="timelines">

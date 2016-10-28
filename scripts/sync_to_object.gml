@@ -1,5 +1,5 @@
 // This script allows to sync an object position relative to other object position.
-// argument0 - The object to which te position is going to be sync.
+// argument0 - The object to which the position is going to be sync.
 // argument1 - X value to be added to the object's x axis.
 // argument2 - Y value to be added to the object's y axis.
 // argument3 - Preserve the image_xscale to the object.

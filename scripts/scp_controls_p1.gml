@@ -44,6 +44,7 @@ if(global.control == "keyboard") {
                 ammo --;
                 audio_play_sound(snd_wep01_shot, 0, false);
                 alarm[0] = argument3;
+
             } else {
                 is_shooting = 1;
                 audio_play_sound(snd_wep01_empty, 0, false);
@@ -59,6 +60,7 @@ if(global.control == "keyboard") {
     // Weapon reload
     if(keyboard_check_pressed(reload) && is_reloading == 0 && is_shooting = 0 && ammo < max_ammo) {
         is_reloading = 1;
+        obj_wep01.alarm[1] = 1;        
         alarm[1] = 60;
     }        
 } else {

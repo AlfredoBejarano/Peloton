@@ -14,7 +14,7 @@ if(recoil) {
     image_index = 2;
     image_angle = 20 * image_xscale;
     x = argument0.x + (96 * image_xscale);
-    y = argument0.y + 48;   
+    y = argument0.y + 48;
 } else {
     image_angle = 300 * image_xscale;
     x = argument0.x + (64 * image_xscale); 
