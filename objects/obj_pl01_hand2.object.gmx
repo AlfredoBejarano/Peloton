@@ -3,7 +3,7 @@
   <spriteName>spr_dummy_hand2</spriteName>
   <solid>0</solid>
   <visible>-1</visible>
-  <depth>-3</depth>
+  <depth>-4</depth>
   <persistent>0</persistent>
   <parentName>&lt;undefined&gt;</parentName>
   <maskName>&lt;undefined&gt;</maskName>
@@ -25,7 +25,8 @@
         <arguments>
           <argument>
             <kind>1</kind>
-            <string>switch(global.pl01_character) {
+            <string>reloading_position = 0;
+switch(global.pl01_character) {
     case 1: {
         sprite_index = spr_char01_hand02;
         break;        
@@ -33,6 +34,106 @@
     default: {
         break;
     }
+}
+</string>
+          </argument>
+        </arguments>
+      </action>
+    </event>
+    <event eventtype="2" enumb="3">
+      <action>
+        <libid>1</libid>
+        <id>603</id>
+        <kind>7</kind>
+        <userelative>0</userelative>
+        <isquestion>0</isquestion>
+        <useapplyto>-1</useapplyto>
+        <exetype>2</exetype>
+        <functionname></functionname>
+        <codestring></codestring>
+        <whoName>self</whoName>
+        <relative>0</relative>
+        <isnot>0</isnot>
+        <arguments>
+          <argument>
+            <kind>1</kind>
+            <string>reloading_position = 0;
+</string>
+          </argument>
+        </arguments>
+      </action>
+    </event>
+    <event eventtype="2" enumb="2">
+      <action>
+        <libid>1</libid>
+        <id>603</id>
+        <kind>7</kind>
+        <userelative>0</userelative>
+        <isquestion>0</isquestion>
+        <useapplyto>-1</useapplyto>
+        <exetype>2</exetype>
+        <functionname></functionname>
+        <codestring></codestring>
+        <whoName>self</whoName>
+        <relative>0</relative>
+        <isnot>0</isnot>
+        <arguments>
+          <argument>
+            <kind>1</kind>
+            <string>reloading_position = 3;
+alarm[3] = obj_pl01.weapon.reload_speed / 4;
+</string>
+          </argument>
+        </arguments>
+      </action>
+    </event>
+    <event eventtype="2" enumb="1">
+      <action>
+        <libid>1</libid>
+        <id>603</id>
+        <kind>7</kind>
+        <userelative>0</userelative>
+        <isquestion>0</isquestion>
+        <useapplyto>-1</useapplyto>
+        <exetype>2</exetype>
+        <functionname></functionname>
+        <codestring></codestring>
+        <whoName>self</whoName>
+        <relative>0</relative>
+        <isnot>0</isnot>
+        <arguments>
+          <argument>
+            <kind>1</kind>
+            <string>reloading_position = 2;
+alarm[2] = obj_pl01.weapon.reload_speed / 4;
+
+</string>
+          </argument>
+        </arguments>
+      </action>
+    </event>
+    <event eventtype="2" enumb="0">
+      <action>
+        <libid>1</libid>
+        <id>603</id>
+        <kind>7</kind>
+        <userelative>0</userelative>
+        <isquestion>0</isquestion>
+        <useapplyto>-1</useapplyto>
+        <exetype>2</exetype>
+        <functionname></functionname>
+        <codestring></codestring>
+        <whoName>self</whoName>
+        <relative>0</relative>
+        <isnot>0</isnot>
+        <arguments>
+          <argument>
+            <kind>1</kind>
+            <string>reloading_position = 1;
+alarm[1] = obj_pl01.weapon.reload_speed / 4;
+with (instance_create(x, y, obj_magazine)) {
+    follow_hand = obj_pl01_hand2;
+    alarm[1] = obj_pl01.weapon.reload_speed;
 }
 </string>
           </argument>
@@ -56,7 +157,12 @@
         <arguments>
           <argument>
             <kind>1</kind>
-            <string>sync_to_object(obj_pl01.weapon, 8 * image_xscale, 8, true, false, true);
+            <string>switch(reloading_position) {
+    case 1: { sync_to_object(obj_pl01.weapon, -48 * image_xscale, 48, true, false, true); break; }
+    case 2: { sync_to_object(obj_pl01.weapon, -24 * image_xscale, 48, true, false, true); break; }
+    case 3: { sync_to_object(obj_pl01.weapon, -12 * image_xscale, 48, true, false, true); break; }
+    default: { sync_to_object(obj_pl01.weapon, -4 * image_xscale, 4, true, false, true); break;}                        
+}
 </string>
           </argument>
         </arguments>

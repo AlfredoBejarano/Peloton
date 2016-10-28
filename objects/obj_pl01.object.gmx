@@ -29,6 +29,7 @@
 is_running = 0;
 is_shooting = 0;
 is_reloading = 0;
+is_switching = 0;
 weapon = obj_wep01;
 instance_create(x, y, obj_pl01_hand1);
 instance_create(x, y, obj_pl01_hand2);
@@ -115,7 +116,7 @@ switch(global.pl01_character) {
         <arguments>
           <argument>
             <kind>1</kind>
-            <string>scp_controls_p1(global.keybindings, 0, 4, weapon);
+            <string>scp_controls_p1(global.keybindings, 0, 4, obj_pl01_hand2);
 </string>
           </argument>
         </arguments>

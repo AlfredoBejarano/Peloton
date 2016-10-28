@@ -7,8 +7,8 @@
 // argument5 - Preserve object's image angle.
 
 // Sync to object
-x = argument0.x + argument1;
-y = argument0.y + argument2;
+x = argument0.x + (argument1);
+y = argument0.y + (argument2);
 
 // Preserve image orientation.
 if(argument3)   { image_xscale = argument0.image_xscale; }

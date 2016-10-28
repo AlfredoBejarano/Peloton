@@ -3,7 +3,7 @@
   <spriteName>spr_wep01</spriteName>
   <solid>0</solid>
   <visible>-1</visible>
-  <depth>-1</depth>
+  <depth>-2</depth>
   <persistent>0</persistent>
   <parentName>&lt;undefined&gt;</parentName>
   <maskName>&lt;undefined&gt;</maskName>
@@ -32,6 +32,7 @@ fire_speed = 60;
 image_speed = 0;
 reload_speed = 60;
 shooter = obj_pl01;
+has_magazine = true;
 firing_sound = snd_wep01_shot;
 
 </string>
