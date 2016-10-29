@@ -18,16 +18,16 @@ if(global.control == "keyboard") {
     weaponprevious = ds_list_find_value(argument0, 8);
     
     //Player movement - fixed 
-    if(keyboard_check(left)  && is_aiming = 0)      { x -= argument2;   image_xscale = -1; }     
-    if(keyboard_check(right) && is_aiming = 0)      { x += argument2;   image_xscale = 1;  } 
-    if(keyboard_check(up)    && is_aiming = 0)      { y -= (argument2 + (argument2 / 2));  }
-    if(keyboard_check(down)  && is_aiming = 0)      { y += (argument2 + (argument2 / 2));  }      
+    if(keyboard_check(left)  && is_aiming = 0 && x > 128               )      { x -= argument2;   image_xscale = -1; }     
+    if(keyboard_check(right) && is_aiming = 0 && x < room_width - 128  )      { x += argument2;   image_xscale = 1;  } 
+    if(keyboard_check(up)    && is_aiming = 0 && y > 540               )      { y -= (argument2 + (argument2 / 2));  }
+    if(keyboard_check(down)  && is_aiming = 0 && y < room_height - 128 )      { y += (argument2 + (argument2 / 2));  }      
         
     //Player Movement -  variable
-    if(keyboard_check(left)  && is_aiming = 1)      { x -= argument2 / 2; }
-    if(keyboard_check(right) && is_aiming = 1)      { x += argument2 / 2; }
-    if(keyboard_check(up)    && is_aiming = 1)      { y -= ((argument2 + (argument2 / 2)) / 2); }
-    if(keyboard_check(down)  && is_aiming = 1)      { y += ((argument2 + (argument2 / 2)) / 2); }
+    if(keyboard_check(left)  && is_aiming = 1 && x > 128               )      { x -= argument2 / 2; }
+    if(keyboard_check(right) && is_aiming = 1 && x < room_width - 128  )      { x += argument2 / 2; }
+    if(keyboard_check(up)    && is_aiming = 1 && y > 540               )      { y -= ((argument2 + (argument2 / 2)) / 2); }
+    if(keyboard_check(down)  && is_aiming = 1 && y < room_height - 128 )      { y += ((argument2 + (argument2 / 2)) / 2); }
         
     // Player shooting
     if(!keyboard_check(aim) && is_shooting == 0) { is_aiming = 0; }    
@@ -44,17 +44,39 @@ if(global.control == "keyboard") {
                 weapon.ammo --;
                 audio_play_sound(weapon.firing_sound, 0, false);
                 alarm[0] = weapon.fire_speed;
-            } else {
-                is_shooting = 1;
-                audio_play_sound(weapon.empty_sound, 0, false);
-                alarm[0] = weapon.fire_speed;
             }
+        }
+        
+        //Pressing shoot button while weapon is empty
+        if(keyboard_check_pressed(shoot) && is_aiming == 1 && weapon.ammo == 0) {
+            is_shooting = 1;
+            audio_play_sound(weapon.empty_sound, 0, false);
+            alarm[0] = weapon.fire_speed;
         }
     } 
 
     //Weapon switch
-    if(keyboard_check_pressed(weaponnext) && weapon < 5)        { audio_play_sound(snd_wep_switch, 0, false); }
-    if(keyboard_check_pressed(weaponprevious) && weapon > 1)    { audio_play_sound(snd_wep_switch, 0, false); }
+    if(keyboard_check_pressed(weaponnext) && current_weapon < weapons_inventory && is_reloading == 0 && is_shooting == 0) { 
+        is_switching = 1;
+        ds_list_insert(weapons_ammo, current_weapon, weapon.ammo);        
+        current_weapon ++;
+        with(weapon) { instance_destroy(); }
+        weapon = ds_list_find_value(global.pl01_weapon_inventory, current_weapon);
+        with (instance_create(x + (64 * image_xscale), y+64, weapon)) { shooter = obj_pl01; }
+        audio_play_sound(snd_wep_switch, 0, false); 
+        is_switching = 0;
+    }
+    
+    if(keyboard_check_pressed(weaponprevious) && current_weapon > 0 && is_reloading == 0 && is_shooting == 0) { 
+        is_switching = 1;
+        ds_list_insert(weapons_ammo, current_weapon, weapon.ammo);        
+        current_weapon --;
+        with(weapon) { instance_destroy(); }
+        weapon = ds_list_find_value(global.pl01_weapon_inventory, current_weapon);
+        with (instance_create(x + (64 * image_xscale), y+64, weapon)) { shooter = obj_pl01; }
+        audio_play_sound(snd_wep_switch, 0, false); 
+        is_switching = 0;
+    }
 
     // Weapon reload
     if(keyboard_check_pressed(reload) && is_reloading == 0 && is_shooting = 0 && weapon.ammo < weapon.max_ammo && is_switching == 0) {

@@ -25,7 +25,8 @@
         <arguments>
           <argument>
             <kind>1</kind>
-            <string>switch(global.pl01_character) {
+            <string>ammo = 10;
+switch(global.pl01_character) {
     case 1: {
         sprite_index = spr_char01_hand01;
         break;        
@@ -56,7 +57,9 @@
         <arguments>
           <argument>
             <kind>1</kind>
-            <string>sync_to_object(obj_pl01.weapon, -4 * image_xscale, -4, true, false, true);
+            <string>if(obj_pl01.is_switching == 0) {
+    sync_to_object(obj_pl01.weapon, -4 * image_xscale, -4, true, false, true);
+}
 </string>
           </argument>
         </arguments>

@@ -25,7 +25,8 @@
         <arguments>
           <argument>
             <kind>1</kind>
-            <string>reloading_position = 0;
+            <string>ammo = 10;
+reloading_position = 0;
 switch(global.pl01_character) {
     case 1: {
         sprite_index = spr_char01_hand02;
@@ -167,8 +168,7 @@ with (instance_create(x, y, obj_magazine)) {
         <arguments>
           <argument>
             <kind>1</kind>
-            <string>
-
+            <string>if(obj_pl01.is_switching == 1) { exit; }
 switch(obj_pl01.weapon) {
     case obj_wep01:
         switch(reloading_position) {

@@ -30,12 +30,12 @@ max_ammo = 10;
 recoil = false;
 fire_speed = 60;
 image_speed = 0;
+shooter = false;
 reload_speed = 60;
 has_magazine = true;
 empty_sound = snd_wep01_empty;
 firing_sound = snd_wep01_shot;
 reload_sound = snd_wep01_reload;
-
 </string>
           </argument>
         </arguments>

@@ -28,9 +28,10 @@
             <string>ammo = 15;
 max_ammo = 15;
 recoil = false;
-fire_speed = 10;
+fire_speed = 20;
 image_speed = 0;
-reload_speed = 60;
+shooter = false;
+reload_speed = 20;
 has_magazine = true;
 empty_sound = snd_wep02_empty;
 firing_sound = snd_wep02_shot;
