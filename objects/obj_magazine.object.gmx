@@ -77,7 +77,7 @@ weapon_belongs_to = false;
             <string>if(follow_hand != false) {
     switch(weapon_belongs_to) {
         case obj_wep02:
-            x = follow_hand.x - 48;
+            x = follow_hand.x - (48 * image_xscale);
         break;
         
         default :
