@@ -31,9 +31,10 @@ recoil = false;
 fire_speed = 60;
 image_speed = 0;
 reload_speed = 60;
-shooter = obj_pl01;
 has_magazine = true;
+empty_sound = snd_wep01_empty;
 firing_sound = snd_wep01_shot;
+reload_sound = snd_wep01_reload;
 
 </string>
           </argument>
@@ -80,7 +81,7 @@ firing_sound = snd_wep01_shot;
         <arguments>
           <argument>
             <kind>1</kind>
-            <string>create_dropable_fx(x, y -15, obj_magazine, false, 15, 15);    
+            <string>create_dropable_fx(x * image_xscale, y -15, obj_magazine, false, 10, 15, true, spr_wep01, obj_wep01);    
 </string>
           </argument>
         </arguments>
@@ -103,7 +104,7 @@ firing_sound = snd_wep01_shot;
         <arguments>
           <argument>
             <kind>1</kind>
-            <string>create_dropable_fx(x+(image_xscale * 70), y - 31, obj_shell, true, 15, 15);    
+            <string>create_dropable_fx(x+(image_xscale * 70), y - 31, obj_shell, true, 15, 15, false, false, obj_wep01);    
 recoil = false;
 
 </string>
@@ -128,10 +129,7 @@ recoil = false;
         <arguments>
           <argument>
             <kind>1</kind>
-            <string>scp_wep01(shooter);
-
-
-
+            <string>scp_wep01(shooter); 
 </string>
           </argument>
         </arguments>

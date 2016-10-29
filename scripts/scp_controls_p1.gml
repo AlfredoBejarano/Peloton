@@ -46,7 +46,7 @@ if(global.control == "keyboard") {
                 alarm[0] = weapon.fire_speed;
             } else {
                 is_shooting = 1;
-                audio_play_sound(snd_wep01_empty, 0, false);
+                audio_play_sound(weapon.empty_sound, 0, false);
                 alarm[0] = weapon.fire_speed;
             }
         }

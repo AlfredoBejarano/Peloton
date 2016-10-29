@@ -58,6 +58,7 @@ switch(global.pl01_character) {
           <argument>
             <kind>1</kind>
             <string>reloading_position = 0;
+audio_play_sound(obj_pl01.weapon.reload_sound,1,false);
 </string>
           </argument>
         </arguments>
@@ -106,7 +107,6 @@ alarm[3] = obj_pl01.weapon.reload_speed / 4;
             <kind>1</kind>
             <string>reloading_position = 2;
 alarm[2] = obj_pl01.weapon.reload_speed / 4;
-
 </string>
           </argument>
         </arguments>
@@ -133,7 +133,17 @@ alarm[2] = obj_pl01.weapon.reload_speed / 4;
 alarm[1] = obj_pl01.weapon.reload_speed / 4;
 with (instance_create(x, y, obj_magazine)) {
     follow_hand = obj_pl01_hand2;
-    alarm[1] = obj_pl01.weapon.reload_speed;
+    weapon_belongs_to = obj_pl01.weapon;
+    alarm[1] = obj_pl01.weapon.reload_speed - (obj_pl01.weapon.reload_speed / 4);
+    switch(obj_pl01.weapon) {
+        case obj_wep01:
+            sprite_index = spr_wep01;
+        break;
+        
+        case obj_wep02:
+            sprite_index = spr_wep02;
+        break;
+    }
 }
 </string>
           </argument>
@@ -157,12 +167,28 @@ with (instance_create(x, y, obj_magazine)) {
         <arguments>
           <argument>
             <kind>1</kind>
-            <string>switch(reloading_position) {
-    case 1: { sync_to_object(obj_pl01.weapon, -48 * image_xscale, 48, true, false, true); break; }
-    case 2: { sync_to_object(obj_pl01.weapon, -24 * image_xscale, 48, true, false, true); break; }
-    case 3: { sync_to_object(obj_pl01.weapon, -12 * image_xscale, 48, true, false, true); break; }
-    default: { sync_to_object(obj_pl01.weapon, -4 * image_xscale, 4, true, false, true); break;}                        
+            <string>
+
+switch(obj_pl01.weapon) {
+    case obj_wep01:
+        switch(reloading_position) {
+            case 1: { sync_to_object(obj_pl01.weapon, -48 * image_xscale, 48, true, false, true); break; }
+            case 2: { sync_to_object(obj_pl01.weapon, -24 * image_xscale, 48, true, false, true); break; }
+            case 3: { sync_to_object(obj_pl01.weapon, -12 * image_xscale, 48, true, false, true); break; }
+            default: { sync_to_object(obj_pl01.weapon, -4 * image_xscale, 4, true, false, true); break;}                        
+        }
+    break;
+    
+    case obj_wep02:
+        switch(reloading_position) {
+            case 1: { sync_to_object(obj_pl01.weapon, -48 * image_xscale, 48, true, false, true); break; }
+            case 2: { sync_to_object(obj_pl01.weapon, -24 * image_xscale, 48, true, false, true); break; }
+            case 3: { sync_to_object(obj_pl01.weapon, -12 * image_xscale, 48, true, false, true); break; }
+            default: { sync_to_object(obj_pl01.weapon, 70 * image_xscale, 0, true, false, true); break;}                        
+        }
+    break;
 }
+
 </string>
           </argument>
         </arguments>

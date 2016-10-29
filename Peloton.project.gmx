@@ -9,9 +9,13 @@
       <sounds name="wep01">
         <sound>sound\snd_wep01_shot</sound>
         <sound>sound\snd_wep01_empty</sound>
+        <sound>sound\snd_wep01_reload</sound>
       </sounds>
       <sounds name="wep02">
         <sound>sound\snd_wep02_shot</sound>
+        <sound>sound\snd_wep02_empty</sound>
+        <sound>sound\snd_wep02_reload</sound>
+        <sound>sound\snd_wep02_pin</sound>
       </sounds>
       <sounds name="wep03">
         <sound>sound\snd_wep03_shot</sound>
@@ -43,8 +47,9 @@
   <scripts name="scripts">
     <script>scripts\scp_controls_p1.gml</script>
     <scripts name="weapon">
-      <scripts name="wep01">
+      <scripts name="wep">
         <script>scripts\scp_wep01.gml</script>
+        <script>scripts\scp_wep02.gml</script>
       </scripts>
     </scripts>
     <scripts name="common">
@@ -63,6 +68,7 @@
     </objects>
     <objects name="wep">
       <object>objects\obj_wep01</object>
+      <object>objects\obj_wep02</object>
       <object>objects\obj_bullet</object>
       <object>objects\obj_shell</object>
       <object>objects\obj_magazine</object>

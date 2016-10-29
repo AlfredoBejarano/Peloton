@@ -30,7 +30,7 @@ is_running = 0;
 is_shooting = 0;
 is_reloading = 0;
 is_switching = 0;
-weapon = obj_wep01;
+weapon = obj_wep02;
 instance_create(x, y, obj_pl01_hand1);
 instance_create(x, y, obj_pl01_hand2);
 with (instance_create(x, y, weapon)) {
