@@ -56,10 +56,10 @@ for(i = 0; i &lt; ds_list_size(global.pl01_weapon_inventory); i++) {
 }
 
 instance_create(x, y, obj_pl01_hand1);
-instance_create(x, y, obj_pl01_hand2);
 with (instance_create(x, y, weapon)) {
     shooter = obj_pl01;
 }
+instance_create(x, y, obj_pl01_hand2);
 
 // DS_List for storing ammo types in bag (0 for HG, 1 for MG, 2 for SG, 3 for RFL).
 ammo_inventory = global.pl01_ammo_inventory;

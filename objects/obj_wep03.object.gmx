@@ -62,7 +62,10 @@ ammo = ds_list_find_value(shooter.weapons_ammo, shooter.current_weapon);
         <arguments>
           <argument>
             <kind>1</kind>
-            <string>pump = 0;
+            <string>if(ammo &lt; max_ammo) {
+    calculate_ammo();
+    alarm[3] = (reload_speed / 2) - (reload_speed / max_ammo);
+}
 </string>
           </argument>
         </arguments>
@@ -85,7 +88,8 @@ ammo = ds_list_find_value(shooter.weapons_ammo, shooter.current_weapon);
         <arguments>
           <argument>
             <kind>1</kind>
-            <string>calculate_ammo();
+            <string>pump = 0;
+
 </string>
           </argument>
         </arguments>
