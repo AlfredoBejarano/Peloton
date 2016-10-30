@@ -24,6 +24,8 @@
       </sounds>
       <sound>sound\snd_wep_switch</sound>
       <sound>sound\snd_shell_fall</sound>
+      <sound>sound\snd_wep_pump01</sound>
+      <sound>sound\snd_wep_pump02</sound>
     </sounds>
   </sounds>
   <sprites name="sprites">

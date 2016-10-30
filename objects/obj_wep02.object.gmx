@@ -109,7 +109,7 @@ ammo = ds_list_find_value(shooter.weapons_ammo, shooter.current_weapon);
         <arguments>
           <argument>
             <kind>1</kind>
-            <string>create_dropable_fx(x+(image_xscale * 48), y - 43, obj_shell, true, 15, 15, false, false, obj_wep02);    
+            <string>create_dropable_fx(x+(image_xscale * 48), y - 43, obj_shell, true, 10, 15, false, false, obj_wep02);    
 recoil = false;
 if(ammo == 0) {
     audio_play_sound(snd_wep02_pin, 1, false);

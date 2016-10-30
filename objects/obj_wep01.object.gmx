@@ -109,7 +109,7 @@ ammo = ds_list_find_value(shooter.weapons_ammo, shooter.current_weapon);
         <arguments>
           <argument>
             <kind>1</kind>
-            <string>create_dropable_fx(x+(image_xscale * 70), y - 31, obj_shell, true, 15, 15, false, false, obj_wep01);    
+            <string>create_dropable_fx(x+(image_xscale * 70), y - 24, obj_shell, true, 10, 15, false, false, obj_wep01);    
 recoil = false;
 
 </string>

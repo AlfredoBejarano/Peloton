@@ -44,8 +44,8 @@ if(global.control == "keyboard") {
                     weapon.alarm[0] = weapon.fire_speed - (weapon.fire_speed/2); 
                 } else { 
                     weapon.alarm[0] = weapon.fire_speed - ((weapon.fire_speed/4)*3); 
-                    weapon.alarm[1] = weapon.fire_speed - ((weapon.fire_speed/4)*2); 
-                    weapon.alarm[2] = weapon.fire_speed - ((weapon.fire_speed/4)*1);                                         
+                    weapon.alarm[1] = weapon.fire_speed - (weapon.fire_speed/2)
+                    weapon.alarm[2] = weapon.fire_speed - (weapon.fire_speed/4);                                         
                 }
                 weapon.ammo --;
                 audio_play_sound(weapon.firing_sound, 0, false);
@@ -95,6 +95,8 @@ if(global.control == "keyboard") {
         if(weapon.has_magazine == true) {
             argument3.alarm[0] = (weapon.reload_speed / 4) * 1;
         } else {
+            weapon.pump = 1;
+            audio_play_sound(snd_wep_pump01, 1, false);
             argument3.alarm[0] = argument3.time / 2;
             weapon.alarm[3] = argument3.time;
         }
