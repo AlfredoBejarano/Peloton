@@ -28,7 +28,7 @@
             <string>ammo_type = 1;
 max_ammo = 15;
 recoil = false;
-fire_speed = 20;
+fire_speed = 15;
 image_speed = 0;
 shooter = false;
 reload_speed = 20;

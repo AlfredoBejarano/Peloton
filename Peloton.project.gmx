@@ -40,6 +40,7 @@
       <sprite>sprites\spr_bullet</sprite>
       <sprite>sprites\spr_shell</sprite>
       <sprite>sprites\spr_wep02</sprite>
+      <sprite>sprites\spr_wep03</sprite>
     </sprites>
   </sprites>
   <backgrounds name="background">

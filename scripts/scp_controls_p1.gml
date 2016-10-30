@@ -20,13 +20,13 @@ if(global.control == "keyboard") {
     //Player movement - fixed 
     if(keyboard_check(left)  && is_aiming = 0 && x > 128               )      { x -= argument2;   image_xscale = -1; }     
     if(keyboard_check(right) && is_aiming = 0 && x < room_width - 128  )      { x += argument2;   image_xscale = 1;  } 
-    if(keyboard_check(up)    && is_aiming = 0 && y > 540               )      { y -= (argument2 + (argument2 / 2));  }
+    if(keyboard_check(up)    && is_aiming = 0 && y > 440               )      { y -= (argument2 + (argument2 / 2));  }
     if(keyboard_check(down)  && is_aiming = 0 && y < room_height - 128 )      { y += (argument2 + (argument2 / 2));  }      
         
     //Player Movement -  variable
     if(keyboard_check(left)  && is_aiming = 1 && x > 128               )      { x -= argument2 / 2; }
     if(keyboard_check(right) && is_aiming = 1 && x < room_width - 128  )      { x += argument2 / 2; }
-    if(keyboard_check(up)    && is_aiming = 1 && y > 540               )      { y -= ((argument2 + (argument2 / 2)) / 2); }
+    if(keyboard_check(up)    && is_aiming = 1 && y > 440               )      { y -= ((argument2 + (argument2 / 2)) / 2); }
     if(keyboard_check(down)  && is_aiming = 1 && y < room_height - 128 )      { y += ((argument2 + (argument2 / 2)) / 2); }
         
     // Player shooting
