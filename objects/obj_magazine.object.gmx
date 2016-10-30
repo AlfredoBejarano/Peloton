@@ -79,7 +79,7 @@ weapon_belongs_to = false;
         case obj_wep02:
             x = follow_hand.x - (48 * image_xscale);
         break;
-        
+            
         default :
             x = follow_hand.x;
         break;

@@ -54,7 +54,7 @@ if(global.control == "keyboard") {
         }
         
         //Pressing shoot button while weapon is empty
-        if(keyboard_check_pressed(shoot) && is_aiming == 1 && weapon.ammo == 0) {
+        if(keyboard_check_pressed(shoot) && is_aiming == 1 && weapon.ammo == 0 && current_ammo <= 0) {
             is_shooting = 1;
             audio_play_sound(weapon.empty_sound, 0, false);
             alarm[0] = weapon.fire_speed;
@@ -87,7 +87,7 @@ if(global.control == "keyboard") {
     }
 
     // Weapon reload
-    if(keyboard_check_pressed(reload) && is_reloading == 0 && is_shooting = 0 && weapon.ammo < weapon.max_ammo && is_switching == 0 && current_ammo > 0) {
+    if((keyboard_check_pressed(reload) || keyboard_check(shoot)) && is_reloading == 0 && is_shooting = 0 && weapon.ammo < weapon.max_ammo && is_switching == 0 && current_ammo > 0) {
         is_reloading = 1;
         weapon.alarm[1] = 1;        
         alarm[1] = weapon.reload_speed;
