@@ -25,7 +25,7 @@
         <arguments>
           <argument>
             <kind>1</kind>
-            <string>ammo = 10;
+            <string>ammo_type = 0;
 max_ammo = 10;
 recoil = false;
 fire_speed = 60;
@@ -36,6 +36,9 @@ has_magazine = true;
 empty_sound = snd_wep01_empty;
 firing_sound = snd_wep01_shot;
 reload_sound = snd_wep01_reload;
+
+// Getting ammo from player's object inventory
+ammo = ds_list_find_value(shooter.weapons_ammo, shooter.current_weapon);
 </string>
           </argument>
         </arguments>
@@ -58,7 +61,8 @@ reload_sound = snd_wep01_reload;
         <arguments>
           <argument>
             <kind>1</kind>
-            <string>ammo = max_ammo;
+            <string>calculate_ammo();
+
 </string>
           </argument>
         </arguments>

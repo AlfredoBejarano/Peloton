@@ -58,28 +58,30 @@ if(global.control == "keyboard") {
     //Weapon switch
     if(keyboard_check_pressed(weaponnext) && current_weapon < weapons_inventory && is_reloading == 0 && is_shooting == 0) { 
         is_switching = 1;
-        ds_list_insert(weapons_ammo, current_weapon, weapon.ammo);        
+        ds_list_replace(weapons_ammo, current_weapon, weapon.ammo);       
         current_weapon ++;
         with(weapon) { instance_destroy(); }
         weapon = ds_list_find_value(global.pl01_weapon_inventory, current_weapon);
         with (instance_create(x + (64 * image_xscale), y+64, weapon)) { shooter = obj_pl01; }
+        current_ammo = ds_list_find_value(ammo_inventory, weapon.ammo_type);
         audio_play_sound(snd_wep_switch, 0, false); 
         is_switching = 0;
     }
     
     if(keyboard_check_pressed(weaponprevious) && current_weapon > 0 && is_reloading == 0 && is_shooting == 0) { 
         is_switching = 1;
-        ds_list_insert(weapons_ammo, current_weapon, weapon.ammo);        
+        ds_list_replace(weapons_ammo, current_weapon, weapon.ammo);       
         current_weapon --;
         with(weapon) { instance_destroy(); }
         weapon = ds_list_find_value(global.pl01_weapon_inventory, current_weapon);
         with (instance_create(x + (64 * image_xscale), y+64, weapon)) { shooter = obj_pl01; }
+        current_ammo = ds_list_find_value(ammo_inventory, weapon.ammo_type);
         audio_play_sound(snd_wep_switch, 0, false); 
         is_switching = 0;
     }
 
     // Weapon reload
-    if(keyboard_check_pressed(reload) && is_reloading == 0 && is_shooting = 0 && weapon.ammo < weapon.max_ammo && is_switching == 0) {
+    if(keyboard_check_pressed(reload) && is_reloading == 0 && is_shooting = 0 && weapon.ammo < weapon.max_ammo && is_switching == 0 && current_ammo > 0) {
         is_reloading = 1;
         weapon.alarm[1] = 1;        
         alarm[1] = weapon.reload_speed;

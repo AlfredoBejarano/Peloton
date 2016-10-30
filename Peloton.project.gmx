@@ -53,6 +53,7 @@
         <script>scripts\scp_wep01.gml</script>
         <script>scripts\scp_wep02.gml</script>
       </scripts>
+      <script>scripts\calculate_ammo.gml</script>
     </scripts>
     <scripts name="common">
       <script>scripts\sync_to_object.gml</script>

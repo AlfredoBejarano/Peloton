@@ -10,10 +10,11 @@
   <persistent>0</persistent>
   <colour>12632256</colour>
   <showcolour>-1</showcolour>
-  <code>global.control = "keyboard";
-global.pl01_character = 1;
+  <code>global.pl01_character = 1;
+global.control = "keyboard";
 global.keybindings = ds_list_create();
 global.gamepadbuttons = ds_list_create();
+global.pl01_ammo_inventory = ds_list_create();
 global.pl01_weapon_inventory = ds_list_create();
 
 ds_list_add(global.keybindings,
