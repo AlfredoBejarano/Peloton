@@ -45,6 +45,7 @@
       <sprite>sprites\spr_shell</sprite>
       <sprite>sprites\spr_wep02</sprite>
       <sprite>sprites\spr_wep03</sprite>
+      <sprite>sprites\spr_weapon_hud</sprite>
     </sprites>
   </sprites>
   <backgrounds name="background">
@@ -68,6 +69,9 @@
       <script>scripts\create_dropable_fx.gml</script>
     </scripts>
   </scripts>
+  <fonts name="fonts">
+    <font>fonts\fnt_hud</font>
+  </fonts>
   <objects name="objects">
     <objects name="pl">
       <objects name="pl01">
@@ -84,6 +88,7 @@
       <object>objects\obj_shell</object>
       <object>objects\obj_sgshell</object>
       <object>objects\obj_magazine</object>
+      <object>objects\obj_pl01_wep_hud</object>
     </objects>
   </objects>
   <timelines name="timelines">
