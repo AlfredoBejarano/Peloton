@@ -25,7 +25,8 @@
         <arguments>
           <argument>
             <kind>1</kind>
-            <string>ammo_type = 0;
+            <string>pump = 0;
+ammo_type = 0;
 max_ammo = 8;
 recoil = false;
 fire_speed = 60;

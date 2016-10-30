@@ -168,27 +168,7 @@ with (instance_create(x, y, obj_magazine)) {
         <arguments>
           <argument>
             <kind>1</kind>
-            <string>if(obj_pl01.is_switching == 1) { exit; }
-switch(obj_pl01.weapon) {
-    case obj_wep01:
-        switch(reloading_position) {
-            case 1: { sync_to_object(obj_pl01.weapon, -48 * image_xscale, 48, true, false, true); break; }
-            case 2: { sync_to_object(obj_pl01.weapon, -24 * image_xscale, 48, true, false, true); break; }
-            case 3: { sync_to_object(obj_pl01.weapon, -12 * image_xscale, 48, true, false, true); break; }
-            default: { sync_to_object(obj_pl01.weapon, -4 * image_xscale, 4, true, false, true); break;}                        
-        }
-    break;
-    
-    case obj_wep02:
-        switch(reloading_position) {
-            case 1: { sync_to_object(obj_pl01.weapon, -48 * image_xscale, 48, true, false, true); break; }
-            case 2: { sync_to_object(obj_pl01.weapon, -24 * image_xscale, 48, true, false, true); break; }
-            case 3: { sync_to_object(obj_pl01.weapon, -12 * image_xscale, 48, true, false, true); break; }
-            default: { sync_to_object(obj_pl01.weapon, 70 * image_xscale, 0, true, false, true); break;}                        
-        }
-    break;
-}
-
+            <string>sync_reloading_hand(obj_pl01);
 </string>
           </argument>
         </arguments>

@@ -19,6 +19,8 @@
       </sounds>
       <sounds name="wep03">
         <sound>sound\snd_wep03_shot</sound>
+        <sound>sound\snd_wep03_empty</sound>
+        <sound>sound\snd_wep03_reload</sound>
       </sounds>
       <sound>sound\snd_wep_switch</sound>
       <sound>sound\snd_shell_fall</sound>
@@ -53,8 +55,10 @@
       <scripts name="wep">
         <script>scripts\scp_wep01.gml</script>
         <script>scripts\scp_wep02.gml</script>
+        <script>scripts\scp_wep03.gml</script>
       </scripts>
       <script>scripts\calculate_ammo.gml</script>
+      <script>scripts\sync_reloading_hand.gml</script>
     </scripts>
     <scripts name="common">
       <script>scripts\sync_to_object.gml</script>
@@ -73,8 +77,10 @@
     <objects name="wep">
       <object>objects\obj_wep01</object>
       <object>objects\obj_wep02</object>
+      <object>objects\obj_wep03</object>
       <object>objects\obj_bullet</object>
       <object>objects\obj_shell</object>
+      <object>objects\obj_sgshell</object>
       <object>objects\obj_magazine</object>
     </objects>
   </objects>

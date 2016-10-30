@@ -40,7 +40,13 @@ if(global.control == "keyboard") {
                 is_shooting = 1;
                 create_projectile(weapon.x + (image_xscale * 59), weapon.y - 31, obj_bullet, 60 * image_xscale, 0, 1, 120, image_xscale, 1);
                 weapon.recoil = true;
-                weapon.alarm[0] = weapon.fire_speed - (weapon.fire_speed/2);
+                if(weapon.has_magazine) { 
+                    weapon.alarm[0] = weapon.fire_speed - (weapon.fire_speed/2); 
+                } else { 
+                    weapon.alarm[0] = weapon.fire_speed - ((weapon.fire_speed/4)*3); 
+                    weapon.alarm[1] = weapon.fire_speed - ((weapon.fire_speed/4)*2); 
+                    weapon.alarm[3] = weapon.fire_speed - ((weapon.fire_speed/4)*1);                                         
+                }
                 weapon.ammo --;
                 audio_play_sound(weapon.firing_sound, 0, false);
                 alarm[0] = weapon.fire_speed;

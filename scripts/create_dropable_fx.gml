@@ -14,5 +14,8 @@ with(instance_create(argument0, argument1, argument2)) {
     if(argument3)   { alarm[0] = 1; } else {  image_xscale = argument8.image_xscale; }
     alarm[1] = argument4;
     vspeed = argument5;
-    if(argument6) { sprite_index = argument7; image_index = 3;}
+    if(argument6) { 
+        sprite_index = argument7; 
+        image_index = 3; 
+    }
 }
