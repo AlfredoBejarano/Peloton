@@ -37,8 +37,8 @@ if(global.control == "keyboard") {
         // Weapon firing
         if(keyboard_check(shoot) && is_shooting == 0 && is_reloading == 0) {
             if(weapon.ammo > 0) {
-                is_shooting = 1;
                 weapon.alarm[4] = 1;
+                is_shooting = 1;
                 weapon.recoil = true;
                 if(weapon.has_magazine) { 
                     weapon.alarm[0] = weapon.fire_speed - (weapon.fire_speed/2); 

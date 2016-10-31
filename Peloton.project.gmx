@@ -41,10 +41,10 @@
     </sprites>
     <sprites name="wep">
       <sprite>sprites\spr_wep01</sprite>
-      <sprite>sprites\spr_bullet</sprite>
-      <sprite>sprites\spr_shell</sprite>
       <sprite>sprites\spr_wep02</sprite>
       <sprite>sprites\spr_wep03</sprite>
+      <sprite>sprites\spr_bullet</sprite>
+      <sprite>sprites\spr_shell</sprite>
       <sprite>sprites\spr_weapon_hud</sprite>
     </sprites>
   </sprites>
@@ -67,6 +67,7 @@
       <script>scripts\sync_to_object.gml</script>
       <script>scripts\create_projectile.gml</script>
       <script>scripts\create_dropable_fx.gml</script>
+      <script>scripts\draw_text_outline.gml</script>
     </scripts>
   </scripts>
   <fonts name="fonts">

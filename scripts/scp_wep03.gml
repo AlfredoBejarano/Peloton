@@ -8,7 +8,7 @@ image_xscale = argument0.image_xscale;
 
 // Animations start here
 if(recoil) {
-    image_angle = 45;
+    image_angle = 45 * image_xscale;
     x = argument0.x + (-64 * image_xscale);
     y = argument0.y + 80;   
 } else if(argument0.is_aiming == 1 && argument0.is_reloading == 0) {
@@ -16,7 +16,7 @@ if(recoil) {
     x = argument0.x + (-32 * image_xscale);
     y = argument0.y + 64;
 } else if(argument0.is_reloading == 1) {
-    image_angle = 15;
+    image_angle = 15 * image_xscale;
     x = argument0.x + (16 * image_xscale);
     y = argument0.y + 72;
 } else {

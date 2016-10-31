@@ -65,11 +65,11 @@ ammo = ds_list_find_value(shooter.weapons_ammo, shooter.current_weapon);
           <argument>
             <kind>1</kind>
             <string>create_projectile(
-    image_xscale * 59,
-    -31, 
+    x + image_xscale * 204,
+    y - 26, 
     obj_bullet, 
-    60 * image_xscale, 
-    0, 
+    0,
+    60 * image_xscale,
     damage, 
     120, 
     image_xscale, 

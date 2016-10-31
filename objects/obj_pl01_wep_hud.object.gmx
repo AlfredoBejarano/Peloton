@@ -30,26 +30,14 @@
 draw_set_font(fnt_hud);
 
 if(obj_pl01.weapon.ammo &lt; 10) {
-    draw_text(view_xview + 32 , view_yview + 70, obj_pl01.weapon.ammo);
+    draw_text_outline(view_xview + 32 , view_yview + 70, c_red, c_white, obj_pl01.weapon.ammo, 0.25);
 } else if(obj_pl01.weapon.ammo &gt; 9 &amp;&amp; obj_pl01.weapon.ammo &lt; 99) {
-    draw_text(view_xview + 16 , view_yview  + 70, obj_pl01.weapon.ammo);
+    draw_text_outline(view_xview + 16 , view_yview + 70, c_red, c_white, obj_pl01.weapon.ammo, 0.25);
 } else {
-    draw_text(view_xview + 2 , view_yview  + 70, obj_pl01.weapon.ammo);    
+    draw_text_outline(view_xview + 2 , view_yview + 70, c_red, c_white, obj_pl01.weapon.ammo, 0.25);
 }
 
-draw_text(view_xview + 75 , view_yview + 80, obj_pl01.current_ammo);
-
-draw_flush();
-/**
-draw_set_alpha(0.5);
-draw_set_color(c_black);
-draw_set_alpha(1);
-draw_set_color(c_white);
-draw_set_font(fnt_helvetica);
-draw_text(view_xview+8, view_yview+76, obj_pl01.weapon.ammo);
-draw_set_alpha(-1);
-draw_set_color(-1);
-**/
+draw_text_outline(view_xview + 75 , view_yview + 80, c_red, c_white, obj_pl01.current_ammo, 0.25);
 </string>
           </argument>
         </arguments>
