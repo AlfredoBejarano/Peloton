@@ -63,15 +63,16 @@ instance_create(x, y, obj_pl01_hand2);
 
 // DS_List for storing ammo types in bag (0 for HG, 1 for MG, 2 for SG, 3 for RFL).
 ammo_inventory = global.pl01_ammo_inventory;
+ds_list_add(ammo_inventory,0,0,0,0);
 
 // Creating initial ammo in the bag
 for(i = 0; i &lt; ds_list_size(global.pl01_weapon_inventory); i++) {
     inventory_weapon = instance_create(x,y, ds_list_find_value(global.pl01_weapon_inventory, i));
     ds_list_add(weapons_ammo, inventory_weapon.max_ammo);
-    ds_list_add(ammo_inventory, (inventory_weapon.max_ammo)*2);
+    ds_list_replace(ammo_inventory, inventory_weapon.ammo_type, (inventory_weapon.max_ammo)*2);
     with(inventory_weapon) { instance_destroy(); }    
 }
-current_ammo = ds_list_find_value(ammo_inventory, weapon.ammo_type);
+current_ammo = ds_list_find_value(ammo_inventory, 2);
 instance_create(x,y,obj_pl01_wep_hud);
 </string>
           </argument>

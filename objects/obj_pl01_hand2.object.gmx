@@ -30,7 +30,7 @@ reloading_position = 0;
 if(obj_pl01.weapon.has_magazine) {
     time = obj_pl01.weapon.reload_speed / 4;
 } else {
-    time = (obj_pl01.weapon.reload_speed / 2) / obj_pl01.weapon.max_ammo;
+    time = (obj_pl01.weapon.reload_speed / obj_pl01.weapon.max_ammo) / 2;
 }
 switch(global.pl01_character) {
     case 1: {

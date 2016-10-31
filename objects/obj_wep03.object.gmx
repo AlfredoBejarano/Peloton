@@ -27,7 +27,7 @@
             <kind>1</kind>
             <string>pump = 0;
 damage = 1;
-max_ammo = 3;
+max_ammo = 4;
 ammo_type = 2;
 hud_image = 3;
 recoil = false;
@@ -101,7 +101,7 @@ ammo = ds_list_find_value(shooter.weapons_ammo, shooter.current_weapon);
             <kind>1</kind>
             <string>if(ammo != max_ammo) {
     calculate_ammo();
-    alarm[3] = (reload_speed / 2) - (reload_speed / max_ammo);
+    alarm[3] = (reload_speed / max_ammo) / 2;
 }
 </string>
           </argument>

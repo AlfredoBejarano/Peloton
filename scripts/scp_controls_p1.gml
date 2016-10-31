@@ -24,8 +24,8 @@ if(global.control == "keyboard") {
     if(keyboard_check(down)  && is_aiming = 0 && y < room_height - 128 )      { y += (argument2 + (argument2 / 2));  }      
         
     //Player Movement -  variable
-    if(keyboard_check(left)  && is_aiming = 1 && x > 128               )      { x -= argument2 / 2; image_xscale = -1; }
-    if(keyboard_check(right) && is_aiming = 1 && x < room_width - 128  )      { x += argument2 / 2; image_xscale =  1; }
+    if(keyboard_check(left)  && is_aiming = 1 && x > 128               )      { x -= argument2 / 2; }
+    if(keyboard_check(right) && is_aiming = 1 && x < room_width - 128  )      { x += argument2 / 2; }
     if(keyboard_check(up)    && is_aiming = 1 && y > 440               )      { y -= ((argument2 + (argument2 / 2)) / 2); }
     if(keyboard_check(down)  && is_aiming = 1 && y < room_height - 128 )      { y += ((argument2 + (argument2 / 2)) / 2); }
         
@@ -96,7 +96,7 @@ if(global.control == "keyboard") {
             argument3.alarm[0] = (weapon.reload_speed / 4) * 1;
         } else {
             weapon.pump = 1;
-            audio_play_sound(snd_wep_pump01, 1, false);
+            //audio_play_sound(snd_wep_pump01, 1, false);
             argument3.alarm[0] = argument3.time / 2;
             weapon.alarm[3] = argument3.time;
         }

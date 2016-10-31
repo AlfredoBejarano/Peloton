@@ -18,7 +18,7 @@ switch(argument0.weapon) {
             case 3: { sync_to_object(argument0.weapon, (-12 * image_xscale), 48, true, false, true); break; }
             default: { sync_to_object(argument0.weapon, (70 * image_xscale), 16, true, false, true); break;}                        
         }
-        if(argument0.is_aiming == 1) {
+        if(argument0.is_aiming == 1 && argument0.is_reloading == 0) {
             sync_to_object(argument0.weapon, (70 * image_xscale), -4, true, false, true);
         }
     break;
