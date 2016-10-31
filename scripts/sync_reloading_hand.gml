@@ -1,6 +1,7 @@
 // argument0 - Player object
 
 if(argument0.is_switching == 1) { exit; }
+if(argument0.weapon != obj_wep00) { image_alpha = 1; }
 switch(argument0.weapon) {
     case obj_wep01:
         switch(reloading_position) {
@@ -43,5 +44,9 @@ switch(argument0.weapon) {
                 }
             }
         }
-    break;        
+    break; 
+    
+    default:
+        image_alpha = 0;
+    break;      
 }

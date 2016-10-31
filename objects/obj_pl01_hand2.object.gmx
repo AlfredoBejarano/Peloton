@@ -176,6 +176,9 @@ with (instance_create(x, y, obj_magazine)) {
                 sprite_index = spr_wep03;
                 image_index = 2;
             break;
+            default:
+                image_alpha = 0;
+            break;
         }
     } 
 </string>
