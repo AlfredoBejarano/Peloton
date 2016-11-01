@@ -29,13 +29,14 @@
 damage = 1;
 ammo_type = 1;
 hud_image = 2;
-max_ammo = 15;
+max_ammo = 30;
 recoil = false;
-fire_speed = 15;
+fire_speed = 7.5;
 image_speed = 0;
 shooter = false;
 reload_speed = 60;
 has_magazine = true;
+aim_sound = snd_wep02_aim;
 empty_sound = snd_wep02_empty;
 firing_sound = snd_wep02_shot;
 reload_sound = snd_wep02_reload;

@@ -31,11 +31,12 @@ max_ammo = 8;
 ammo_type = 0;
 hud_image = 1;
 recoil = false;
-fire_speed = 60;
+fire_speed = 30;
 image_speed = 0;
 shooter = false;
 reload_speed = 60;
 has_magazine = true;
+aim_sound = snd_wep01_aim;
 empty_sound = snd_wep01_empty;
 firing_sound = snd_wep01_shot;
 reload_sound = snd_wep01_reload;
@@ -66,7 +67,7 @@ ammo = ds_list_find_value(shooter.weapons_ammo, shooter.current_weapon);
             <kind>1</kind>
             <string>create_projectile(
     x + image_xscale * 58,
-    y + 8, 
+    y-8, 
     obj_bullet, 
     0,
     60 * image_xscale,

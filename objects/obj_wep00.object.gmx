@@ -32,13 +32,15 @@ max_ammo = false;
 ammo_type = false;
 hud_image = 0;
 recoil = false;
-fire_speed = 16;
+fire_speed = 8;
 image_speed = 0;
+image_index = 0;
 shooter = false;
 reload_speed = 0;
 has_magazine = false;
 firing_sound = snd_wep0_shot;
 empty_sound = snd_blank;
+aim_sound = snd_blank;
 reload_sound = firing_sound;
 position = 0;
 </string>
@@ -66,10 +68,41 @@ position = 0;
             <string>shooter.weapon = ds_list_find_value(shooter.weapons_inventory, shooter.current_weapon);
 with(instance_create(x,y,shooter.weapon)) { shooter = shooter; }
 shooter.current_ammo = ds_list_find_value(shooter.ammo_inventory, shooter.weapon.ammo_type);
-audio_play_sound(snd_wep_switch, 0, false);
 shooter.is_aiming = 0;
 shooter.is_shooting = 0;
 shooter.is_switching = 0; 
+</string>
+          </argument>
+        </arguments>
+      </action>
+    </event>
+    <event eventtype="2" enumb="1">
+      <action>
+        <libid>1</libid>
+        <id>603</id>
+        <kind>7</kind>
+        <userelative>0</userelative>
+        <isquestion>0</isquestion>
+        <useapplyto>-1</useapplyto>
+        <exetype>2</exetype>
+        <functionname></functionname>
+        <codestring></codestring>
+        <whoName>self</whoName>
+        <relative>0</relative>
+        <isnot>0</isnot>
+        <arguments>
+          <argument>
+            <kind>1</kind>
+            <string>if(position &gt; 0){ 
+    position --; 
+    alarm[1] = fire_speed / 8;
+} else { 
+    position = 0;
+    shooter.is_switching = 1;    
+    instance_destroy();
+}
+
+     
 </string>
           </argument>
         </arguments>
@@ -92,13 +125,13 @@ shooter.is_switching = 0;
         <arguments>
           <argument>
             <kind>1</kind>
-            <string>if(position != 3){
-    position ++;
-    alarm[0] = fire_speed / 4;
-} else {
-    shooter.is_switching = 1;    
-    instance_destroy();
+            <string>if(position &lt; 7){ 
+    position ++; 
+    alarm[0] = fire_speed / 8;
+} else { 
+    alarm[1] = fire_speed / 8; 
 }
+
 </string>
           </argument>
         </arguments>
@@ -122,30 +155,6 @@ shooter.is_switching = 0;
           <argument>
             <kind>1</kind>
             <string>scp_wep00(shooter); 
-</string>
-          </argument>
-        </arguments>
-      </action>
-    </event>
-    <event eventtype="8" enumb="0">
-      <action>
-        <libid>1</libid>
-        <id>603</id>
-        <kind>7</kind>
-        <userelative>0</userelative>
-        <isquestion>0</isquestion>
-        <useapplyto>-1</useapplyto>
-        <exetype>2</exetype>
-        <functionname></functionname>
-        <codestring></codestring>
-        <whoName>self</whoName>
-        <relative>0</relative>
-        <isnot>0</isnot>
-        <arguments>
-          <argument>
-            <kind>1</kind>
-            <string>draw_text(0, 0, shooter.current_weapon);
-draw_self();
 </string>
           </argument>
         </arguments>

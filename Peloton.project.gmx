@@ -6,28 +6,34 @@
   <NewExtensions/>
   <sounds name="sound">
     <sounds name="wep">
+      <sounds name="wep0">
+        <sound>sound\snd_wep0_aim</sound>
+        <sound>sound\snd_wep0_shot</sound>
+      </sounds>
       <sounds name="wep01">
+        <sound>sound\snd_wep01_aim</sound>
         <sound>sound\snd_wep01_shot</sound>
         <sound>sound\snd_wep01_empty</sound>
         <sound>sound\snd_wep01_reload</sound>
       </sounds>
       <sounds name="wep02">
+        <sound>sound\snd_wep02_pin</sound>
+        <sound>sound\snd_wep02_aim</sound>
         <sound>sound\snd_wep02_shot</sound>
         <sound>sound\snd_wep02_empty</sound>
         <sound>sound\snd_wep02_reload</sound>
-        <sound>sound\snd_wep02_pin</sound>
       </sounds>
       <sounds name="wep03">
+        <sound>sound\snd_wep03_aim</sound>
         <sound>sound\snd_wep03_shot</sound>
         <sound>sound\snd_wep03_empty</sound>
         <sound>sound\snd_wep03_reload</sound>
+        <sound>sound\snd_wep_pump01</sound>
+        <sound>sound\snd_wep_pump02</sound>
       </sounds>
-      <sound>sound\snd_wep_switch</sound>
-      <sound>sound\snd_shell_fall</sound>
-      <sound>sound\snd_wep_pump01</sound>
-      <sound>sound\snd_wep_pump02</sound>
-      <sound>sound\snd_wep0_shot</sound>
       <sound>sound\snd_blank</sound>
+      <sound>sound\snd_shell_fall</sound>
+      <sound>sound\snd_wep_switch</sound>
     </sounds>
   </sounds>
   <sprites name="sprites">
@@ -97,9 +103,7 @@
       <object>objects\obj_pl01_wep_hud</object>
     </objects>
   </objects>
-  <timelines name="timelines">
-    <timeline>timelines\tml_wep01_recoil</timeline>
-  </timelines>
+  <timelines name="timelines"/>
   <rooms name="rooms">
     <room>rooms\room0</room>
   </rooms>

@@ -38,7 +38,7 @@ switch(argument0.weapon) {
                 if(argument0.weapon.recoil == 1) {
                     sync_to_object(argument0.weapon, (96 * image_xscale), -96, true, false, true);
                 } else if(argument0.is_aiming == 0) {
-                    sync_to_object(argument0.weapon, (138 * image_xscale), 26, true, false, true);
+                    sync_to_object(argument0.weapon, (138 * image_xscale), -24, true, false, true);
                 } else if(argument0.is_aiming == 1) {
                     sync_to_object(argument0.weapon, (140* image_xscale), 4, true, false, true);
                 }

@@ -16,7 +16,7 @@ if(recoil) {
     image_index = 1;
     image_angle = 45 * image_xscale;
     x = argument0.x + (96 * image_xscale);
-    y = argument0.y - 24;   
+    y = argument0.y - 6;   
 } else if(argument0.is_aiming == 1 && argument0.is_reloading == 0) {
     image_angle = 0;
     x = argument0.x + (150 * image_xscale);

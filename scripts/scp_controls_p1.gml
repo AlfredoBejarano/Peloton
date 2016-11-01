@@ -31,8 +31,13 @@ if(global.control == "keyboard") {
         
     // Player shooting
     if(!keyboard_check(aim) && is_shooting == 0) { is_aiming = 0; }    
+    
+    // Weapon aim (audio play)
+    if(keyboard_check_pressed(aim)) { audio_play_sound(weapon.aim_sound, 1, false); }
+    
+    // Weapon aiming (hold)
     if(keyboard_check(aim)) {
-        is_aiming = 1;
+        is_aiming = 1;                
         
         // Weapon firing
         if(keyboard_check(shoot) && is_shooting == 0 && is_reloading == 0 && is_aiming == 1) {
@@ -104,6 +109,7 @@ if(global.control == "keyboard") {
         is_aiming = 1;
         is_shooting = 1;
         obj_pl01.current_ammo = 0;
+        audio_play_sound(snd_wep0_aim, 1, false);
         ds_list_replace(weapons_ammo, current_weapon, weapon.ammo);       
         with(weapon) {instance_destroy();}
         weapon = obj_wep00;

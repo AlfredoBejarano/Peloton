@@ -25,7 +25,10 @@
         <arguments>
           <argument>
             <kind>1</kind>
-            <string>is_aiming = 0;
+            <string>image_index = 0;
+image_speed = 0;
+
+is_aiming = 0;
 is_running = 0;
 is_shooting = 0;
 is_reloading = 0;
@@ -145,6 +148,54 @@ hud = instance_create(x,y,obj_pl01_wep_hud);
           <argument>
             <kind>1</kind>
             <string>scp_controls_p1(global.keybindings, 0, 4, obj_pl01_hand2);
+
+if(is_reloading == 1) { image_index = 1; } else { image_index = 0; }
+</string>
+          </argument>
+        </arguments>
+      </action>
+    </event>
+    <event eventtype="8" enumb="0">
+      <action>
+        <libid>1</libid>
+        <id>603</id>
+        <kind>7</kind>
+        <userelative>0</userelative>
+        <isquestion>0</isquestion>
+        <useapplyto>-1</useapplyto>
+        <exetype>2</exetype>
+        <functionname></functionname>
+        <codestring></codestring>
+        <whoName>self</whoName>
+        <relative>0</relative>
+        <isnot>0</isnot>
+        <arguments>
+          <argument>
+            <kind>1</kind>
+            <string>draw_self();
+if(weapon == obj_wep00) {
+    draw_sprite_ext(
+        weapon.sprite_index, 
+        1, 
+        x + (16 * image_xscale), 
+        y + 64, image_xscale,
+        image_yscale,
+        225 * image_xscale,
+        -1,
+        1
+    ); 
+} else {
+    draw_sprite_ext(
+        spr_wep00, 
+        2, 
+        x + (16 * image_xscale), 
+        y + 64, image_xscale,
+        image_yscale,
+        225 * image_xscale,
+        -1,
+        1
+    );
+}
 </string>
           </argument>
         </arguments>
