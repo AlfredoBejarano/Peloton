@@ -33,11 +33,16 @@ if(global.control == "keyboard") {
     if(!keyboard_check(aim) && is_shooting == 0) { is_aiming = 0; }    
     
     // Weapon aim (audio play)
-    if(keyboard_check_pressed(aim)) { audio_play_sound(weapon.aim_sound, 1, false); }
+    if(keyboard_check_pressed(aim)) {  audio_play_sound(weapon.aim_sound, 1, false); } 
+    
+    // HUD transparency effect
+    if(keyboard_check_pressed(aim) || (keyboard_check_pressed(reload) && (weapon.ammo < weapon.max_ammo && current_ammo > 0))) { hud.alarm[0] = 1; }
+    if(keyboard_check_released(aim) || keyboard_check_pressed(reload)) { hud.alarm[1] = 120; }
     
     // Weapon aiming (hold)
     if(keyboard_check(aim)) {
-        is_aiming = 1;                
+        is_aiming = 1;    
+        hud.alarm[0] = 1;            
         
         // Weapon firing
         if(keyboard_check(shoot) && is_shooting == 0 && is_reloading == 0 && is_aiming == 1) {
@@ -75,6 +80,8 @@ if(global.control == "keyboard") {
         current_ammo = ds_list_find_value(ammo_inventory, weapon.ammo_type);
         audio_play_sound(snd_wep_switch, 0, false); 
         is_switching = 0;
+        hud.alarm[0] = 1;
+        hud.alarm[1] = 30;
     }
     
     if(keyboard_check_pressed(weaponprevious) && current_weapon > 0 && is_reloading == 0 && is_shooting == 0) { 
@@ -87,6 +94,8 @@ if(global.control == "keyboard") {
         current_ammo = ds_list_find_value(ammo_inventory, weapon.ammo_type);
         audio_play_sound(snd_wep_switch, 0, false); 
         is_switching = 0;
+        hud.alarm[0] = 1;
+        hud.alarm[1] = 30;
     }
 
     // Weapon reload
@@ -106,6 +115,7 @@ if(global.control == "keyboard") {
     
     // Knife
     if(keyboard_check_pressed(shoot) && is_aiming == 0 && is_shooting = 0 && is_reloading == 0) {
+        hud.alarm[0] = 1;
         is_aiming = 1;
         is_shooting = 1;
         obj_pl01.current_ammo = 0;
@@ -118,6 +128,7 @@ if(global.control == "keyboard") {
             audio_play_sound(firing_sound, 0, false);
         }
         weapon.alarm[0] = weapon.fire_speed/4;
+        hud.alarm[1] = 1;
     }      
 } else {
     x = argument1;

@@ -89,6 +89,7 @@
         <object>objects\obj_pl01</object>
         <object>objects\obj_pl01_hand1</object>
         <object>objects\obj_pl01_hand2</object>
+        <object>objects\obj_pl01_wep_hud</object>
       </objects>
     </objects>
     <objects name="wep">
@@ -100,7 +101,6 @@
       <object>objects\obj_shell</object>
       <object>objects\obj_sgshell</object>
       <object>objects\obj_magazine</object>
-      <object>objects\obj_pl01_wep_hud</object>
     </objects>
   </objects>
   <timelines name="timelines"/>
