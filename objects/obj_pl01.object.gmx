@@ -149,7 +149,9 @@ hud = instance_create(x,y,obj_pl01_wep_hud);
             <kind>1</kind>
             <string>scp_controls_p1(global.keybindings, 0, 4, obj_pl01_hand2);
 
-if(is_reloading == 1) { image_index = 1; } else { image_index = 0; }
+if(is_reloading == 1)   { image_index = 1; } 
+else if(is_aiming == 1) { image_index = 2; } 
+else                    { image_index = 0; }
 </string>
           </argument>
         </arguments>

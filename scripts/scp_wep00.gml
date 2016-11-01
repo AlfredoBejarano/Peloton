@@ -5,6 +5,7 @@ switch(position) {
         image_angle = 270 * image_xscale;
         x = argument0.x + (32 * image_xscale); 
         y = argument0.y + 60;    
+        image_alpha = 1;
     break;
     case 2:
         image_angle = 315 * image_xscale;
@@ -40,5 +41,6 @@ switch(position) {
         image_angle = 225 * image_xscale;
         x = argument0.x + (16 * image_xscale); 
         y = argument0.y + 64;   
+        image_alpha = 0;
     break;    
 }
