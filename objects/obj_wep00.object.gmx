@@ -32,7 +32,7 @@ max_ammo = false;
 ammo_type = false;
 hud_image = 0;
 recoil = false;
-fire_speed = 8;
+fire_speed = 12;
 image_speed = 0;
 image_index = 0;
 shooter = false;
@@ -69,8 +69,29 @@ position = 0;
 with(instance_create(x,y,shooter.weapon)) { shooter = shooter; }
 shooter.current_ammo = ds_list_find_value(shooter.ammo_inventory, shooter.weapon.ammo_type);
 shooter.is_aiming = 0;
-shooter.is_shooting = 0;
-shooter.is_switching = 0; 
+</string>
+          </argument>
+        </arguments>
+      </action>
+    </event>
+    <event eventtype="2" enumb="2">
+      <action>
+        <libid>1</libid>
+        <id>603</id>
+        <kind>7</kind>
+        <userelative>0</userelative>
+        <isquestion>0</isquestion>
+        <useapplyto>-1</useapplyto>
+        <exetype>2</exetype>
+        <functionname></functionname>
+        <codestring></codestring>
+        <whoName>self</whoName>
+        <relative>0</relative>
+        <isnot>0</isnot>
+        <arguments>
+          <argument>
+            <kind>1</kind>
+            <string>instance_destroy();
 </string>
           </argument>
         </arguments>
@@ -95,11 +116,11 @@ shooter.is_switching = 0;
             <kind>1</kind>
             <string>if(position &gt; 0){ 
     position --; 
-    alarm[1] = fire_speed / 8;
+    alarm[1] = 1;
 } else { 
-    position = 0;
-    shooter.is_switching = 1;    
-    instance_destroy();
+    position = 0;   
+    alarm[2] = 24;
+    shooter.can_knife = 1;    
 }
 
      
@@ -127,9 +148,9 @@ shooter.is_switching = 0;
             <kind>1</kind>
             <string>if(position &lt; 7){ 
     position ++; 
-    alarm[0] = fire_speed / 8;
+    alarm[0] = 1;
 } else { 
-    alarm[1] = fire_speed / 8; 
+    alarm[1] = 1; 
 }
 
 </string>

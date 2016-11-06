@@ -99,7 +99,7 @@ if(global.control == "keyboard") {
     }
 
     // Weapon reload
-    if((keyboard_check_pressed(reload) || (keyboard_check(shoot) && is_aiming == 1)) && is_reloading == 0 && is_shooting = 0 && weapon.ammo < weapon.max_ammo && is_switching == 0 && current_ammo > 0) {
+    if(keyboard_check_pressed(reload) && is_reloading == 0 && is_shooting = 0 && weapon.ammo < weapon.max_ammo && is_switching == 0 && current_ammo > 0) {
         is_reloading = 1;
         weapon.alarm[1] = 1;        
         alarm[1] = weapon.reload_speed;
@@ -111,24 +111,6 @@ if(global.control == "keyboard") {
             argument3.alarm[0] = argument3.time / 2;
             weapon.alarm[3] = argument3.time;
         }
-    }  
-    
-    // Knife
-    if(keyboard_check_pressed(shoot) && is_aiming == 0 && is_shooting = 0 && is_reloading == 0) {
-        hud.alarm[0] = 1;
-        is_aiming = 1;
-        is_shooting = 1;
-        obj_pl01.current_ammo = 0;
-        audio_play_sound(snd_wep0_aim, 1, false);
-        ds_list_replace(weapons_ammo, current_weapon, weapon.ammo);       
-        with(weapon) {instance_destroy();}
-        weapon = obj_wep00;
-        with(instance_create(x,y, weapon)){
-            shooter = obj_pl01;
-            audio_play_sound(firing_sound, 0, false);
-        }
-        weapon.alarm[0] = weapon.fire_speed/4;
-        hud.alarm[1] = 1;
     }      
 } else {
     x = argument1;

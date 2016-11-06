@@ -103,7 +103,6 @@
       <object>objects\obj_magazine</object>
     </objects>
   </objects>
-  <timelines name="timelines"/>
   <rooms name="rooms">
     <room>rooms\room0</room>
   </rooms>
