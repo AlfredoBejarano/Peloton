@@ -2,6 +2,7 @@
 //argument1 - The gamepad buttons for player1 (as DS_list)
 //argument2 - Character's speed movement
 //argument3 - Player second hand
+//argument4 - Player object itself
 
 var up, left, down, right, aim, shoot, action, reload;
 
@@ -30,7 +31,7 @@ if(global.control == "keyboard") {
     if(keyboard_check(down)  && is_aiming = 1 && y < room_height - 128 )      { y += ((argument2 + (argument2 / 2)) / 2); }
         
     // Player shooting
-    if(!keyboard_check(aim) && is_shooting == 0) { is_aiming = 0; }    
+    if(!keyboard_check(aim) && is_shooting == 0 && weapon != obj_wep00) { is_aiming = 0; }    
     
     // Weapon aim (audio play)
     if(keyboard_check_pressed(aim)) {  audio_play_sound(weapon.aim_sound, 1, false); } 
@@ -76,7 +77,7 @@ if(global.control == "keyboard") {
         current_weapon ++;
         with(weapon) { instance_destroy(); }
         weapon = ds_list_find_value(global.pl01_weapon_inventory, current_weapon);
-        with (instance_create(x + (64 * image_xscale), y+64, weapon)) { shooter = obj_pl01; }
+        with (instance_create(x + (64 * image_xscale), y+64, weapon)) { shooter = argument4; }
         current_ammo = ds_list_find_value(ammo_inventory, weapon.ammo_type);
         audio_play_sound(snd_wep_switch, 0, false); 
         is_switching = 0;
@@ -90,7 +91,7 @@ if(global.control == "keyboard") {
         current_weapon --;
         with(weapon) { instance_destroy(); }
         weapon = ds_list_find_value(global.pl01_weapon_inventory, current_weapon);
-        with (instance_create(x + (64 * image_xscale), y+64, weapon)) { shooter = obj_pl01; }
+        with (instance_create(x + (64 * image_xscale), y+64, weapon)) { shooter = argument4; }
         current_ammo = ds_list_find_value(ammo_inventory, weapon.ammo_type);
         audio_play_sound(snd_wep_switch, 0, false); 
         is_switching = 0;
@@ -111,7 +112,29 @@ if(global.control == "keyboard") {
             argument3.alarm[0] = argument3.time / 2;
             weapon.alarm[3] = argument3.time;
         }
-    }      
+    }
+    
+    // Knife
+    if(is_shooting == 1 || is_reloading == 1 || is_switching == 1) { can_knife = false; } else { can_knife = true; } // Prevents knife being used in unexpected cases.
+    
+    // Knife usage
+    if(keyboard_check_pressed(shoot) && can_knife ) {
+        // player is aiming
+        is_aiming = 1;
+    
+        // save state of the currents weapon chamber ammo and destroy it.
+        ds_list_replace(weapons_ammo, weapon, weapon.ammo);
+        with(weapon){instance_destroy();}
+           
+        // change current weapon to the knife
+        weapon = obj_wep00;
+        with(instance_create(x + (16 * image_xscale), y + 64, weapon)) { 
+            shooter = argument4; 
+            alarm[0] = 1;
+        }
+        
+    }
+    
 } else {
     x = argument1;
 }

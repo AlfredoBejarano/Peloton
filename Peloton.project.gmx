@@ -62,7 +62,7 @@
   </backgrounds>
   <paths name="paths"/>
   <scripts name="scripts">
-    <script>scripts\scp_controls_p1.gml</script>
+    <script>scripts\scp_controls.gml</script>
     <scripts name="weapon">
       <scripts name="wep">
         <script>scripts\scp_wep00.gml</script>

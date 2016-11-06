@@ -3,6 +3,11 @@
 if(argument0.is_switching == 1) { exit; }
 if(argument0.weapon != obj_wep00) { image_alpha = 1; }
 switch(argument0.weapon) {
+    case obj_wep00:
+        image_alpha = 0;
+        sync_to_object(argument0.weapon, (-48 * image_xscale), 48, true, false, true);        
+    break;
+
     case obj_wep01:
         switch(reloading_position) {
             case 1: { sync_to_object(argument0.weapon, (-48 * image_xscale), 48, true, false, true); break; }
