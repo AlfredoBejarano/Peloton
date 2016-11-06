@@ -126,7 +126,7 @@ if(global.control == "keyboard") {
         is_shooting = 1;
             
         // save state of the currents weapon chamber ammo and destroy it.
-        ds_list_replace(weapons_ammo, current_weapon, weapon.ammo);
+        if(weapon != obj_wep00) { ds_list_replace(weapons_ammo, current_weapon, weapon.ammo); }
         with(weapon){instance_destroy();}
            
         // change current weapon to the knife
@@ -135,7 +135,7 @@ if(global.control == "keyboard") {
             shooter = argument4; 
             alarm[0] = 1;
         }
-        
+        audio_play_sound(weapon.aim_sound, 0, false);         
     }
     
 } else {
