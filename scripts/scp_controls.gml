@@ -71,7 +71,7 @@ if(global.control == "keyboard") {
     } 
 
     //Weapon switch
-    if(keyboard_check_pressed(weaponnext) && current_weapon < ds_list_size(weapons_inventory)-1 && is_reloading == 0 && is_shooting == 0) { 
+    if(keyboard_check_pressed(weaponnext) && current_weapon < ds_list_size(weapons_inventory)-1 && is_reloading == 0 && is_shooting == 0 && weapon != obj_wep00) { 
         is_switching = 1;
         ds_list_replace(weapons_ammo, current_weapon, weapon.ammo);       
         current_weapon ++;
@@ -85,7 +85,7 @@ if(global.control == "keyboard") {
         hud.alarm[1] = 30;
     }
     
-    if(keyboard_check_pressed(weaponprevious) && current_weapon > 0 && is_reloading == 0 && is_shooting == 0) { 
+    if(keyboard_check_pressed(weaponprevious) && current_weapon > 0 && is_reloading == 0 && is_shooting == 0 && weapon != obj_wep00) { 
         is_switching = 1;
         ds_list_replace(weapons_ammo, current_weapon, weapon.ammo);       
         current_weapon --;
@@ -100,7 +100,7 @@ if(global.control == "keyboard") {
     }
 
     // Weapon reload
-    if(keyboard_check_pressed(reload) && is_reloading == 0 && is_shooting = 0 && weapon.ammo < weapon.max_ammo && is_switching == 0 && current_ammo > 0) {
+    if((weapon.ammo < weapon.max_ammo && current_ammo > 0 && is_reloading == 0) && ((keyboard_check_pressed(reload) && is_shooting = 0 && is_switching == 0) || (weapon.ammo == 0 && keyboard_check(aim) && keyboard_check_pressed(shoot)))) {
         is_reloading = 1;
         weapon.alarm[1] = 1;        
         alarm[1] = weapon.reload_speed;
@@ -115,15 +115,18 @@ if(global.control == "keyboard") {
     }
     
     // Knife
-    if(is_shooting == 1 || is_reloading == 1 || is_switching == 1) { can_knife = false; } else { can_knife = true; } // Prevents knife being used in unexpected cases.
+    if(is_shooting == 1 || is_reloading == 1 || is_switching == 1 || keyboard_check(aim)) { can_knife = false; } else { can_knife = true; } // Prevents knife being used in unexpected cases.
     
     // Knife usage
-    if(keyboard_check_pressed(shoot) && can_knife ) {
+    if(keyboard_check_pressed(shoot) && can_knife) {
         // player is aiming
         is_aiming = 1;
-    
+        
+        // player is "firing" the knife
+        is_shooting = 1;
+            
         // save state of the currents weapon chamber ammo and destroy it.
-        ds_list_replace(weapons_ammo, weapon, weapon.ammo);
+        ds_list_replace(weapons_ammo, current_weapon, weapon.ammo);
         with(weapon){instance_destroy();}
            
         // change current weapon to the knife
