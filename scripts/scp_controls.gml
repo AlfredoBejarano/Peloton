@@ -41,7 +41,7 @@ if(global.control == "keyboard") {
     if(keyboard_check_released(aim) || keyboard_check_pressed(reload)) { hud.alarm[1] = 120; }
     
     // Weapon aiming (hold)
-    if(keyboard_check(aim)) {
+    if(keyboard_check(aim) && is_switching == 0) {
         is_aiming = 1;    
         hud.alarm[0] = 1;            
         
@@ -71,7 +71,7 @@ if(global.control == "keyboard") {
     } 
 
     //Weapon switch
-    if(keyboard_check_pressed(weaponnext) && current_weapon < ds_list_size(weapons_inventory)-1 && is_reloading == 0 && is_shooting == 0 && weapon != obj_wep00) { 
+    if(keyboard_check_pressed(weaponnext) && current_weapon < ds_list_size(weapons_inventory)-1 && is_reloading == 0 && is_shooting == 0 && is_aiming == 0 && weapon != obj_wep00) { 
         is_switching = 1;
         ds_list_replace(weapons_ammo, current_weapon, weapon.ammo);       
         current_weapon ++;
@@ -80,12 +80,11 @@ if(global.control == "keyboard") {
         with (instance_create(x + (64 * image_xscale), y+64, weapon)) { shooter = argument4; }
         current_ammo = ds_list_find_value(ammo_inventory, weapon.ammo_type);
         audio_play_sound(snd_wep_switch, 0, false); 
-        is_switching = 0;
         hud.alarm[0] = 1;
         hud.alarm[1] = 30;
     }
     
-    if(keyboard_check_pressed(weaponprevious) && current_weapon > 0 && is_reloading == 0 && is_shooting == 0 && weapon != obj_wep00) { 
+    if(keyboard_check_pressed(weaponprevious) && current_weapon > 0 && is_reloading == 0 && is_shooting == 0 && is_aiming == 0 && weapon != obj_wep00) { 
         is_switching = 1;
         ds_list_replace(weapons_ammo, current_weapon, weapon.ammo);       
         current_weapon --;
@@ -94,7 +93,6 @@ if(global.control == "keyboard") {
         with (instance_create(x + (64 * image_xscale), y+64, weapon)) { shooter = argument4; }
         current_ammo = ds_list_find_value(ammo_inventory, weapon.ammo_type);
         audio_play_sound(snd_wep_switch, 0, false); 
-        is_switching = 0;
         hud.alarm[0] = 1;
         hud.alarm[1] = 30;
     }
@@ -135,7 +133,9 @@ if(global.control == "keyboard") {
             shooter = argument4; 
             alarm[0] = 1;
         }
-        audio_play_sound(weapon.aim_sound, 0, false);         
+        audio_play_sound(weapon.aim_sound, 0, false);   
+        hud.alarm[0] = 1;
+        hud.alarm[1] = 36;      
     }
     
 } else {

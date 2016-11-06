@@ -72,6 +72,8 @@
       </scripts>
       <script>scripts\calculate_ammo.gml</script>
       <script>scripts\sync_reloading_hand.gml</script>
+      <script>scripts\switching_large_weapon.gml</script>
+      <script>scripts\switching_small_weapon.gml</script>
     </scripts>
     <scripts name="common">
       <script>scripts\sync_to_object.gml</script>

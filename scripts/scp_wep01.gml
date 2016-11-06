@@ -26,9 +26,8 @@ if(recoil) {
     image_angle = 20 * image_xscale;
     x = argument0.x + (96 * image_xscale);
     y = argument0.y + 48;
-} else {
+} else if(argument0.is_switching == 1) {switching_small_weapon(argument0);} else {
     image_angle = 300 * image_xscale;
     x = argument0.x + (64 * image_xscale); 
     y = argument0.y + 76;
 }
-
