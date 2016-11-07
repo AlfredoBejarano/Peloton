@@ -39,9 +39,10 @@ ds_list_add(global.gamepadbuttons,
 );
 
 ds_list_add(global.pl01_weapon_inventory,
-    obj_wep03,
     obj_wep01,
-    obj_wep02
+    obj_wep02,
+    obj_wep03,
+    obj_wep04
 );
 
 // Player's objects must be created at the end

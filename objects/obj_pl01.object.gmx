@@ -222,8 +222,6 @@ if(weapon == obj_wep00) {
         1
     );
 }
-
-draw_text(0, 64, is_switching);
 </string>
           </argument>
         </arguments>

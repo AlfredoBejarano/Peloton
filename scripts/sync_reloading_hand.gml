@@ -51,6 +51,18 @@ switch(argument0.weapon) {
         }
     break; 
     
+    case obj_wep04:
+        switch(reloading_position) {
+            case 1: { sync_to_object(argument0.weapon, (-48 * image_xscale), 48, true, false, true); break; }
+            case 2: { sync_to_object(argument0.weapon, (-24 * image_xscale), 48, true, false, true); break; }
+            case 3: { sync_to_object(argument0.weapon, (-12 * image_xscale), 48, true, false, true); break; }
+            default: { sync_to_object(argument0.weapon, (78 * image_xscale), 8, true, false, true); break;}                        
+        }
+        if(argument0.is_aiming == 1 && argument0.is_reloading == 0) {
+            sync_to_object(argument0.weapon, (78 * image_xscale), -12 * image_yscale, true, false, true);
+        }
+    break;
+        
     default:
         image_alpha = 0;
     break;      

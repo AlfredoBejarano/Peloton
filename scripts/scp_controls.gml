@@ -52,7 +52,11 @@ if(global.control == "keyboard") {
                 is_shooting = 1;
                 weapon.recoil = true;
                 if(weapon.has_magazine) { 
-                    weapon.alarm[0] = weapon.fire_speed - (weapon.fire_speed/2); 
+                    if(weapon != obj_wep04) {
+                        weapon.alarm[0] = weapon.fire_speed - (weapon.fire_speed/2); 
+                    } else {
+                        weapon.alarm[0] = 6;                     
+                    } 
                 } else { 
                     weapon.alarm[0] = weapon.fire_speed - ((weapon.fire_speed/4)*3); 
                     weapon.alarm[1] = weapon.fire_speed - (weapon.fire_speed/2)

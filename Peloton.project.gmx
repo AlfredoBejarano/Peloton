@@ -31,6 +31,11 @@
         <sound>sound\snd_wep_pump01</sound>
         <sound>sound\snd_wep_pump02</sound>
       </sounds>
+      <sounds name="wep04">
+        <sound>sound\snd_wep04_aim</sound>
+        <sound>sound\snd_wep04_shot</sound>
+        <sound>sound\snd_wep04_reload</sound>
+      </sounds>
       <sound>sound\snd_blank</sound>
       <sound>sound\snd_shell_fall</sound>
       <sound>sound\snd_wep_switch</sound>
@@ -52,6 +57,7 @@
       <sprite>sprites\spr_wep01</sprite>
       <sprite>sprites\spr_wep02</sprite>
       <sprite>sprites\spr_wep03</sprite>
+      <sprite>sprites\spr_wep04</sprite>
       <sprite>sprites\spr_bullet</sprite>
       <sprite>sprites\spr_shell</sprite>
       <sprite>sprites\spr_weapon_hud</sprite>
@@ -69,6 +75,7 @@
         <script>scripts\scp_wep01.gml</script>
         <script>scripts\scp_wep02.gml</script>
         <script>scripts\scp_wep03.gml</script>
+        <script>scripts\scp_wep04.gml</script>
       </scripts>
       <script>scripts\calculate_ammo.gml</script>
       <script>scripts\sync_reloading_hand.gml</script>
@@ -99,6 +106,7 @@
       <object>objects\obj_wep01</object>
       <object>objects\obj_wep02</object>
       <object>objects\obj_wep03</object>
+      <object>objects\obj_wep04</object>
       <object>objects\obj_bullet</object>
       <object>objects\obj_shell</object>
       <object>objects\obj_sgshell</object>
