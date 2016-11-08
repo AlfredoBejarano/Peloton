@@ -19,7 +19,9 @@ if(recoil) {
     image_angle = 15 * image_xscale;
     x = argument0.x + (8 * image_xscale);
     y = argument0.y + 64;
-} else if(argument0.is_switching == 1) {switching_weapon(argument0, 1);} else {
+} else if(argument0.is_switching == 1) {
+    switch_weapon_animation(argument0, 1);
+} else {
     image_angle = 10 * image_xscale;
     x = argument0.x + 32; 
     y = argument0.y + 64;

@@ -44,13 +44,15 @@ with (instance_create(x, y, weapon)) {
 // Hands require a weapon to be attached with.
 
 // Creates hand 1.
-with (instance_create(x, y, obj_hand1)) {
+hand1 = instance_create(x, y, obj_hand1);
+with (hand1) {
     player = argument1;
     sprite_index = ds_list_find_value(player_skin_factory(player.character), 1);
 }
 
 // Creates hand 2.
-with (instance_create(x, y, obj_hand2)) {
+hand2 = instance_create(x, y, obj_hand2);
+with (hand2) {
     init_hand2(argument1);
 }
 

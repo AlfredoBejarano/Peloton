@@ -77,7 +77,7 @@
         <script>scripts\scp_wep03.gml</script>
         <script>scripts\scp_wep04.gml</script>
       </scripts>
-      <script>scripts\switching_weapon.gml</script>
+      <script>scripts\switch_weapon_animation.gml</script>
       <script>scripts\sync_reloading_hand.gml</script>
       <script>scripts\sync_reloading_magazine.gml</script>
     </scripts>
@@ -91,8 +91,17 @@
       <script>scripts\calculate_ammo.gml</script>
       <script>scripts\init_weapon_ammo.gml</script>
       <script>scripts\init_inventory_ammo.gml</script>
+      <script>scripts\save_chamber_ammo.gml</script>
     </scripts>
     <scripts name="player">
+      <scripts name="actions">
+        <script>scripts\knife_usage.gml</script>
+        <script>scripts\perform_aim.gml</script>
+        <script>scripts\perform_reload.gml</script>
+        <script>scripts\perform_shoot.gml</script>
+        <script>scripts\player_movement.gml</script>
+        <script>scripts\switch_weapon.gml</script>
+      </scripts>
       <scripts name="factory">
         <script>scripts\gamepad_factory.gml</script>
         <script>scripts\player_skin_factory.gml</script>
@@ -102,8 +111,8 @@
         <script>scripts\init_player.gml</script>
         <script>scripts\init_hand2.gml</script>
       </scripts>
-      <script>scripts\controls.gml</script>
-      <script>scripts\movement.gml</script>
+      <script>scripts\player_controls.gml</script>
+      <script>scripts\controls_consolidation_variables.gml</script>
     </scripts>
   </scripts>
   <fonts name="fonts">
