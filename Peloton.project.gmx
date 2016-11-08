@@ -61,6 +61,7 @@
       <sprite>sprites\spr_bullet</sprite>
       <sprite>sprites\spr_shell</sprite>
       <sprite>sprites\spr_weapon_hud</sprite>
+      <sprite>sprites\spr_holster</sprite>
     </sprites>
   </sprites>
   <backgrounds name="background">
@@ -68,25 +69,41 @@
   </backgrounds>
   <paths name="paths"/>
   <scripts name="scripts">
-    <script>scripts\scp_controls.gml</script>
-    <scripts name="weapon">
-      <scripts name="wep">
+    <scripts name="animations">
+      <scripts name="weapon">
         <script>scripts\scp_wep00.gml</script>
         <script>scripts\scp_wep01.gml</script>
         <script>scripts\scp_wep02.gml</script>
         <script>scripts\scp_wep03.gml</script>
         <script>scripts\scp_wep04.gml</script>
       </scripts>
-      <script>scripts\calculate_ammo.gml</script>
+      <script>scripts\switching_weapon.gml</script>
       <script>scripts\sync_reloading_hand.gml</script>
-      <script>scripts\switching_large_weapon.gml</script>
-      <script>scripts\switching_small_weapon.gml</script>
+      <script>scripts\sync_reloading_magazine.gml</script>
     </scripts>
     <scripts name="common">
       <script>scripts\sync_to_object.gml</script>
       <script>scripts\create_projectile.gml</script>
       <script>scripts\create_dropable_fx.gml</script>
       <script>scripts\draw_text_outline.gml</script>
+    </scripts>
+    <scripts name="weapon">
+      <script>scripts\calculate_ammo.gml</script>
+      <script>scripts\init_weapon_ammo.gml</script>
+      <script>scripts\init_inventory_ammo.gml</script>
+    </scripts>
+    <scripts name="player">
+      <scripts name="factory">
+        <script>scripts\gamepad_factory.gml</script>
+        <script>scripts\player_skin_factory.gml</script>
+        <script>scripts\settings_factory.gml</script>
+      </scripts>
+      <scripts name="initialization">
+        <script>scripts\init_player.gml</script>
+        <script>scripts\init_hand2.gml</script>
+      </scripts>
+      <script>scripts\controls.gml</script>
+      <script>scripts\movement.gml</script>
     </scripts>
   </scripts>
   <fonts name="fonts">
@@ -96,8 +113,8 @@
     <objects name="pl">
       <objects name="pl01">
         <object>objects\obj_pl01</object>
-        <object>objects\obj_pl01_hand1</object>
-        <object>objects\obj_pl01_hand2</object>
+        <object>objects\obj_hand1</object>
+        <object>objects\obj_hand2</object>
         <object>objects\obj_pl01_wep_hud</object>
       </objects>
     </objects>

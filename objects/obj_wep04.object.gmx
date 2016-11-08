@@ -32,7 +32,7 @@ ammo_type = 3;
 hud_image = 4;
 max_ammo = 5;
 recoil = false;
-fire_speed = 120;
+fire_speed = 80;
 image_speed = 0;
 shooter = false;
 reload_speed = 80;
@@ -175,7 +175,7 @@ ammo = ds_list_find_value(shooter.weapons_ammo, shooter.current_weapon);
         <arguments>
           <argument>
             <kind>1</kind>
-            <string>create_dropable_fx(x+(image_xscale * 48), y - 43, obj_shell, true, 10, 15, false, false, obj_wep02);    
+            <string>create_dropable_fx(x+(image_xscale * 48), y - 43, obj_shell, true, 10, 15, false, false, self);    
 recoil = false;
 
 </string>

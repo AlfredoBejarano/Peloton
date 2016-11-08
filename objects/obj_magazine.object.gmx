@@ -75,14 +75,10 @@ weapon_belongs_to = false;
           <argument>
             <kind>1</kind>
             <string>if(follow_hand != false) {
-    switch(weapon_belongs_to) {
-        case obj_wep02:
-            x = follow_hand.x - (48 * image_xscale);
-        break;
-            
-        default :
-            x = follow_hand.x;
-        break;
+    if(weapon_belongs_to == obj_wep02 || weapon_belongs_to == obj_wep04) {
+        x = follow_hand.x - (48 * image_xscale);
+    } else {
+        x = follow_hand.x;
     }
     y = follow_hand.y-16;  
     image_xscale = follow_hand.image_xscale;

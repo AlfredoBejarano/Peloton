@@ -1,5 +1,6 @@
 // argument0 - Player object
 
+//if(argument0.is_switching == 1) { exit; }
 if(argument0.weapon != obj_wep00) { image_alpha = 1; }
 switch(argument0.weapon) {
     case obj_wep00:
@@ -54,7 +55,7 @@ switch(argument0.weapon) {
         switch(reloading_position) {
             case 1: { sync_to_object(argument0.weapon, (-48 * image_xscale), 48, true, false, true); break; }
             case 2: { sync_to_object(argument0.weapon, (-24 * image_xscale), 48, true, false, true); break; }
-            case 3: { sync_to_object(argument0.weapon, (32 * image_xscale), 12, true, false, true); break; }
+            case 3: { sync_to_object(argument0.weapon, (-12 * image_xscale), 48, true, false, true); break; }
             default: { sync_to_object(argument0.weapon, (78 * image_xscale), 8, true, false, true); break;}                        
         }
         if(argument0.is_aiming == 1 && argument0.is_reloading == 0) {

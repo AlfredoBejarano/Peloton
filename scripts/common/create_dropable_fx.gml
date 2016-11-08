@@ -16,6 +16,6 @@ with(instance_create(argument0, argument1, argument2)) {
     vspeed = argument5;
     if(argument6) { 
         sprite_index = argument7; 
-        image_index = image_number - 1; 
+        image_index = 3; 
     }
 }

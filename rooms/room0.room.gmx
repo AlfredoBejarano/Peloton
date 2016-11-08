@@ -11,11 +11,10 @@
   <colour>12632256</colour>
   <showcolour>-1</showcolour>
   <code>global.pl01_character = 1;
-global.control = "keyboard";
+global.control = true;
 global.keybindings = ds_list_create();
-global.gamepadbuttons = ds_list_create();
-global.pl01_ammo_inventory = ds_list_create();
-global.pl01_weapon_inventory = ds_list_create();
+global.pl01gp = ds_list_create();
+global.pl01wi = ds_list_create();
 
 ds_list_add(global.keybindings,
     ord('W'),
@@ -30,7 +29,7 @@ ds_list_add(global.keybindings,
     ord('R')    
 );
 
-ds_list_add(global.gamepadbuttons,
+ds_list_add(global.pl01gp,
     gp_axislv,
     gp_axislh,
     gp_shoulderlb,
@@ -38,7 +37,7 @@ ds_list_add(global.gamepadbuttons,
     gp_face1
 );
 
-ds_list_add(global.pl01_weapon_inventory,
+ds_list_add(global.pl01wi,
     obj_wep01,
     obj_wep02,
     obj_wep03,
