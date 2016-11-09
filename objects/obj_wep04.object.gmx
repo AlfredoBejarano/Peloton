@@ -95,17 +95,7 @@ ammo = ds_list_find_value(shooter.weapons_ammo, shooter.current_weapon);
         <arguments>
           <argument>
             <kind>1</kind>
-            <string>create_projectile(
-    x + image_xscale * 204,
-    y - 26, 
-    obj_bullet, 
-    0,
-    60 * image_xscale,
-    damage, 
-    120, 
-    image_xscale, 
-    1
-);                
+            <string>create_hitscan(x + (image_xscale + 274), y - 24, room_width, self);           
 </string>
           </argument>
         </arguments>
@@ -201,6 +191,29 @@ recoil = false;
           <argument>
             <kind>1</kind>
             <string>scp_wep04(shooter);
+</string>
+          </argument>
+        </arguments>
+      </action>
+    </event>
+    <event eventtype="8" enumb="0">
+      <action>
+        <libid>1</libid>
+        <id>603</id>
+        <kind>7</kind>
+        <userelative>0</userelative>
+        <isquestion>0</isquestion>
+        <useapplyto>-1</useapplyto>
+        <exetype>2</exetype>
+        <functionname></functionname>
+        <codestring></codestring>
+        <whoName>self</whoName>
+        <relative>0</relative>
+        <isnot>0</isnot>
+        <arguments>
+          <argument>
+            <kind>1</kind>
+            <string>draw_scope_item(self, room_width, 23, - 128);
 </string>
           </argument>
         </arguments>
