@@ -141,7 +141,6 @@ if(obj_pl01.weapon != obj_wep00) {
     } else {
         draw_text_outline(window_get_x() + (2 * xs) , window_get_y() + (70 * ys), c_white, c_ltgray, obj_pl01.weapon.ammo, image_alpha / 4);
     }
-    
     draw_text_outline(window_get_x() + (75 * xs) , window_get_y() + (80 * ys), c_white, c_ltgray, obj_pl01.current_ammo, image_alpha / 4);
 }
 

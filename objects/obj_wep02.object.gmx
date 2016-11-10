@@ -32,7 +32,7 @@ ammo_type = 1;
 hud_image = 2;
 max_ammo = 30;
 recoil = false;
-fire_speed = 6;
+fire_speed = 7.5;
 image_speed = 0;
 shooter = false;
 reload_speed = 60;
@@ -194,7 +194,8 @@ if(ammo == 0) {
         <arguments>
           <argument>
             <kind>1</kind>
-            <string>scp_wep02(shooter);
+            <string>depth = shooter.depth - 1;
+scp_wep02(shooter);
 </string>
           </argument>
         </arguments>

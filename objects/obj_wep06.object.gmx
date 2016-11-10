@@ -194,7 +194,8 @@ if(ammo == 0) {
         <arguments>
           <argument>
             <kind>1</kind>
-            <string>scp_wep02(shooter);
+            <string>depth = shooter.depth - 1;
+scp_wep02(shooter);
 </string>
           </argument>
         </arguments>

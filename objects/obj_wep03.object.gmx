@@ -42,7 +42,6 @@ empty_sound = snd_wep03_empty;
 firing_sound = snd_wep03_shot;
 reload_sound = snd_wep03_reload;
 name = "Shotgun - 870"
-spread = 0;
 // Getting ammo from player's object inventory
 ammo = ds_list_find_value(shooter.weapons_ammo, shooter.current_weapon);
 </string>
@@ -97,8 +96,8 @@ ammo = ds_list_find_value(shooter.weapons_ammo, shooter.current_weapon);
           <argument>
             <kind>1</kind>
             <string>repeat(5) {
-    spread = random_range(-5, 5);
-    create_hitscan(x + (image_xscale * 225), y - (20 + spread), view_wview/2, self, -(15 - spread)); 
+    spread = irandom_range(-4, 4);
+    create_hitscan(x + (image_xscale * 225), y - (20 * spread), view_wview/2, self, -(15 - spread)); 
 }
 </string>
           </argument>
@@ -224,7 +223,8 @@ if(shooter.is_reloading == 0) {
         <arguments>
           <argument>
             <kind>1</kind>
-            <string>scp_wep03(shooter);
+            <string>depth = shooter.depth - 1;
+scp_wep03(shooter);
 </string>
           </argument>
         </arguments>

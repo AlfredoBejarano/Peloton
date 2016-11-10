@@ -191,7 +191,8 @@ recoil = false;
         <arguments>
           <argument>
             <kind>1</kind>
-            <string>scp_wep04(shooter);
+            <string>depth = shooter.depth - 1;
+scp_wep04(shooter);
 </string>
           </argument>
         </arguments>

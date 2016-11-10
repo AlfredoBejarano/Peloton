@@ -96,7 +96,7 @@ ammo = ds_list_find_value(shooter.weapons_ammo, shooter.current_weapon);
         <arguments>
           <argument>
             <kind>1</kind>
-            <string>create_hitscan(x + (image_xscale * 82), y - 34, view_wview/2, self, 28);
+            <string>create_hitscan(x + (image_xscale * 67), y - 30, view_wview/2, self, 28);
 </string>
           </argument>
         </arguments>
@@ -191,7 +191,8 @@ recoil = false;
         <arguments>
           <argument>
             <kind>1</kind>
-            <string>scp_wep01(shooter); 
+            <string>depth = shooter.depth - 1;
+scp_wep01(shooter); 
 </string>
           </argument>
         </arguments>
@@ -214,7 +215,7 @@ recoil = false;
         <arguments>
           <argument>
             <kind>1</kind>
-            <string>draw_laser(self, view_wview/2, 72, -22, c_green);
+            <string>draw_laser(self, view_wview/2, 62, -19, c_green);
 </string>
           </argument>
         </arguments>

@@ -53,6 +53,7 @@ with (hand1) {
 // Creates hand 2.
 hand2 = instance_create(x, y, obj_hand2);
 with (hand2) {
+    player = argument1;
     init_hand2(argument1);
 }
 

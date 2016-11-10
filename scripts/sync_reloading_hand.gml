@@ -24,7 +24,7 @@ if(wep = obj_wep00) {
         case 3: { sync_to_object(wep, (-12 * image_xscale), 48, true, false, true); break; }
         default: { sync_to_object(wep, (70 * image_xscale), hy, true, false, true); break;}                        
     }
-} else if(wep == obj_wep03) {
+} else if(wep == obj_wep03 || wep == obj_wep07) {
     switch(reloading_position) {
         case 1: { sync_to_object(wep,  (24 * image_xscale),  16, true, false, true);  break; }
         case 2: { sync_to_object(wep,  (56  * image_xscale), -24, true, false, true);  break; }

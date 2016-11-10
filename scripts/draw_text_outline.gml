@@ -28,5 +28,4 @@ draw_text_transformed(xx+1, yy-1, argument[4], sx, sy, 0);
 //Text  
 draw_set_color(argument[3]);  
 draw_text_transformed(xx, yy, argument[4], sx, sy, 0);  
-draw_text(0,0,sx);
 draw_set_alpha(1);
