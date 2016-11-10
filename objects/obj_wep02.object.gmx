@@ -32,7 +32,7 @@ ammo_type = 1;
 hud_image = 2;
 max_ammo = 30;
 recoil = false;
-fire_speed = 7.5;
+fire_speed = 6;
 image_speed = 0;
 shooter = false;
 reload_speed = 60;
@@ -41,6 +41,7 @@ aim_sound = snd_wep02_aim;
 empty_sound = snd_wep02_empty;
 firing_sound = snd_wep02_shot;
 reload_sound = snd_wep02_reload;
+name = "Machine Gun - 05"
 
 // Getting ammo from player's object inventory
 ammo = ds_list_find_value(shooter.weapons_ammo, shooter.current_weapon);
@@ -95,7 +96,7 @@ ammo = ds_list_find_value(shooter.weapons_ammo, shooter.current_weapon);
         <arguments>
           <argument>
             <kind>1</kind>
-            <string>create_hitscan(x + (image_xscale * 204), y - 28, view_wview/2, self); 
+            <string>create_hitscan(x + (image_xscale * 204), y - 28, view_wview/2, self, 11); 
 </string>
           </argument>
         </arguments>

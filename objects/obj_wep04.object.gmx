@@ -41,6 +41,7 @@ aim_sound = snd_wep04_aim;
 empty_sound = snd_wep03_empty;
 firing_sound = snd_wep04_shot;
 reload_sound = snd_wep04_reload;
+name = "Rifle - G01"
 
 // Getting ammo from player's object inventory
 ammo = ds_list_find_value(shooter.weapons_ammo, shooter.current_weapon);
@@ -95,7 +96,7 @@ ammo = ds_list_find_value(shooter.weapons_ammo, shooter.current_weapon);
         <arguments>
           <argument>
             <kind>1</kind>
-            <string>create_hitscan(x + (image_xscale + 274), y - 24, room_width, self);           
+            <string>create_hitscan(x + (image_xscale + 274), y - 24, room_width, self, 0);           
 </string>
           </argument>
         </arguments>

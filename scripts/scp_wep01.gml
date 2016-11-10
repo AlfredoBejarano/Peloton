@@ -7,7 +7,6 @@ if(ammo > 0) {
     image_index = 1;
 }
 
-
 // Syncs arms with player's position
 image_xscale = argument0.image_xscale;
 

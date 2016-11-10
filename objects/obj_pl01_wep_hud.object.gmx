@@ -135,15 +135,17 @@ draw_set_font(fnt_hud);
 
 if(obj_pl01.weapon != obj_wep00) {
     if(obj_pl01.weapon.ammo &lt; 10) {
-        draw_text_outline(window_get_x() + (32 * xs) , view_yview + (70 * ys), c_white, c_ltgray, obj_pl01.weapon.ammo, image_alpha / 4);
+        draw_text_outline(window_get_x() + (32 * xs) , window_get_y() + (70 * ys), c_white, c_ltgray, obj_pl01.weapon.ammo, image_alpha / 4);
     } else if(obj_pl01.weapon.ammo &gt; 9 &amp;&amp; obj_pl01.weapon.ammo &lt; 99) {
-        draw_text_outline(window_get_x() + (16 * xs) , view_yview + (70 * ys), c_white, c_ltgray, obj_pl01.weapon.ammo, image_alpha / 4);
+        draw_text_outline(window_get_x() + (16 * xs) , window_get_y() + (70 * ys), c_white, c_ltgray, obj_pl01.weapon.ammo, image_alpha / 4);
     } else {
-        draw_text_outline(window_get_x() + (2 * xs) , view_yview + (70 * ys), c_white, c_ltgray, obj_pl01.weapon.ammo, image_alpha / 4);
+        draw_text_outline(window_get_x() + (2 * xs) , window_get_y() + (70 * ys), c_white, c_ltgray, obj_pl01.weapon.ammo, image_alpha / 4);
     }
     
-    draw_text_outline(window_get_x() + (75 * xs) , view_yview + (80 * ys), c_white, c_ltgray, obj_pl01.current_ammo, image_alpha / 4);
+    draw_text_outline(window_get_x() + (75 * xs) , window_get_y() + (80 * ys), c_white, c_ltgray, obj_pl01.current_ammo, image_alpha / 4);
 }
+
+draw_text_outline(window_get_x() + (8 * xs), window_get_y() + (112 * ys), c_white, c_ltgray, obj_pl01.weapon.name, image_alpha / 4);
 </string>
           </argument>
         </arguments>

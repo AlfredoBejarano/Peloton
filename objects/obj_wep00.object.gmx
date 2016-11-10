@@ -47,6 +47,8 @@ firing_sound = snd_wep0_shot;
 empty_sound = snd_blank;
 aim_sound = snd_wep0_aim;
 reload_sound = firing_sound;
+
+name = "Knife"
 </string>
           </argument>
         </arguments>

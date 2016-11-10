@@ -20,13 +20,11 @@ if(player.is_aiming == 1 && player.is_shooting == 0 && player.is_reloading == 0)
     if(target != noone) {   
         draw_set_alpha(0.2);
         draw_circle_colour(target.x, y + argument3, 5, argument4, argument4, false);
-        //draw_sprite_stretched_ext(spr_laser, 0, ox + (argument2 * ixs), (oy + argument3), distance_to_point(target.x, oy+argument3),4, argument4, 0.2);    
         draw_line_width_colour(ox + (argument2 * image_xscale), (oy + argument3), target.x, (oy + argument3), 4, argument4, argument4);
         draw_set_alpha(1);
     } else {
         draw_set_alpha(0.2);
         draw_line_width_colour(ox + (argument2 * image_xscale), (oy + argument3), x2, (oy + argument3), 4, argument4, argument4);
-        //draw_sprite_stretched_ext(spr_laser, 0, ox + (argument2 * ixs), (oy + argument3), x2*image_xscale, 4, argument4, 0.2);    
         draw_set_alpha(1);    
     }
 }   

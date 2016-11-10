@@ -41,7 +41,9 @@ ds_list_add(global.pl01wi,
     obj_wep01,
     obj_wep02,
     obj_wep03,
-    obj_wep04
+    obj_wep04,
+    obj_wep05,
+    obj_wep06
 );
 
 // Player's objects must be created at the end

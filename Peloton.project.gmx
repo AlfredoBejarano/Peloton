@@ -36,6 +36,12 @@
         <sound>sound\snd_wep04_shot</sound>
         <sound>sound\snd_wep04_reload</sound>
       </sounds>
+      <sounds name="wep05">
+        <sound>sound\snd_wep05_shot</sound>
+      </sounds>
+      <sounds name="wep06">
+        <sound>sound\snd_wep06_shot</sound>
+      </sounds>
       <sound>sound\snd_blank</sound>
       <sound>sound\snd_shell_fall</sound>
       <sound>sound\snd_wep_switch</sound>
@@ -61,6 +67,8 @@
       <sprite>sprites\spr_wep02</sprite>
       <sprite>sprites\spr_wep03</sprite>
       <sprite>sprites\spr_wep04</sprite>
+      <sprite>sprites\spr_wep05</sprite>
+      <sprite>sprites\spr_wep06</sprite>
       <sprite>sprites\spr_bullet</sprite>
       <sprite>sprites\spr_shell</sprite>
       <sprite>sprites\spr_weapon_hud</sprite>
@@ -68,6 +76,7 @@
       <sprite>sprites\spr_wep_scope</sprite>
       <sprite>sprites\spr_laser</sprite>
     </sprites>
+    <sprite>sprites\spr_bullet_fx</sprite>
   </sprites>
   <backgrounds name="background">
     <background>background\bck_dummy</background>
@@ -82,25 +91,26 @@
         <script>scripts\scp_wep03.gml</script>
         <script>scripts\scp_wep04.gml</script>
       </scripts>
-      <script>scripts\switch_weapon_animation.gml</script>
       <script>scripts\sync_reloading_hand.gml</script>
       <script>scripts\sync_reloading_magazine.gml</script>
+      <script>scripts\switch_weapon_animation.gml</script>
     </scripts>
     <scripts name="common">
       <script>scripts\sync_to_object.gml</script>
-      <script>scripts\create_hitscan.gml</script>
-      <script>scripts\create_projectile.gml</script>
       <script>scripts\create_dropable_fx.gml</script>
       <script>scripts\draw_text_outline.gml</script>
       <script>scripts\detect_bullet_collision.gml</script>
     </scripts>
     <scripts name="weapon">
+      <script>scripts\create_hitscan.gml</script>
+      <script>scripts\create_projectile.gml</script>
       <script>scripts\draw_laser.gml</script>
       <script>scripts\draw_scope_item.gml</script>
       <script>scripts\calculate_ammo.gml</script>
       <script>scripts\init_weapon_ammo.gml</script>
       <script>scripts\init_inventory_ammo.gml</script>
       <script>scripts\save_chamber_ammo.gml</script>
+      <script>scripts\create_bullet_sparkle.gml</script>
     </scripts>
     <scripts name="player">
       <scripts name="actions">
@@ -142,10 +152,13 @@
       <object>objects\obj_wep02</object>
       <object>objects\obj_wep03</object>
       <object>objects\obj_wep04</object>
+      <object>objects\obj_wep05</object>
+      <object>objects\obj_wep06</object>
       <object>objects\obj_bullet</object>
       <object>objects\obj_shell</object>
       <object>objects\obj_sgshell</object>
       <object>objects\obj_magazine</object>
+      <object>objects\obj_fx_bullet</object>
     </objects>
     <objects name="en">
       <object>objects\obj_dummy_target</object>

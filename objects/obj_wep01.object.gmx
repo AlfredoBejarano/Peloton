@@ -41,7 +41,7 @@ aim_sound = snd_wep01_aim;
 empty_sound = snd_wep01_empty;
 firing_sound = snd_wep01_shot;
 reload_sound = snd_wep01_reload;
-
+name = "Handgun - P7"
 // Getting ammo from player's object inventory
 ammo = ds_list_find_value(shooter.weapons_ammo, shooter.current_weapon);
 </string>
@@ -95,8 +95,7 @@ ammo = ds_list_find_value(shooter.weapons_ammo, shooter.current_weapon);
         <arguments>
           <argument>
             <kind>1</kind>
-            <string>//create_projectile(x + (image_xscale * 58),y - 32, obj_bullet, 0,60 * image_xscale,damage, 120, image_xscale, 1);
-create_hitscan(x + (image_xscale * 58), y - 32, view_wview/2, self);
+            <string>create_hitscan(x + (image_xscale * 58), y - 32, view_wview/2, self, 24);
 </string>
           </argument>
         </arguments>
