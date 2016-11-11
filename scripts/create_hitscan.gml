@@ -5,29 +5,29 @@
 // argument0 - x coordenate creation of the hitscan.
 // argument1 - y coordenate creation of the hitscan.
 // argument2 - distance of the hitscan
-// argument3 - emitter object.
-// argument4 - dy for fx create.
+// argument3 - y of the hitscan. (for shotguns)
+// argument4 - emitter object.
+// argument5 - dy for fx create.
 
 distance = argument0;
 
 x2 = 0;
 x1 = argument0;
 y1 = argument1;
-oy = argument3.y;
 distance = argument2;
-dir = argument3.direction;
+dir = argument4.direction;
 
 // calculate distance relative to the player
 
 while(x2 != distance) {
-    target = collision_line(x1, y1, x1 + (distance*image_xscale), other.y, obj_dummy_target, true, true);
+    target = collision_line(x1, y1, x1 + (distance*image_xscale), y1 + argument3, obj_dummy_target, true, true);
     
     if(target) {        
         switch(target.object_index) {
             case obj_dummy_target:
                 sound = choose(snd_metal_bullet_1, snd_metal_bullet_2);
                 audio_play_sound(sound, 0, false);
-                create_bullet_sparkle(target.x, argument1 + argument4, argument3, target.depth -1);
+                create_bullet_sparkle(target.x, argument1 + argument5, argument4, target.depth -1);
             break;
         }
         x2 = distance;

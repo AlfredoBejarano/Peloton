@@ -27,6 +27,7 @@
             <kind>1</kind>
             <string>pump = 0;
 damage = 1;
+angle = 180;
 position = 0;
 max_ammo = 7;
 ammo_type = 2;
@@ -95,10 +96,7 @@ ammo = ds_list_find_value(shooter.weapons_ammo, shooter.current_weapon);
         <arguments>
           <argument>
             <kind>1</kind>
-            <string>repeat(5) {
-    spread = irandom_range(-4, 4);
-    create_hitscan(x + (image_xscale * 225), y - (20 * spread), view_wview/2, self, -(15 - spread)); 
-}
+            <string>create_sg_hitscans(angle);
 </string>
           </argument>
         </arguments>
@@ -248,6 +246,7 @@ scp_wep03(shooter);
           <argument>
             <kind>1</kind>
             <string>draw_laser(self, view_wview/2, 217, - 10, c_green);
+
 </string>
           </argument>
         </arguments>
