@@ -26,7 +26,7 @@ while(x2 != distance) {
         switch(target.object_index) {
             case obj_dummy_target:
                 sound = choose(snd_metal_bullet_1, snd_metal_bullet_2);
-                audio_play_sound(sound, 0, false);
+                if(!audio_is_playing(sound)){audio_play_sound(sound, 0, false);}
                 create_bullet_sparkle(target.x, argument1 + argument5, argument4, target.depth -1);
             break;
         }
