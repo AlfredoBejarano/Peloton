@@ -81,9 +81,19 @@
       <sprite>sprites\spr_laser</sprite>
     </sprites>
     <sprite>sprites\spr_bullet_fx</sprite>
+    <sprites name="common">
+      <sprite>sprites\spr_sr_crystal</sprite>
+      <sprite>sprites\spr_sr_table</sprite>
+    </sprites>
   </sprites>
   <backgrounds name="background">
     <background>background\bck_dummy</background>
+    <backgrounds name="tiles">
+      <backgrounds name="level0">
+        <background>background\tl_sr_floor</background>
+        <background>background\tl_sr_assets</background>
+      </backgrounds>
+    </backgrounds>
   </backgrounds>
   <paths name="paths"/>
   <scripts name="scripts">
@@ -169,6 +179,10 @@
     <objects name="en">
       <object>objects\obj_dummy_target</object>
       <object>objects\obj_target_parent</object>
+    </objects>
+    <objects name="common">
+      <object>objects\obj_sr_table</object>
+      <object>objects\obj_sr_crystal</object>
     </objects>
   </objects>
   <rooms name="rooms">

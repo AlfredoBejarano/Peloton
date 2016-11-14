@@ -41,7 +41,7 @@ aim_sound = snd_wep01_aim;
 empty_sound = snd_wep01_empty;
 firing_sound = snd_wep05_shot;
 reload_sound = snd_wep01_reload;
-name = "Handgun - FN"
+name = "Handgun - P57"
 
 // Getting ammo from player's object inventory
 ammo = ds_list_find_value(shooter.weapons_ammo, shooter.current_weapon);

@@ -32,7 +32,7 @@ if(control) {
     /* AIMING AND SHOOTING ENDS */
 
     /* WEAPON SWITCHING BEGINS */
-    if((keyboard_check_pressed(weaponnext) || keyboard_check_pressed(weaponprevious)) && not_aiming_reloading_shooting_knife) {         
+    if((keyboard_check_pressed(weaponnext) || keyboard_check_pressed(weaponprevious)) && not_reloading_shooting_knife) {         
         switch_weapon(keyboard_check_pressed(weaponnext), keyboard_check_pressed(weaponprevious), self);    
     }
     /* WEAPON SWITCHING ENDS */    

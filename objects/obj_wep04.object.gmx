@@ -215,7 +215,11 @@ scp_wep04(shooter);
         <arguments>
           <argument>
             <kind>1</kind>
-            <string>draw_scope_item(self, room_width, 23, - 128);
+            <string>if(shooter.is_switching == 0) {
+    draw_scope_item(self, room_width, 23, - 128);
+} else {
+    draw_self();
+}
 </string>
           </argument>
         </arguments>

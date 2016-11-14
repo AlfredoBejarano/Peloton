@@ -9,6 +9,7 @@ reload_condition2 = false;
 reload_condition3 = false;
 not_shooting_knife = false;
 empty_ammo_and_aiming = false;
+not_reloading_shooting_knife = false;
 not_shooting_reloading_but_aiming = false;
 not_aiming_reloading_shooting_knife = false;
 
@@ -52,6 +53,12 @@ if(is_aiming == 0 && is_reloading == 0 && not_shooting_knife) {
     not_aiming_reloading_shooting_knife = true; 
 } else { 
     not_aiming_reloading_shooting_knife = false; 
+}
+
+if(is_reloading == 0 && not_shooting_knife) {
+    not_reloading_shooting_knife = true;
+} else {
+    not_reloading_shooting_knife = false;
 }
 
 if(is_shooting == 0 && is_reloading == 0 && is_aiming == 1) { 
