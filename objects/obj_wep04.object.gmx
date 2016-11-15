@@ -26,7 +26,7 @@
           <argument>
             <kind>1</kind>
             <string>pump = 0;
-damage = 1;
+damage = 20;
 position = 0;
 ammo_type = 3;
 hud_image = 4;
@@ -96,7 +96,7 @@ ammo = ds_list_find_value(shooter.weapons_ammo, shooter.current_weapon);
         <arguments>
           <argument>
             <kind>1</kind>
-            <string>create_hitscan(x + (image_xscale + 274), y - 24, room_width, 0, self, 0);           
+            <string>create_hitscan(x + (image_xscale * 274), y - 24, room_width, 0, self, 0);           
 </string>
           </argument>
         </arguments>

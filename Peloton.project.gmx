@@ -9,6 +9,7 @@
       <sounds name="wep0">
         <sound>sound\snd_wep0_aim</sound>
         <sound>sound\snd_wep0_shot</sound>
+        <sound>sound\snd_wep00_cut</sound>
       </sounds>
       <sounds name="wep01">
         <sound>sound\snd_wep01_aim</sound>
@@ -51,6 +52,19 @@
       <sound>sound\snd_metal_bullet_1</sound>
       <sound>sound\snd_metal_bullet_2</sound>
     </sounds>
+    <sounds name="en">
+      <sounds name="common">
+        <sound>sound\snd_en_hit01</sound>
+        <sound>sound\snd_en_hit02</sound>
+        <sound>sound\snd_en_hit03</sound>
+      </sounds>
+    </sounds>
+    <sounds name="music">
+      <sounds name="lvl_helipad">
+        <sound>sound\snd_helipad_intro</sound>
+        <sound>sound\snd_helipad_music</sound>
+      </sounds>
+    </sounds>
   </sounds>
   <sprites name="sprites">
     <sprite>sprites\spr_dummy</sprite>
@@ -63,9 +77,15 @@
         <sprite>sprites\spr_char01_hand01</sprite>
         <sprite>sprites\spr_char01_hand02</sprite>
       </sprites>
+      <sprites name="pl02">
+        <sprite>sprites\spr_char02</sprite>
+        <sprite>sprites\spr_char02_hand01</sprite>
+        <sprite>sprites\spr_char02_hand02</sprite>
+      </sprites>
     </sprites>
     <sprites name="wep">
-      <sprite>sprites\spr_wep00</sprite>
+      <sprite>sprites\spr_wep00_1</sprite>
+      <sprite>sprites\spr_wep00_2</sprite>
       <sprite>sprites\spr_wep01</sprite>
       <sprite>sprites\spr_wep02</sprite>
       <sprite>sprites\spr_wep03</sprite>
@@ -73,27 +93,31 @@
       <sprite>sprites\spr_wep05</sprite>
       <sprite>sprites\spr_wep06</sprite>
       <sprite>sprites\spr_wep07</sprite>
-      <sprite>sprites\spr_bullet</sprite>
+      <sprite>sprites\spr_laser</sprite>
+      <sprite>sprites\spr_holster</sprite>
       <sprite>sprites\spr_shell</sprite>
       <sprite>sprites\spr_weapon_hud</sprite>
-      <sprite>sprites\spr_holster</sprite>
       <sprite>sprites\spr_wep_scope</sprite>
-      <sprite>sprites\spr_laser</sprite>
+      <sprite>sprites\spr_bullet_fx</sprite>
+      <sprite>sprites\spr_blood_fx</sprite>
+      <sprite>sprites\spr_bullet</sprite>
     </sprites>
-    <sprite>sprites\spr_bullet_fx</sprite>
-    <sprites name="common">
-      <sprite>sprites\spr_sr_crystal</sprite>
-      <sprite>sprites\spr_sr_table</sprite>
+    <sprites name="fx">
+      <sprite>sprites\spr_muzzle_fx</sprite>
+      <sprite>sprites\spr_player_light</sprite>
+      <sprite>sprites\spr_light_round_fx</sprite>
+      <sprite>sprites\spr_light_round_fx_big</sprite>
+      <sprite>sprites\spr_light_round_fx_small</sprite>
+    </sprites>
+    <sprites name="en">
+      <sprite>sprites\spr_en01</sprite>
+      <sprite>sprites\spr_en01_arm</sprite>
     </sprites>
   </sprites>
   <backgrounds name="background">
-    <background>background\bck_dummy</background>
-    <backgrounds name="tiles">
-      <backgrounds name="level0">
-        <background>background\tl_sr_floor</background>
-        <background>background\tl_sr_assets</background>
-      </backgrounds>
-    </backgrounds>
+    <background>background\bck_pad1</background>
+    <background>background\bck_pad2</background>
+    <background>background\bck_pad3</background>
   </backgrounds>
   <paths name="paths"/>
   <scripts name="scripts">
@@ -121,8 +145,10 @@
       <script>scripts\calculate_ammo.gml</script>
       <script>scripts\create_projectile.gml</script>
       <script>scripts\draw_scope_item.gml</script>
+      <script>scripts\create_blood_splat.gml</script>
       <script>scripts\create_sg_hitscans.gml</script>
       <script>scripts\init_weapon_ammo.gml</script>
+      <script>scripts\create_muzzle_flash.gml</script>
       <script>scripts\init_inventory_ammo.gml</script>
       <script>scripts\create_bullet_sparkle.gml</script>
       <script>scripts\save_chamber_ammo.gml</script>
@@ -175,14 +201,24 @@
       <object>objects\obj_sgshell</object>
       <object>objects\obj_magazine</object>
       <object>objects\obj_fx_bullet</object>
+      <object>objects\obj_fx_blood</object>
     </objects>
     <objects name="en">
-      <object>objects\obj_dummy_target</object>
+      <object>objects\obj_barrel</object>
+      <object>objects\obj_en01</object>
       <object>objects\obj_target_parent</object>
     </objects>
+    <objects name="fx">
+      <object>objects\obj_gunshot_muzzle</object>
+      <object>objects\obj_red_light</object>
+      <object>objects\obj_explosion</object>
+      <object>objects\obj_yellow_light</object>
+      <object>objects\obj_parent_surface</object>
+      <object>objects\obj_lights_surface</object>
+      <object>objects\obj_player_shadow_surface</object>
+    </objects>
     <objects name="common">
-      <object>objects\obj_sr_table</object>
-      <object>objects\obj_sr_crystal</object>
+      <object>objects\obj_music_player</object>
     </objects>
   </objects>
   <rooms name="rooms">

@@ -14,22 +14,33 @@ distance = argument0;
 x2 = 0;
 x1 = argument0;
 y1 = argument1;
+ixs = image_xscale;
 distance = argument2;
 dir = argument4.direction;
 
 // calculate distance relative to the player
 
+if(argument4.object_index != obj_wep03 && argument4.object_index != obj_wep07) { create_muzzle_flash(x1, y1, argument4); }
+
 while(x2 != distance) {
-    target = collision_line(x1, y1, x1 + (distance*image_xscale), y1 + argument3, obj_dummy_target, true, true);
+    target = collision_line(x1, y1, x1 + (distance*image_xscale), y1 + argument3, obj_target_parent, true, true);
     
     if(target) {        
         switch(target.object_index) {
-            case obj_dummy_target:
-                sound = choose(snd_metal_bullet_1, snd_metal_bullet_2);
-                if(!audio_is_playing(sound)){audio_play_sound(sound, 0, false);}
+            case obj_barrel:                
                 create_bullet_sparkle(target.x, argument1 + argument5, argument4, target.depth -1);
             break;
+            
+            case obj_en01:                
+                create_blood_splat(target.x, argument1 + argument5, argument4, target.depth -1, false);
+            break;
         }
+        
+        if(target.hp != noone) {
+            target.hp -= argument4.damage;
+            target.damage = damage;
+        }
+        
         x2 = distance;
     } else {
         x2 = distance;

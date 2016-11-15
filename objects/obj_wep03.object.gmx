@@ -26,7 +26,7 @@
           <argument>
             <kind>1</kind>
             <string>pump = 0;
-damage = 1;
+damage = 3;
 angle = 180;
 position = 0;
 max_ammo = 7;
@@ -36,7 +36,7 @@ recoil = false;
 fire_speed = 60;
 image_speed = 0;
 shooter = false;
-reload_speed = 60;
+reload_speed = 180;
 has_magazine = false;
 aim_sound = snd_wep03_aim;
 empty_sound = snd_wep03_empty;
@@ -246,7 +246,6 @@ scp_wep03(shooter);
           <argument>
             <kind>1</kind>
             <string>draw_laser(self, view_wview/2, 217, - 10, c_green);
-
 </string>
           </argument>
         </arguments>
