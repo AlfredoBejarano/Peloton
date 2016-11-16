@@ -78,7 +78,7 @@ surface = surface_create(view_wview, view_hview);
     depth = obj_antenna.depth;
     with(obj_antenna) {
         draw_set_blend_mode(bm_src_color);
-        draw_sprite_ext(spr_light_round_fx_big, 0, x, y, 1,1,0,c_red,1);
+        draw_sprite_ext(spr_player_light, 0, x, y, 2,2,rot,c_white,1);
         draw_set_blend_mode(bm_normal);
     }
     with(obj_muzzle_flash) {    
