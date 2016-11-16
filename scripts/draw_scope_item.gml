@@ -26,7 +26,7 @@ target = collision_line(ox, oy, ox + (distance*ixs), oy, obj_target_parent, true
     
 if(player.is_aiming == 1 && player.is_shooting == 0 && player.is_reloading == 0) {
     if(target != noone) {   
-        draw_sprite_stretched(target.sprite_index, 0, (ox + (argument2 * ixs)) - (size/2), ((oy + argument3)) - (size/2), size, size );
+        draw_sprite_stretched(target.sprite_index, target.image_index, (ox + (argument2 * ixs)) - (size/2), ((oy + argument3)) - (size/2), size, size );
     }
     draw_sprite(spr_wep_scope, 0, ox + (argument2 * ixs), (oy + argument3));
 }   

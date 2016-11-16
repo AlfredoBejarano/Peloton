@@ -3,22 +3,20 @@
   <caption></caption>
   <width>1920</width>
   <height>1080</height>
-  <vsnap>64</vsnap>
-  <hsnap>120</hsnap>
+  <vsnap>1</vsnap>
+  <hsnap>1</hsnap>
   <isometric>0</isometric>
   <speed>60</speed>
   <persistent>0</persistent>
   <colour>1507328</colour>
   <showcolour>-1</showcolour>
-  <code>global.pl01_character = 2;
+  <code>global.pl01_character = 1;
 global.control = true;
 global.keybindings = ds_list_create();
 global.pl01gp = ds_list_create();
 global.pl01wi = ds_list_create();
 global.level_music = ds_list_create();
 ds_list_add(global.level_music, snd_helipad_intro, snd_helipad_music);
-
-instance_create(0,0,obj_music_player);
 
 ds_list_add(global.keybindings,
     ord('W'),
@@ -42,13 +40,13 @@ ds_list_add(global.pl01gp,
 );
 
 ds_list_add(global.pl01wi,
-//    obj_wep01,
-//    obj_wep02,
-//    obj_wep03,
-//    obj_wep04,
-    obj_wep05,
-    obj_wep06,
-    obj_wep07
+    obj_wep01,
+    obj_wep02,
+    obj_wep03,
+    obj_wep04
+//    obj_wep05,
+//    obj_wep06,
+//    obj_wep07
 );
 
 // Player's objects must be created at the end
@@ -75,8 +73,8 @@ instance_create(0,810, obj_en01);</code>
   </makerSettings>
   <backgrounds>
     <background visible="-1" foreground="0" name="bck_pad3" x="0" y="0" htiled="-1" vtiled="-1" hspeed="0" vspeed="0" stretch="0"/>
-    <background visible="-1" foreground="0" name="" x="0" y="0" htiled="-1" vtiled="-1" hspeed="0" vspeed="0" stretch="0"/>
-    <background visible="-1" foreground="0" name="" x="0" y="0" htiled="-1" vtiled="-1" hspeed="0" vspeed="0" stretch="0"/>
+    <background visible="-1" foreground="0" name="bck_pad2" x="0" y="0" htiled="-1" vtiled="-1" hspeed="0" vspeed="0" stretch="0"/>
+    <background visible="-1" foreground="0" name="bck_pad1" x="0" y="0" htiled="-1" vtiled="-1" hspeed="0" vspeed="0" stretch="0"/>
     <background visible="0" foreground="0" name="" x="0" y="0" htiled="-1" vtiled="-1" hspeed="0" vspeed="0" stretch="0"/>
     <background visible="0" foreground="0" name="" x="0" y="0" htiled="-1" vtiled="-1" hspeed="0" vspeed="0" stretch="0"/>
     <background visible="0" foreground="0" name="" x="0" y="0" htiled="-1" vtiled="-1" hspeed="0" vspeed="0" stretch="0"/>
@@ -96,12 +94,14 @@ instance_create(0,810, obj_en01);</code>
   <instances>
     <instance objName="obj_barrel" x="360" y="832" name="inst_9794FD6B" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
     <instance objName="obj_barrel" x="1560" y="896" name="inst_AA7D5000" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
+    <instance objName="obj_am_lighting" x="0" y="1088" name="inst_31BD757C" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
+    <instance objName="obj_antenna" x="26" y="1037" name="inst_11274A6A" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
+    <instance objName="obj_antenna" x="956" y="791" name="inst_3DD78D44" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
+    <instance objName="obj_antenna" x="283" y="870" name="inst_0DDDF8F2" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
+    <instance objName="obj_antenna" x="1630" y="867" name="inst_883DB184" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
+    <instance objName="obj_antenna" x="1889" y="1036" name="inst_894EBE11" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
   </instances>
-  <tiles>
-    <tile bgName="bck_pad2" x="0" y="0" w="960" h="1080" xo="0" yo="0" id="10000001" name="inst_10257DCE" depth="100" locked="0" colour="4294967295" scaleX="1" scaleY="1"/>
-    <tile bgName="bck_pad2" x="960" y="0" w="960" h="1080" xo="960" yo="0" id="10000002" name="inst_215D5484" depth="100" locked="0" colour="4294967295" scaleX="1" scaleY="1"/>
-    <tile bgName="bck_pad1" x="0" y="0" w="1920" h="1080" xo="0" yo="0" id="10000003" name="inst_94B4F109" depth="99" locked="0" colour="4294967295" scaleX="1" scaleY="1"/>
-  </tiles>
+  <tiles/>
   <PhysicsWorld>0</PhysicsWorld>
   <PhysicsWorldTop>0</PhysicsWorldTop>
   <PhysicsWorldLeft>0</PhysicsWorldLeft>

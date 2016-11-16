@@ -3,4 +3,4 @@ xx = argument0;
 yy = argument1;
 wep = argument2;
  
-//with(instance_create(xx,yy, obj_gunshot_muzzle)) { weapon = argument2; }
+with(instance_create(xx,yy, obj_muzzle_flash)) { weapon = argument2; }

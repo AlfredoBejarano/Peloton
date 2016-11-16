@@ -103,7 +103,7 @@
       <sprite>sprites\spr_bullet</sprite>
     </sprites>
     <sprites name="fx">
-      <sprite>sprites\spr_muzzle_fx</sprite>
+      <sprite>sprites\spr_muzzle_flash</sprite>
       <sprite>sprites\spr_player_light</sprite>
       <sprite>sprites\spr_light_round_fx</sprite>
       <sprite>sprites\spr_light_round_fx_big</sprite>
@@ -113,6 +113,7 @@
       <sprite>sprites\spr_en01</sprite>
       <sprite>sprites\spr_en01_arm</sprite>
     </sprites>
+    <sprite>sprites\spr_antenna</sprite>
   </sprites>
   <backgrounds name="background">
     <background>background\bck_pad1</background>
@@ -187,7 +188,7 @@
         <object>objects\obj_pl01_wep_hud</object>
       </objects>
     </objects>
-    <objects name="wep">
+    <objects name="wp">
       <object>objects\obj_wep00</object>
       <object>objects\obj_wep01</object>
       <object>objects\obj_wep02</object>
@@ -200,6 +201,7 @@
       <object>objects\obj_shell</object>
       <object>objects\obj_sgshell</object>
       <object>objects\obj_magazine</object>
+      <object>objects\obj_muzzle_flash</object>
     </objects>
     <objects name="en">
       <object>objects\obj_barrel</object>
@@ -210,8 +212,9 @@
       <object>objects\obj_fx_bullet</object>
       <object>objects\obj_fx_blood</object>
     </objects>
-    <objects name="common">
-      <object>objects\obj_music_player</object>
+    <objects name="am">
+      <object>objects\obj_am_lighting</object>
+      <object>objects\obj_antenna</object>
     </objects>
   </objects>
   <rooms name="rooms">
