@@ -114,6 +114,10 @@
       <sprite>sprites\spr_en01_arm</sprite>
     </sprites>
     <sprite>sprites\spr_antenna</sprite>
+    <sprites name="bd">
+      <sprite>sprites\spr_hbd</sprite>
+      <sprite>sprites\spr_vbd</sprite>
+    </sprites>
   </sprites>
   <backgrounds name="background">
     <background>background\bck_pad1</background>
@@ -215,6 +219,10 @@
     <objects name="am">
       <object>objects\obj_am_lighting</object>
       <object>objects\obj_antenna</object>
+    </objects>
+    <objects name="bd">
+      <object>objects\obj_hbd</object>
+      <object>objects\obj_vbd</object>
     </objects>
   </objects>
   <rooms name="rooms">

@@ -3,8 +3,8 @@
   <caption></caption>
   <width>1920</width>
   <height>1080</height>
-  <vsnap>1</vsnap>
-  <hsnap>1</hsnap>
+  <vsnap>540</vsnap>
+  <hsnap>8</hsnap>
   <isometric>0</isometric>
   <speed>60</speed>
   <persistent>0</persistent>
@@ -100,6 +100,10 @@ instance_create(0,810, obj_en01);</code>
     <instance objName="obj_antenna" x="283" y="870" name="inst_0DDDF8F2" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
     <instance objName="obj_antenna" x="1630" y="867" name="inst_883DB184" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
     <instance objName="obj_antenna" x="1889" y="1036" name="inst_894EBE11" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
+    <instance objName="obj_hbd" x="0" y="872" name="inst_0E4430C4" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
+    <instance objName="obj_hbd" x="960" y="872" name="inst_3EA5DF3B" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
+    <instance objName="obj_vbd" x="56" y="540" name="inst_4FD5F1E0" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
+    <instance objName="obj_vbd" x="1856" y="540" name="inst_7274D4DA" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
   </instances>
   <tiles/>
   <PhysicsWorld>0</PhysicsWorld>
