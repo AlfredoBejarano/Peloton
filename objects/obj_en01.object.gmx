@@ -30,12 +30,15 @@ can_get_stab = 1;
 image_index = choose(0, 1, 2);
 max_hp = 10;
 hp = max_hp;
+
+hand1 = create_zombie_hand(self, 256, 256, 0);
+hand2 = create_zombie_hand(self, 256, 256, 1);
 </string>
           </argument>
         </arguments>
       </action>
     </event>
-    <event eventtype="1" enumb="0">
+    <event eventtype="2" enumb="1">
       <action>
         <libid>1</libid>
         <id>603</id>
@@ -52,7 +55,15 @@ hp = max_hp;
         <arguments>
           <argument>
             <kind>1</kind>
-            <string>instance_create(x,y,obj_en01);
+            <string>if(image_angle &gt; -90) {
+    image_angle -= 6;
+} else {
+    with(hand1) { instance_destroy(); }
+    with(hand2) { instance_destroy(); }    
+    instance_destroy(); 
+}
+
+
 </string>
           </argument>
         </arguments>
@@ -99,9 +110,12 @@ hp = max_hp;
           <argument>
             <kind>1</kind>
             <string>depth = -y;
-mp_potential_step(obj_pl01.x, obj_pl01.y, 1, false);
+mp_potential_step_object(obj_pl01.x, obj_pl01.y, 1, obj_hbd);
 if(x &gt; obj_pl01.x) { image_xscale = -1; } else { image_xscale = 1; }
-if(hp &lt;= 0) { instance_destroy(); }
+if(hp &lt;= 0) { 
+    hp = 0;
+    alarm[1] = 1
+}
 </string>
           </argument>
         </arguments>
@@ -125,7 +139,7 @@ if(hp &lt;= 0) { instance_destroy(); }
           <argument>
             <kind>1</kind>
             <string>if(can_get_stab == 1) {
-    create_blood_splat(x,y, other, depth-1, true);
+    create_blood_splat(x,other.y, other, depth-1, true, self);
     hp -= 0.5;
     alarm[0] = 30;
     can_get_stab = 0;
@@ -152,9 +166,7 @@ if(hp &lt;= 0) { instance_destroy(); }
         <arguments>
           <argument>
             <kind>1</kind>
-            <string>draw_sprite_ext(spr_en01_arm, image_index, x + (128 *image_xscale), y + 32, image_xscale, 1, 0, c_white, 1);
-draw_self();
-draw_sprite_ext(spr_en01_arm, image_index, x + (64 *image_xscale), y + 64, image_xscale, 1, 0, c_white, 1);
+            <string>draw_self();
 draw_rectangle_colour(
     x - (sprite_width/2), 
     y - (sprite_height+64), 

@@ -50,9 +50,10 @@ audio_play_sound(intro, 1, false);
         <arguments>
           <argument>
             <kind>1</kind>
-            <string>if(audio_is_playing(loop)) {exit;}
-if(!audio_is_playing(intro)) {
-    audio_play_sound(loop, 1, true);
+            <string>if(!audio_is_playing(intro)) {
+    if(!audio_is_playing(loop)) {
+        audio_play_sound(loop, 1, true);
+    }
 }
 </string>
           </argument>

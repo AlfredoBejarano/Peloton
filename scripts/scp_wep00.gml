@@ -8,7 +8,7 @@ dy = -6;
 
 ixs = image_xscale;
 
-y = argument0.y + (yi + (dy * position))
+y = argument0.y-128 + (yi + (dy * position))
 x = argument0.x + ((xi + (dx * position)) * ixs);
 
 if(position < fire_speed / 2) { 

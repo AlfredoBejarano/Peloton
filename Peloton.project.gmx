@@ -67,6 +67,7 @@
     </sounds>
   </sounds>
   <sprites name="sprites">
+    <sprite>sprites\spr_antenna</sprite>
     <sprite>sprites\spr_dummy</sprite>
     <sprite>sprites\spr_dummy_hand2</sprite>
     <sprite>sprites\spr_dummy_hand1</sprite>
@@ -101,6 +102,7 @@
       <sprite>sprites\spr_bullet_fx</sprite>
       <sprite>sprites\spr_blood_fx</sprite>
       <sprite>sprites\spr_bullet</sprite>
+      <sprite>sprites\spr_blood_floor_fx</sprite>
     </sprites>
     <sprites name="fx">
       <sprite>sprites\spr_muzzle_flash</sprite>
@@ -113,7 +115,6 @@
       <sprite>sprites\spr_en01</sprite>
       <sprite>sprites\spr_en01_arm</sprite>
     </sprites>
-    <sprite>sprites\spr_antenna</sprite>
     <sprites name="bd">
       <sprite>sprites\spr_hbd</sprite>
       <sprite>sprites\spr_vbd</sprite>
@@ -162,10 +163,10 @@
       <scripts name="actions">
         <script>scripts\knife_usage.gml</script>
         <script>scripts\perform_aim.gml</script>
-        <script>scripts\perform_reload.gml</script>
         <script>scripts\perform_shoot.gml</script>
-        <script>scripts\player_movement.gml</script>
+        <script>scripts\perform_reload.gml</script>
         <script>scripts\switch_weapon.gml</script>
+        <script>scripts\player_movement.gml</script>
       </scripts>
       <scripts name="factory">
         <script>scripts\gamepad_factory.gml</script>
@@ -178,6 +179,9 @@
       </scripts>
       <script>scripts\player_controls.gml</script>
       <script>scripts\controls_consolidation_variables.gml</script>
+    </scripts>
+    <scripts name="enemy">
+      <script>scripts\create_zombie_hand.gml</script>
     </scripts>
   </scripts>
   <fonts name="fonts">
@@ -209,16 +213,21 @@
     </objects>
     <objects name="en">
       <object>objects\obj_barrel</object>
-      <object>objects\obj_en01</object>
       <object>objects\obj_target_parent</object>
+      <objects name="en01">
+        <object>objects\obj_en01</object>
+        <object>objects\obj_en01_arm</object>
+      </objects>
     </objects>
     <objects name="fx">
       <object>objects\obj_fx_bullet</object>
       <object>objects\obj_fx_blood</object>
+      <object>objects\obj_blood_floor</object>
     </objects>
     <objects name="am">
       <object>objects\obj_am_lighting</object>
       <object>objects\obj_antenna</object>
+      <object>objects\obj_music_player</object>
     </objects>
     <objects name="bd">
       <object>objects\obj_hbd</object>

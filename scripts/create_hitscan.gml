@@ -32,7 +32,7 @@ while(x2 != distance) {
             break;
             
             case obj_en01:                
-                create_blood_splat(target.x, argument1 + argument5, argument4, target.depth -1, false);
+                create_blood_splat(target.x, argument1 + argument5, argument4, target.depth -1, false, target);
             break;
         }
         
