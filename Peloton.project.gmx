@@ -200,8 +200,6 @@
       <object>objects\obj_shell</object>
       <object>objects\obj_sgshell</object>
       <object>objects\obj_magazine</object>
-      <object>objects\obj_fx_bullet</object>
-      <object>objects\obj_fx_blood</object>
     </objects>
     <objects name="en">
       <object>objects\obj_barrel</object>
@@ -209,13 +207,8 @@
       <object>objects\obj_target_parent</object>
     </objects>
     <objects name="fx">
-      <object>objects\obj_gunshot_muzzle</object>
-      <object>objects\obj_red_light</object>
-      <object>objects\obj_explosion</object>
-      <object>objects\obj_yellow_light</object>
-      <object>objects\obj_parent_surface</object>
-      <object>objects\obj_lights_surface</object>
-      <object>objects\obj_player_shadow_surface</object>
+      <object>objects\obj_fx_bullet</object>
+      <object>objects\obj_fx_blood</object>
     </objects>
     <objects name="common">
       <object>objects\obj_music_player</object>
