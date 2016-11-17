@@ -65,6 +65,16 @@
         <sound>sound\snd_helipad_music</sound>
       </sounds>
     </sounds>
+    <sounds name="char">
+      <sounds name="char01">
+        <sound>sound\snd_char01_critical_hp</sound>
+        <sound>sound\snd_char01_dam01</sound>
+        <sound>sound\snd_char01_dam02</sound>
+        <sound>sound\snd_char01_dam03</sound>
+        <sound>sound\snd_char01_dam04</sound>
+        <sound>sound\snd_char01_dam05</sound>
+      </sounds>
+    </sounds>
   </sounds>
   <sprites name="sprites">
     <sprite>sprites\spr_antenna</sprite>
@@ -83,6 +93,9 @@
         <sprite>sprites\spr_char02_hand01</sprite>
         <sprite>sprites\spr_char02_hand02</sprite>
       </sprites>
+      <sprite>sprites\spr_eye</sprite>
+      <sprite>sprites\spr_male_mouth</sprite>
+      <sprite>sprites\spr_female_motuh</sprite>
     </sprites>
     <sprites name="wep">
       <sprite>sprites\spr_wep00_1</sprite>
@@ -110,6 +123,7 @@
       <sprite>sprites\spr_light_round_fx</sprite>
       <sprite>sprites\spr_light_round_fx_big</sprite>
       <sprite>sprites\spr_light_round_fx_small</sprite>
+      <sprite>sprites\spr_health</sprite>
     </sprites>
     <sprites name="en">
       <sprite>sprites\spr_en01</sprite>
@@ -128,6 +142,9 @@
   <paths name="paths"/>
   <scripts name="scripts">
     <scripts name="animations">
+      <scripts name="player">
+        <script>scripts\draw_facial_expression.gml</script>
+      </scripts>
       <scripts name="weapon">
         <script>scripts\scp_wep00.gml</script>
         <script>scripts\scp_wep01.gml</script>
@@ -194,6 +211,7 @@
         <object>objects\obj_hand1</object>
         <object>objects\obj_hand2</object>
         <object>objects\obj_pl01_wep_hud</object>
+        <object>objects\obj_plhealth</object>
       </objects>
     </objects>
     <objects name="wp">

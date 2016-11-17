@@ -9,10 +9,11 @@ if(argument4) {
         audio_play_sound(sound, 0, false);
     }
 }
+
 with(instance_create(argument0, argument1, obj_fx_blood)){ 
     image_xscale = argument2.image_xscale*-1; 
     depth = argument3
     image_yscale = choose(-1, 1);
 }
 
-instance_create(argument0, argument5.y, obj_blood_floor);
+aaa = argument5;

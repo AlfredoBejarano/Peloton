@@ -5,11 +5,11 @@ skin = ds_list_create();
 
 switch(argument0) {
     case 1:
-        ds_list_add(skin, spr_char01, spr_char01_hand01, spr_char01_hand02, spr_wep00_1);
+        ds_list_add(skin, spr_char01, spr_char01_hand01, spr_char01_hand02, spr_wep00_1, spr_male_mouth);
     break;
 
     case 2:
-        ds_list_add(skin, spr_char02, spr_char02_hand01, spr_char02_hand02, spr_wep00_2);
+        ds_list_add(skin, spr_char02, spr_char02_hand01, spr_char02_hand02, spr_wep00_2, spr_female_motuh);
     break;    
     
     default:

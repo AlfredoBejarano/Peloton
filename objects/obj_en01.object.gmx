@@ -25,7 +25,8 @@
         <arguments>
           <argument>
             <kind>1</kind>
-            <string>image_speed = 0;
+            <string>dying = 0;
+image_speed = 0;
 can_get_stab = 1;
 image_index = choose(0, 1, 2);
 max_hp = 10;
@@ -55,13 +56,9 @@ hand2 = create_zombie_hand(self, 256, 256, 1);
         <arguments>
           <argument>
             <kind>1</kind>
-            <string>if(image_angle &gt; -90) {
-    image_angle -= 6;
-} else {
-    with(hand1) { instance_destroy(); }
-    with(hand2) { instance_destroy(); }    
-    instance_destroy(); 
-}
+            <string>with(hand1) { instance_destroy(); }
+with(hand2) { instance_destroy(); }    
+instance_destroy(); 
 
 
 </string>
@@ -110,11 +107,13 @@ hand2 = create_zombie_hand(self, 256, 256, 1);
           <argument>
             <kind>1</kind>
             <string>depth = -y;
-mp_potential_step_object(obj_pl01.x, obj_pl01.y, 1, obj_hbd);
+if(dying == 0){mp_potential_step_object(obj_pl01.x, obj_pl01.y, 1, obj_hbd);}
 if(x &gt; obj_pl01.x) { image_xscale = -1; } else { image_xscale = 1; }
-if(hp &lt;= 0) { 
+if(hp &lt;= 0 &amp;&amp; dying == 0) { 
     hp = 0;
+    dying = 1;
     alarm[1] = 1
+    instance_create(x,y-5, obj_blood_floor);
 }
 </string>
           </argument>

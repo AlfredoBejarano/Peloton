@@ -4,6 +4,7 @@
 image_index = 0;
 image_speed = 0;
 
+hp = 100;
 is_aiming = 0;
 is_running = 0;
 is_shooting = 0;
@@ -12,6 +13,10 @@ is_reloading = 0;
 is_switching = 0;
 current_weapon = 0;
 control = argument0;
+
+// Facial expression variables
+eye_index = 0;
+mouth_index = 0;
 
 settings = settings_factory(control, self);
 
@@ -65,3 +70,10 @@ instance_create(x,y, hud);
 
 // Sets knife sprite for the player
 knife_sprite = ds_list_find_value(player_skin_factory(character), 3);
+
+// Sets mouth sprite
+mouth_sprite = ds_list_find_value(player_skin_factory(character), 4);
+
+// Sets health hud
+healthhud = instance_create(x,y, obj_plhealth);
+with(healthhud) { player = argument1; }
