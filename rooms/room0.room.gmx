@@ -18,7 +18,7 @@ global.pl01wi = ds_list_create();
 global.level_music = ds_list_create();
 ds_list_add(global.level_music, snd_helipad_intro, snd_helipad_music);
 
-instance_create(x,y, obj_music_player);
+//instance_create(x,y, obj_music_player);
 
 ds_list_add(global.keybindings,
     ord('W'),
