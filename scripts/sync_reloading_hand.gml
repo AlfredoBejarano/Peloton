@@ -1,12 +1,9 @@
 // argument0 - Player object
 
 wep = argument0.weapon;
-
 hy = 0;
 
-if(wep != obj_wep00) { image_alpha = 1; }
-
-if(wep = obj_wep00) {
+if(wep == obj_wep00 || argument0.is_taking_damage == 1) {
     image_alpha = 0;
     sync_to_object(wep, (-48 * image_xscale), 48, true, false, true);        
 } else if(wep == obj_wep01) {

@@ -27,7 +27,7 @@
             <kind>1</kind>
             <string>max_hp = 2;
 hp = max_hp;
-damage = 0;
+damage = noone;
 </string>
           </argument>
         </arguments>

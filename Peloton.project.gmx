@@ -3,6 +3,7 @@
   <Configs name="configs">
     <Config>Configs\Default</Config>
   </Configs>
+  <datafiles number="1" name="datafiles"/>
   <NewExtensions/>
   <sounds name="sound">
     <sounds name="wep">
@@ -151,6 +152,7 @@
         <script>scripts\scp_wep02.gml</script>
         <script>scripts\scp_wep03.gml</script>
         <script>scripts\scp_wep04.gml</script>
+        <script>scripts\scp_wep_dam.gml</script>
       </scripts>
       <script>scripts\sync_reloading_hand.gml</script>
       <script>scripts\sync_reloading_magazine.gml</script>
@@ -180,6 +182,7 @@
       <scripts name="actions">
         <script>scripts\knife_usage.gml</script>
         <script>scripts\perform_aim.gml</script>
+        <script>scripts\take_damage.gml</script>
         <script>scripts\perform_shoot.gml</script>
         <script>scripts\perform_reload.gml</script>
         <script>scripts\switch_weapon.gml</script>

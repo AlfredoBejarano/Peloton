@@ -13,7 +13,7 @@ switch(argument0) {
     break;    
     
     default:
-        ds_list_add(skin, spr_dummy, spr_dummy_hand1, spr_dummy_hand2, spr_wep00_1);
+        ds_list_add(skin, spr_dummy, spr_dummy_hand1, spr_dummy_hand2, spr_wep00_1, spr_male_mouth);
     break;
 }
 

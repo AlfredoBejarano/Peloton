@@ -14,6 +14,11 @@ is_switching = 0;
 current_weapon = 0;
 control = argument0;
 
+// Damage variables
+can_take_damage = 1;
+damage_direction = 0;
+is_taking_damage = 0;
+
 // Facial expression variables
 eye_index = 0;
 mouth_index = 0;

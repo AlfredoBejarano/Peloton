@@ -4,6 +4,8 @@
 //argument3 - Player second hand
 //argument4 - Player object itself
 
+if(is_taking_damage == 1) {exit;} else {
+
 controls = ds_list_find_value(settings, 0);
 var up, left, down, right, aim, shoot, action, reload;
 
@@ -48,4 +50,4 @@ if(control) {
 } else {
     list = ds_list_create();
     ds_list_add(list, argument0 , argument1 , argument2 , argument3 , argument4);
-}
+}}

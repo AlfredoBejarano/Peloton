@@ -31,7 +31,7 @@ can_get_stab = 1;
 image_index = choose(0, 1, 2);
 max_hp = 10;
 hp = max_hp;
-
+damage = 10;
 hand1 = create_zombie_hand(self, 256, 256, 0);
 hand2 = create_zombie_hand(self, 256, 256, 1);
 </string>
