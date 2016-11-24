@@ -78,11 +78,6 @@
     </sounds>
   </sounds>
   <sprites name="sprites">
-    <sprite>sprites\spr_antenna</sprite>
-    <sprite>sprites\spr_dummy</sprite>
-    <sprite>sprites\spr_dummy_hand2</sprite>
-    <sprite>sprites\spr_dummy_hand1</sprite>
-    <sprite>sprites\spr_dummy_target</sprite>
     <sprites name="pl">
       <sprites name="pl01">
         <sprite>sprites\spr_char01</sprite>
@@ -97,6 +92,9 @@
       <sprite>sprites\spr_eye</sprite>
       <sprite>sprites\spr_male_mouth</sprite>
       <sprite>sprites\spr_female_motuh</sprite>
+      <sprite>sprites\spr_dummy</sprite>
+      <sprite>sprites\spr_dummy_hand1</sprite>
+      <sprite>sprites\spr_dummy_hand2</sprite>
     </sprites>
     <sprites name="wep">
       <sprite>sprites\spr_wep00_1</sprite>
@@ -129,10 +127,18 @@
     <sprites name="en">
       <sprite>sprites\spr_en01</sprite>
       <sprite>sprites\spr_en01_arm</sprite>
+      <sprite>sprites\spr_dummy_target</sprite>
     </sprites>
     <sprites name="bd">
       <sprite>sprites\spr_hbd</sprite>
       <sprite>sprites\spr_vbd</sprite>
+    </sprites>
+    <sprites name="gu">
+      <sprite>sprites\spr_keybutton</sprite>
+    </sprites>
+    <sprites name="dp">
+      <sprite>sprites\spr_antenna</sprite>
+      <sprite>sprites\spr_droppables</sprite>
     </sprites>
   </sprites>
   <backgrounds name="background">
@@ -159,9 +165,11 @@
       <script>scripts\switch_weapon_animation.gml</script>
     </scripts>
     <scripts name="common">
+      <script>scripts\get_keyname.gml</script>
       <script>scripts\sync_to_object.gml</script>
       <script>scripts\create_dropable_fx.gml</script>
       <script>scripts\draw_text_outline.gml</script>
+      <script>scripts\draw_action_button.gml</script>
       <script>scripts\detect_bullet_collision.gml</script>
     </scripts>
     <scripts name="weapon">
@@ -187,11 +195,14 @@
         <script>scripts\perform_reload.gml</script>
         <script>scripts\switch_weapon.gml</script>
         <script>scripts\player_movement.gml</script>
+        <script>scripts\switch_controls.gml</script>
+        <script>scripts\gamepad_anybutton.gml</script>
       </scripts>
       <scripts name="factory">
         <script>scripts\gamepad_factory.gml</script>
         <script>scripts\player_skin_factory.gml</script>
         <script>scripts\settings_factory.gml</script>
+        <script>scripts\button_color_factory.gml</script>
       </scripts>
       <scripts name="initialization">
         <script>scripts\init_player.gml</script>
@@ -206,6 +217,7 @@
   </scripts>
   <fonts name="fonts">
     <font>fonts\fnt_hud</font>
+    <font>fonts\fnt_action_buttons</font>
   </fonts>
   <objects name="objects">
     <objects name="pl">
@@ -258,6 +270,13 @@
   <rooms name="rooms">
     <room>rooms\room0</room>
   </rooms>
+  <constants number="5">
+    <constant name="gp_white">make_color_rgb(249, 249, 249)</constant>
+    <constant name="gp_yellow">make_color_rgb(233, 211, 0)</constant>
+    <constant name="gp_blue">make_color_rgb(0, 129, 198)</constant>
+    <constant name="gp_red">make_color_rgb(197, 34, 37)</constant>
+    <constant name="gp_green">make_color_rgb(75, 169, 52)</constant>
+  </constants>
   <help>
     <rtf>help.rtf</rtf>
   </help>

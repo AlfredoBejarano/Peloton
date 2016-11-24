@@ -6,7 +6,7 @@ settings = ds_list_create();
 if(argument0) { 
     ds_list_add(settings, global.keybindings, global.pl01wi, obj_pl01_wep_hud, global.pl01_character); 
 } else {
-    settings = gamepad_factory(argument1);
+    ds_list_add(settings, global.pl01gp, global.pl01wi, obj_pl01_wep_hud, global.pl01_character); 
 }
-
+l = argument1;
 return settings;

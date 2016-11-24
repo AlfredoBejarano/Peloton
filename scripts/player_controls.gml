@@ -1,14 +1,5 @@
-//argument0 - The Keybindings for player1 (as DS_list)
-//argument1 - The gamepad buttons for player1 (as DS_list)
-//argument2 - Character's speed movement
-//argument3 - Player second hand
-//argument4 - Player object itself
-
 if(is_taking_damage == 1) {exit;} else {
-
-controls = ds_list_find_value(settings, 0);
 var up, left, down, right, aim, shoot, action, reload;
-
 if(control) {    
     up = ds_list_find_value(controls, 0);
     aim = ds_list_find_value(controls, 4);
@@ -48,6 +39,58 @@ if(control) {
     /*  KNIFE ENDS */
     
 } else {
-    list = ds_list_create();
-    ds_list_add(list, argument0 , argument1 , argument2 , argument3 , argument4);
+    if(gamepad_axis_value(0, ds_list_find_value(controls, 0)) < -0.5) {
+        up = true;
+        down = false;
+    } else if(gamepad_axis_value(0, ds_list_find_value(controls, 0)) > 0.5) {
+        up = false;
+        down = true;
+    } else {
+        up = false;
+        down = false;
+    }
+    
+    if(gamepad_axis_value(0, ds_list_find_value(controls, 1)) > 0.5) {
+        right = true;
+        left = false;
+    } else if(gamepad_axis_value(0, ds_list_find_value(controls, 1)) < -0.5) {
+        right = false;
+        left = true;
+    } else {
+        right = false;
+        left = false;
+    }
+    
+    aim = ds_list_find_value(controls, 2);
+    shoot = ds_list_find_value(controls, 3);    
+    action = ds_list_find_value(controls, 4);    
+    reload = ds_list_find_value(controls, 7);     
+    weaponnext = ds_list_find_value(controls, 5);    
+    weaponprevious = ds_list_find_value(controls, 6);
+
+    /* CONSOLIDATION BEGINS */
+    controls_consolidation_variables(gamepad_button_check_pressed(0, reload),gamepad_button_check(0, aim),gamepad_button_check_pressed(0, shoot));
+    /* CONSOLIDATION ENDS */
+    
+    /* MOVEMENT BEGINS */
+    player_movement(is_aiming, up, down, left, right);
+    /* MOVEMENT ENDS */         
+    
+    /* AIMING AND SHOOTING BEGINS */
+    perform_aim(gamepad_button_check(0, aim), gamepad_button_check_pressed(0, aim), gamepad_button_check(0, shoot), gamepad_button_check_pressed(0, shoot), gamepad_button_check_released(0, aim), gamepad_button_check_pressed(0, reload), self); 
+    /* AIMING AND SHOOTING ENDS */
+
+    /* WEAPON SWITCHING BEGINS */
+    if((gamepad_button_check_pressed(0, weaponnext) || gamepad_button_check_pressed(0, weaponprevious)) && not_reloading_shooting_knife) {         
+        switch_weapon(gamepad_button_check_pressed(0, weaponnext), gamepad_button_check_pressed(0, weaponprevious), self);    
+    }
+    /* WEAPON SWITCHING ENDS */    
+
+    /* RELOAD BEGINS */
+    perform_reload(self);
+    /* RELOAD ENDS */
+    
+    /*  KNIFE BEGINS */
+    knife_usage(self, gamepad_button_check(0, aim), gamepad_button_check_pressed(0, shoot));
+    /*  KNIFE ENDS */    
 }}
