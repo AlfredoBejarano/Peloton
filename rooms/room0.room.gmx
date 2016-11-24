@@ -11,7 +11,7 @@
   <colour>1507328</colour>
   <showcolour>-1</showcolour>
   <code>global.pl01_character = 1;
-global.control = false;
+global.control = true;
 global.keybindings = ds_list_create();
 global.pl01gp = ds_list_create();
 global.pl01wi = ds_list_create();
