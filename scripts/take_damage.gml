@@ -12,7 +12,11 @@ if(can_take_damage == 0) {
             cplhps = 0;
         }    
     }
-    
+    if(argument0 == image_xscale) {
+        damage_direction = 1;
+    } else {
+        damage_direction = 0;
+    }    
     hp -= argument1;
     eye_index = 2;
     hspeed = 15*argument0;
