@@ -134,7 +134,7 @@
       <sprite>sprites\spr_vbd</sprite>
     </sprites>
     <sprites name="gu">
-      <sprite>sprites\spr_keybutton</sprite>
+      <sprite>sprites\spr_gp_buttons</sprite>
     </sprites>
     <sprites name="dp">
       <sprite>sprites\spr_antenna</sprite>

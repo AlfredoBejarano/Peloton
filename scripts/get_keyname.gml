@@ -1,5 +1,7 @@
 // get_keyname(ascii_number)
 
+key = ds_list_create();
+
 switch(argument0) {
     /* Special keys */ 
     case vk_left: return "←";
@@ -91,16 +93,24 @@ switch(argument0) {
     case ord('Z'): return "Z";
     
     /* Gamepad buttons */
-    case gp_face1: return "A";
-    case gp_face2: return "B";
-    case gp_face3: return "X";
-    case gp_face4: return "Y";
-    case gp_select: return "select";
-    case gp_start: return "start";
-    case gp_shoulderr: return "RB";
-    case gp_shoulderl: return "LB";
-    case gp_shoulderrb: return "RT";
-    case gp_shoulderlb: return "LT";
+    case gp_face1:      { ds_list_add(key, spr_gp_buttons, 0); break; } 
+    case gp_face2:      { ds_list_add(key, spr_gp_buttons, 1); break; } 
+    case gp_face3:      { ds_list_add(key, spr_gp_buttons, 2); break; } 
+    case gp_face4:      { ds_list_add(key, spr_gp_buttons, 3); break; } 
+    case gp_shoulderr:  { ds_list_add(key, spr_gp_buttons, 4); break; } 
+    case gp_shoulderl:  { ds_list_add(key, spr_gp_buttons, 5); break; }    
+    case gp_select:     { ds_list_add(key, spr_gp_buttons, 6); break; } 
+    case gp_start:      { ds_list_add(key, spr_gp_buttons, 7); break; }  
+    case gp_stickl:     { ds_list_add(key, spr_gp_buttons, 8); break; } 
+    case gp_stickr:     { ds_list_add(key, spr_gp_buttons, 9); break; }    
+    case gp_padu:       { ds_list_add(key, spr_gp_buttons, 10); break; } 
+    case gp_padd:       { ds_list_add(key, spr_gp_buttons, 11); break; } 
+    case gp_padl:       { ds_list_add(key, spr_gp_buttons, 12); break; } 
+    case gp_padr:       { ds_list_add(key, spr_gp_buttons, 13); break; }        
+    case gp_shoulderlb: { ds_list_add(key, spr_gp_buttons, 14); break; }        
+    case gp_shoulderrb: { ds_list_add(key, spr_gp_buttons, 15); break; }        
     
     default: return " ";
 }
+
+return key;
