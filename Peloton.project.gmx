@@ -122,6 +122,7 @@
       <sprite>sprites\spr_light_round_fx</sprite>
       <sprite>sprites\spr_light_round_fx_big</sprite>
       <sprite>sprites\spr_light_round_fx_small</sprite>
+      <sprite>sprites\spr_light_round_fx_micro</sprite>
       <sprite>sprites\spr_health</sprite>
     </sprites>
     <sprites name="en">
@@ -265,6 +266,11 @@
     <objects name="bd">
       <object>objects\obj_hbd</object>
       <object>objects\obj_vbd</object>
+    </objects>
+    <objects name="dp">
+      <object>objects\obj_dp_parent</object>
+      <object>objects\obj_dp_handgun</object>
+      <object>objects\obj_item_picker</object>
     </objects>
   </objects>
   <rooms name="rooms">

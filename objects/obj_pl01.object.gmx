@@ -161,6 +161,41 @@ if(hp &lt;= 0) {game_end();}
         </arguments>
       </action>
     </event>
+    <event eventtype="4" ename="obj_dp_parent">
+      <action>
+        <libid>1</libid>
+        <id>603</id>
+        <kind>7</kind>
+        <userelative>0</userelative>
+        <isquestion>0</isquestion>
+        <useapplyto>-1</useapplyto>
+        <exetype>2</exetype>
+        <functionname></functionname>
+        <codestring></codestring>
+        <whoName>self</whoName>
+        <relative>0</relative>
+        <isnot>0</isnot>
+        <arguments>
+          <argument>
+            <kind>1</kind>
+            <string>if(other.item_type == "ammo") {
+    // Calculates the new ammo value for replacing it in the inventory
+    new_ammo = ds_list_find_value(ammo_inventory, other.ammo_type) + other.quantity;    
+    ds_list_replace(ammo_inventory, other.ammo_type, new_ammo);
+    
+    // If the ammo picked is the same type as current weapon ammo type
+    if(weapon.ammo_type == other.ammo_type){
+        current_ammo = ds_list_find_value(ammo_inventory, other.ammo_type);
+    }
+    
+    // Destroy the pickable item
+    with(other) { instance_destroy(); }
+}
+</string>
+          </argument>
+        </arguments>
+      </action>
+    </event>
     <event eventtype="4" ename="obj_target_parent">
       <action>
         <libid>1</libid>
