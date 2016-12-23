@@ -28,6 +28,9 @@
             <string>draw_sprite(spr_droppables, 0, view_wview - 74, (view_yview + (view_hview/2)+8));
 draw_set_font(fnt_hud);
 draw_text(view_wview - 74, view_yview + (view_hview/2)+32, "x8");
+draw_set_font(fnt_kb);
+draw_action_button(512, 512, get_keyname(ord('F')));
+draw_action_button(512, 512, get_keyname(gp_face3));
 </string>
           </argument>
         </arguments>

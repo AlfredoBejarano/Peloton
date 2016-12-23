@@ -1,4 +1,4 @@
-// get_keyname(ascii_number)
+/// get_keyname(key constant)
 
 key = ds_list_create();
 
@@ -8,22 +8,22 @@ switch(argument0) {
     case vk_right: return "→";
     case vk_up: return "↑";
     case vk_down: return "↓";    
-    case vk_enter: return "Enter";
-    case vk_escape: return "Esc";
-    case vk_space: return "Spacebar";
-    case vk_shift: return "Shift";
-    case vk_control: return "Ctrl";
-    case vk_alt: return "Alt";
-    case vk_backspace: return "Backspace";
-    case vk_tab: return "Tab";
-    case vk_home: return "Home";
-    case vk_end: return "End";
-    case vk_delete: return "Del";
-    case vk_insert: return "Ins";
-    case vk_pageup: return "Page Up";
-    case vk_pagedown: return "Page Down";    
-    case vk_pause: return "Pause";
-    case vk_printscreen: return "Printscreen";
+    case vk_enter: return "ENTER";
+    case vk_escape: return "ESC";
+    case vk_space: return "SPACE";
+    case vk_shift: return "SHIFT";
+    case vk_control: return "CTRL";
+    case vk_alt: return "ALT";
+    case vk_backspace: return "BACKSPACE";
+    case vk_tab: return "TAB";
+    case vk_home: return "HOME";
+    case vk_end: return "END";
+    case vk_delete: return "DEL";
+    case vk_insert: return "INS";
+    case vk_pageup: return "UP";
+    case vk_pagedown: return "DOWN";    
+    case vk_pause: return "PAUSE";
+    case vk_printscreen: return "PRINTSCREEN";
     case vk_f1: return "F1";
     case vk_f2: return "F2";    
     case vk_f3: return "F3";
@@ -77,11 +77,10 @@ switch(argument0) {
     case ord('L'): return "L";
     case ord('M'): return "M";
     case ord('N'): return "N";   
-/*    case ord('Ñ'): return "Ñ";
-    case ord('R'): return "R";
+    case ord('Ñ'): return "Ñ";
     case ord('O'): return "O";       
     case ord('P'): return "P";
-    case ord('Q'): return "Q";*/
+    case ord('Q'): return "Q";
     case ord('R'): return "R";       
     case ord('S'): return "S";           
     case ord('T'): return "T";
@@ -93,22 +92,22 @@ switch(argument0) {
     case ord('Z'): return "Z";
     
     /* Gamepad buttons */
-    case gp_face1:      { ds_list_add(key, spr_gp_buttons, 0); break; } 
-    case gp_face2:      { ds_list_add(key, spr_gp_buttons, 1); break; } 
-    case gp_face3:      { ds_list_add(key, spr_gp_buttons, 2); break; } 
-    case gp_face4:      { ds_list_add(key, spr_gp_buttons, 3); break; } 
-    case gp_shoulderr:  { ds_list_add(key, spr_gp_buttons, 4); break; } 
-    case gp_shoulderl:  { ds_list_add(key, spr_gp_buttons, 5); break; }    
-    case gp_select:     { ds_list_add(key, spr_gp_buttons, 6); break; } 
-    case gp_start:      { ds_list_add(key, spr_gp_buttons, 7); break; }  
-    case gp_stickl:     { ds_list_add(key, spr_gp_buttons, 8); break; } 
-    case gp_stickr:     { ds_list_add(key, spr_gp_buttons, 9); break; }    
-    case gp_padu:       { ds_list_add(key, spr_gp_buttons, 10); break; } 
-    case gp_padd:       { ds_list_add(key, spr_gp_buttons, 11); break; } 
-    case gp_padl:       { ds_list_add(key, spr_gp_buttons, 12); break; } 
-    case gp_padr:       { ds_list_add(key, spr_gp_buttons, 13); break; }        
-    case gp_shoulderlb: { ds_list_add(key, spr_gp_buttons, 14); break; }        
-    case gp_shoulderrb: { ds_list_add(key, spr_gp_buttons, 15); break; }        
+    case gp_face1:      { return 0; } 
+    case gp_face2:      { return 1; } 
+    case gp_face3:      { return 2; } 
+    case gp_face4:      { return 3; } 
+    case gp_shoulderr:  { return 4; } 
+    case gp_shoulderl:  { return 5; } 
+    case gp_select:     { return 6; } 
+    case gp_start:      { return 7; } 
+    case gp_stickl:     { return 8; } 
+    case gp_stickr:     { return 9; } 
+    case gp_padu:       { return 10; } 
+    case gp_padd:       { return 11; } 
+    case gp_padl:       { return 12; } 
+    case gp_padr:       { return 13; } 
+    case gp_shoulderlb: { return 14; } 
+    case gp_shoulderrb: { return 15; } 
     
     default: return " ";
 }

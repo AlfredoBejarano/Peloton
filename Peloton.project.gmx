@@ -219,7 +219,7 @@
   </scripts>
   <fonts name="fonts">
     <font>fonts\fnt_hud</font>
-    <font>fonts\fnt_action_buttons</font>
+    <font>fonts\fnt_kb</font>
   </fonts>
   <objects name="objects">
     <objects name="pl">
@@ -277,7 +277,9 @@
   <rooms name="rooms">
     <room>rooms\room0</room>
   </rooms>
-  <constants number="5">
+  <constants number="7">
+    <constant name="gp_bt_inner">make_color_rgb(18,18,18)</constant>
+    <constant name="gp_bt_outline">make_color_rgb(59,59,56)</constant>
     <constant name="gp_white">make_color_rgb(249, 249, 249)</constant>
     <constant name="gp_yellow">make_color_rgb(233, 211, 0)</constant>
     <constant name="gp_blue">make_color_rgb(0, 129, 198)</constant>
