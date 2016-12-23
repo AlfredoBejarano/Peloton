@@ -26,8 +26,8 @@
           <argument>
             <kind>1</kind>
             <string>quantity = 8;
-ammo_type = 0;
-item_type = "ammo";
+ammo_type = 1;
+item_type = "ammo"
 
 </string>
           </argument>

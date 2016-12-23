@@ -8,7 +8,7 @@ with(instance_create(x, y, obj_magazine)) {
     mag_type = follow_hand.player.weapon.ammo_type;
         
     sprite_index = follow_hand.player.weapon.sprite_index;        
-    if(mag_type > 1) {
+    if(mag_type > 2) {
         image_index = 2;
     }
 } 

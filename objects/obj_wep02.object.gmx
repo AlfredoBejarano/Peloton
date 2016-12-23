@@ -28,7 +28,7 @@
             <string>pump = 0;
 damage = 1;
 position = 0;
-ammo_type = 1;
+ammo_type = 2;
 hud_image = 2;
 max_ammo = 30;
 recoil = false;

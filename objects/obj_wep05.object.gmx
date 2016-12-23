@@ -29,7 +29,7 @@
 damage = 2.5;
 position = 0;
 max_ammo = 10;
-ammo_type = 0;
+ammo_type = 1;
 hud_image = 5;
 recoil = false;
 fire_speed = 36;

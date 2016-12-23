@@ -172,6 +172,7 @@
       <script>scripts\draw_text_outline.gml</script>
       <script>scripts\draw_action_button.gml</script>
       <script>scripts\detect_bullet_collision.gml</script>
+      <script>scripts\pick_droppable.gml</script>
     </scripts>
     <scripts name="weapon">
       <script>scripts\draw_laser.gml</script>

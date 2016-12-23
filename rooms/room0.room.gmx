@@ -39,8 +39,8 @@ ds_list_add(global.pl01gp,
     gp_shoulderlb,
     gp_shoulderrb,
     gp_face1,
-    gp_shoulderr,
-    gp_shoulderl,
+    gp_padr,
+    gp_padl,
     gp_face3
 );
 
@@ -48,10 +48,10 @@ ds_list_add(global.pl01wi,
     obj_wep01,
     obj_wep02,
     obj_wep03,
-    obj_wep04
-//    obj_wep05,
-//    obj_wep06,
-//    obj_wep07
+    obj_wep04,
+    obj_wep05,
+    obj_wep06,
+    obj_wep07
 );
 
 // Player's objects must be created at the end

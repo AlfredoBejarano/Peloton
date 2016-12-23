@@ -178,19 +178,7 @@ if(hp &lt;= 0) {game_end();}
         <arguments>
           <argument>
             <kind>1</kind>
-            <string>if(other.item_type == "ammo") {
-    // Calculates the new ammo value for replacing it in the inventory
-    new_ammo = ds_list_find_value(ammo_inventory, other.ammo_type) + other.quantity;    
-    ds_list_replace(ammo_inventory, other.ammo_type, new_ammo);
-    
-    // If the ammo picked is the same type as current weapon ammo type
-    if(weapon.ammo_type == other.ammo_type){
-        current_ammo = ds_list_find_value(ammo_inventory, other.ammo_type);
-    }
-    
-    // Destroy the pickable item
-    with(other) { instance_destroy(); }
-}
+            <string>pick_droppable();
 </string>
           </argument>
         </arguments>
@@ -266,17 +254,6 @@ if(weapon == obj_wep00) {
     );
 }
 
-draw_rectangle_colour(
-    x - (sprite_width/2), 
-    y - (sprite_height+64), 
-    x - (sprite_width/2) + (sprite_width*(hp/100)),
-    y - (sprite_height+64),
-    c_blue,
-    c_blue,
-    c_blue,
-    c_blue,
-    4
-);
 </string>
           </argument>
         </arguments>

@@ -6,7 +6,7 @@
 // argument0 - Players weapon's inventory.
 ai = ds_list_create();
 // initialize all ammo type at 0.
-ds_list_add(ai, 0, 0, 0, 0);
+ds_list_add(ai, 0, 0, 0, 0, 0);
 
 size = ds_list_size(argument0);
 
