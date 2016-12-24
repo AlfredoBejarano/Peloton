@@ -9,6 +9,8 @@ draw_set_font(fnt_kb);
 if(is_string(key)) {
     // Variables for drawing the rectangle, like padding or so.
     length = string_length(key);
+    
+    // 46px width is for a 96px Height font (91 pts font size).
     size = 18;
     
     // Center the rectangle drawing
