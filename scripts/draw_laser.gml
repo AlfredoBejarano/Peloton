@@ -1,3 +1,4 @@
+/// draw_laser(gun object, distance, x, y, color);
 // calculate distance relative to the player
 // argument0 - gun object.
 // argument1 - distance.

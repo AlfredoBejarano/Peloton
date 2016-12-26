@@ -47,6 +47,9 @@
       <sounds name="wep07">
         <sound>sound\snd_wep07_shot</sound>
       </sounds>
+      <sounds name="wep08">
+        <sound>sound\snd_wep08_shot</sound>
+      </sounds>
       <sound>sound\snd_blank</sound>
       <sound>sound\snd_shell_fall</sound>
       <sound>sound\snd_wep_switch</sound>
@@ -106,6 +109,7 @@
       <sprite>sprites\spr_wep05</sprite>
       <sprite>sprites\spr_wep06</sprite>
       <sprite>sprites\spr_wep07</sprite>
+      <sprite>sprites\spr_wep08</sprite>
       <sprite>sprites\spr_laser</sprite>
       <sprite>sprites\spr_holster</sprite>
       <sprite>sprites\spr_shell</sprite>
@@ -242,6 +246,7 @@
       <object>objects\obj_wep05</object>
       <object>objects\obj_wep06</object>
       <object>objects\obj_wep07</object>
+      <object>objects\obj_wep08</object>
       <object>objects\obj_bullet</object>
       <object>objects\obj_shell</object>
       <object>objects\obj_sgshell</object>
@@ -275,6 +280,7 @@
       <object>objects\obj_dp_handgun</object>
       <object>objects\obj_dp_machinegun</object>
       <object>objects\obj_dp_shotgun</object>
+      <object>objects\obj_dp_rifle</object>
       <object>objects\obj_item_picker</object>
     </objects>
   </objects>

@@ -41,7 +41,7 @@ if(wep == obj_wep00 || argument0.is_taking_damage == 1) {
             }
         }
     }
-} else if(wep == obj_wep04) {
+} else if(wep == obj_wep04 || wep == obj_wep08) {
     switch(reloading_position) {
         case 1: { sync_to_object(wep, (-48 * image_xscale), 48, true, false, true); break; }
         case 2: { sync_to_object(wep, (-24 * image_xscale), 48, true, false, true); break; }
@@ -49,7 +49,7 @@ if(wep == obj_wep00 || argument0.is_taking_damage == 1) {
         default: { sync_to_object(wep, (78 * image_xscale), 8, true, false, true); break;}                        
     }
     if(argument0.is_aiming == 1 && argument0.is_reloading == 0) {
-        sync_to_object(wep, (78 * image_xscale), -12 * image_yscale, true, false, true);
+        sync_to_object(wep, (96 * image_xscale), -12 * image_yscale, true, false, true);
     }
 } else if(wep == obj_wep05) {
     switch(reloading_position) {
