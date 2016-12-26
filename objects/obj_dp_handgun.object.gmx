@@ -51,7 +51,11 @@ item_type = "ammo"
         <arguments>
           <argument>
             <kind>1</kind>
-            <string>instance_create(x,y, obj_item_picker);
+            <string>picker = obj_pl01.picker;
+picker.name = "Handgun Ammo"
+picker.quantity = quantity;
+picker.subimage = 1;
+picker.alarm[0] = 1;
 </string>
           </argument>
         </arguments>

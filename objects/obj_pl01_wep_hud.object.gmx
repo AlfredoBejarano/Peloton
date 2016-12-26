@@ -130,8 +130,7 @@ if(image_alpha &gt; 1) { image_alpha = 1; } else if(image_alpha &lt; 0) { image_
         <arguments>
           <argument>
             <kind>1</kind>
-            <string>
-draw_set_font(fnt_hud);
+            <string>draw_set_font(fnt_hud);
 
 if(obj_pl01.weapon != obj_wep00) {
     if(obj_pl01.weapon.ammo &lt; 10) {

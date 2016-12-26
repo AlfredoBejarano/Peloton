@@ -13,6 +13,8 @@ is_reloading = 0;
 is_switching = 0;
 current_weapon = 0;
 control = argument0;
+abutton = noone;
+picker = instance_create(0,0,obj_item_picker);
 
 // Damage variables
 can_take_damage = 1;

@@ -57,7 +57,7 @@ hand2 = create_zombie_hand(self, 256, 256, 1);
         <arguments>
           <argument>
             <kind>1</kind>
-            <string>instance_create(x, y, obj_dp_handgun);
+            <string>instance_create(x, y, choose(obj_dp_handgun, obj_dp_machinegun, obj_dp_shotgun));
 </string>
           </argument>
         </arguments>

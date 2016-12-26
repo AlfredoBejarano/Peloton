@@ -14,7 +14,7 @@ switch(argument0) {
     case vk_shift: return "SHIFT";
     case vk_control: return "CTRL";
     case vk_alt: return "ALT";
-    case vk_backspace: return "BACKSPACE";
+    case vk_backspace: return "BACK";
     case vk_tab: return "TAB";
     case vk_home: return "HOME";
     case vk_end: return "END";
@@ -23,7 +23,7 @@ switch(argument0) {
     case vk_pageup: return "UP";
     case vk_pagedown: return "DOWN";    
     case vk_pause: return "PAUSE";
-    case vk_printscreen: return "PRINTSCREEN";
+    case vk_printscreen: return "PTRSC";
     case vk_f1: return "F1";
     case vk_f2: return "F2";    
     case vk_f3: return "F3";

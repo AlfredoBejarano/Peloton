@@ -136,6 +136,7 @@
     </sprites>
     <sprites name="gu">
       <sprite>sprites\spr_gp_buttons</sprite>
+      <sprite>sprites\spr_kb_key</sprite>
     </sprites>
     <sprites name="dp">
       <sprite>sprites\spr_antenna</sprite>
@@ -220,6 +221,7 @@
   <fonts name="fonts">
     <font>fonts\fnt_hud</font>
     <font>fonts\fnt_kb</font>
+    <font>fonts\fnt_kb_small</font>
   </fonts>
   <objects name="objects">
     <objects name="pl">
@@ -271,6 +273,8 @@
     <objects name="dp">
       <object>objects\obj_dp_parent</object>
       <object>objects\obj_dp_handgun</object>
+      <object>objects\obj_dp_machinegun</object>
+      <object>objects\obj_dp_shotgun</object>
       <object>objects\obj_item_picker</object>
     </objects>
   </objects>
