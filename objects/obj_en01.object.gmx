@@ -28,11 +28,17 @@
             <string>dying = 0;
 image_speed = 0;
 can_get_stab = 1;
+can_move = 1;
+can_attack = 1;
+can_get_hit = 1;
+hand1y = 0;
+hand2y = 0;
 image_index = choose(0, 1, 2);
 max_hp = 10;
 hp = max_hp;
-damage = 10;
-
+damage = 25;
+red_alpha = 1;
+death_position = 0;
 hand1 = create_zombie_hand(self, 256, 256, 0);
 hand2 = create_zombie_hand(self, 256, 256, 1);
 </string>
@@ -63,6 +69,30 @@ hand2 = create_zombie_hand(self, 256, 256, 1);
         </arguments>
       </action>
     </event>
+    <event eventtype="2" enumb="2">
+      <action>
+        <libid>1</libid>
+        <id>603</id>
+        <kind>7</kind>
+        <userelative>0</userelative>
+        <isquestion>0</isquestion>
+        <useapplyto>-1</useapplyto>
+        <exetype>2</exetype>
+        <functionname></functionname>
+        <codestring></codestring>
+        <whoName>self</whoName>
+        <relative>0</relative>
+        <isnot>0</isnot>
+        <arguments>
+          <argument>
+            <kind>1</kind>
+            <string>can_attack = 1;
+can_move = 1;
+</string>
+          </argument>
+        </arguments>
+      </action>
+    </event>
     <event eventtype="2" enumb="1">
       <action>
         <libid>1</libid>
@@ -80,11 +110,20 @@ hand2 = create_zombie_hand(self, 256, 256, 1);
         <arguments>
           <argument>
             <kind>1</kind>
-            <string>with(hand1) { instance_destroy(); }
-with(hand2) { instance_destroy(); }    
-instance_destroy(); 
-
-
+            <string>if(death_position &gt;= 60) {
+    with(hand1) { instance_destroy(); }
+    with(hand2) { instance_destroy(); }    
+    instance_destroy();
+} else {
+    death_position += 3;
+    red_alpha -= 1/60;
+    if(death_position &lt;= 15) {
+        hand1y += 4;
+    } else if(death_position &lt;= 50){
+        hand2y += 2;
+    }
+    alarm[1] = 1;
+}
 </string>
           </argument>
         </arguments>
@@ -131,14 +170,28 @@ instance_destroy();
           <argument>
             <kind>1</kind>
             <string>depth = -y;
-if(dying == 0){mp_potential_step_object(obj_pl01.x, obj_pl01.y, 1, obj_hbd);}
+if(can_move == 1){mp_potential_step_object(obj_pl01.x, obj_pl01.y, 1, obj_hbd);}
+
+if((distance_to_object(obj_pl01) &lt; 64) &amp;&amp; (can_attack == 1)) {
+    audio_play_sound(snd_en01_attack, 0, false);
+    alarm[2] = 120;
+    can_attack = 0;
+    can_move = 0;
+}
 if(x &gt; obj_pl01.x) { image_xscale = -1; } else { image_xscale = 1; }
+
 if(hp &lt;= 0 &amp;&amp; dying == 0) { 
+    can_attack = 0;
+    can_get_hit = 0;
     hp = 0;
     dying = 1;
-    alarm[1] = 1
+    alarm[1] = 1;
+    can_move = 0;
     instance_create(x,y-5, obj_blood_floor);
+    instance_create(random_range(x-128, x+128), random_range(y-128, y+128), obj_fx_blood);
 }
+
+if(hp &lt;= 0) { hp = 0; }
 </string>
           </argument>
         </arguments>
@@ -189,18 +242,22 @@ if(hp &lt;= 0 &amp;&amp; dying == 0) {
         <arguments>
           <argument>
             <kind>1</kind>
-            <string>draw_self();
-draw_rectangle_colour(
-    x - (sprite_width/2), 
-    y - (sprite_height+64), 
-    x - (sprite_width/2) + (sprite_width*(hp/max_hp)),
-    y - (sprite_height+64),
-    c_red,
-    c_red,
-    c_red,
-    c_red,
-    4
-);
+            <string>if(dying == 0) {
+    draw_self();
+    draw_rectangle_colour(
+        x - (sprite_width/2), 
+        y - (sprite_height+64), 
+        x - (sprite_width/2) + (sprite_width*(hp/max_hp)),
+        y - (sprite_height+64),
+        c_red,
+        c_red,
+        c_red,
+        c_red,
+        4
+    );
+} else {
+    draw_sprite_ext(sprite_index, image_index, x, y, image_xscale, 1, 1, c_white, red_alpha);
+}
 </string>
           </argument>
         </arguments>

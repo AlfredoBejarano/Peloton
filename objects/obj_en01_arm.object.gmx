@@ -52,10 +52,10 @@ position = 0;
             <string>if(zombie != noone) {
     if(position == 0) {
         depth = zombie.depth + 1;
-        sync_to_object(zombie, 128 * image_xscale, -96, true, false, true);
+        sync_to_object(zombie, 128 * image_xscale, -96+zombie.hand2y, true, false, true);
     } else {
         depth = zombie.depth - 1;    
-        sync_to_object(zombie, 64 * image_xscale,  -64, true, false, true);    
+        sync_to_object(zombie, 64 * image_xscale,  -64+zombie.hand1y, true, false, true);    
     }
 }
 </string>

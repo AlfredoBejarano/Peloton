@@ -25,7 +25,7 @@ if(argument4.object_index != obj_wep03 && argument4.object_index != obj_wep07) {
 while(x2 != distance) {
     target = collision_line(x1, y1, x1 + (distance*image_xscale), y1 + argument3, obj_target_parent, true, true);
     
-    if(target) {        
+    if(target && target.can_get_hit == 1) {        
         switch(target.object_index) {
             case obj_barrel:                
                 create_bullet_sparkle(target.x, argument1 + argument5, argument4, target.depth -1);

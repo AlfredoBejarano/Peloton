@@ -62,6 +62,9 @@
         <sound>sound\snd_en_hit02</sound>
         <sound>sound\snd_en_hit03</sound>
       </sounds>
+      <sounds name="en01">
+        <sound>sound\snd_en01_attack</sound>
+      </sounds>
     </sounds>
     <sounds name="music">
       <sounds name="lvl_helipad">
@@ -78,6 +81,9 @@
         <sound>sound\snd_char01_dam04</sound>
         <sound>sound\snd_char01_dam05</sound>
       </sounds>
+    </sounds>
+    <sounds name="dp">
+      <sound>sound\snd_dp_bullet</sound>
     </sounds>
   </sounds>
   <sprites name="sprites">
@@ -117,7 +123,6 @@
       <sprite>sprites\spr_wep_scope</sprite>
       <sprite>sprites\spr_bullet_fx</sprite>
       <sprite>sprites\spr_blood_fx</sprite>
-      <sprite>sprites\spr_bullet</sprite>
       <sprite>sprites\spr_blood_floor_fx</sprite>
     </sprites>
     <sprites name="fx">
@@ -247,7 +252,6 @@
       <object>objects\obj_wep06</object>
       <object>objects\obj_wep07</object>
       <object>objects\obj_wep08</object>
-      <object>objects\obj_bullet</object>
       <object>objects\obj_shell</object>
       <object>objects\obj_sgshell</object>
       <object>objects\obj_magazine</object>

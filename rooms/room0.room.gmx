@@ -45,13 +45,13 @@ ds_list_add(global.pl01gp,
 );
 
 ds_list_add(global.pl01wi,
-    //obj_wep01,
-    //obj_wep02,
-    //obj_wep03,
+    obj_wep01,
+    obj_wep02,
+    obj_wep03,
     obj_wep04,
-    //obj_wep05,
-    //obj_wep06,
-    //obj_wep07,
+    obj_wep05,
+    obj_wep06,
+    obj_wep07,
     obj_wep08
 );
 
@@ -105,10 +105,9 @@ instance_create(960,900, obj_pl01);</code>
     <instance objName="obj_antenna" x="296" y="912" name="inst_0DDDF8F2" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
     <instance objName="obj_antenna" x="1640" y="912" name="inst_883DB184" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
     <instance objName="obj_antenna" x="1904" y="1080" name="inst_894EBE11" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
-    <instance objName="obj_dp_handgun" x="1528" y="1032" name="inst_788C0C04" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
-    <instance objName="obj_dp_machinegun" x="1672" y="1032" name="inst_64EA79AD" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
-    <instance objName="obj_dp_shotgun" x="1384" y="1032" name="inst_6FECF7A3" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
-    <instance objName="obj_dp_rifle" x="1272" y="1016" name="inst_7652DE1E" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
+    <instance objName="obj_en01" x="2040" y="1008" name="inst_B9FE3351" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
+    <instance objName="obj_en01" x="2304" y="992" name="inst_8B0C4694" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
+    <instance objName="obj_en01" x="1752" y="1048" name="inst_C6A1CF7F" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
   </instances>
   <tiles/>
   <PhysicsWorld>0</PhysicsWorld>

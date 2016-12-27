@@ -219,7 +219,7 @@ scp_wep04(shooter);
     draw_scope_item(self, room_width, 35, - 128);
 } else {
     draw_self();
-}
+}  
 </string>
           </argument>
         </arguments>

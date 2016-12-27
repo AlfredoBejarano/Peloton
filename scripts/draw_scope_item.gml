@@ -1,3 +1,4 @@
+///draw_scope_item(gun object, distance, x laser origin, y laser origin)
 // calculate distance relative to the player
 // argument0 - gun object.
 // argument1 - distance.
