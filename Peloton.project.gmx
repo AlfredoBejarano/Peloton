@@ -124,6 +124,7 @@
       <sprite>sprites\spr_bullet_fx</sprite>
       <sprite>sprites\spr_blood_fx</sprite>
       <sprite>sprites\spr_blood_floor_fx</sprite>
+      <sprite>sprites\spr_rifle_bullet</sprite>
     </sprites>
     <sprites name="fx">
       <sprite>sprites\spr_muzzle_flash</sprite>
@@ -151,6 +152,7 @@
       <sprite>sprites\spr_antenna</sprite>
       <sprite>sprites\spr_droppables</sprite>
     </sprites>
+    <sprite>sprites\sprite46</sprite>
   </sprites>
   <backgrounds name="background">
     <background>background\bck_pad1</background>
@@ -256,6 +258,7 @@
       <object>objects\obj_sgshell</object>
       <object>objects\obj_magazine</object>
       <object>objects\obj_muzzle_flash</object>
+      <object>objects\obj_shot</object>
     </objects>
     <objects name="en">
       <object>objects\obj_barrel</object>

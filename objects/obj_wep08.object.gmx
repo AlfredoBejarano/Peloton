@@ -96,7 +96,7 @@ ammo = ds_list_find_value(shooter.weapons_ammo, shooter.current_weapon);
         <arguments>
           <argument>
             <kind>1</kind>
-            <string>create_hitscan(x + (image_xscale * 285), y - 24, room_width, 0, self, 0);           
+            <string>create_hitscan(x + (image_xscale * 295), y - 27, room_width, 0, self, 0);           
 </string>
           </argument>
         </arguments>
@@ -216,7 +216,7 @@ scp_wep04(shooter);
           <argument>
             <kind>1</kind>
             <string>if(shooter.is_switching == 0) {
-    draw_scope_item(self, room_width, 40, - 128);
+    draw_scope_item(self, room_width, x + (image_xscale * 295), y-27);
 } else {
     draw_self();
 }  

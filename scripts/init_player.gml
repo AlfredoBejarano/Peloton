@@ -5,15 +5,19 @@ image_index = 0;
 image_speed = 0;
 
 hp = 100;
+cplhps = 1;
 is_aiming = 0;
 is_running = 0;
+alarm[4] = 120;
+abutton = noone;
 is_shooting = 0;
 can_knife = true;
 is_reloading = 0;
 is_switching = 0;
+being_attacked = 0;
 current_weapon = 0;
 control = argument0;
-abutton = noone;
+wait_for_controls = false;
 picker = instance_create(0,0,obj_item_picker);
 
 // Damage variables

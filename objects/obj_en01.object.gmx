@@ -33,12 +33,15 @@ can_attack = 1;
 can_get_hit = 1;
 hand1y = 0;
 hand2y = 0;
+handx = 0;
 image_index = choose(0, 1, 2);
 max_hp = 10;
 hp = max_hp;
 damage = 25;
 red_alpha = 1;
 death_position = 0;
+attack_position = 0;
+is_attacking = 0;
 hand1 = create_zombie_hand(self, 256, 256, 0);
 hand2 = create_zombie_hand(self, 256, 256, 1);
 </string>
@@ -69,6 +72,28 @@ hand2 = create_zombie_hand(self, 256, 256, 1);
         </arguments>
       </action>
     </event>
+    <event eventtype="2" enumb="3">
+      <action>
+        <libid>1</libid>
+        <id>603</id>
+        <kind>7</kind>
+        <userelative>0</userelative>
+        <isquestion>0</isquestion>
+        <useapplyto>-1</useapplyto>
+        <exetype>2</exetype>
+        <functionname></functionname>
+        <codestring></codestring>
+        <whoName>self</whoName>
+        <relative>0</relative>
+        <isnot>0</isnot>
+        <arguments>
+          <argument>
+            <kind>1</kind>
+            <string></string>
+          </argument>
+        </arguments>
+      </action>
+    </event>
     <event eventtype="2" enumb="2">
       <action>
         <libid>1</libid>
@@ -88,6 +113,7 @@ hand2 = create_zombie_hand(self, 256, 256, 1);
             <kind>1</kind>
             <string>can_attack = 1;
 can_move = 1;
+attack_position = 0;
 </string>
           </argument>
         </arguments>
@@ -174,6 +200,7 @@ if(can_move == 1){mp_potential_step_object(obj_pl01.x, obj_pl01.y, 1, obj_hbd);}
 
 if((distance_to_object(obj_pl01) &lt; 64) &amp;&amp; (can_attack == 1)) {
     audio_play_sound(snd_en01_attack, 0, false);
+    alarm[3] = 1;
     alarm[2] = 120;
     can_attack = 0;
     can_move = 0;

@@ -21,9 +21,24 @@ dir = argument4.direction;
 // calculate distance relative to the player
 
 if(argument4.object_index != obj_wep03 && argument4.object_index != obj_wep07) { create_muzzle_flash(x1, y1, argument4); }
-
 while(x2 != distance) {
     target = collision_line(x1, y1, x1 + (distance*image_xscale), y1 + argument3, obj_target_parent, true, true);
+    
+    if(argument4.object_index == obj_wep04 || argument4.object_index == obj_wep08) {
+        shot = instance_create(x1, y1, obj_shot);
+        if(target) {
+           shot.target = target;
+           with(shot) {
+              x2 = target.x;
+              alarm[1] = 1;
+           }       
+        } else {
+           with(shot) {
+              x2 = argument0 + (argument2*argument4.image_xscale);
+              alarm[1] = 1;
+           }
+        }    
+    }    
     
     if(target && target.can_get_hit == 1) {        
         switch(target.object_index) {
