@@ -245,7 +245,7 @@ scp_wep03(shooter);
         <arguments>
           <argument>
             <kind>1</kind>
-            <string>draw_laser(self, view_wview/2, 217, - 10, c_green);
+            <string>draw_laser(self, view_wview/2, 217, - 10, c_green, 0);
 </string>
           </argument>
         </arguments>

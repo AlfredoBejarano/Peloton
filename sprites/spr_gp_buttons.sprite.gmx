@@ -121,8 +121,5 @@
     <frame index="98">images\spr_gp_buttons_98.png</frame>
     <frame index="99">images\spr_gp_buttons_99.png</frame>
     <frame index="100">images\spr_gp_buttons_100.png</frame>
-    <frame index="101">images\spr_gp_buttons_101.png</frame>
-    <frame index="102">images\spr_gp_buttons_102.png</frame>
-    <frame index="103">images\spr_gp_buttons_103.png</frame>
   </frames>
 </sprite>

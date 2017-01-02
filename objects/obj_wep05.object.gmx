@@ -96,7 +96,7 @@ ammo = ds_list_find_value(shooter.weapons_ammo, shooter.current_weapon);
         <arguments>
           <argument>
             <kind>1</kind>
-            <string>create_hitscan(x + (image_xscale * 67), y - 30, view_wview/2,0, self, 28);
+            <string>create_hitscan(x + (image_xscale * 67), y - 19, view_wview/2,0, self, 0);
 </string>
           </argument>
         </arguments>
@@ -215,7 +215,7 @@ scp_wep01(shooter);
         <arguments>
           <argument>
             <kind>1</kind>
-            <string>draw_laser(self, view_wview/2, 62, -19, c_green);
+            <string>draw_laser(self, view_wview/2, 62, -19, c_green, 19);
 </string>
           </argument>
         </arguments>

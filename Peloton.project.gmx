@@ -146,7 +146,6 @@
     </sprites>
     <sprites name="gu">
       <sprite>sprites\spr_gp_buttons</sprite>
-      <sprite>sprites\spr_kb_key</sprite>
     </sprites>
     <sprites name="dp">
       <sprite>sprites\spr_antenna</sprite>

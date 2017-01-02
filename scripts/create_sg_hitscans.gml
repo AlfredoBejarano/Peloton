@@ -9,8 +9,8 @@ pe1 = an2;
 pe2 = an2 - an5;
 pe3 = an2 - an25;
 
-xx = x + (image_xscale*229);
-yy = y - 20;
+xx = x + (image_xscale*280);
+yy = y - 51;
 
 create_hitscan(xx, yy, view_wview/2, -pe1, self, -(15 - -pe1)); 
 create_hitscan(xx, yy, view_wview/2, -pe2, self, -(15 - -pe2)); 
