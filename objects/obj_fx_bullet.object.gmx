@@ -26,7 +26,6 @@
           <argument>
             <kind>1</kind>
             <string>alarm[1] = 3;
-create_muzzle_flash(x,y, self);
 </string>
           </argument>
         </arguments>

@@ -1,3 +1,4 @@
+///create_hitscan(x, y, distance, hitscan y, emitter object, y delta)
 /*
 * This script allows the creation of a hitscan.
 */
@@ -34,6 +35,7 @@ while(x2 != distance) {
            }       
         } else {
            with(shot) {
+              image_alpha = 0.5;
               x2 = argument0 + (argument2*argument4.image_xscale);
               alarm[1] = 1;
            }
@@ -47,7 +49,7 @@ while(x2 != distance) {
             break;
             
             case obj_en01:                
-                create_blood_splat(target.x, argument1 + argument5, argument4, target.depth -1, false, target);
+                create_blood_splat(target.x, argument1 + argument5, argument4, false, target.depth - 1);
             break;
         }
         

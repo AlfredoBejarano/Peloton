@@ -1,6 +1,4 @@
-// argument0 - next weapon key (pressed).
-// argument1 - previous weapon key (pressed).
-// argument2 - Player's object.
+///switch_weapon(next weapon key/button (pressed), previous weapon key/button (pressed), Player object);
 
 player = argument2;
 
@@ -22,7 +20,7 @@ if(argument0) {
 
 player.is_switching = 1;     
 player.weapon = ds_list_find_value(player.weapons_inventory, player.current_weapon);
-with (instance_create(x + (64 * image_xscale), y+64, player.weapon)) { shooter = argument2; }
+with (instance_create(x - (64 * image_xscale), y-64, player.weapon)) { shooter = argument2; image_xscale = -(argument2.image_xscale); }
 player.current_ammo = ds_list_find_value(player.ammo_inventory, player.weapon.ammo_type);
 audio_play_sound(snd_wep_switch, 0, false); 
 player.hud.alarm[0] = 1;

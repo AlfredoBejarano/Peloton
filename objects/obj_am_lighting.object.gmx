@@ -73,24 +73,33 @@ surface = surface_create(view_wview, view_hview);
           <argument>
             <kind>1</kind>
             <string>if(surface_exists(surface)) {
-    surface_set_target(surface);
-    draw_clear(c_black);
-    depth = obj_antenna.depth;
-    with(obj_antenna) {
-        draw_set_blend_mode(bm_src_color);
-        draw_sprite_ext(spr_player_light, 0, x, y, 2,2,rot,c_white,1);
-        draw_set_blend_mode(bm_normal);
-    }
-    with(obj_muzzle_flash) {    
-        draw_set_blend_mode(bm_src_color);
-        draw_sprite_ext(spr_light_round_fx_big, 0, x, y, 2, 0.2, choose(0, 5, 180, 355), c_yellow,1);
-        draw_set_blend_mode(bm_add);
-        draw_sprite_ext(spr_light_round_fx, 0, x, y, 2, 0.2, choose(0, 5, 180, 355), c_yellow,1);        
-        draw_set_blend_mode(bm_normal);
+   surface_set_target(surface);
+   draw_clear(c_black);
+   depth = obj_antenna.depth;
+   with(obj_antenna) {
+      draw_set_blend_mode(bm_src_color);
+      draw_sprite_ext(spr_player_light, 0, x, y, 2,2,rot,c_white,1);
+      draw_set_blend_mode(bm_normal);
+   }
+   with(obj_muzzle_flash_small) {    
+      ixs = obj_muzzle_flash_small.image_xscale;
+      draw_set_blend_mode(bm_add);
+      draw_sprite_ext(spr_light_round_fx_big, 0, x, y, 2, 2, 1, c_orange,1);            
+      draw_sprite_ext(spr_muzzle_flash_small, 0, x, y, 2*ixs, choose(2, -2), 1, c_orange,1);
+      draw_sprite_ext(spr_muzzle_flash_small, 0, x, y, 1*ixs, choose(1, -1), 1, c_yellow,1);        
+      draw_set_blend_mode(bm_normal);
     }    
+   with(obj_muzzle_flash) {    
+      ixs = obj_muzzle_flash.image_xscale;   
+      draw_set_blend_mode(bm_add);
+      draw_sprite_ext(spr_light_round_fx_big, 0, x, y, 2, 2, 1, c_orange,1);            
+      draw_sprite_ext(spr_muzzle_flash, 0, x, y, 2*ixs, choose(2, -2), 1, c_orange,1);
+      draw_sprite_ext(spr_muzzle_flash, 0, x, y, 1*ixs, choose(1, -1), 1, c_yellow,1);        
+      draw_set_blend_mode(bm_normal);
+    }        
     depth = -1080;
     surface_reset_target();
-    draw_surface_ext(surface, window_get_x(), window_get_y(), 1, 1, 0, c_white, 0.7);
+    draw_surface_ext(surface, view_xview, view_yview, 1, 1, 0, c_white, 0.7);
 }
 </string>
           </argument>

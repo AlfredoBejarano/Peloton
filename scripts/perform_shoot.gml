@@ -7,11 +7,7 @@ if(player.weapon.ammo > 0) {
     player.is_shooting = 1;
     player.weapon.recoil = true;
     if(player.weapon.has_magazine) { 
-        if(player.weapon != obj_wep04) {
-            player.weapon.alarm[0] = player.weapon.fire_speed - (player.weapon.fire_speed/2); 
-        } else {
-            player.weapon.alarm[0] = 6;     
-        }    
+       player.weapon.alarm[0] = player.weapon.fire_speed - (player.weapon.fire_speed/2); 
     } else { 
         player.weapon.alarm[0] = player.weapon.fire_speed - ((player.weapon.fire_speed/4)*3); 
         player.weapon.alarm[1] = player.weapon.fire_speed - (player.weapon.fire_speed/2)

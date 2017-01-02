@@ -8,6 +8,30 @@
   <parentName>&lt;undefined&gt;</parentName>
   <maskName>&lt;undefined&gt;</maskName>
   <events>
+    <event eventtype="2" enumb="4">
+      <action>
+        <libid>1</libid>
+        <id>603</id>
+        <kind>7</kind>
+        <userelative>0</userelative>
+        <isquestion>0</isquestion>
+        <useapplyto>-1</useapplyto>
+        <exetype>2</exetype>
+        <functionname></functionname>
+        <codestring></codestring>
+        <whoName>self</whoName>
+        <relative>0</relative>
+        <isnot>0</isnot>
+        <arguments>
+          <argument>
+            <kind>1</kind>
+            <string>/// Alarm for sync hand with sg's reloading pump action
+reloading_position = 3;
+</string>
+          </argument>
+        </arguments>
+      </action>
+    </event>
     <event eventtype="2" enumb="3">
       <action>
         <libid>1</libid>
@@ -26,11 +50,9 @@
           <argument>
             <kind>1</kind>
             <string>reloading_position = 0;
-if(player.weapon.has_magazine == 0) { 
-    player.weapon.pump = 0; 
-} else {
+if(player.weapon.has_magazine == true) { 
     audio_play_sound(player.weapon.reload_sound,1,false);
-} 
+}
 </string>
           </argument>
         </arguments>
@@ -53,8 +75,14 @@ if(player.weapon.has_magazine == 0) {
         <arguments>
           <argument>
             <kind>1</kind>
-            <string>reloading_position = 3;
-alarm[3] = player.weapon.reload_speed / 4;
+            <string>alarm[3] = player.weapon.reload_speed / 4;
+if(player.weapon.has_magazine == true) {
+   reloading_position = 3;
+} else {
+   alarm[4] = player.weapon.reload_speed / 8;
+   player.weapon.alarm[1] = player.weapon.reload_speed / 8;
+   player.weapon.alarm[2] = player.weapon.reload_speed / 4;
+}
 
 </string>
           </argument>
@@ -87,7 +115,7 @@ alarm[3] = player.weapon.reload_speed / 4;
             reloading_position = 2;
             audio_play_sound(player.weapon.reload_sound,1,false);
     } else {
-        reloading_position = 3;
+        reloading_position = 0;
         alarm[2] = player.weapon.reload_speed / 4;         
     }
 }

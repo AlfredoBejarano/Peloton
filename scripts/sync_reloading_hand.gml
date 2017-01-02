@@ -1,3 +1,4 @@
+///sync_reloading_hand(Player object)
 // argument0 - Player object
 
 wep = argument0.weapon;
@@ -23,8 +24,8 @@ if(wep == obj_wep00 || argument0.is_taking_damage == 1) {
     }
 } else if(wep == obj_wep03 || wep == obj_wep07) {
     switch(reloading_position) {
-        case 1: { sync_to_object(wep,  (24 * image_xscale),  16, true, false, true);  break; }
-        case 2: { sync_to_object(wep,  (56 * image_xscale),  -8, true, false, true);  break; }
+        case 1: { sync_to_object(wep,  (56 * image_xscale),  -8, true, false, true);  break; }
+        case 2: { sync_to_object(wep,  (24 * image_xscale),  16, true, false, true);  break; }
         case 3: { sync_to_object(wep,  (112 * image_xscale),  -24, true, false, true); break;}                 
         default: { sync_to_object(wep, (138 * image_xscale), -32, true, false, true); break;}                        
     }

@@ -121,19 +121,19 @@
       <sprite>sprites\spr_shell</sprite>
       <sprite>sprites\spr_weapon_hud</sprite>
       <sprite>sprites\spr_wep_scope</sprite>
-      <sprite>sprites\spr_bullet_fx</sprite>
-      <sprite>sprites\spr_blood_fx</sprite>
-      <sprite>sprites\spr_blood_floor_fx</sprite>
-      <sprite>sprites\spr_rifle_bullet</sprite>
     </sprites>
     <sprites name="fx">
       <sprite>sprites\spr_muzzle_flash</sprite>
+      <sprite>sprites\spr_muzzle_flash_small</sprite>
       <sprite>sprites\spr_player_light</sprite>
       <sprite>sprites\spr_light_round_fx</sprite>
       <sprite>sprites\spr_light_round_fx_big</sprite>
       <sprite>sprites\spr_light_round_fx_small</sprite>
       <sprite>sprites\spr_light_round_fx_micro</sprite>
       <sprite>sprites\spr_health</sprite>
+      <sprite>sprites\spr_bullet_fx</sprite>
+      <sprite>sprites\spr_blood_fx</sprite>
+      <sprite>sprites\spr_blood_floor_fx</sprite>
     </sprites>
     <sprites name="en">
       <sprite>sprites\spr_en01</sprite>
@@ -152,7 +152,6 @@
       <sprite>sprites\spr_antenna</sprite>
       <sprite>sprites\spr_droppables</sprite>
     </sprites>
-    <sprite>sprites\sprite46</sprite>
   </sprites>
   <backgrounds name="background">
     <background>background\bck_pad1</background>
@@ -258,6 +257,7 @@
       <object>objects\obj_sgshell</object>
       <object>objects\obj_magazine</object>
       <object>objects\obj_muzzle_flash</object>
+      <object>objects\obj_muzzle_flash_small</object>
       <object>objects\obj_shot</object>
     </objects>
     <objects name="en">

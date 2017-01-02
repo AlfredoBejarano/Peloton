@@ -220,7 +220,7 @@
     <option_freeze>false</option_freeze>
     <option_frequency>0</option_frequency>
     <option_frontimage>nil</option_frontimage>
-    <option_fullscreen>True</option_fullscreen>
+    <option_fullscreen>False</option_fullscreen>
     <option_gameguid>{04DCD1EB-3251-4956-A5FB-19B046A68C02}</option_gameguid>
     <option_gameid>214916983</option_gameid>
     <option_haptic_effects>0</option_haptic_effects>
@@ -517,7 +517,7 @@
     <option_winUAP_build_version>0</option_winUAP_build_version>
     <option_winUAP_certificate_location>WinUWPRunner_TemporaryKey.pfx</option_winUAP_certificate_location>
     <option_winUAP_display_name>Peloton</option_winUAP_display_name>
-    <option_winUAP_internet_capable>0</option_winUAP_internet_capable>
+    <option_winUAP_internet_capable>-1</option_winUAP_internet_capable>
     <option_winUAP_interpolate>-1</option_winUAP_interpolate>
     <option_winUAP_landscape_allowed>-1</option_winUAP_landscape_allowed>
     <option_winUAP_landscape_flipped_allowed>-1</option_winUAP_landscape_flipped_allowed>
@@ -535,7 +535,7 @@
     <option_winUAP_portrait_flipped_allowed>-1</option_winUAP_portrait_flipped_allowed>
     <option_winUAP_publisher_display_name>YourPublisherName</option_winUAP_publisher_display_name>
     <option_winUAP_revision_version>0</option_winUAP_revision_version>
-    <option_winUAP_scaling_stretch>false</option_winUAP_scaling_stretch>
+    <option_winUAP_scaling_stretch>true</option_winUAP_scaling_stretch>
     <option_winUAP_search_capable>0</option_winUAP_search_capable>
     <option_winUAP_small_logo>Configs\Default\WindowsUAP\logos\SmallLogo.scale-100.png</option_winUAP_small_logo>
     <option_winUAP_smallish_logo>Configs\Default\WindowsUAP\logos\SmallishLogo.scale-100.png</option_winUAP_smallish_logo>
