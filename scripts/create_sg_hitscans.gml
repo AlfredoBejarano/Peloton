@@ -18,4 +18,4 @@ create_hitscan(xx, yy, view_wview/2, -pe3, self, -(15 - -pe3));
 create_hitscan(xx, yy, view_wview/2, pe3, self, -(15 - pe3)); 
 create_hitscan(xx, yy, view_wview/2, pe2, self, -(15 - pe2)); 
 create_hitscan(xx, yy, view_wview/2, pe1, self, -(15 - pe1)); 
-create_muzzle_flash(xx + (64 * image_xscale), yy - 32, self)
+create_muzzle_flash(xx + (16 * image_xscale), yy - 8, self)

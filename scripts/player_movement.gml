@@ -20,7 +20,7 @@ if(aim) {
     if(right) { image_xscale = 1; }    
 }
 
-if(left)    { x -= move;   }
-if(right)   { x += move;   }
+if(left && x > 128)    { x -= move;   }
+if(right && x < (room_width - 128))   { x += move;   }
 if(up)      { y -= move/2; }
-if(down)    { y += move/2; }
+if(down && y < 1075)    { y += move/2; }

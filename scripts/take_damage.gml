@@ -3,7 +3,7 @@ if(can_take_damage == 0) {
     exit; 
 } else {
     is_taking_damage = 1;
-    if(hp <= 25) {
+    if(hp <= 50) {
         eye_index = 1;
         mouth_index = 1;
         

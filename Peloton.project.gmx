@@ -134,6 +134,7 @@
       <sprite>sprites\spr_bullet_fx</sprite>
       <sprite>sprites\spr_blood_fx</sprite>
       <sprite>sprites\spr_blood_floor_fx</sprite>
+      <sprite>sprites\spr_fire_fx</sprite>
     </sprites>
     <sprites name="en">
       <sprite>sprites\spr_en01</sprite>
@@ -153,9 +154,10 @@
     </sprites>
   </sprites>
   <backgrounds name="background">
-    <background>background\bck_pad1</background>
-    <background>background\bck_pad2</background>
-    <background>background\bck_pad3</background>
+    <background>background\bck_basement1</background>
+    <background>background\bck_basement2</background>
+    <background>background\bck_basement3</background>
+    <background>background\bck_pipes</background>
   </backgrounds>
   <paths name="paths"/>
   <scripts name="scripts">
@@ -241,6 +243,7 @@
         <object>objects\obj_pl01_wep_hud</object>
         <object>objects\obj_plhealth</object>
       </objects>
+      <object>objects\obj_player_parent</object>
     </objects>
     <objects name="wp">
       <object>objects\obj_wep00</object>
@@ -271,11 +274,12 @@
       <object>objects\obj_fx_bullet</object>
       <object>objects\obj_fx_blood</object>
       <object>objects\obj_blood_floor</object>
+      <object>objects\obj_fx_light_round_big</object>
     </objects>
     <objects name="am">
-      <object>objects\obj_am_lighting</object>
       <object>objects\obj_antenna</object>
       <object>objects\obj_music_player</object>
+      <object>objects\obj_am_lighting</object>
     </objects>
     <objects name="bd">
       <object>objects\obj_hbd</object>

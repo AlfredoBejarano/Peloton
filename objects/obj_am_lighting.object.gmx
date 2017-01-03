@@ -3,58 +3,11 @@
   <spriteName>&lt;undefined&gt;</spriteName>
   <solid>0</solid>
   <visible>-1</visible>
-  <depth>0</depth>
-  <persistent>-1</persistent>
+  <depth>-1080</depth>
+  <persistent>0</persistent>
   <parentName>&lt;undefined&gt;</parentName>
   <maskName>&lt;undefined&gt;</maskName>
   <events>
-    <event eventtype="0" enumb="0">
-      <action>
-        <libid>1</libid>
-        <id>603</id>
-        <kind>7</kind>
-        <userelative>0</userelative>
-        <isquestion>0</isquestion>
-        <useapplyto>-1</useapplyto>
-        <exetype>2</exetype>
-        <functionname></functionname>
-        <codestring></codestring>
-        <whoName>self</whoName>
-        <relative>0</relative>
-        <isnot>0</isnot>
-        <arguments>
-          <argument>
-            <kind>1</kind>
-            <string>// Setups lighint
-surface = surface_create(view_wview, view_hview);
-</string>
-          </argument>
-        </arguments>
-      </action>
-    </event>
-    <event eventtype="3" enumb="0">
-      <action>
-        <libid>1</libid>
-        <id>603</id>
-        <kind>7</kind>
-        <userelative>0</userelative>
-        <isquestion>0</isquestion>
-        <useapplyto>-1</useapplyto>
-        <exetype>2</exetype>
-        <functionname></functionname>
-        <codestring></codestring>
-        <whoName>self</whoName>
-        <relative>0</relative>
-        <isnot>0</isnot>
-        <arguments>
-          <argument>
-            <kind>1</kind>
-            <string>depth = -y;
-</string>
-          </argument>
-        </arguments>
-      </action>
-    </event>
     <event eventtype="8" enumb="0">
       <action>
         <libid>1</libid>
@@ -72,35 +25,9 @@ surface = surface_create(view_wview, view_hview);
         <arguments>
           <argument>
             <kind>1</kind>
-            <string>if(surface_exists(surface)) {
-   surface_set_target(surface);
-   draw_clear(c_black);
-   depth = obj_antenna.depth;
-   with(obj_antenna) {
-      draw_set_blend_mode(bm_src_color);
-      draw_sprite_ext(spr_player_light, 0, x, y, 2,2,rot,c_white,1);
-      draw_set_blend_mode(bm_normal);
-   }
-   with(obj_muzzle_flash_small) {    
-      ixs = obj_muzzle_flash_small.image_xscale;
-      draw_set_blend_mode(bm_add);
-      draw_sprite_ext(spr_light_round_fx_big, 0, x, y, 2, 2, 1, c_orange,1);            
-      draw_sprite_ext(spr_muzzle_flash_small, 0, x, y, 2*ixs, choose(2, -2), 1, c_orange,1);
-      draw_sprite_ext(spr_muzzle_flash_small, 0, x, y, 1*ixs, choose(1, -1), 1, c_yellow,1);        
-      draw_set_blend_mode(bm_normal);
-    }    
-   with(obj_muzzle_flash) {    
-      ixs = obj_muzzle_flash.image_xscale;   
-      draw_set_blend_mode(bm_add);
-      draw_sprite_ext(spr_light_round_fx_big, 0, x, y, 2, 2, 1, c_orange,1);            
-      draw_sprite_ext(spr_muzzle_flash, 0, x, y, 2*ixs, choose(2, -2), 1, c_orange,1);
-      draw_sprite_ext(spr_muzzle_flash, 0, x, y, 1*ixs, choose(1, -1), 1, c_yellow,1);        
-      draw_set_blend_mode(bm_normal);
-    }        
-    depth = -1080;
-    surface_reset_target();
-    draw_surface_ext(surface, view_xview, view_yview, 1, 1, 0, c_white, 0.7);
-}
+            <string>draw_set_alpha(0.8);
+draw_rectangle_colour(0,0,room_width, room_height, c_black, c_black, c_black,  c_black, false);
+draw_set_alpha(1);
 </string>
           </argument>
         </arguments>

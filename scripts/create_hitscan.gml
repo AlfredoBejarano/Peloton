@@ -22,7 +22,9 @@ dir = argument4.direction;
 // calculate distance relative to the player
 
 if(argument4.object_index != obj_wep03 && argument4.object_index != obj_wep07) { 
-   create_muzzle_flash(x1, y1, argument4); 
+   with(create_muzzle_flash(x1, y1, argument4)) {
+      image_xscale = argument4.image_xscale;
+   }
 }
 
 while(x2 != distance) {
@@ -54,8 +56,9 @@ while(x2 != distance) {
                 create_bullet_sparkle(target.x, argument1 + argument5, argument4, target.depth -1);
             break;
             
-            case obj_en01:                
-                create_blood_splat(target.x, argument1 + argument5, argument4, false, target.depth - 1);
+            case obj_en01:
+               target.can_move = 1;                  
+               create_blood_splat(target.x, argument1 + argument5, argument4, false, target.depth - 1);
             break;
         }
         

@@ -5,7 +5,7 @@
   <visible>-1</visible>
   <depth>0</depth>
   <persistent>0</persistent>
-  <parentName>&lt;undefined&gt;</parentName>
+  <parentName>obj_player_parent</parentName>
   <maskName>&lt;undefined&gt;</maskName>
   <events>
     <event eventtype="0" enumb="0">
@@ -72,7 +72,7 @@
         <arguments>
           <argument>
             <kind>1</kind>
-            <string>if(hp &gt; 25) { 
+            <string>if(hp &gt; 50) { 
     eye_index = 0; 
 } else { 
     eye_index = 1; 
@@ -184,31 +184,6 @@ if(hp &lt;= 0) {game_end();}
         </arguments>
       </action>
     </event>
-    <event eventtype="4" ename="obj_dp_parent">
-      <action>
-        <libid>1</libid>
-        <id>603</id>
-        <kind>7</kind>
-        <userelative>0</userelative>
-        <isquestion>0</isquestion>
-        <useapplyto>-1</useapplyto>
-        <exetype>2</exetype>
-        <functionname></functionname>
-        <codestring></codestring>
-        <whoName>self</whoName>
-        <relative>0</relative>
-        <isnot>0</isnot>
-        <arguments>
-          <argument>
-            <kind>1</kind>
-            <string>if(keyboard_check_pressed(abutton) || gamepad_button_check_pressed(0, abutton)) {
-    pick_droppable();
-}
-</string>
-          </argument>
-        </arguments>
-      </action>
-    </event>
     <event eventtype="4" ename="obj_en01_arm">
       <action>
         <libid>1</libid>
@@ -227,32 +202,7 @@ if(hp &lt;= 0) {game_end();}
           <argument>
             <kind>1</kind>
             <string>if(other.zombie.is_attacking == 1) {
-    take_damage(other.zombie.image_xscale, other.zombie.damage);
-}
-</string>
-          </argument>
-        </arguments>
-      </action>
-    </event>
-    <event eventtype="4" ename="obj_target_parent">
-      <action>
-        <libid>1</libid>
-        <id>603</id>
-        <kind>7</kind>
-        <userelative>0</userelative>
-        <isquestion>0</isquestion>
-        <useapplyto>-1</useapplyto>
-        <exetype>2</exetype>
-        <functionname></functionname>
-        <codestring></codestring>
-        <whoName>self</whoName>
-        <relative>0</relative>
-        <isnot>0</isnot>
-        <arguments>
-          <argument>
-            <kind>1</kind>
-            <string>if(other.damage != noone) {
-    take_damage(other.image_xscale, other.damage);
+   take_damage(other.zombie.image_xscale, other.zombie.damage);
 }
 </string>
           </argument>

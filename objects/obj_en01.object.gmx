@@ -25,23 +25,24 @@
         <arguments>
           <argument>
             <kind>1</kind>
-            <string>dying = 0;
-image_speed = 0;
-can_get_stab = 1;
-can_move = 1;
-can_attack = 1;
-can_get_hit = 1;
+            <string>handx = 0;
+dying = 0;
 hand1y = 0;
 hand2y = 0;
-handx = 0;
-image_index = choose(0, 1, 2);
-max_hp = 10;
+max_hp = 20;
 hp = max_hp;
 damage = 25;
+can_move = 0;
 red_alpha = 1;
+can_attack = 1;
+target = noone;
+can_get_hit = 1;
+image_speed = 0;
+can_get_stab = 1;
+is_attacking = 0;
 death_position = 0;
 attack_position = 0;
-is_attacking = 0;
+image_index = choose(0, 1, 2);
 hand1 = create_zombie_hand(self, 256, 256, 0);
 hand2 = create_zombie_hand(self, 256, 256, 1);
 </string>
@@ -89,7 +90,22 @@ hand2 = create_zombie_hand(self, 256, 256, 1);
         <arguments>
           <argument>
             <kind>1</kind>
-            <string></string>
+            <string>if(attack_position &lt;= 0) {
+   can_move = 1;
+   can_attack = 1;
+   attack_position = 0;
+} else {
+   handx -=4;
+   attack_position --;   
+   alarm[3] = 1;
+   hand1y -= 2;
+   hand2y -= 2;      
+   hand1.image_angle += 6*hand1.image_xscale;
+   hand2.image_angle += 6*hand2.image_xscale;         
+}
+
+
+</string>
           </argument>
         </arguments>
       </action>
@@ -111,9 +127,19 @@ hand2 = create_zombie_hand(self, 256, 256, 1);
         <arguments>
           <argument>
             <kind>1</kind>
-            <string>can_attack = 1;
-can_move = 1;
-attack_position = 0;
+            <string>if(attack_position &gt;= 15) {
+   alarm[3] = 1;
+} else {
+   handx +=4;
+   attack_position ++;   
+   alarm[2] = 1;
+   hand1y += 2;
+   hand2y += 2;   
+   hand1.image_angle -= 6*hand1.image_xscale;
+   hand2.image_angle -= 6*hand2.image_xscale;      
+}
+
+
 </string>
           </argument>
         </arguments>
@@ -141,15 +167,15 @@ attack_position = 0;
     with(hand2) { instance_destroy(); }    
     instance_destroy();
 } else {
-   create_blood_splat(random_range(x-128, x+128), random_range(y-256, y), self, false, depth - 5);
-   death_position += 3;
+   alarm[1] = 1;
    red_alpha -= 1/60;
+   death_position += 3;
    if(death_position &lt;= 15) {
       hand1y += 8;
-   } else if(death_position &lt;= 50){
+   } else if(death_position &lt;= 50) {
      hand2y += 4;
    }
-   alarm[1] = 1;
+   create_blood_splat(random_range(x-128, x+128), random_range(y-256, y), self, false, depth - 5);   
 }
 </string>
           </argument>
@@ -196,18 +222,37 @@ attack_position = 0;
         <arguments>
           <argument>
             <kind>1</kind>
-            <string>depth = -y;
-if(can_move == 1){mp_potential_step_object(obj_pl01.x, obj_pl01.y, 1, obj_hbd);}
+            <string>/// Enemy basic IA
+depth = -y;
+target = instance_nearest(x,y,obj_player_parent);
 
-if((distance_to_object(obj_pl01) &lt; 64) &amp;&amp; (can_attack == 1)) {
-    audio_play_sound(snd_en01_attack, 0, false);
-    alarm[3] = 1;
-    alarm[2] = 120;
-    can_attack = 0;
-    can_move = 0;
+// Starts following the player if certain distance is met.
+if(distance_to_object(target) &lt; 512) { 
+   can_move = 1; 
 }
-if(x &gt; obj_pl01.x) { image_xscale = -1; } else { image_xscale = 1; }
 
+if(can_move == 1){
+   // Follow the targeted player
+   mp_potential_step(target.x, target.y, 3, false);
+   
+   // Change facing direction depending on target's location.
+   if(x &gt; target.x) { 
+      image_xscale = -1; 
+   } else { 
+      image_xscale = 1; 
+   }
+}
+
+// Attack the player.
+if((distance_to_object(target) &lt; 64) &amp;&amp; (can_attack == 1)) {
+    can_move = 0;
+    alarm[2] = 1;
+    can_attack = 0;
+    is_attacking = 1;
+    audio_play_sound(snd_en01_attack, 0, false);    
+}
+
+// Kill animation, prevents enemy for attacking, moving or doing any action other than dying.
 if(hp &lt;= 0 &amp;&amp; dying == 0) { 
     can_attack = 0;
     can_get_hit = 0;
@@ -218,7 +263,12 @@ if(hp &lt;= 0 &amp;&amp; dying == 0) {
     instance_create(x,y-5, obj_blood_floor);
 }
 
-if(hp &lt;= 0) { hp = 0; }
+// Prevents enemy health overflows or undeflows.
+if(hp &lt;= 0) { 
+   hp = 0; 
+} else if(hp &gt;= max_hp) {
+   hp = max_hp;
+}
 </string>
           </argument>
         </arguments>

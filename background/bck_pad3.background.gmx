@@ -13,7 +13,7 @@
     <TextureGroup0>0</TextureGroup0>
   </TextureGroups>
   <For3D>0</For3D>
-  <width>1920</width>
-  <height>1080</height>
+  <width>240</width>
+  <height>210</height>
   <data>images\bck_pad3.png</data>
 </background>

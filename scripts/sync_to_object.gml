@@ -1,3 +1,4 @@
+///sync_to_object(object, x, y, image_xscale preserve, image_yscale preserve, image_angle preserve)
 // This script allows to sync an object position relative to other object position.
 // argument0 - The object to which the position is going to be sync.
 // argument1 - X value to be added to the object's x axis.
