@@ -27,7 +27,7 @@
             <kind>1</kind>
             <string>ammo = 0;
 pump = 0;
-damage = 1;
+damage = 4;
 max_ammo = 0;
 hud_image = 0;
 recoil = false;

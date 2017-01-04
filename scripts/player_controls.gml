@@ -7,6 +7,8 @@ if(control) {
     down = ds_list_find_value(controls, 2);    
     right = ds_list_find_value(controls, 3);    
     shoot = ds_list_find_value(controls, 5);
+    heal = ds_list_find_value(controls, 10);
+    knife = ds_list_find_value(controls, 11);        
     reload = ds_list_find_value(controls, 9);     
     action = ds_list_find_value(controls, 6);
     weaponnext = ds_list_find_value(controls, 7);    
@@ -35,8 +37,12 @@ if(control) {
     /* RELOAD ENDS */
     
     /*  KNIFE BEGINS */
-    knife_usage(self, keyboard_check(aim), keyboard_check_pressed(shoot));
+    knife_usage(self, keyboard_check_pressed(knife));
     /*  KNIFE ENDS */
+    
+    /* I NEED HEALING */
+    perform_healing(keyboard_check_pressed(heal));
+    /* */
     
 } else {
     if(gamepad_axis_value(0, ds_list_find_value(controls, 0)) < -0.5) {
@@ -60,9 +66,11 @@ if(control) {
         right = false;
         left = false;
     }
-    
+         
     aim = ds_list_find_value(controls, 2);
+    heal = ds_list_find_value(controls, 8);        
     shoot = ds_list_find_value(controls, 3);    
+    knife = ds_list_find_value(controls, 9);    
     action = ds_list_find_value(controls, 4);    
     reload = ds_list_find_value(controls, 7);     
     weaponnext = ds_list_find_value(controls, 5);    
@@ -91,6 +99,10 @@ if(control) {
     /* RELOAD ENDS */
     
     /*  KNIFE BEGINS */
-    knife_usage(self, gamepad_button_check(0, aim), gamepad_button_check_pressed(0, shoot));
+    knife_usage(self, gamepad_button_check_pressed(0, knife));
     /*  KNIFE ENDS */    
+    
+    /* I NEED HEALING */
+    perform_healing(gamepad_button_check_pressed(0, heal));
+    /* */    
 }}

@@ -6,10 +6,12 @@ image_speed = 0;
 
 hp = 100;
 cplhps = 1;
+can_heal = 1;
 is_aiming = 0;
 is_running = 0;
 alarm[4] = 120;
 abutton = noone;
+ybutton = noone;
 is_shooting = 0;
 can_knife = true;
 is_reloading = 0;
@@ -51,6 +53,10 @@ weapons_ammo = init_weapon_ammo(weapons_inventory);
 
 // Sets ammo for the inventory
 ammo_inventory = init_inventory_ammo(weapons_inventory);
+
+// Adds healing items
+ds_list_replace(ammo_inventory, 0, 1);
+heals = ds_list_find_value(ammo_inventory, 0);
 
 // Creates the weapon
 with (instance_create(x, y, weapon)) {

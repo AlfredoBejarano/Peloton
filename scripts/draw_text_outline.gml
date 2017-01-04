@@ -5,7 +5,7 @@
     It has been modified for adding alpha value for the text.
 **/
 
-//draw_text_outlined(x, y, outline color, string color, string)  
+///draw_text_outlined(x, y, outline color, string color, string)  
 var xx,yy;  
 xx = argument[0];  
 yy = argument[1];  
@@ -26,6 +26,5 @@ draw_text_transformed(xx-1, yy+1, argument[4], sx, sy, 0);
 draw_text_transformed(xx+1, yy-1, argument[4], sx, sy, 0);  
 
 //Text  
-draw_set_color(argument[3]);  
 draw_text_transformed(xx, yy, argument[4], sx, sy, 0);  
 draw_set_alpha(1);

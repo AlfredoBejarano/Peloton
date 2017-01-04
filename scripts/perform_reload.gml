@@ -1,3 +1,4 @@
+///perform_reload(player object)
 // argument0 - player object
 
 player = argument0;

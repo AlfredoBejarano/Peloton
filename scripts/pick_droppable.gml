@@ -8,7 +8,11 @@ if(other.item_type == "ammo") {
     if(weapon.ammo_type == other.ammo_type){
         current_ammo = ds_list_find_value(ammo_inventory, other.ammo_type);
     }
-    
-    // Destroy the pickable item
-    with(other) { instance_destroy(); }
+} else if(other.item_type = "heal") {
+   heals ++;
+   ds_list_replace(ammo_inventory, 0, heals);
+   heals = ds_list_find_value(ammo_inventory, 0);
 }
+
+// Destroy the pickable item
+with(other) { instance_destroy(); }

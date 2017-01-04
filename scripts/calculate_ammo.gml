@@ -1,3 +1,4 @@
+if(shooter == obj_plIA) { exit; }
 if(has_magazine) {
     ammo_nedeed = max_ammo - ammo;
 

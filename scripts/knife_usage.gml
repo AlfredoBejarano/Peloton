@@ -1,19 +1,18 @@
 /* Script for using the knife */
 // argument0 - Player object
-// argument1 - Aim key (check).
-// argument2 - Shoot key (pressed).
+// argument1 - Shoot key (pressed).
 
 player = argument0;
 
 // Prevents knife being used in unexpected cases.
-if(player.knife_restrict || argument1) {
+if(player.knife_restrict) {
     player.can_knife = false;
 } else {
     player.can_knife = true;
 }
 
 // Knife usage
-if(argument2 && player.can_knife) {
+if(argument1 && player.can_knife) {
     // player is aiming
     player.is_aiming = 1;
     

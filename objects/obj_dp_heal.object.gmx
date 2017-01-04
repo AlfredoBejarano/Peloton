@@ -5,10 +5,10 @@
   <visible>-1</visible>
   <depth>0</depth>
   <persistent>0</persistent>
-  <parentName>&lt;undefined&gt;</parentName>
+  <parentName>obj_dp_parent</parentName>
   <maskName>&lt;undefined&gt;</maskName>
   <events>
-    <event eventtype="2" enumb="1">
+    <event eventtype="0" enumb="0">
       <action>
         <libid>1</libid>
         <id>603</id>
@@ -25,15 +25,16 @@
         <arguments>
           <argument>
             <kind>1</kind>
-            <string>image_alpha -= 1/15;
-alarm[1] = 1;
-if(image_alpha &lt;= 0) { instance_destroy();}
+            <string>quantity = 1;
+ammo_type = 0;
+item_type = "heal"
+
 </string>
           </argument>
         </arguments>
       </action>
     </event>
-    <event eventtype="3" enumb="0">
+    <event eventtype="1" enumb="0">
       <action>
         <libid>1</libid>
         <id>603</id>
@@ -50,32 +51,12 @@ if(image_alpha &lt;= 0) { instance_destroy();}
         <arguments>
           <argument>
             <kind>1</kind>
-            <string>depth = -y;
-</string>
-          </argument>
-        </arguments>
-      </action>
-    </event>
-    <event eventtype="8" enumb="0">
-      <action>
-        <libid>1</libid>
-        <id>603</id>
-        <kind>7</kind>
-        <userelative>0</userelative>
-        <isquestion>0</isquestion>
-        <useapplyto>-1</useapplyto>
-        <exetype>2</exetype>
-        <functionname></functionname>
-        <codestring></codestring>
-        <whoName>self</whoName>
-        <relative>0</relative>
-        <isnot>0</isnot>
-        <arguments>
-          <argument>
-            <kind>1</kind>
-            <string>draw_set_alpha(image_alpha);
-draw_line_width_colour(x1,y1,x2,y2,2,c_yellow, c_yellow);
-draw_set_alpha(1);
+            <string>picker = obj_pl01.picker;
+picker.name = "Bandage"
+picker.quantity = quantity;
+picker.subimage = 0;
+picker.alarm[0] = 1;
+audio_play_sound(snd_dp_bullet, 0, false);
 </string>
           </argument>
         </arguments>

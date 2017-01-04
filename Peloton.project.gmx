@@ -81,6 +81,7 @@
         <sound>sound\snd_char01_dam04</sound>
         <sound>sound\snd_char01_dam05</sound>
       </sounds>
+      <sound>sound\snd_healing</sound>
     </sounds>
     <sounds name="dp">
       <sound>sound\snd_dp_bullet</sound>
@@ -121,6 +122,7 @@
       <sprite>sprites\spr_shell</sprite>
       <sprite>sprites\spr_weapon_hud</sprite>
       <sprite>sprites\spr_wep_scope</sprite>
+      <sprite>sprites\spr_heal</sprite>
     </sprites>
     <sprites name="fx">
       <sprite>sprites\spr_muzzle_flash</sprite>
@@ -135,6 +137,7 @@
       <sprite>sprites\spr_blood_fx</sprite>
       <sprite>sprites\spr_blood_floor_fx</sprite>
       <sprite>sprites\spr_fire_fx</sprite>
+      <sprite>sprites\spr_heal_fx</sprite>
     </sprites>
     <sprites name="en">
       <sprite>sprites\spr_en01</sprite>
@@ -211,6 +214,7 @@
         <script>scripts\player_movement.gml</script>
         <script>scripts\switch_controls.gml</script>
         <script>scripts\gamepad_anybutton.gml</script>
+        <script>scripts\perform_healing.gml</script>
       </scripts>
       <scripts name="factory">
         <script>scripts\gamepad_factory.gml</script>
@@ -228,11 +232,13 @@
     <scripts name="enemy">
       <script>scripts\create_zombie_hand.gml</script>
     </scripts>
+    <scripts name="IA">
+      <script>scripts\init_ia.gml</script>
+      <script>scripts\perform_ia_reload.gml</script>
+    </scripts>
   </scripts>
   <fonts name="fonts">
     <font>fonts\fnt_hud</font>
-    <font>fonts\fnt_kb</font>
-    <font>fonts\fnt_kb_small</font>
   </fonts>
   <objects name="objects">
     <objects name="pl">
@@ -244,6 +250,9 @@
         <object>objects\obj_plhealth</object>
       </objects>
       <object>objects\obj_player_parent</object>
+      <objects name="IA">
+        <object>objects\obj_plIA</object>
+      </objects>
     </objects>
     <objects name="wp">
       <object>objects\obj_wep00</object>
@@ -275,6 +284,7 @@
       <object>objects\obj_fx_blood</object>
       <object>objects\obj_blood_floor</object>
       <object>objects\obj_fx_light_round_big</object>
+      <object>objects\obj_fx_heal</object>
     </objects>
     <objects name="am">
       <object>objects\obj_antenna</object>
@@ -288,6 +298,7 @@
     <objects name="dp">
       <object>objects\obj_dp_parent</object>
       <object>objects\obj_dp_handgun</object>
+      <object>objects\obj_dp_heal</object>
       <object>objects\obj_dp_machinegun</object>
       <object>objects\obj_dp_shotgun</object>
       <object>objects\obj_dp_rifle</object>

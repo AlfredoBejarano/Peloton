@@ -1,7 +1,6 @@
-///perform_shoot(player object, weapon object)
-// argument0 - Player object
+///perform_shoot(player object)
+var player = obj_plIA;
 
-var player = argument0;
 if(player.weapon.ammo > 0) {
     player.weapon.alarm[4] = 1;
     player.is_shooting = 1;
@@ -18,4 +17,3 @@ if(player.weapon.ammo > 0) {
     audio_play_sound(player.weapon.firing_sound, 0, false);
     alarm[0] = player.weapon.fire_speed;
 }
-

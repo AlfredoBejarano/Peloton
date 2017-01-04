@@ -143,6 +143,8 @@ if(obj_pl01.weapon != obj_wep00) {
 }
 
 draw_text_outline(view_xview[0] + (8 * xs), view_yview[0] + (112 * ys), c_white, c_ltgray, obj_pl01.weapon.name, image_alpha / 4);
+draw_sprite_ext(spr_heal, 0, view_xview[0] + ((view_wview - 72) * xs), view_yview[0] + (8 * ys), 1, 1, 0, c_white, 1);
+draw_text_outline(view_xview[0] + ((view_wview - 96) * xs), view_yview[0] + (24 * ys), c_white, c_ltgray, obj_pl01.heals, 0.5);
 </string>
           </argument>
         </arguments>

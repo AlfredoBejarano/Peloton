@@ -1,3 +1,4 @@
+///save_chamber_ammo(player, gun object)
 // argument0 - player object 
 
 if(argument0.weapon != obj_wep00) { 
