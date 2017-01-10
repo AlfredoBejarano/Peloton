@@ -20,7 +20,12 @@ being_attacked = 0;
 current_weapon = 0;
 control = argument0;
 wait_for_controls = false;
+control = global.control;
+device = device_factory(self);
 picker = instance_create(0,0,obj_item_picker);
+
+settings = settings_factory(control, obj_pl01);
+controls = ds_list_find_value(settings, 0);
 
 // Damage variables
 can_take_damage = 1;
@@ -59,7 +64,9 @@ ds_list_replace(ammo_inventory, 0, 1);
 heals = ds_list_find_value(ammo_inventory, 0);
 
 // Creates the weapon
-with (instance_create(x, y, weapon)) {
+cweapon = instance_create(x, y, weapon);
+weapon_id = cweapon.id;
+with (cweapon) {
     shooter = argument1;
 }
 
@@ -67,6 +74,7 @@ with (instance_create(x, y, weapon)) {
 
 // Creates hand 1.
 hand1 = instance_create(x, y, obj_hand1);
+hand1id = hand1.id;
 with (hand1) {
     player = argument1;
     sprite_index = ds_list_find_value(player_skin_factory(player.character), 1);
@@ -74,6 +82,7 @@ with (hand1) {
 
 // Creates hand 2.
 hand2 = instance_create(x, y, obj_hand2);
+hand2id = hand2.id;
 with (hand2) {
     player = argument1;
     init_hand2(argument1);

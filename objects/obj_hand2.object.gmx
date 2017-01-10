@@ -50,8 +50,8 @@ reloading_position = 3;
           <argument>
             <kind>1</kind>
             <string>reloading_position = 0;
-if(player.weapon.has_magazine == true) { 
-    audio_play_sound(player.weapon.reload_sound,1,false);
+if(wep.has_magazine == true) { 
+    audio_play_sound(wep.reload_sound,1,false);
 }
 </string>
           </argument>
@@ -75,13 +75,13 @@ if(player.weapon.has_magazine == true) {
         <arguments>
           <argument>
             <kind>1</kind>
-            <string>alarm[3] = player.weapon.reload_speed / 4;
-if(player.weapon.has_magazine == true) {
+            <string>alarm[3] = wep.reload_speed / 4;
+if(wep.has_magazine == true) {
    reloading_position = 3;
 } else {
-   alarm[4] = player.weapon.reload_speed / 8;
-   player.weapon.alarm[1] = player.weapon.reload_speed / 8;
-   player.weapon.alarm[2] = player.weapon.reload_speed / 4;
+   alarm[4] = wep.reload_speed / 8;
+   wep.alarm[1] = wep.reload_speed / 8;
+   wep.alarm[2] = wep.reload_speed / 4;
 }
 
 </string>
@@ -106,17 +106,17 @@ if(player.weapon.has_magazine == true) {
         <arguments>
           <argument>
             <kind>1</kind>
-            <string>if(player.weapon.has_magazine == 1) {
+            <string>if(wep.has_magazine == 1) {
     reloading_position = 2;
-    alarm[2] = player.weapon.reload_speed / 4;
+    alarm[2] = wep.reload_speed / 4;
 } else {
-    if(player.weapon.ammo &lt; player.weapon.max_ammo &amp;&amp; player.current_ammo &gt; 0) {
+    if(wep.ammo &lt; wep.max_ammo &amp;&amp; player.current_ammo &gt; 0) {
             alarm[0] = time/2;
             reloading_position = 2;
-            audio_play_sound(player.weapon.reload_sound,1,false);
+            audio_play_sound(wep.reload_sound,1,false);
     } else {
         reloading_position = 0;
-        alarm[2] = player.weapon.reload_speed / 4;         
+        alarm[2] = wep.reload_speed / 4;         
     }
 }
 </string>
@@ -142,13 +142,11 @@ if(player.weapon.has_magazine == true) {
           <argument>
             <kind>1</kind>
             <string>reloading_position = 1;
-
-if(player.weapon.has_magazine == 1) {
+if(wep.has_magazine == 1) {
     alarm[1] = time;   
 } else {
     alarm[1] = time/2;
 }
-
 sync_reloading_magazine(self);
 </string>
           </argument>

@@ -1,9 +1,8 @@
 ///sync_reloading_hand(Player object)
 // argument0 - Player object
 
-wep = argument0.weapon;
 hy = 0;
-
+wep = player.weapon;
 if(wep == obj_wep00 || argument0.is_taking_damage == 1) {
     image_alpha = 0;
     sync_to_object(wep, (-48 * image_xscale), 48, true, false, true);        

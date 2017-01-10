@@ -96,7 +96,9 @@ ammo = ds_list_find_value(shooter.weapons_ammo, shooter.current_weapon);
         <arguments>
           <argument>
             <kind>1</kind>
-            <string>create_hitscan(x + (image_xscale * 203), y - 25, view_wview/2,0, self, 0); 
+            <string>with(instance_find(shooter.weapon, shooter.weapon_id)) {
+   create_hitscan(x + (image_xscale * 203), y - 25, view_wview/2,0, instance_find(shooter.weapon, shooter.weapon_id), 0); 
+}
 </string>
           </argument>
         </arguments>

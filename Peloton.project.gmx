@@ -188,6 +188,7 @@
       <script>scripts\draw_action_button.gml</script>
       <script>scripts\detect_bullet_collision.gml</script>
       <script>scripts\pick_droppable.gml</script>
+      <script>scripts\calculate_drop.gml</script>
     </scripts>
     <scripts name="weapon">
       <script>scripts\draw_laser.gml</script>
@@ -202,6 +203,9 @@
       <script>scripts\init_inventory_ammo.gml</script>
       <script>scripts\create_bullet_sparkle.gml</script>
       <script>scripts\save_chamber_ammo.gml</script>
+      <scripts name="factory">
+        <script>scripts\ammo_objects_factory.gml</script>
+      </scripts>
     </scripts>
     <scripts name="player">
       <scripts name="actions">
@@ -221,6 +225,7 @@
         <script>scripts\player_skin_factory.gml</script>
         <script>scripts\settings_factory.gml</script>
         <script>scripts\button_color_factory.gml</script>
+        <script>scripts\shooter_factory.gml</script>
       </scripts>
       <scripts name="initialization">
         <script>scripts\init_player.gml</script>
@@ -228,6 +233,7 @@
       </scripts>
       <script>scripts\player_controls.gml</script>
       <script>scripts\controls_consolidation_variables.gml</script>
+      <script>scripts\device_factory.gml</script>
     </scripts>
     <scripts name="enemy">
       <script>scripts\create_zombie_hand.gml</script>
@@ -244,6 +250,7 @@
     <objects name="pl">
       <objects name="pl01">
         <object>objects\obj_pl01</object>
+        <object>objects\obj_pl02</object>
         <object>objects\obj_hand1</object>
         <object>objects\obj_hand2</object>
         <object>objects\obj_pl01_wep_hud</object>

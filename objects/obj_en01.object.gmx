@@ -67,7 +67,33 @@ hand2 = create_zombie_hand(self, 256, 256, 1);
         <arguments>
           <argument>
             <kind>1</kind>
-            <string>instance_create(x, y, choose(obj_dp_handgun,obj_dp_shotgun,obj_dp_machinegun,obj_dp_rifle,obj_dp_heal));
+            <string>calculate_drop();
+</string>
+          </argument>
+        </arguments>
+      </action>
+    </event>
+    <event eventtype="2" enumb="4">
+      <action>
+        <libid>1</libid>
+        <id>603</id>
+        <kind>7</kind>
+        <userelative>0</userelative>
+        <isquestion>0</isquestion>
+        <useapplyto>-1</useapplyto>
+        <exetype>2</exetype>
+        <functionname></functionname>
+        <codestring></codestring>
+        <whoName>self</whoName>
+        <relative>0</relative>
+        <isnot>0</isnot>
+        <arguments>
+          <argument>
+            <kind>1</kind>
+            <string>can_move = 1;
+can_attack = 1;
+is_attacking = 0;
+attack_position = 0;
 </string>
           </argument>
         </arguments>
@@ -91,11 +117,9 @@ hand2 = create_zombie_hand(self, 256, 256, 1);
           <argument>
             <kind>1</kind>
             <string>if(attack_position &lt;= 0) {
-   can_move = 1;
-   can_attack = 1;
-   attack_position = 0;
+   alarm[4] = 15;
 } else {
-   handx -=4;
+   handx -=5;
    attack_position --;   
    alarm[3] = 1;
    hand1y -= 2;
@@ -130,7 +154,7 @@ hand2 = create_zombie_hand(self, 256, 256, 1);
             <string>if(attack_position &gt;= 15) {
    alarm[3] = 1;
 } else {
-   handx +=4;
+   handx +=5;
    attack_position ++;   
    alarm[2] = 1;
    hand1y += 2;
@@ -227,13 +251,15 @@ depth = -y;
 target = instance_nearest(x,y,obj_player_parent);
 
 // Starts following the player if certain distance is met.
-if(distance_to_object(target) &lt; 512) { 
+if(distance_to_object(target) &lt; 512 &amp;&amp; is_attacking == 0) { 
    can_move = 1; 
 }
 
 if(can_move == 1){
-   // Follow the targeted player
-   mp_potential_step(target.x, target.y, 3, false);
+   if(is_attacking == 0) {
+      // Follow the targeted player
+      mp_potential_step(target.x, target.y, 3, false);
+   }
    
    // Change facing direction depending on target's location.
    if(x &gt; target.x) { 

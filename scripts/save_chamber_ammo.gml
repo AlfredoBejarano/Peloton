@@ -1,10 +1,11 @@
 ///save_chamber_ammo(player, gun object)
 // argument0 - player object 
+wep = instance_find(argument0.weapon, argument0.weapon_id);
 
-if(argument0.weapon != obj_wep00) { 
+if(wep != obj_wep00) { 
     ds_list_replace(argument0.weapons_ammo, argument0.current_weapon, argument0.weapon.ammo); 
 }
 
-with(argument0.weapon){
+with(wep){
     instance_destroy();
 }

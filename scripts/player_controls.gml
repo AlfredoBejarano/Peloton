@@ -45,10 +45,10 @@ if(control) {
     /* */
     
 } else {
-    if(gamepad_axis_value(0, ds_list_find_value(controls, 0)) < -0.5) {
+    if(gamepad_axis_value(device, ds_list_find_value(controls, 0)) < -0.5) {
         up = true;
         down = false;
-    } else if(gamepad_axis_value(0, ds_list_find_value(controls, 0)) > 0.5) {
+    } else if(gamepad_axis_value(device, ds_list_find_value(controls, 0)) > 0.5) {
         up = false;
         down = true;
     } else {
@@ -56,10 +56,10 @@ if(control) {
         down = false;
     }
     
-    if(gamepad_axis_value(0, ds_list_find_value(controls, 1)) > 0.5) {
+    if(gamepad_axis_value(device, ds_list_find_value(controls, 1)) > 0.5) {
         right = true;
         left = false;
-    } else if(gamepad_axis_value(0, ds_list_find_value(controls, 1)) < -0.5) {
+    } else if(gamepad_axis_value(device, ds_list_find_value(controls, 1)) < -0.5) {
         right = false;
         left = true;
     } else {
@@ -77,7 +77,7 @@ if(control) {
     weaponprevious = ds_list_find_value(controls, 6);
 
     /* CONSOLIDATION BEGINS */
-    controls_consolidation_variables(gamepad_button_check_pressed(0, reload),gamepad_button_check(0, aim),gamepad_button_check_pressed(0, shoot));
+    controls_consolidation_variables(gamepad_button_check_pressed(device, reload),gamepad_button_check(device, aim),gamepad_button_check_pressed(device, shoot));
     /* CONSOLIDATION ENDS */
     
     /* MOVEMENT BEGINS */
@@ -85,12 +85,12 @@ if(control) {
     /* MOVEMENT ENDS */         
     
     /* AIMING AND SHOOTING BEGINS */
-    perform_aim(gamepad_button_check(0, aim), gamepad_button_check_pressed(0, aim), gamepad_button_check(0, shoot), gamepad_button_check_pressed(0, shoot), gamepad_button_check_released(0, aim), gamepad_button_check_pressed(0, reload), self); 
+    perform_aim(gamepad_button_check(device, aim), gamepad_button_check_pressed(device, aim), gamepad_button_check(device, shoot), gamepad_button_check_pressed(device, shoot), gamepad_button_check_released(device, aim), gamepad_button_check_pressed(device, reload), self); 
     /* AIMING AND SHOOTING ENDS */
 
     /* WEAPON SWITCHING BEGINS */
-    if((gamepad_button_check_pressed(0, weaponnext) || gamepad_button_check_pressed(0, weaponprevious)) && not_reloading_shooting_knife) {         
-        switch_weapon(gamepad_button_check_pressed(0, weaponnext), gamepad_button_check_pressed(0, weaponprevious), self);    
+    if((gamepad_button_check_pressed(device, weaponnext) || gamepad_button_check_pressed(device, weaponprevious)) && not_reloading_shooting_knife) {         
+        switch_weapon(gamepad_button_check_pressed(device, weaponnext), gamepad_button_check_pressed(device, weaponprevious), self);    
     }
     /* WEAPON SWITCHING ENDS */    
 
@@ -99,10 +99,10 @@ if(control) {
     /* RELOAD ENDS */
     
     /*  KNIFE BEGINS */
-    knife_usage(self, gamepad_button_check_pressed(0, knife));
+    knife_usage(self, gamepad_button_check_pressed(device, knife));
     /*  KNIFE ENDS */    
     
     /* I NEED HEALING */
-    perform_healing(gamepad_button_check_pressed(0, heal));
+    perform_healing(gamepad_button_check_pressed(device, heal));
     /* */    
 }}

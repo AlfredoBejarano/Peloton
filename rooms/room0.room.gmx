@@ -11,10 +11,16 @@
   <colour>0</colour>
   <showcolour>-1</showcolour>
   <code>global.pl01_character = 1;
+global.pl02_character = 2;
 global.control = true;
 global.keybindings = ds_list_create();
+
 global.pl01gp = ds_list_create();
 global.pl01wi = ds_list_create();
+
+global.pl02gp = ds_list_create();
+global.pl02wi = ds_list_create();
+
 global.level_music = ds_list_create();
 ds_list_add(global.level_music, snd_helipad_intro, snd_helipad_music);
 
@@ -48,20 +54,30 @@ ds_list_add(global.pl01gp,
     gp_shoulderr
 );
 
+ds_list_add(global.pl02gp,
+    gp_axislv,
+    gp_axislh,
+    gp_shoulderlb,
+    gp_shoulderrb,
+    gp_face2,
+    gp_padr,
+    gp_padl,
+    gp_face1,
+    gp_face4,
+    gp_shoulderr
+);
+
 ds_list_add(global.pl01wi,
-    obj_wep01,
-    obj_wep02,
-    obj_wep03,
-    obj_wep04,
-    obj_wep05,
-    obj_wep06,
-    obj_wep07,
-    obj_wep08
+    obj_wep01
+);
+
+ds_list_add(global.pl02wi,
+    obj_wep06
 );
 
 // Player's objects must be created at the end
 instance_create(960,900, obj_pl01);
-instance_create(900,900, obj_plIA);</code>
+//instance_create(832,900, obj_pl02);</code>
   <enableViews>-1</enableViews>
   <clearViewBackground>-1</clearViewBackground>
   <clearDisplayBuffer>-1</clearDisplayBuffer>

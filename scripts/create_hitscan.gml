@@ -17,13 +17,14 @@ x1 = argument0;
 y1 = argument1;
 ixs = image_xscale;
 distance = argument2;
-dir = argument4.direction;
-
+wep = argument4
+wp = instance_find(argument4.shooter.weapon, argument4.shooter.weapon_id);
+with(wp) {
 // calculate distance relative to the player
 
-if(argument4.object_index != obj_wep03 && argument4.object_index != obj_wep07) { 
-   with(create_muzzle_flash(x1, y1, argument4)) {
-      image_xscale = argument4.image_xscale;
+if(wep.object_index != obj_wep03 && wep.object_index != obj_wep07) { 
+   with(create_muzzle_flash(x1, y1, wep)) {
+      image_xscale = wep.image_xscale;
    }
 }
 
@@ -53,22 +54,21 @@ while(x2 != distance) {
     if(target && target.can_get_hit == 1) {        
         switch(target.object_index) {
             case obj_barrel:                
-                create_bullet_sparkle(target.x, argument1 + argument5, argument4, target.depth -1);
+                create_bullet_sparkle(target.x, argument1 + argument5, wep, target.depth -1);
             break;
             
             case obj_en01:
                target.can_move = 1;                  
-               create_blood_splat(target.x, argument1 + argument5, argument4, false, target.depth - 1);
+               create_blood_splat(target.x, argument1 + argument5, wep, false, target.depth - 1);
             break;
         }
         
         if(target.hp != noone) {
-            target.hp -= argument4.damage;
-            target.damage = damage;
+            target.hp -= wep.damage;
         }
         
         x2 = distance;
     } else {
         x2 = distance;
     }
-}
+}}

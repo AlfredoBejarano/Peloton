@@ -1,21 +1,23 @@
-///perform_shoot(player object, weapon object)
+///perform_shoot(player object, wep object)
 // argument0 - Player object
 
-var player = argument0;
-if(player.weapon.ammo > 0) {
-    player.weapon.alarm[4] = 1;
+player = argument0;
+wep = instance_find(weapon, weapon_id);
+
+if(wep.ammo > 0) {
+   wep.alarm[4] = 1;
     player.is_shooting = 1;
-    player.weapon.recoil = true;
-    if(player.weapon.has_magazine) { 
-       player.weapon.alarm[0] = player.weapon.fire_speed - (player.weapon.fire_speed/2); 
+    wep.recoil = true;
+    if(wep.has_magazine) { 
+       wep.alarm[0] = wep.fire_speed - (wep.fire_speed/2); 
     } else { 
-        player.weapon.alarm[0] = player.weapon.fire_speed - ((player.weapon.fire_speed/4)*3); 
-        player.weapon.alarm[1] = player.weapon.fire_speed - (player.weapon.fire_speed/2)
-        player.weapon.alarm[2] = player.weapon.fire_speed - (player.weapon.fire_speed/4);         
+        wep.alarm[0] = wep.fire_speed - ((wep.fire_speed/4)*3); 
+        wep.alarm[1] = wep.fire_speed - (wep.fire_speed/2)
+        wep.alarm[2] = wep.fire_speed - (wep.fire_speed/4);         
     }
     
-    player.weapon.ammo --;
-    audio_play_sound(player.weapon.firing_sound, 0, false);
-    alarm[0] = player.weapon.fire_speed;
+    wep.ammo --;
+    audio_play_sound(wep.firing_sound, 0, false);
+    alarm[0] = wep.fire_speed;
 }
 
