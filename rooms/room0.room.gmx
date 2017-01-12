@@ -68,7 +68,7 @@ ds_list_add(global.pl02gp,
 );
 
 ds_list_add(global.pl01wi,
-    obj_wep01
+    obj_wep06
 );
 
 ds_list_add(global.pl02wi,

@@ -12,7 +12,6 @@ empty_ammo_and_aiming = false;
 not_reloading_shooting_knife = false;
 not_shooting_reloading_but_aiming = false;
 not_aiming_reloading_shooting_knife = false;
-
 if(weapon.ammo < weapon.max_ammo && current_ammo > 0) {
     ammo_available = true;
 } else {

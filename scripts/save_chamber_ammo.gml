@@ -2,7 +2,7 @@
 // argument0 - player object 
 wep = instance_find(argument0.weapon, argument0.weapon_id);
 
-if(wep != obj_wep00) { 
+if(wep.object_index != obj_wep00) { 
     ds_list_replace(argument0.weapons_ammo, argument0.current_weapon, argument0.weapon.ammo); 
 }
 
