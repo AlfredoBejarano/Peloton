@@ -2,7 +2,7 @@
 // argument0 - Player object
 
 player = argument0;
-wep = instance_find(weapon, weapon_id);
+wep = argument0.weapon.id;
 
 if(wep.ammo > 0) {
    wep.alarm[4] = 1;

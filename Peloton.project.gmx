@@ -61,6 +61,7 @@
         <sound>sound\snd_en_hit01</sound>
         <sound>sound\snd_en_hit02</sound>
         <sound>sound\snd_en_hit03</sound>
+        <sound>sound\snd_en_appear</sound>
       </sounds>
       <sounds name="en01">
         <sound>sound\snd_en01_attack</sound>
@@ -241,6 +242,7 @@
     <scripts name="IA">
       <script>scripts\init_ia.gml</script>
       <script>scripts\perform_ia_reload.gml</script>
+      <script>scripts\create_enemy_wave.gml</script>
     </scripts>
   </scripts>
   <fonts name="fonts">
@@ -285,6 +287,7 @@
         <object>objects\obj_en01</object>
         <object>objects\obj_en01_arm</object>
       </objects>
+      <object>objects\obj_en_gm1_gen</object>
     </objects>
     <objects name="fx">
       <object>objects\obj_fx_bullet</object>

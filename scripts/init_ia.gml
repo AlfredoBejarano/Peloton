@@ -18,7 +18,7 @@ spd = 4;
 eye_index = 0;
 mouth_index = 0;
 hp = 100;
-weapon = obj_wep06;
+weapon = obj_wep05;
 abutton = noone;
 // Creates the weapon
 cweapon = instance_create(x, y, weapon);

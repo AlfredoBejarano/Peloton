@@ -1,3 +1,4 @@
+///draw_text_outline(x, y, outline color, string color, string, alpha)  
 /**
     This script was originally posted by Alien_Production user
     in the r/gamemaker subforum.
@@ -5,7 +6,6 @@
     It has been modified for adding alpha value for the text.
 **/
 
-///draw_text_outlined(x, y, outline color, string color, string)  
 var xx,yy;  
 xx = argument[0];  
 yy = argument[1];  

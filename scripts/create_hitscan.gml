@@ -17,14 +17,12 @@ x1 = argument0;
 y1 = argument1;
 ixs = image_xscale;
 distance = argument2;
-wep = argument4
-wp = instance_find(argument4.shooter.weapon, argument4.shooter.weapon_id);
-with(wp) {
+with(argument4) {
 // calculate distance relative to the player
 
-if(wep.object_index != obj_wep03 && wep.object_index != obj_wep07) { 
-   with(create_muzzle_flash(x1, y1, wep)) {
-      image_xscale = wep.image_xscale;
+if(argument4.object_index != obj_wep03 && argument4.object_index != obj_wep07) { 
+   with(create_muzzle_flash(x1, y1, argument4)) {
+      image_xscale = argument4.image_xscale;
    }
 }
 
@@ -64,7 +62,7 @@ while(x2 != distance) {
         }
         
         if(target.hp != noone) {
-            target.hp -= wep.damage;
+            target.hp -= argument4.damage;
         }
         
         x2 = distance;
