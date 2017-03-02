@@ -16,6 +16,7 @@ is_shooting = 0;
 can_knife = true;
 is_reloading = 0;
 is_switching = 0;
+is_enemy = false;
 being_attacked = 0;
 current_weapon = 0;
 control = argument0;

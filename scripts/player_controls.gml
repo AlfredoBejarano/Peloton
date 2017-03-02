@@ -22,8 +22,12 @@ if(control) {
     player_movement(is_aiming, keyboard_check(up), keyboard_check(down), keyboard_check(left), keyboard_check(right));
     /* MOVEMENT ENDS */         
     
-    /* AIMING AND SHOOTING BEGINS */
-    perform_aim(keyboard_check(aim), keyboard_check_pressed(aim), keyboard_check(shoot), keyboard_check_pressed(shoot), keyboard_check_released(aim), keyboard_check_pressed(reload), self); 
+    /* AIMING AND SHOOTING BEGINS */      
+      if(global.touch) {
+         perform_touch_aim(keyboard_check(aim), keyboard_check_pressed(aim), keyboard_check(shoot), keyboard_check_pressed(shoot), keyboard_check_released(aim), keyboard_check_pressed(reload), self); 
+      } else {
+         perform_aim(keyboard_check(aim), keyboard_check_pressed(aim), keyboard_check(shoot), keyboard_check_pressed(shoot), keyboard_check_released(aim), keyboard_check_pressed(reload), self); 
+      }
     /* AIMING AND SHOOTING ENDS */
 
     /* WEAPON SWITCHING BEGINS */

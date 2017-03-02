@@ -16,5 +16,7 @@ for(i = 0; i < ds_list_size(obj_pl01.ammo_inventory); i ++) {
 drop_item = choose(dropable[0], dropable[1], dropable[2], dropable[3], dropable[4]);
 if(drop_item != noone) {
    instance_create(x, y, drop_item);
+} else {
+   instance_create(x, y, choose(obj_dp_handgun));
 }
 

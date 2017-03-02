@@ -10,7 +10,13 @@
   <persistent>0</persistent>
   <colour>0</colour>
   <showcolour>-1</showcolour>
-  <code>global.pl01_character = 1;
+  <code>if(os_type ==  os_android || os_type == os_ios) {
+   global.touch = true;
+} else {
+   global.touch = false;
+}
+
+global.pl01_character = 1;
 global.pl02_character = 2;
 global.control = true;
 global.keybindings = ds_list_create();
@@ -32,12 +38,12 @@ ds_list_add(global.keybindings,
     ord('S'),
     ord('D'),
     vk_shift,
-    vk_enter,
+    ord('F'),
     ord('F'),
     ord('E'),
     ord('Q'),
     ord('R'),
-    vk_tab,
+    ord('V'),
     vk_space   
 );
 
@@ -69,6 +75,13 @@ ds_list_add(global.pl02gp,
 
 ds_list_add(global.pl01wi,
     obj_wep01
+/*    obj_wep02,
+    obj_wep03,
+    obj_wep04,
+    obj_wep05,
+    obj_wep06,
+    obj_wep07,                
+    obj_wep08  */  
 );
 
 ds_list_add(global.pl02wi,
@@ -77,7 +90,11 @@ ds_list_add(global.pl02wi,
 
 // Player's objects must be created at the end
 instance_create(room_width/2,900, obj_pl01);
-//instance_create(1500,900, obj_plIA);</code>
+//instance_create(1500,900, obj_plIA);
+
+// Establish render scale based on device's screen size
+//view_wport = 640;
+//view_hport = 480;</code>
   <enableViews>-1</enableViews>
   <clearViewBackground>-1</clearViewBackground>
   <clearDisplayBuffer>-1</clearDisplayBuffer>
@@ -108,7 +125,7 @@ instance_create(room_width/2,900, obj_pl01);
     <background visible="0" foreground="0" name="" x="0" y="0" htiled="-1" vtiled="-1" hspeed="0" vspeed="0" stretch="0"/>
   </backgrounds>
   <views>
-    <view visible="-1" objName="obj_pl01" xview="0" yview="0" wview="1920" hview="1080" xport="0" yport="0" wport="1920" hport="1080" hborder="960" vborder="540" hspeed="-1" vspeed="-1"/>
+    <view visible="-1" objName="obj_pl01" xview="0" yview="0" wview="1920" hview="1080" xport="0" yport="0" wport="800" hport="450" hborder="960" vborder="540" hspeed="-1" vspeed="-1"/>
     <view visible="0" objName="&lt;undefined&gt;" xview="0" yview="0" wview="1024" hview="768" xport="0" yport="0" wport="1024" hport="768" hborder="32" vborder="32" hspeed="-1" vspeed="-1"/>
     <view visible="0" objName="&lt;undefined&gt;" xview="0" yview="0" wview="1024" hview="768" xport="0" yport="0" wport="1024" hport="768" hborder="32" vborder="32" hspeed="-1" vspeed="-1"/>
     <view visible="0" objName="&lt;undefined&gt;" xview="0" yview="0" wview="1024" hview="768" xport="0" yport="0" wport="1024" hport="768" hborder="32" vborder="32" hspeed="-1" vspeed="-1"/>

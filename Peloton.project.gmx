@@ -4,7 +4,9 @@
     <Config>Configs\Default</Config>
   </Configs>
   <datafiles number="1" name="datafiles"/>
-  <NewExtensions/>
+  <NewExtensions>
+    <extension index="0">extensions\FacebookExtension</extension>
+  </NewExtensions>
   <sounds name="sound">
     <sounds name="wep">
       <sounds name="wep0">
@@ -86,6 +88,7 @@
     </sounds>
     <sounds name="dp">
       <sound>sound\snd_dp_bullet</sound>
+      <sound>sound\snd_dp_heal</sound>
     </sounds>
   </sounds>
   <sprites name="sprites">
@@ -151,6 +154,8 @@
     </sprites>
     <sprites name="gu">
       <sprite>sprites\spr_gp_buttons</sprite>
+      <sprite>sprites\spr_device_gamepad</sprite>
+      <sprite>sprites\spr_dv_buttons</sprite>
     </sprites>
     <sprites name="dp">
       <sprite>sprites\spr_antenna</sprite>
@@ -212,6 +217,7 @@
       <scripts name="actions">
         <script>scripts\knife_usage.gml</script>
         <script>scripts\perform_aim.gml</script>
+        <script>scripts\perform_touch_aim.gml</script>
         <script>scripts\take_damage.gml</script>
         <script>scripts\perform_shoot.gml</script>
         <script>scripts\perform_reload.gml</script>
@@ -294,6 +300,7 @@
       <object>objects\obj_fx_blood</object>
       <object>objects\obj_blood_floor</object>
       <object>objects\obj_fx_light_round_big</object>
+      <object>objects\obj_fx_enemy_spawn</object>
       <object>objects\obj_fx_heal</object>
     </objects>
     <objects name="am">

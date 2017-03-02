@@ -18,7 +18,7 @@ if(argument4 || argument5) {
 }
 
 // Revert aiming when the player is not doing it.
-if(!(argument0) && player.not_shooting_knife) {
+if(!argument1 && player.not_shooting_knife) {
     player.is_aiming = 0;    
 }
 

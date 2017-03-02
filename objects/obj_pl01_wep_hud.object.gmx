@@ -27,8 +27,8 @@
             <kind>1</kind>
             <string>image_alpha = 0;
 dwep = instance_find(obj_pl01.weapon, obj_pl01.weapon_id);
-xs = window_get_width()    /   1920;
-ys = window_get_height()   /   1080;
+xs = (display_get_width()    /   1920);
+ys = (display_get_height()   /   1080);
 </string>
           </argument>
         </arguments>
@@ -107,6 +107,52 @@ ys = window_get_height()   /   1080;
 ys = view_hview[0]   /   1080;
 dwep = instance_find(obj_pl01.weapon, obj_pl01.weapon_id);
 if(image_alpha &gt; 1) { image_alpha = 1; } else if(image_alpha &lt; 0) { image_alpha = 0; }
+image_alpha = 0.5;
+
+</string>
+          </argument>
+        </arguments>
+      </action>
+    </event>
+    <event eventtype="8" enumb="64">
+      <action>
+        <libid>1</libid>
+        <id>603</id>
+        <kind>7</kind>
+        <userelative>0</userelative>
+        <isquestion>0</isquestion>
+        <useapplyto>-1</useapplyto>
+        <exetype>2</exetype>
+        <functionname></functionname>
+        <codestring></codestring>
+        <whoName>self</whoName>
+        <relative>0</relative>
+        <isnot>0</isnot>
+        <arguments>
+          <argument>
+            <kind>1</kind>
+            <string>if(global.touch) {
+   /* movement keys */
+   up = virtual_key_add(96, display_get_height() - 288, 96, 96, ord('W'));
+   down = virtual_key_add(96, display_get_height() - 96, 96, 96, ord('S'));
+   left = virtual_key_add(0, display_get_height() - 192, 96, 96, ord('A'));
+   right = virtual_key_add(192, display_get_height() - 192, 96, 96, ord('D'));
+   
+   ul = virtual_key_add(0, display_get_height() - 288, 96, 96, ord('I'));
+   ur = virtual_key_add(192, display_get_height() - 288, 96, 96, ord('J'));
+
+   dl = virtual_key_add(0, display_get_height() - 96, 96, 96, ord('K'));
+   dr = virtual_key_add(192, display_get_height() - 96, 96, 96, ord('L'));
+      
+   
+   aim =           virtual_key_add(display_get_width() - 128, display_get_gui_height() - (256),   128,  128, vk_shift);
+   shoot =         virtual_key_add(display_get_width() - 256, display_get_gui_height() - (128),   128,  128, ord('F'));
+   knife =         virtual_key_add(display_get_width() - 256, display_get_gui_height() - (384),   128,  128, vk_space);
+   reload =        virtual_key_add(display_get_width() - 384, display_get_gui_height() - (256),   128,  128, ord('R'));
+   
+   healing = virtual_key_add(display_get_width()- (256), 0, 256, 256, ord('V'));   
+   swich = virtual_key_add(0, 0, 256, 256, ord('E'));       
+}
 </string>
           </argument>
         </arguments>
@@ -129,25 +175,36 @@ if(image_alpha &gt; 1) { image_alpha = 1; } else if(image_alpha &lt; 0) { image_
         <arguments>
           <argument>
             <kind>1</kind>
-            <string>draw_sprite_ext(spr_weapon_hud, dwep.hud_image, view_xview[0] + 8, view_yview[0] + 8, xs, ys, 0, c_white, image_alpha);
+            <string>draw_sprite_ext(spr_weapon_hud, dwep.hud_image, view_xview[0] + 8, view_yview[0] + 8, (xs*2), (ys*2), 0, c_white, image_alpha);
 
 draw_set_font(fnt_hud);
 
 if(dwep.object_index != obj_wep00) {
     if(dwep.ammo &lt; 10) {
-        draw_text_outline(view_xview[0] + (32 * xs) , view_yview[0]+ (70 * ys), c_white, c_ltgray, dwep.ammo, image_alpha / 4);
+        draw_text_outline(view_xview[0] + (32 * (xs*2)) , view_yview[0]+ (70 * (ys*2)), c_white, c_ltgray, dwep.ammo, image_alpha / 4);
     } else if(dwep.ammo &gt; 9 &amp;&amp; dwep.ammo &lt; 99) {
-        draw_text_outline(view_xview[0]+  (16 * xs) , view_yview[0] + (70 * ys), c_white, c_ltgray, dwep.ammo, image_alpha / 4);
+        draw_text_outline(view_xview[0]+  (16 * (xs*2)) , view_yview[0] + (70 * (ys*2)), c_white, c_ltgray, dwep.ammo, image_alpha / 4);
     } else {
-        draw_text_outline(view_xview[0]+  (2 * xs) , view_yview[0] + (70 * ys), c_white, c_ltgray, dwep.ammo, image_alpha / 4);
+        draw_text_outline(view_xview[0]+  (2 * (xs*2)) , view_yview[0] + (70 * (ys*2)), c_white, c_ltgray, dwep.ammo, image_alpha / 4);
     }
-    draw_text_outline(view_xview[0]+ (75 * xs) , view_yview[0] + (80 * ys), c_white, c_ltgray, obj_pl01.current_ammo, image_alpha / 4);
+    draw_text_outline(view_xview[0]+ (75 * (xs*2)) , view_yview[0] + (80 * (ys*2)), c_white, c_ltgray, obj_pl01.current_ammo, image_alpha / 4);
 }
+draw_text_outline(view_xview[0] + (8 * (xs*2)), view_yview[0] + (112 * (ys*2)), c_white, c_ltgray, dwep.name, image_alpha / 4);
 
-draw_text_outline(view_xview[0] + (8 * xs), view_yview[0] + (112 * ys), c_white, c_ltgray, dwep.name, image_alpha / 4);
-draw_sprite_ext(spr_heal, 0, view_xview[0] + ((view_wview - 72) * xs), view_yview[0] + (8 * ys), 1, 1, 0, c_white, 1);
-draw_text_outline(view_xview[0] + ((view_wview - 96) * xs), view_yview[0] + (24 * ys), c_white, c_ltgray, obj_pl01.heals, 0.5);
+draw_sprite_ext(spr_heal, 0, view_xview[0] + ((view_wview - 144) * (xs)), view_yview[0] + (8 * (ys)), 2, 2, 0, c_white, 1);
+draw_text_outline(view_xview[0] + ((view_wview - 192) * (xs)), view_yview[0] + (24 * (ys)), c_white, c_ltgray, obj_pl01.heals, 0.5);
 
+draw_text(view_xview[0], view_yview[0], fps);
+
+if(global.touch) {
+   /* draw gamepad */          
+   draw_sprite_ext(spr_device_gamepad, 0, view_xview, view_yview + (view_hview - 288),1, 1, 0, c_white, 0.5);
+   
+   draw_sprite_stretched_ext(spr_dv_buttons, 0, view_xview+(view_wview[0]-128), view_yview + (view_hview[0] - 256), 128, 128, c_white, 0.5);
+   draw_sprite_stretched_ext(spr_dv_buttons, 1, view_xview+(view_wview[0]-256), view_yview + (view_hview[0] - 128), 128, 128, c_white, 0.5);
+   draw_sprite_stretched_ext(spr_dv_buttons, 2, view_xview+(view_wview[0]-256), view_yview + (view_hview[0] - 384), 128, 128, c_white, 0.5);
+   draw_sprite_stretched_ext(spr_dv_buttons, 3, view_xview+(view_wview[0]-384), view_yview + (view_hview[0] - 256), 128, 128, c_white, 0.5);
+}    
 </string>
           </argument>
         </arguments>

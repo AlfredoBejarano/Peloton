@@ -1,0 +1,21 @@
+Facebook Extension changes:
+
+iOS and Android:
+
+Updated demo app to work with and demonstrate new functionality.
+Added facebook_send_event(my_event) for facebook event tracking
+Added facebook_refresh_accesstoken to allow accesstoken to be refreshed - occasionally permissions may be changed outside of the app and this allows the accesstoken to be updated to match.
+Permissions - How facebook handles permissions has changed, a user can permit or deny individual permissions rather than a global permit\deny.
+The login code has been changed to generate an async social event with the id "facebook_login_result" This returns each requested permission within the async_load map with a value of "granted" or "declined".
+The previous async event with the identifier "facebook_permission_request" is no longer sent.
+Added a delete permissions button to the demo for easier testing.
+
+
+iOS: Updated to version 4.14
+Updated onOpenUrl to add the annotation parameter. (This required a GMS ide change so a new version of GMS is needed)
+Login type has been changed - facebook now only offers 4 options FBSDKLoginBehaviorNative(default),FBSDKLoginBehaviorBrowser(fb_login_forcing_safari),FBSDKLoginBehaviorSystemAccount(fb_login_use_system_account) and FBSDKLoginBehaviorWeb (fb_login_forcing_webview)
+These aren't well documented by facebook and the default should only be changed in special circumstances.
+
+
+Android: Updated to version 4.+ (This updates automatically via Gradle) currently tested with 4.15
+Fixed bug with the Build Tools version being used where the Support Library version should have been used.

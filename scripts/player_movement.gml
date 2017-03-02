@@ -12,15 +12,20 @@ var down    = argument2;
 var left    = argument3;
 var right   = argument4;
 
+var upleft = keyboard_check(ord('I'));
+var upright = keyboard_check(ord('J'));
+var downleft = keyboard_check(ord('K'));
+var downright = keyboard_check(ord('L'));
+
 if(aim) { 
-    move = 2; 
-} else { 
     move = 4; 
-    if(left) { image_xscale = -1; } else 
-    if(right) { image_xscale = 1; }    
+} else { 
+    move = 8; 
+    if(left  || upleft  || downleft ) { image_xscale = -1; } else 
+    if(right || upright || downright) { image_xscale = 1; }    
 }
 
-if(left && x > 128)    { x -= move;   }
-if(right && x < (room_width - 128))   { x += move;   }
-if(up)      { y -= move/2; }
-if(down && y < 1075)    { y += move/2; }
+if((left  || upleft  || downleft ) && x > 128)    { x -= move;   }
+if((right || upright || downright) && x < (room_width - 128))   { x += move;   }
+if((up || upright || upleft) &&    y > 860)      { y -= move/2; }
+if((down || downleft || downright) &&  y < 1075)    { y += move/2; }

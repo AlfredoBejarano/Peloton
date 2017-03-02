@@ -27,6 +27,7 @@
             <kind>1</kind>
             <string>handx = 0;
 dying = 0;
+cplhps = 0;
 hand1y = 0;
 hand2y = 0;
 max_hp = 20;
@@ -40,8 +41,11 @@ can_get_hit = 1;
 image_speed = 0;
 can_get_stab = 1;
 is_attacking = 0;
+is_enemy = true;
 death_position = 0;
 attack_position = 0;
+can_take_damage = 1;
+is_taking_damage = 0;
 image_index = choose(0, 1, 2);
 hand1 = create_zombie_hand(self, 256, 256, 0);
 hand2 = create_zombie_hand(self, 256, 256, 1);
@@ -72,6 +76,32 @@ hand2 = create_zombie_hand(self, 256, 256, 1);
       alarm[0] = 1;
 }
 calculate_drop();
+</string>
+          </argument>
+        </arguments>
+      </action>
+    </event>
+    <event eventtype="2" enumb="5">
+      <action>
+        <libid>1</libid>
+        <id>603</id>
+        <kind>7</kind>
+        <userelative>0</userelative>
+        <isquestion>0</isquestion>
+        <useapplyto>-1</useapplyto>
+        <exetype>2</exetype>
+        <functionname></functionname>
+        <codestring></codestring>
+        <whoName>self</whoName>
+        <relative>0</relative>
+        <isnot>0</isnot>
+        <arguments>
+          <argument>
+            <kind>1</kind>
+            <string>image_angle = 0;
+is_taking_damage = 0;
+can_take_damage = 1;
+hspeed = 0;
 </string>
           </argument>
         </arguments>
@@ -121,7 +151,8 @@ attack_position = 0;
           <argument>
             <kind>1</kind>
             <string>if(attack_position &lt;= 0) {
-   alarm[4] = 15;
+   alarm[4] = 60;
+   is_attacking = 0;
 } else {
    handx -=5;
    attack_position --;   
@@ -250,19 +281,25 @@ attack_position = 0;
         <arguments>
           <argument>
             <kind>1</kind>
-            <string>/// Enemy basic IA
+            <string>   if(is_taking_damage == 1) { exit; }
+
+/// Enemy basic IA
 depth = -y;
 target = instance_nearest(x,y,obj_player_parent);
 
+if(x &lt; 0) { x = 0; } 
+if(x &gt; room_width) { x = room_width; }
+
 // Starts following the player if certain distance is met.
-if(distance_to_object(target) &lt; 512 &amp;&amp; is_attacking == 0) { 
+/*if(distance_to_object(target) &lt; 512 &amp;&amp; is_attacking == 0) { 
    can_move = 1; 
-}
+}*/
 
 if(can_move == 1){
+
    if(is_attacking == 0) {
       // Follow the targeted player
-      mp_potential_step(target.x, target.y, 3, false);
+      mp_potential_step(target.x, target.y, 1, false);
    }
    
    // Change facing direction depending on target's location.

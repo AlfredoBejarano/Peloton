@@ -52,17 +52,37 @@ while(x2 != distance) {
     if(target && target.can_get_hit == 1) {        
         switch(target.object_index) {
             case obj_barrel:                
-                create_bullet_sparkle(target.x, argument1 + argument5, wep, target.depth -1);
+                create_bullet_sparkle(target.x, argument1 + argument5, argument4, target.depth -1);
             break;
             
             case obj_en01:
                target.can_move = 1;                  
-               create_blood_splat(target.x, argument1 + argument5, wep, false, target.depth - 1);
+               create_blood_splat(target.x, argument1 + argument5, argument4, false, target.depth - 1);
             break;
         }
         
         if(target.hp != noone) {
-            target.hp -= argument4.damage;
+            switch(argument4.ammo_type) {
+               case 1:
+                  stopping_power = choose(true, false);  
+               break;
+               case 2:
+                  stopping_power = choose(true, false, false);  
+               break;               
+               default :
+                  stopping_power = true;
+               break;
+            }
+
+            if(stopping_power) {
+               with(target) {
+                  mult = 1;
+                  if(argument4.ammo_type == 3) { mult = 5; }
+                  take_damage(image_xscale * -1, argument4.damage * mult);
+               }
+            } else {
+               target.hp -= argument4.damage;
+            }            
         }
         
         x2 = distance;
