@@ -16,6 +16,8 @@
    global.touch = false;
 }
 
+global.kills = 0;
+
 global.pl01_character = 1;
 global.pl02_character = 2;
 global.control = true;
@@ -74,14 +76,14 @@ ds_list_add(global.pl02gp,
 );
 
 ds_list_add(global.pl01wi,
-    obj_wep01
-/*    obj_wep02,
+    obj_wep01, 
+    obj_wep02,
     obj_wep03,
     obj_wep04,
     obj_wep05,
     obj_wep06,
     obj_wep07,                
-    obj_wep08  */  
+    obj_wep08
 );
 
 ds_list_add(global.pl02wi,
@@ -94,7 +96,14 @@ instance_create(room_width/2,900, obj_pl01);
 
 // Establish render scale based on device's screen size
 //view_wport = 640;
-//view_hport = 480;</code>
+//view_hport = 480;
+
+global.upgrade = 0;
+
+/* weapons upgrades */
+global.wep01dmg = 2.5;
+global.wep01fs = 30;
+global.wep01rs = 60;</code>
   <enableViews>-1</enableViews>
   <clearViewBackground>-1</clearViewBackground>
   <clearDisplayBuffer>-1</clearDisplayBuffer>

@@ -26,7 +26,6 @@
           <argument>
             <kind>1</kind>
             <string>init_player(global.control, self);
-
 </string>
           </argument>
         </arguments>

@@ -37,11 +37,12 @@ can_move = 0;
 red_alpha = 1;
 can_attack = 1;
 target = noone;
+is_enemy = true;
+inrange = false;
 can_get_hit = 1;
 image_speed = 0;
 can_get_stab = 1;
 is_attacking = 0;
-is_enemy = true;
 death_position = 0;
 attack_position = 0;
 can_take_damage = 1;
@@ -71,9 +72,14 @@ hand2 = create_zombie_hand(self, 256, 256, 1);
         <arguments>
           <argument>
             <kind>1</kind>
-            <string>if(instance_exists(obj_en_gm1_gen)) {
-   with(obj_en_gm1_gen)
-      alarm[0] = 1;
+            <string>global.kills ++;
+if(instance_exists(obj_en_gm1_gen)) {
+   with(obj_en_gm1_gen) {
+      if(instance_number(obj_en01) &lt;= 1) {
+         timer = 3;
+         alarm[0] = 60;
+      }      
+   }
 }
 calculate_drop();
 </string>
@@ -289,6 +295,7 @@ target = instance_nearest(x,y,obj_player_parent);
 
 if(x &lt; 0) { x = 0; } 
 if(x &gt; room_width) { x = room_width; }
+if(y &gt; 1075) { y = 1075; }
 
 // Starts following the player if certain distance is met.
 /*if(distance_to_object(target) &lt; 512 &amp;&amp; is_attacking == 0) { 
@@ -299,7 +306,7 @@ if(can_move == 1){
 
    if(is_attacking == 0) {
       // Follow the targeted player
-      mp_potential_step(target.x, target.y, 1, false);
+      mp_potential_step(target.x, target.y, 2, false);
    }
    
    // Change facing direction depending on target's location.
@@ -311,7 +318,7 @@ if(can_move == 1){
 }
 
 // Attack the player.
-if((distance_to_object(target) &lt; 64) &amp;&amp; (can_attack == 1)) {
+if((distance_to_object(target) &lt; 32) &amp;&amp; (can_attack == 1)) {
     can_move = 0;
     alarm[2] = 1;
     can_attack = 0;
