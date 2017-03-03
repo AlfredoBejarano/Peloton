@@ -57,6 +57,10 @@
       <sound>sound\snd_wep_switch</sound>
       <sound>sound\snd_metal_bullet_1</sound>
       <sound>sound\snd_metal_bullet_2</sound>
+      <sounds name="siege mode">
+        <sound>sound\snd_upgrade_add</sound>
+        <sound>sound\snd_weapon_add</sound>
+      </sounds>
     </sounds>
     <sounds name="en">
       <sounds name="common">
@@ -161,12 +165,20 @@
       <sprite>sprites\spr_antenna</sprite>
       <sprite>sprites\spr_droppables</sprite>
     </sprites>
+    <sprites name="openBeta">
+      <sprite>sprites\spr_play</sprite>
+      <sprite>sprites\spr_post</sprite>
+    </sprites>
   </sprites>
   <backgrounds name="background">
     <background>background\bck_basement1</background>
     <background>background\bck_basement2</background>
     <background>background\bck_basement3</background>
     <background>background\bck_pipes</background>
+    <backgrounds name="openBeta">
+      <background>background\bck_betawarning</background>
+      <background>background\bck_thanks</background>
+    </backgrounds>
   </backgrounds>
   <paths name="paths"/>
   <scripts name="scripts">
@@ -195,6 +207,7 @@
       <script>scripts\detect_bullet_collision.gml</script>
       <script>scripts\pick_droppable.gml</script>
       <script>scripts\calculate_drop.gml</script>
+      <script>scripts\set_item_picker_data.gml</script>
     </scripts>
     <scripts name="weapon">
       <script>scripts\draw_laser.gml</script>
@@ -211,6 +224,9 @@
       <script>scripts\save_chamber_ammo.gml</script>
       <scripts name="factory">
         <script>scripts\ammo_objects_factory.gml</script>
+      </scripts>
+      <scripts name="siege mode">
+        <script>scripts\siege_upgrades.gml</script>
       </scripts>
     </scripts>
     <scripts name="player">
@@ -253,6 +269,7 @@
   </scripts>
   <fonts name="fonts">
     <font>fonts\fnt_hud</font>
+    <font>fonts\fnt_upgrades</font>
   </fonts>
   <objects name="objects">
     <objects name="pl">
@@ -321,9 +338,13 @@
       <object>objects\obj_dp_rifle</object>
       <object>objects\obj_item_picker</object>
     </objects>
+    <object>objects\obj_play</object>
+    <object>objects\obj_share</object>
   </objects>
   <rooms name="rooms">
+    <room>rooms\room1</room>
     <room>rooms\room0</room>
+    <room>rooms\room2</room>
   </rooms>
   <constants number="7">
     <constant name="gp_bt_inner">make_color_rgb(18,18,18)</constant>

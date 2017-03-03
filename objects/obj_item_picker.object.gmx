@@ -114,7 +114,7 @@ yy = 60;
         </arguments>
       </action>
     </event>
-    <event eventtype="8" enumb="0">
+    <event eventtype="8" enumb="64">
       <action>
         <libid>1</libid>
         <id>603</id>
@@ -131,10 +131,12 @@ yy = 60;
         <arguments>
           <argument>
             <kind>1</kind>
-            <string>str = "+"+string(quantity)+"#"+name;
+            <string>str = "+"+string(quantity)+" "+name;
 draw_set_alpha(image_alpha);
-draw_text( (view_xview + (view_wview/2))-84, ((view_yview + ((view_hview/3)*2))+yy)+ 50, str);
-draw_sprite(spr_droppables, subimage, view_xview + (view_wview/2), (view_yview + ((view_hview/3)*2))+yy);
+draw_set_font(fnt_upgrades);
+draw_text((display_get_gui_width() / 2) - ((string_length(str) / 2) * 20), (((display_get_gui_height() / 3)*2) + yy) + 50, str);
+draw_set_font(fnt_hud);
+draw_sprite(spr_droppables, subimage, display_get_gui_width() / 2, ((display_get_gui_height() / 3)*2) + yy);
 </string>
           </argument>
         </arguments>

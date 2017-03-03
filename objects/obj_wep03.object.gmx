@@ -26,17 +26,17 @@
           <argument>
             <kind>1</kind>
             <string>pump = 0;
-damage = 3;
+damage = global.wep03dmg;
 angle = 180;
 position = 0;
-max_ammo = 7;
+max_ammo = global.wep03ma;
 ammo_type = 3;
 hud_image = 3;
 recoil = false;
-fire_speed = 60;
+fire_speed = global.wep03fs;
 image_speed = 0;
 shooter = false;
-reload_speed = 180;
+reload_speed = global.wep03rs;
 has_magazine = false;
 aim_sound = snd_wep03_aim;
 empty_sound = snd_wep03_empty;

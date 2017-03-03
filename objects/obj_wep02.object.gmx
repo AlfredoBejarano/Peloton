@@ -26,22 +26,24 @@
           <argument>
             <kind>1</kind>
             <string>pump = 0;
-damage = 1;
 position = 0;
 ammo_type = 2;
 hud_image = 2;
-max_ammo = 30;
 recoil = false;
-fire_speed = 7.5;
 image_speed = 0;
 shooter = false;
-reload_speed = 60;
 has_magazine = true;
 aim_sound = snd_wep02_aim;
 empty_sound = snd_wep02_empty;
 firing_sound = snd_wep02_shot;
 reload_sound = snd_wep02_reload;
 name = "Machine Gun - X05"
+
+/* upgradable values */
+damage = global.wep02dmg;
+max_ammo = global.wep02ma;
+fire_speed = global.wep02fs;
+reload_speed = global.wep02rs;
 
 // Getting ammo from player's object inventory
 ammo = ds_list_find_value(shooter.weapons_ammo, shooter.current_weapon);

@@ -200,7 +200,9 @@ hspeed = 0;
             <string>depth = -y;
 switch_controls();
 player_controls();
-if(hp &lt;= 0) {game_restart();}
+if(hp &lt;= 0) {
+   room_goto(room2);
+}
 
 if(x &lt; 0) {
    x = 0;
@@ -240,12 +242,11 @@ if(y &lt; 900) {
           <argument>
             <kind>1</kind>
             <string>inrange = false;
-
 if(((y &lt;= other.zombie.y + 32) &amp;&amp; (y &gt;= other.zombie.y - 32)) || y == other.zombie.y) {
    inrange = true;
 }
 
-if(other.zombie.is_attacking == 1 &amp;&amp; inrange) {
+if(other.zombie.is_attacking == 1 &amp;&amp; inrange &amp;&amp; can_take_damage == 1) {
    take_damage(other.zombie.image_xscale, other.zombie.damage);
 }
 </string>
