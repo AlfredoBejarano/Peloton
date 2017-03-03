@@ -19,6 +19,6 @@ drop_item = choose(dropable[0], dropable[1], dropable[2], dropable[3], dropable[
 if(drop_item != noone) {
    instance_create(x, y, drop_item);
 } else {
-   instance_create(x, y, choose(obj_dp_heal, obj_dp_handgun));
+   instance_create(x, y, obj_dp_handgun);
 }
 
