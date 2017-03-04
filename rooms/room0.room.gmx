@@ -99,6 +99,11 @@ global.wep03ma = 4;
 global.wep03rs = 180;
 global.wep03fs = 60;
 global.wep03dmg = 3;
+// Wep04
+global.wep04ma = 5;
+global.wep04rs = 80;
+global.wep04fs = 80;
+global.wep04dmg = 20;
 
 // Player's objects must be created at the end
 instance_create(room_width/2,900, obj_pl01);</code>

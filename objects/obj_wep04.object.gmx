@@ -26,22 +26,23 @@
           <argument>
             <kind>1</kind>
             <string>pump = 0;
-damage = 20;
 position = 0;
 ammo_type = 4;
 hud_image = 4;
-max_ammo = 5;
 recoil = false;
-fire_speed = 80;
 image_speed = 0;
 shooter = false;
-reload_speed = 80;
 has_magazine = true;
 aim_sound = snd_wep04_aim;
 empty_sound = snd_wep03_empty;
 firing_sound = snd_wep04_shot;
 reload_sound = snd_wep04_reload;
 name = "Rifle - G01"
+/* Upgradable variables */
+damage = global.wep04dmg;
+max_ammo = global.wep04ma;
+fire_speed = global.wep04fs;
+reload_speed = global.wep04rs;
 
 // Getting ammo from player's object inventory
 ammo = ds_list_find_value(shooter.weapons_ammo, shooter.current_weapon);
