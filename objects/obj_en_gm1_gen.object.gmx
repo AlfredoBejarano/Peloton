@@ -87,6 +87,30 @@ alarm[0] = 60;
         </arguments>
       </action>
     </event>
+    <event eventtype="8" enumb="64">
+      <action>
+        <libid>1</libid>
+        <id>603</id>
+        <kind>7</kind>
+        <userelative>0</userelative>
+        <isquestion>0</isquestion>
+        <useapplyto>-1</useapplyto>
+        <exetype>2</exetype>
+        <functionname></functionname>
+        <codestring></codestring>
+        <whoName>self</whoName>
+        <relative>0</relative>
+        <isnot>0</isnot>
+        <arguments>
+          <argument>
+            <kind>1</kind>
+            <string>draw_sprite_ext(spr_en01,0, 80, (display_get_gui_height()/2), 0.5, 0.5, 0, c_white, 1);
+draw_text_outline(160, (display_get_gui_height()/2)-64, gp_red, gp_white, string(global.kills), 1);
+</string>
+          </argument>
+        </arguments>
+      </action>
+    </event>
     <event eventtype="8" enumb="0">
       <action>
         <libid>1</libid>
@@ -107,14 +131,8 @@ alarm[0] = 60;
             <string>if(timer != 0) {
    str = "Attack incoming in: " + string(timer) + "s";
    color = gp_yellow;
-} else {
-   str = "Wave: " + string(wave);
-   color = gp_red;   
+   draw_text_colour(view_xview + ((view_wview / 2)- ((string_length(str)*48)/4)), view_yview + 8, str, color, color, color, color, 1);
 }
-str2 = "Kills: "+string(global.kills);
-
-draw_text_colour(view_xview + ((view_wview / 2)- ((string_length(str)*48)/4)), view_yview + 8, str, color, color, color, color, 1);
-draw_text_colour(view_xview + ((view_wview / 2)- ((string_length(str2)*48)/2)), view_yview + 64, str2, gp_red, gp_red, gp_red, gp_red, 1);
 </string>
           </argument>
         </arguments>

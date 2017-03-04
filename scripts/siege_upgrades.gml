@@ -101,7 +101,7 @@ if(global.upgrade == 0 && kills == 2) {
          fire_speed = global.wep03fs;
       }
    } 
-} else if(global.upgrade == 11 && kills == 22)  {
+} else if(global.upgrade == 11 && kills == 24)  {
    set_item_picker_data("Shotgun 870 Damage", "60%", 10, snd_upgrade_add);
    global.wep03dmg += global.wep03dmg*0.6;
    global.upgrade ++;
@@ -110,7 +110,7 @@ if(global.upgrade == 0 && kills == 2) {
          damage = global.wep03dmg;
       }
    }   
-} else if(global.upgrade == 12 && kills == 24) {
+} else if(global.upgrade == 12 && kills == 26) {
    set_item_picker_data("Shotgun 870 Capacity", "50%", 7, snd_upgrade_add);
    global.wep03ma += global.wep03ma*0.5;
    global.upgrade ++;
@@ -122,7 +122,7 @@ if(global.upgrade == 0 && kills == 2) {
          }
       }
    }
-} else if(global.upgrade == 13 && kills == 26)  {
+} else if(global.upgrade == 13 && kills == 28)  {
    set_item_picker_data("Shotgun 870 Reload Speed", "50%", 8, snd_upgrade_add);
    global.wep03rs -= global.wep03rs*0.5;
    global.upgrade ++;
@@ -131,10 +131,10 @@ if(global.upgrade == 0 && kills == 2) {
          reload_speed = global.wep03rs;
       }
    } 
-} else if(global.upgrade == 14 && kills == 28)  {
+} else if(global.upgrade == 14 && kills == 30)  {
    set_item_picker_data("Rifle G05", global.wep04ma*3, 14, snd_weapon_add);
    global.upgrade ++;
    ds_list_add(obj_pl01.weapons_inventory, obj_wep04);
    ds_list_add(obj_pl01.weapons_ammo, global.wep04ma);
-   ds_list_replace(obj_pl01.ammo_inventory, 3, global.wep04ma*2);
+   ds_list_replace(obj_pl01.ammo_inventory, 4, global.wep04ma*2);
 }}
