@@ -37,12 +37,14 @@ aim_sound = snd_wep04_aim;
 empty_sound = snd_wep03_empty;
 firing_sound = snd_wep04_shot;
 reload_sound = snd_wep04_reload;
-name = "Rifle - G01"
-/* Upgradable variables */
-damage = global.wep04dmg;
-max_ammo = global.wep04ma;
-fire_speed = global.wep04fs;
-reload_speed = global.wep04rs;
+name = ds_list_find_value(global.wepnames, 4);
+
+/* upgradable values */ 
+damage         = ds_map_find_value(global.upgrades,"wep04dmg");
+max_ammo       = ds_map_find_value(global.upgrades,"wep04ma");
+fire_speed     = ds_map_find_value(global.upgrades,"wep04fs");
+reload_speed   = ds_map_find_value(global.upgrades,"wep04rs");
+
 
 // Getting ammo from player's object inventory
 ammo = ds_list_find_value(shooter.weapons_ammo, shooter.current_weapon);

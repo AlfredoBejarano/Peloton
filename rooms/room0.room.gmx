@@ -83,27 +83,31 @@ ds_list_add(global.pl02wi,
 
 global.upgrade = 0;
 
+global.wepnames = ds_list_create();
+ds_list_add(global.wepnames, "Knife");
+ds_list_add(global.wepnames, "Handgun P07");
+ds_list_add(global.wepnames, "Machinegun X05");
+ds_list_add(global.wepnames, "Shotgun 870");
+ds_list_add(global.wepnames, "Rifle G05");
+
+global.upgrades = ds_map_create();
 /* weapons upgrades */
-// Wep01
-global.wep01dmg = 2.5;
-global.wep01fs = 30;
-global.wep01rs = 60;
-global.wep01ma = 8;
-// Wep02
-global.wep02ma = 30;
-global.wep02rs = 60;
-global.wep02fs = 10;
-global.wep02dmg = 1;
-// Wep03
-global.wep03ma = 4;
-global.wep03rs = 180;
-global.wep03fs = 60;
-global.wep03dmg = 3;
-// Wep04
-global.wep04ma = 5;
-global.wep04rs = 80;
-global.wep04fs = 80;
-global.wep04dmg = 20;
+ds_map_add(global.upgrades, "wep01ma", 8);
+ds_map_add(global.upgrades, "wep01fs", 30);
+ds_map_add(global.upgrades, "wep01rs", 60);
+ds_map_add(global.upgrades, "wep01dmg", 2.5);
+ds_map_add(global.upgrades, "wep02ma", 30);
+ds_map_add(global.upgrades, "wep02fs", 10);
+ds_map_add(global.upgrades, "wep02rs", 60);
+ds_map_add(global.upgrades, "wep02dmg", 1);
+ds_map_add(global.upgrades, "wep03ma", 4);
+ds_map_add(global.upgrades, "wep03fs", 60);
+ds_map_add(global.upgrades, "wep03rs", 180);
+ds_map_add(global.upgrades, "wep03dmg", 3);
+ds_map_add(global.upgrades, "wep04ma", 5);
+ds_map_add(global.upgrades, "wep04fs", 80);
+ds_map_add(global.upgrades, "wep04rs", 80);
+ds_map_add(global.upgrades, "wep04dmg", 20);
 
 // Player's objects must be created at the end
 instance_create(room_width/2,900, obj_pl01);</code>

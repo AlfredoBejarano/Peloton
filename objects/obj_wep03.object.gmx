@@ -26,23 +26,26 @@
           <argument>
             <kind>1</kind>
             <string>pump = 0;
-damage = global.wep03dmg;
 angle = 180;
 position = 0;
-max_ammo = global.wep03ma;
 ammo_type = 3;
 hud_image = 3;
 recoil = false;
-fire_speed = global.wep03fs;
 image_speed = 0;
 shooter = false;
-reload_speed = global.wep03rs;
 has_magazine = false;
 aim_sound = snd_wep03_aim;
 empty_sound = snd_wep03_empty;
 firing_sound = snd_wep03_shot;
 reload_sound = snd_wep03_reload;
-name = "Shotgun - 870"
+name = ds_list_find_value(global.wepnames, 3);
+
+/* upgradable values */ 
+damage         = ds_map_find_value(global.upgrades,"wep03dmg");
+max_ammo       = ds_map_find_value(global.upgrades,"wep03ma");
+fire_speed     = ds_map_find_value(global.upgrades,"wep03fs");
+reload_speed   = ds_map_find_value(global.upgrades,"wep03rs");
+
 // Getting ammo from player's object inventory
 ammo = ds_list_find_value(shooter.weapons_ammo, shooter.current_weapon);
 </string>

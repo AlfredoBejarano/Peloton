@@ -1,47 +1,16 @@
-///siege_ammo_upgrade()
+///siege_upgrades()
 kills = global.kills;
 upgrades = global.upgrade;
 if(global.kills % 2 == 0 && global.kills > 0) {
 if(global.upgrade == 0 && kills == 2) {
-   set_item_picker_data("Handgun P07 Fire Speed", "10%", 9, snd_upgrade_add);
-   global.wep01fs -= global.wep01fs*0.1;
-   global.upgrade ++;
-   if(obj_pl01.weapon.object_index == obj_wep01.object_index) {
-      with(obj_pl01.weapon) {
-         fire_speed = global.wep01fs;
-      }
-   } 
+   siege_weapon_upgrade(obj_wep01, 0.5, up_firespeed);
 } else if(global.upgrade == 1 && kills == 4)  {
-   set_item_picker_data("Handgun P07 Damage", "20%", 10, snd_upgrade_add);
-   global.wep01dmg += global.wep01dmg*0.2;
-   global.upgrade ++;
-   if(obj_pl01.weapon.object_index == obj_wep01.object_index) {
-      with(obj_pl01.weapon) {
-         damage = global.wep01dmg;
-      }
-   }   
+   siege_weapon_upgrade(obj_wep01, 0.2, up_damage);   
 } else if(global.upgrade == 2 && kills == 6) {
-   set_item_picker_data("Handgun P07 Capacity", "25%", 7, snd_upgrade_add);
-   global.wep01ma += global.wep01ma * 0.25;
-   global.upgrade ++;
-   if(obj_pl01.weapon.object_index == obj_wep01.object_index) {
-      with(obj_pl01.weapon) {
-         max_ammo = global.wep01ma;
-         if(ammo < max_ammo) {
-            ammo = max_ammo;
-         }
-      }
-   }
+   siege_weapon_upgrade(obj_wep01, 0.25, up_maxammo);
 } else if(global.upgrade == 3 && kills == 8)  {
-   set_item_picker_data("Handgun P07 Reload Speed", "10%", 8, snd_upgrade_add);
-   global.wep01rs -= global.wep01rs*0.1;
-   global.upgrade ++;
-   if(obj_pl01.weapon.object_index == obj_wep01.object_index) {
-      with(obj_pl01.weapon) {
-         reload_speed = global.wep01rs;
-      }
-   } 
-} else if(global.upgrade == 4 && kills == 10)  {
+   siege_weapon_upgrade(obj_wep01, 0.5, up_reloadspeed);
+} /*else if(global.upgrade == 4 && kills == 10)  {
    set_item_picker_data("Machine Gun X05", global.wep02ma*3, 12, snd_weapon_add);
    global.upgrade ++;
    ds_list_add(obj_pl01.weapons_inventory, obj_wep02);
@@ -137,4 +106,4 @@ if(global.upgrade == 0 && kills == 2) {
    ds_list_add(obj_pl01.weapons_inventory, obj_wep04);
    ds_list_add(obj_pl01.weapons_ammo, global.wep04ma);
    ds_list_replace(obj_pl01.ammo_inventory, 4, global.wep04ma*2);
-}}
+}*/}
