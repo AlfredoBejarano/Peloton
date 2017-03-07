@@ -28,7 +28,6 @@
             <string>quantity = 4;
 ammo_type = 3;
 item_type = "ammo"
-
 </string>
           </argument>
         </arguments>
@@ -57,6 +56,7 @@ picker.quantity = quantity;
 picker.subimage = 3;
 picker.alarm[0] = 1;
 audio_play_sound(snd_dp_bullet, 0, false);
+
 </string>
           </argument>
         </arguments>

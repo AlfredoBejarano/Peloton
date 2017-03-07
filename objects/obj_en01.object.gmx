@@ -88,6 +88,29 @@ siege_upgrades();
         </arguments>
       </action>
     </event>
+    <event eventtype="2" enumb="6">
+      <action>
+        <libid>1</libid>
+        <id>603</id>
+        <kind>7</kind>
+        <userelative>0</userelative>
+        <isquestion>0</isquestion>
+        <useapplyto>-1</useapplyto>
+        <exetype>2</exetype>
+        <functionname></functionname>
+        <codestring></codestring>
+        <whoName>self</whoName>
+        <relative>0</relative>
+        <isnot>0</isnot>
+        <arguments>
+          <argument>
+            <kind>1</kind>
+            <string>can_attack = 1;
+</string>
+          </argument>
+        </arguments>
+      </action>
+    </event>
     <event eventtype="2" enumb="5">
       <action>
         <libid>1</libid>
@@ -105,10 +128,10 @@ siege_upgrades();
         <arguments>
           <argument>
             <kind>1</kind>
-            <string>image_angle = 0;
+            <string>hspeed = 0;
+image_angle = 0;
 is_taking_damage = 0;
 can_take_damage = 1;
-hspeed = 0;
 </string>
           </argument>
         </arguments>
@@ -131,8 +154,8 @@ hspeed = 0;
         <arguments>
           <argument>
             <kind>1</kind>
-            <string>can_move = 1;
-can_attack = 1;
+            <string>alarm[6] = 15;
+can_move = 1;
 is_attacking = 0;
 attack_position = 0;
 </string>
@@ -158,7 +181,7 @@ attack_position = 0;
           <argument>
             <kind>1</kind>
             <string>if(attack_position &lt;= 0) {
-   alarm[4] = 60;
+   alarm[4] = 15;
    is_attacking = 0;
 } else {
    handx -=5;

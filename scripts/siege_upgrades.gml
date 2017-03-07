@@ -55,4 +55,14 @@ if(upgrades == 0) {
    siege_weapon_upgrade(obj_wep03, 0.25, up_maxammo);
 } else if(upgrades == 25)  {
    siege_weapon_upgrade(obj_wep03, 0.25, up_reloadspeed);
+} else if(upgrades == 26) {
+   siege_weapon_add(obj_wep04);
+} else if(upgrades == 27) {
+   siege_weapon_upgrade(obj_wep04, 0.25, up_firespeed);
+} else if(upgrades == 28) {
+   siege_weapon_upgrade(obj_wep04, 0.25, up_damage);
+} else if(upgrades == 29) {
+   siege_weapon_upgrade(obj_wep04, 0.5, up_maxammo);
+} else if(upgrades == 30){
+   siege_weapon_upgrade(obj_wep04, 0.5, up_reloadspeed);
 }

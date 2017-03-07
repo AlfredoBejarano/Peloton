@@ -24,7 +24,7 @@ if(can_take_damage == 0) {
       alarm[5] = 5;
     } else {
       eye_index = 2;
-      alarm[3] = 10;    
+      alarm[3] = 15;    
     }
     if(!(hp <= 25 && cplhps = 1) && !audio_is_playing(snd_char01_critical_hp) && !is_enemy) {
         sound = choose(snd_char01_dam01, snd_char01_dam02,snd_char01_dam03, snd_char01_dam04, snd_char01_dam05);

@@ -3,7 +3,9 @@
 audio_play_sound(snd_en_appear, 0, false);   
 xc = 0;
 yc = 900;
-for(i = 1; i <= argument0; i++) {   
+times = argument[0];
+if(argument[0] > 20) { times = 20; }
+for(i = 1; i <= times; i++) {   
    xc = irandom(room_width);
    yc = irandom_range(900, room_height);
    if(!place_free(xc, yc)) {

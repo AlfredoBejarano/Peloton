@@ -27,8 +27,8 @@
             <kind>1</kind>
             <string>quantity = 30;
 ammo_type = 2;
+picked = false;
 item_type = "ammo"
-
 </string>
           </argument>
         </arguments>
