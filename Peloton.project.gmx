@@ -208,6 +208,7 @@
       <script>scripts\pick_droppable.gml</script>
       <script>scripts\calculate_drop.gml</script>
       <script>scripts\set_item_picker_data.gml</script>
+      <script>scripts\draw_circle_bar.gml</script>
     </scripts>
     <scripts name="weapon">
       <script>scripts\draw_laser.gml</script>
@@ -227,8 +228,9 @@
       </scripts>
       <scripts name="siege mode">
         <script>scripts\siege_upgrades.gml</script>
+        <script>scripts\get_weapon_data.gml</script>
         <script>scripts\siege_keys_factory.gml</script>
-        <script>scripts\get_weapon_name.gml</script>
+        <script>scripts\siege_weapon_add.gml</script>
         <script>scripts\siege_weapon_upgrade.gml</script>
       </scripts>
     </scripts>

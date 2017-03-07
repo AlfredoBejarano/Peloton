@@ -37,7 +37,7 @@ aim_sound = snd_wep02_aim;
 empty_sound = snd_wep02_empty;
 firing_sound = snd_wep02_shot;
 reload_sound = snd_wep02_reload;
-name = ds_list_find_value(global.wepnames, 2);
+name = ds_list_find_value(get_weapon_data(object_index), 0);
 
 /* upgradable values */ 
 damage         = ds_map_find_value(global.upgrades,"wep02dmg");

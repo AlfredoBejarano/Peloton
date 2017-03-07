@@ -9,13 +9,13 @@ ds_map_add(subimage,up_firespeed, 9);
 ds_map_add(subimage,up_damage, 10);
 
 keys = siege_keys_factory(argument[0]);
-wpname = get_weapon_name(argument[0]);
+wpname = ds_list_find_value(get_weapon_data(argument[0]), 0);
 upname = ds_list_find_value(upgrade_texts, real(argument[2]));
 text = wpname + " " + upname;
 
 upgrade_key = string(ds_list_find_value(keys, real(argument[2])));
 pvalue = ds_map_find_value(global.upgrades, upgrade_key);
-upgrade = pvalue  * argument[1];
+upgrade = round(pvalue  * argument[1]);
 
 if(argument[2] == up_maxammo || argument[2] == up_damage) {
    ds_map_replace(global.upgrades, upgrade_key, real(pvalue + upgrade));
@@ -29,9 +29,9 @@ set_item_picker_data(text, string(argument[1] * 100) + "%", ds_map_find_value(su
 ds_map_destroy(subimage);
 ds_list_destroy(upgrade_texts);
 
-if(obj_pl01.weapon.object_index == argument[0].object_index) {
+if(obj_pl01.weapon == argument[0]) {
    with(obj_pl01.weapon) {
-      keys = siege_keys_factory(self);
+      keys = siege_keys_factory(object_index);
       switch(argument[2]) {
          case(up_firespeed): 
             fire_speed = ds_map_find_value(global.upgrades, ds_list_find_value(keys, 0));

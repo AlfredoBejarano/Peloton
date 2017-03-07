@@ -51,7 +51,7 @@ empty_sound = snd_blank;
 aim_sound = snd_wep0_aim;
 reload_sound = firing_sound;
 
-name = ds_list_find_value(global.wepnames, 0);
+name = ds_list_find_value(get_weapon_data(self), 0);
 </string>
           </argument>
         </arguments>

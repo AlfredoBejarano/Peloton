@@ -76,12 +76,13 @@ hand2 = create_zombie_hand(self, 256, 256, 1);
 if(instance_exists(obj_en_gm1_gen)) {
    with(obj_en_gm1_gen) {
       if(instance_number(obj_en01) &lt;= 1) {
-         timer = 3;
-         alarm[0] = 60;
+         timer = 2.5;
+         alarm[0] = 60/100;
       }      
    }
 }
 calculate_drop();
+siege_upgrades();
 </string>
           </argument>
         </arguments>
