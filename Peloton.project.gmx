@@ -74,9 +74,9 @@
       </sounds>
     </sounds>
     <sounds name="music">
-      <sounds name="lvl_helipad">
-        <sound>sound\snd_helipad_intro</sound>
-        <sound>sound\snd_helipad_music</sound>
+      <sounds name="siege">
+        <sound>sound\snd_siege_intro</sound>
+        <sound>sound\snd_siege_loop</sound>
       </sounds>
     </sounds>
     <sounds name="char">
@@ -209,6 +209,8 @@
       <script>scripts\calculate_drop.gml</script>
       <script>scripts\set_item_picker_data.gml</script>
       <script>scripts\draw_circle_bar.gml</script>
+      <script>scripts\pixels_as_dp_units.gml</script>
+      <script>scripts\set_resolution.gml</script>
     </scripts>
     <scripts name="weapon">
       <script>scripts\draw_laser.gml</script>

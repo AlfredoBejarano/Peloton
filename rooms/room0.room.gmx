@@ -10,7 +10,9 @@
   <persistent>0</persistent>
   <colour>0</colour>
   <showcolour>-1</showcolour>
-  <code>if(os_type ==  os_android || os_type == os_ios) {
+  <code>set_resolution(0.75);
+
+if(os_type ==  os_android || os_type == os_ios) {
    global.touch = true;
 } else {
    global.touch = false;
@@ -30,9 +32,9 @@ global.pl02gp = ds_list_create();
 global.pl02wi = ds_list_create();
 
 global.level_music = ds_list_create();
-ds_list_add(global.level_music, snd_helipad_intro, snd_helipad_music);
+ds_list_add(global.level_music, snd_siege_intro, snd_siege_loop);
 
-//instance_create(x,y, obj_music_player);
+instance_create(x,y, obj_music_player);
 
 ds_list_add(global.keybindings,
     ord('W'),
@@ -170,7 +172,7 @@ instance_create(room_width/2,900, obj_pl01);</code>
     <background visible="0" foreground="0" name="" x="0" y="0" htiled="-1" vtiled="-1" hspeed="0" vspeed="0" stretch="0"/>
   </backgrounds>
   <views>
-    <view visible="-1" objName="obj_pl01" xview="0" yview="0" wview="1920" hview="1080" xport="0" yport="0" wport="800" hport="450" hborder="960" vborder="540" hspeed="-1" vspeed="-1"/>
+    <view visible="-1" objName="obj_pl01" xview="0" yview="0" wview="1920" hview="1080" xport="0" yport="0" wport="1920" hport="1080" hborder="960" vborder="540" hspeed="-1" vspeed="-1"/>
     <view visible="0" objName="&lt;undefined&gt;" xview="0" yview="0" wview="1024" hview="768" xport="0" yport="0" wport="1024" hport="768" hborder="32" vborder="32" hspeed="-1" vspeed="-1"/>
     <view visible="0" objName="&lt;undefined&gt;" xview="0" yview="0" wview="1024" hview="768" xport="0" yport="0" wport="1024" hport="768" hborder="32" vborder="32" hspeed="-1" vspeed="-1"/>
     <view visible="0" objName="&lt;undefined&gt;" xview="0" yview="0" wview="1024" hview="768" xport="0" yport="0" wport="1024" hport="768" hborder="32" vborder="32" hspeed="-1" vspeed="-1"/>
