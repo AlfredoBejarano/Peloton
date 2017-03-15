@@ -1,5 +1,5 @@
-//create_zombie_hand(zombie object, x, y, position);
-hand = instance_create(argument1, argument2, obj_en01_arm);
+//create_zombie_hand(zombie object, x, y, position, hand object);
+hand = instance_create(argument1, argument2, argument4);
 
 with(hand) {
     image_speed = 0;

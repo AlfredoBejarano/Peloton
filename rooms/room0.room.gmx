@@ -34,7 +34,7 @@ global.pl02wi = ds_list_create();
 global.level_music = ds_list_create();
 ds_list_add(global.level_music, snd_siege_intro, snd_siege_loop);
 
-instance_create(x,y, obj_music_player);
+//instance_create(x,y, obj_music_player);
 
 ds_list_add(global.keybindings,
     ord('W'),
@@ -184,8 +184,8 @@ instance_create(room_width/2,900, obj_pl01);</code>
   <instances>
     <instance objName="obj_fx_light_round_big" x="1360" y="567" name="inst_CF1CC9EB" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
     <instance objName="obj_fx_light_round_big" x="3173" y="584" name="inst_147D0CC6" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
-    <instance objName="obj_am_lighting" x="86" y="212" name="inst_978571A9" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
-    <instance objName="obj_en_gm1_gen" x="1165" y="467" name="inst_7F55C7D3" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
+    <instance objName="obj_am_lighting" x="-39" y="29" name="inst_978571A9" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
+    <instance objName="obj_en02" x="1809" y="973" name="inst_4E4E9534" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
   </instances>
   <tiles>
     <tile bgName="bck_pipes" x="0" y="360" w="120" h="120" xo="0" yo="0" id="10000012" name="inst_F16CD0E3" depth="10000001" locked="0" colour="4294967295" scaleX="1" scaleY="1"/>

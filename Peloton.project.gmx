@@ -151,6 +151,9 @@
       <sprite>sprites\spr_en01</sprite>
       <sprite>sprites\spr_en01_arm</sprite>
       <sprite>sprites\spr_dummy_target</sprite>
+      <sprite>sprites\spr_en02_hand01</sprite>
+      <sprite>sprites\spr_en02_hand02</sprite>
+      <sprite>sprites\spr_en02</sprite>
     </sprites>
     <sprites name="bd">
       <sprite>sprites\spr_hbd</sprite>
@@ -209,7 +212,6 @@
       <script>scripts\calculate_drop.gml</script>
       <script>scripts\set_item_picker_data.gml</script>
       <script>scripts\draw_circle_bar.gml</script>
-      <script>scripts\pixels_as_dp_units.gml</script>
       <script>scripts\set_resolution.gml</script>
     </scripts>
     <scripts name="weapon">
@@ -262,11 +264,14 @@
         <script>scripts\init_hand2.gml</script>
       </scripts>
       <script>scripts\player_controls.gml</script>
-      <script>scripts\controls_consolidation_variables.gml</script>
       <script>scripts\device_factory.gml</script>
+      <script>scripts\controls_consolidation_variables.gml</script>
     </scripts>
     <scripts name="enemy">
+      <script>scripts\basic_en_IA.gml</script>
       <script>scripts\create_zombie_hand.gml</script>
+      <script>scripts\init_enemy.gml</script>
+      <script>scripts\draw_enemy_healthbar.gml</script>
     </scripts>
     <scripts name="IA">
       <script>scripts\init_ia.gml</script>
@@ -318,6 +323,10 @@
         <object>objects\obj_en01_arm</object>
       </objects>
       <object>objects\obj_en_gm1_gen</object>
+      <objects name="en02">
+        <object>objects\obj_en02</object>
+        <object>objects\obj_en02_hand01</object>
+      </objects>
     </objects>
     <objects name="fx">
       <object>objects\obj_fx_bullet</object>
@@ -353,7 +362,9 @@
     <room>rooms\room0</room>
     <room>rooms\room2</room>
   </rooms>
-  <constants number="11">
+  <constants number="13">
+    <constant name="type_height">1</constant>
+    <constant name="type_width">0</constant>
     <constant name="up_damage">3</constant>
     <constant name="up_maxammo">2</constant>
     <constant name="up_reloadspeed">1</constant>

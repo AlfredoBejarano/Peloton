@@ -155,7 +155,6 @@ image_alpha = 0.5;
    
    /* draw virtual keys */    
    draw_sprite_ext(spr_device_gamepad, 0, 32, display_get_gui_height() - 384 - 32, 1.3, 1.3, 0, c_white, 0.2);
-   
    draw_sprite_ext(spr_dv_buttons, 0, display_get_gui_width()- 128 - 32, display_get_gui_height() - 256 - 32, 1.3, 1.3, 0, c_white, 0.2);
    draw_sprite_ext(spr_dv_buttons, 1, display_get_gui_width()- 256 - 32, display_get_gui_height() - 128 - 32, 1.3, 1.3, 0, c_white, 0.2);
    draw_sprite_ext(spr_dv_buttons, 2, display_get_gui_width()- 256 - 32, display_get_gui_height() - 384 - 32, 1.3, 1.3, 0, c_white, 0.2);

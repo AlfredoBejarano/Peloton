@@ -1,0 +1,26 @@
+///init_enemy(arm 1 object, arm2 object, HP)
+handx = 0;
+dying = 0;
+cplhps = 0;
+hand1y = 0;
+hand2y = 0;
+max_hp = argument[2];
+hp = max_hp;
+damage = 25;
+can_move = 0;
+red_alpha = 1;
+can_attack = 1;
+target = noone;
+is_enemy = true;
+inrange = false;
+can_get_hit = 1;
+image_speed = 0;
+can_get_stab = 1;
+is_attacking = 0;
+death_position = 0;
+attack_position = 0;
+can_take_damage = 1;
+is_taking_damage = 0;
+image_index = choose(0, 1, 2);
+hand1 = argument[0];
+hand2 = argument[1];
