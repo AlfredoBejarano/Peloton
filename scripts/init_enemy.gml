@@ -1,4 +1,4 @@
-///init_enemy(arm 1 object, arm2 object, HP)
+///init_enemy(arm 1 object, arm2 object, HP, enemy object)
 handx = 0;
 dying = 0;
 cplhps = 0;
@@ -24,3 +24,16 @@ is_taking_damage = 0;
 image_index = choose(0, 1, 2);
 hand1 = argument[0];
 hand2 = argument[1];
+
+if(argument[3] == obj_en02) {
+   att_sound = snd_en02_attack;
+   dam_sound = snd_en02_damage;
+   weapon = instance_create(x, y, obj_en_wep01);
+   with(weapon) {
+      shooter = argument[3];
+   }
+} else {
+   att_sound = snd_en01_attack;
+   dam_sound = snd_en01_damage;
+   weapon = noone;
+}

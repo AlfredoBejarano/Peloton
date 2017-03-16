@@ -272,7 +272,37 @@ if(((y &lt;= other.zombie.y + 32) &amp;&amp; (y &gt;= other.zombie.y - 32)) || y
 }
 
 if(other.zombie.is_attacking == 1 &amp;&amp; inrange &amp;&amp; can_take_damage == 1) {
-   take_damage(other.zombie.image_xscale, other.zombie.damage);
+   take_damage(other.zombie.image_xscale, other.zombie.damage, sounds);
+}
+</string>
+          </argument>
+        </arguments>
+      </action>
+    </event>
+    <event eventtype="4" ename="obj_en_wep01">
+      <action>
+        <libid>1</libid>
+        <id>603</id>
+        <kind>7</kind>
+        <userelative>0</userelative>
+        <isquestion>0</isquestion>
+        <useapplyto>-1</useapplyto>
+        <exetype>2</exetype>
+        <functionname></functionname>
+        <codestring></codestring>
+        <whoName>self</whoName>
+        <relative>0</relative>
+        <isnot>0</isnot>
+        <arguments>
+          <argument>
+            <kind>1</kind>
+            <string>inrange = false;
+if(((y &lt;= other.shooter.y + 32) &amp;&amp; (y &gt;= other.shooter.y - 32)) || y == other.shooter.y) {
+   inrange = true;
+}
+
+if(other.shooter.is_attacking == 1 &amp;&amp; inrange &amp;&amp; can_take_damage == 1) {
+   take_damage(other.shooter.image_xscale, other.damage, sounds);
 }
 </string>
           </argument>

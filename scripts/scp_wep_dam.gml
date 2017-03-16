@@ -1,4 +1,4 @@
-// scp_wep_dam(player);
+///scp_wep_dam(player);
 
 y = argument0.y-52;
 if(argument0.damage_direction == 0) {

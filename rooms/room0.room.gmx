@@ -95,7 +95,9 @@ ds_list_add(global.wepnames,
    "Handgun P57",
    "Machinegun A47",
    "Shotgun 500",
-   "Rifle B82");
+   "Rifle B82",
+   "Chainsaw"
+);
 
 
 global.upgrades = ds_map_create();
@@ -139,6 +141,11 @@ ds_map_add(global.upgrades, "wep08ma", 8);
 ds_map_add(global.upgrades, "wep08fs", 60);
 ds_map_add(global.upgrades, "wep08rs", 70);
 ds_map_add(global.upgrades, "wep08dmg", 12);
+
+ds_map_add(global.upgrades, "wep09ma", 10);
+ds_map_add(global.upgrades, "wep09fs", 1);
+ds_map_add(global.upgrades, "wep09rs", 120);
+ds_map_add(global.upgrades, "wep09dmg", 100);
 
 // Player's objects must be created at the end
 instance_create(room_width/2,900, obj_pl01);</code>
@@ -185,7 +192,7 @@ instance_create(room_width/2,900, obj_pl01);</code>
     <instance objName="obj_fx_light_round_big" x="1360" y="567" name="inst_CF1CC9EB" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
     <instance objName="obj_fx_light_round_big" x="3173" y="584" name="inst_147D0CC6" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
     <instance objName="obj_am_lighting" x="-39" y="29" name="inst_978571A9" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
-    <instance objName="obj_en02" x="1809" y="973" name="inst_4E4E9534" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
+    <instance objName="obj_en02" x="1168" y="952" name="inst_4E4E9534" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
   </instances>
   <tiles>
     <tile bgName="bck_pipes" x="0" y="360" w="120" h="120" xo="0" yo="0" id="10000012" name="inst_F16CD0E3" depth="10000001" locked="0" colour="4294967295" scaleX="1" scaleY="1"/>

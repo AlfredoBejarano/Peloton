@@ -1,4 +1,4 @@
-///basic_en_IA(movement speed, can be idle)
+///basic_en_IA(movement speed, can be idle, attack distance)
    if(is_taking_damage == 1) { exit; }
 
 /// Enemy basic IA
@@ -30,12 +30,18 @@ if(can_move == 1){
 }
 
 // Attack the player.
-if((distance_to_object(target) < 32) && (can_attack == 1)) {
+if((distance_to_object(target) < real(argument[2])) && (can_attack == 1)) {
     can_move = 0;
     alarm[2] = 1;
     can_attack = 0;
     is_attacking = 1;
-    audio_play_sound(snd_en01_attack, 0, false);    
+    if(!audio_is_playing(att_sound)) {
+       audio_play_sound(att_sound, 0, false);    
+    }
+    if(weapon != noone) {
+      audio_stop_sound(weapon.aim_sound);
+      audio_play_sound(weapon.firing_sound, 0, false);    
+    }
 }
 
 // Kill animation, prevents enemy for attacking, moving or doing any action other than dying.

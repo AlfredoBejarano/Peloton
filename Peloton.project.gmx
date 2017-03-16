@@ -52,6 +52,12 @@
       <sounds name="wep08">
         <sound>sound\snd_wep08_shot</sound>
       </sounds>
+      <sounds name="wep09">
+        <sound>sound\snd_wep09_shot</sound>
+        <sound>sound\snd_wep09_aim</sound>
+        <sound>sound\snd_wep09_reload</sound>
+        <sound>sound\snd_wep09_empty</sound>
+      </sounds>
       <sound>sound\snd_blank</sound>
       <sound>sound\snd_shell_fall</sound>
       <sound>sound\snd_wep_switch</sound>
@@ -71,6 +77,11 @@
       </sounds>
       <sounds name="en01">
         <sound>sound\snd_en01_attack</sound>
+        <sound>sound\snd_en01_damage</sound>
+      </sounds>
+      <sounds name="en02">
+        <sound>sound\snd_en02_attack</sound>
+        <sound>sound\snd_en02_damage</sound>
       </sounds>
     </sounds>
     <sounds name="music">
@@ -131,6 +142,7 @@
       <sprite>sprites\spr_weapon_hud</sprite>
       <sprite>sprites\spr_wep_scope</sprite>
       <sprite>sprites\spr_heal</sprite>
+      <sprite>sprites\spr_en_wep01</sprite>
     </sprites>
     <sprites name="fx">
       <sprite>sprites\spr_muzzle_flash</sprite>
@@ -196,6 +208,7 @@
         <script>scripts\scp_wep03.gml</script>
         <script>scripts\scp_wep04.gml</script>
         <script>scripts\scp_wep_dam.gml</script>
+        <script>scripts\scp_en_wep01.gml</script>
       </scripts>
       <script>scripts\sync_reloading_hand.gml</script>
       <script>scripts\sync_reloading_magazine.gml</script>
@@ -268,9 +281,9 @@
       <script>scripts\controls_consolidation_variables.gml</script>
     </scripts>
     <scripts name="enemy">
+      <script>scripts\init_enemy.gml</script>
       <script>scripts\basic_en_IA.gml</script>
       <script>scripts\create_zombie_hand.gml</script>
-      <script>scripts\init_enemy.gml</script>
       <script>scripts\draw_enemy_healthbar.gml</script>
     </scripts>
     <scripts name="IA">
@@ -308,6 +321,7 @@
       <object>objects\obj_wep06</object>
       <object>objects\obj_wep07</object>
       <object>objects\obj_wep08</object>
+      <object>objects\obj_en_wep01</object>
       <object>objects\obj_shell</object>
       <object>objects\obj_sgshell</object>
       <object>objects\obj_magazine</object>
@@ -326,6 +340,7 @@
       <objects name="en02">
         <object>objects\obj_en02</object>
         <object>objects\obj_en02_hand01</object>
+        <object>objects\obj_en02_hand02</object>
       </objects>
     </objects>
     <objects name="fx">

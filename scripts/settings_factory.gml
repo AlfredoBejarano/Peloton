@@ -20,9 +20,11 @@ switch(pl) {
       break;
    }
 } */
+sounds = ds_list_create();
+ds_list_add(sounds, snd_char01_dam01, snd_char01_dam02, snd_char01_dam03, snd_char01_dam04, snd_char01_dam05);
 if(argument0 == true) { 
-       ds_list_add(settings, global.keybindings, global.pl01wi, obj_pl01_wep_hud, global.pl01_character); 
-      } else {
-       ds_list_add(settings, global.pl01gp, global.pl01wi, obj_pl01_wep_hud, global.pl01_character); 
-      }
+   ds_list_add(settings, global.keybindings, global.pl01wi, obj_pl01_wep_hud, global.pl01_character, sounds); 
+} else {
+   ds_list_add(settings, global.pl01gp, global.pl01wi, obj_pl01_wep_hud, global.pl01_character, sounds); 
+}
 return settings;

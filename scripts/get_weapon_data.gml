@@ -24,7 +24,7 @@ switch(argument[0]) {
       break;      
    case obj_wep08: 
       ds_list_add(data, ds_list_find_value(global.wepnames, 8), 4, 18);         
-      break;      
+      break;          
    default: 
       ds_list_add(data, ds_list_find_value(global.wepnames, 0), 0, 10);
       break;      

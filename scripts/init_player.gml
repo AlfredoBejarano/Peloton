@@ -27,6 +27,7 @@ picker = instance_create(0,0,obj_item_picker);
 
 settings = settings_factory(control, obj_pl01);
 controls = ds_list_find_value(settings, 0);
+sounds = ds_list_find_value(settings, 4);
 
 // Damage variables
 can_take_damage = 1;

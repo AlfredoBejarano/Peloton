@@ -27,7 +27,7 @@
             <kind>1</kind>
             <string>hand1 = create_zombie_hand(self, 256, 256, 0, obj_en01_arm);
 hand2 = create_zombie_hand(self, 256, 256, 1, obj_en01_arm);
-init_enemy(hand1, hand2, 20);
+init_enemy(hand1, hand2, 20, obj_en01);
 </string>
           </argument>
         </arguments>
@@ -289,7 +289,7 @@ attack_position = 0;
         <arguments>
           <argument>
             <kind>1</kind>
-            <string>basic_en_IA(2, false);
+            <string>basic_en_IA(2, false, 33);
 </string>
           </argument>
         </arguments>
