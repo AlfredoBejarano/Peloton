@@ -205,8 +205,6 @@ attack_position = 0;
    hand1.image_angle -= 6*hand1.image_xscale;
    hand2.image_angle -= 6*hand2.image_xscale;      
 }
-
-
 </string>
           </argument>
         </arguments>

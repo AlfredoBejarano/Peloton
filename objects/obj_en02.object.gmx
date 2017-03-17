@@ -32,9 +32,11 @@ init_enemy(hand1, hand2, 100, obj_en02);
 hand2x = 0;
 eye_index = 0;
 chains = 2;
+chainsaw_raised = false;
 can_chain = true;
 is_chaining = true;
 alarm[7] = 1;
+cpcs = true;
 audio_play_sound(weapon.reload_sound, 0, false);
 </string>
           </argument>
@@ -72,6 +74,46 @@ with(weapon) {
 }
 calculate_drop();
 siege_upgrades();
+</string>
+          </argument>
+        </arguments>
+      </action>
+    </event>
+    <event eventtype="2" enumb="9">
+      <action>
+        <libid>1</libid>
+        <id>603</id>
+        <kind>7</kind>
+        <userelative>0</userelative>
+        <isquestion>0</isquestion>
+        <useapplyto>-1</useapplyto>
+        <exetype>2</exetype>
+        <functionname></functionname>
+        <codestring></codestring>
+        <whoName>self</whoName>
+        <relative>0</relative>
+        <isnot>0</isnot>
+        <arguments>
+          <argument>
+            <kind>1</kind>
+            <string>if(attack_position &gt;= 15) {
+   alarm[3] = 1;
+} else {
+   if(cpcs) {
+      audio_stop_sound(weapon.aim_sound);
+      audio_play_sound(weapon.firing_sound, 0, false);    
+      cpcs = false;
+   }
+   chainsaw_raised = false;
+   handx += 7;
+   hand2x += 6;
+   attack_position ++;   
+   alarm[9] = 1;
+   hand1y += 4;
+   hand2y += 2;   
+   hand1.image_angle -= 6*hand1.image_xscale;
+   hand2.image_angle -= 6*hand2.image_xscale;      
+}
 </string>
           </argument>
         </arguments>
@@ -166,7 +208,9 @@ siege_upgrades();
           <argument>
             <kind>1</kind>
             <string>can_attack = 1;
-audio_play_sound(weapon.aim_sound, 0, true);
+if(!audio_is_playing(weapon.aim_sound,)) {
+   audio_play_sound(weapon.aim_sound, 0, true);
+}
 </string>
           </argument>
         </arguments>
@@ -244,6 +288,7 @@ attack_position = 0;
             <string>if(attack_position &lt;= 0) {
    alarm[4] = 15;
    is_attacking = 0;
+   cpcs = true;
 } else {
    handx -=7;
    hand2x -= 6;
@@ -278,20 +323,8 @@ attack_position = 0;
         <arguments>
           <argument>
             <kind>1</kind>
-            <string>if(attack_position &gt;= 15) {
-   alarm[3] = 1;
-} else {
-   handx += 7;
-   hand2x += 6;
-   attack_position ++;   
-   alarm[2] = 1;
-   hand1y += 4;
-   hand2y += 2;   
-   hand1.image_angle -= 6*hand1.image_xscale;
-   hand2.image_angle -= 6*hand2.image_xscale;      
-}
-
-
+            <string>chainsaw_raised = true;
+alarm[9] = 30;
 </string>
           </argument>
         </arguments>

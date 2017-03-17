@@ -1,4 +1,4 @@
-///basic_en_IA(movement speed, can be idle, attack distance)
+///basic_en_IA(movement speed, can be idle, attack distance, attack_alarm)
    if(is_taking_damage == 1) { exit; }
 
 /// Enemy basic IA
@@ -37,10 +37,6 @@ if((distance_to_object(target) < real(argument[2])) && (can_attack == 1)) {
     is_attacking = 1;
     if(!audio_is_playing(att_sound)) {
        audio_play_sound(att_sound, 0, false);    
-    }
-    if(weapon != noone) {
-      audio_stop_sound(weapon.aim_sound);
-      audio_play_sound(weapon.firing_sound, 0, false);    
     }
 }
 
