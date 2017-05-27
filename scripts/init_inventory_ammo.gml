@@ -15,9 +15,9 @@ for(i = 0; i < ds_list_size(argument0); i++) {
     current_supply = ds_list_find_value(ai, tw.ammo_type);
     
     if(current_supply == 0) {
-        current_supply = tw.max_ammo*2;
+        current_supply = tw.max_ammo*4;
     } else {
-        current_supply = current_supply + tw.max_ammo*2;
+        current_supply = current_supply + tw.max_ammo*4;
     }
     
     ds_list_replace(ai, tw.ammo_type, current_supply);

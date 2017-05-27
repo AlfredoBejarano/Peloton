@@ -30,7 +30,7 @@ if(can_move == 1){
 }
 
 // Attack the player.
-if((distance_to_object(target) < real(argument[2])) && (can_attack == 1)) {
+if((distance_to_object(target) < real(argument[2])) && (can_attack == 1) && (is_hitting == 0)) {
     can_move = 0;
     alarm[2] = 1;
     can_attack = 0;

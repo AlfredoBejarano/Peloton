@@ -10,7 +10,7 @@
   <persistent>0</persistent>
   <colour>0</colour>
   <showcolour>-1</showcolour>
-  <code>set_resolution(0.75);
+  <code>set_resolution(1);
 
 if(os_type ==  os_android || os_type == os_ios) {
    global.touch = true;
@@ -41,13 +41,13 @@ ds_list_add(global.keybindings,
     ord('A'),
     ord('S'),
     ord('D'),
-    vk_shift,
-    ord('F'),
+    mb_right,
+    mb_left,
     ord('F'),
     ord('E'),
     ord('Q'),
     ord('R'),
-    ord('V'),
+    vk_tab,
     vk_space   
 );
 
@@ -192,7 +192,7 @@ instance_create(room_width/2,900, obj_pl01);</code>
     <instance objName="obj_fx_light_round_big" x="1360" y="567" name="inst_CF1CC9EB" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
     <instance objName="obj_fx_light_round_big" x="3173" y="584" name="inst_147D0CC6" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
     <instance objName="obj_am_lighting" x="-39" y="29" name="inst_978571A9" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
-    <instance objName="obj_en02" x="1168" y="952" name="inst_4E4E9534" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
+    <instance objName="obj_en_gm1_gen" x="-39" y="100" name="inst_17FAD1FD" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
   </instances>
   <tiles>
     <tile bgName="bck_pipes" x="0" y="360" w="120" h="120" xo="0" yo="0" id="10000012" name="inst_F16CD0E3" depth="10000001" locked="0" colour="4294967295" scaleX="1" scaleY="1"/>

@@ -18,7 +18,7 @@ var downleft = keyboard_check(ord('K'));
 var downright = keyboard_check(ord('L'));
 
 if(aim) { 
-    move = 4; 
+    move = 3; 
 } else { 
     move = 8; 
     if(left  || upleft  || downleft ) { image_xscale = -1; } else 

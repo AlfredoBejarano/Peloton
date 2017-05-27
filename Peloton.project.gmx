@@ -98,6 +98,7 @@
         <sound>sound\snd_char01_dam03</sound>
         <sound>sound\snd_char01_dam04</sound>
         <sound>sound\snd_char01_dam05</sound>
+        <sound>sound\snd_char01_chain_hit</sound>
       </sounds>
       <sound>sound\snd_healing</sound>
     </sounds>
@@ -294,6 +295,7 @@
   </scripts>
   <fonts name="fonts">
     <font>fonts\fnt_hud</font>
+    <font>fonts\fnt_weapon_name</font>
     <font>fonts\fnt_upgrades</font>
   </fonts>
   <objects name="objects">
@@ -373,7 +375,6 @@
     <object>objects\obj_share</object>
   </objects>
   <rooms name="rooms">
-    <room>rooms\room1</room>
     <room>rooms\room0</room>
     <room>rooms\room2</room>
   </rooms>

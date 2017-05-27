@@ -29,7 +29,7 @@ if(control) {
             perform_reload(self);
          }
       } else {
-         perform_aim(keyboard_check(aim), keyboard_check_pressed(aim), keyboard_check(shoot), keyboard_check_pressed(shoot), keyboard_check_released(aim), keyboard_check_pressed(reload), self); 
+         perform_aim(mouse_check_button(aim), mouse_check_button_pressed(aim), mouse_check_button(shoot), mouse_check_button_pressed(shoot), mouse_check_button_released(aim), keyboard_check_pressed(reload), self); 
       }
     /* AIMING AND SHOOTING ENDS */
 

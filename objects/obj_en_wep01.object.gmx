@@ -35,6 +35,8 @@ empty_sound = snd_wep09_empty;
 firing_sound = snd_wep09_shot;
 reload_sound = snd_wep09_reload;
 name = "Chainsaw";
+is_hitting = 0;
+cphs = 1;
 
 /* upgradable values */ 
 damage         = 20;
@@ -90,6 +92,11 @@ reload_speed   = 120;
             <kind>1</kind>
             <string>depth = shooter.depth - 1;
 scp_en_wep01(shooter);
+if(is_hitting == 1 &amp;&amp; cphs == 1) {
+   audio_play_sound(snd_wep09_empty, 0, false);
+   cphs = 0;
+   shooter.chainsaw_raised = true;
+}
 </string>
           </argument>
         </arguments>

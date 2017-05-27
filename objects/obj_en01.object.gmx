@@ -287,7 +287,7 @@ attack_position = 0;
         <arguments>
           <argument>
             <kind>1</kind>
-            <string>basic_en_IA(2, false, 33);
+            <string>basic_en_IA(4, false, 16);
 </string>
           </argument>
         </arguments>

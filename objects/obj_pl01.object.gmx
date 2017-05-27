@@ -26,6 +26,30 @@
           <argument>
             <kind>1</kind>
             <string>init_player(global.control, self);
+cpcs = 1;
+</string>
+          </argument>
+        </arguments>
+      </action>
+    </event>
+    <event eventtype="2" enumb="7">
+      <action>
+        <libid>1</libid>
+        <id>603</id>
+        <kind>7</kind>
+        <userelative>0</userelative>
+        <isquestion>0</isquestion>
+        <useapplyto>-1</useapplyto>
+        <exetype>2</exetype>
+        <functionname></functionname>
+        <codestring></codestring>
+        <whoName>self</whoName>
+        <relative>0</relative>
+        <isnot>0</isnot>
+        <arguments>
+          <argument>
+            <kind>1</kind>
+            <string> take_damage(tix, hp, sounds);
 </string>
           </argument>
         </arguments>
@@ -117,7 +141,11 @@
         <arguments>
           <argument>
             <kind>1</kind>
-            <string>if(hp &gt; 50) { 
+            <string>if(hp &lt;= 0) {
+   room_goto(room2);
+}
+
+if(hp &gt; 50) { 
     eye_index = 0; 
 } else { 
     eye_index = 1; 
@@ -223,9 +251,6 @@ alarm[6] = 30;
             <string>depth = -y;
 switch_controls();
 player_controls();
-if(hp &lt;= 0) {
-   room_goto(room2);
-}
 
 if(x &lt; 0) {
    x = 0;
@@ -243,7 +268,7 @@ if(y &lt; 900) {
    y = 900;
 }
 
-if(heals &gt;= 9) { heals = 9; }
+
 </string>
           </argument>
         </arguments>
@@ -271,7 +296,7 @@ if(((y &lt;= other.zombie.y + 32) &amp;&amp; (y &gt;= other.zombie.y - 32)) || y
    inrange = true;
 }
 
-if(other.zombie.is_attacking == 1 &amp;&amp; inrange &amp;&amp; can_take_damage == 1) {
+if(other.zombie.is_attacking == 1 &amp;&amp; inrange &amp;&amp; can_take_damage == 1 &amp;&amp; is_taking_damage == 0) {
    take_damage(other.zombie.image_xscale, other.zombie.damage, sounds);
 }
 </string>
@@ -296,13 +321,28 @@ if(other.zombie.is_attacking == 1 &amp;&amp; inrange &amp;&amp; can_take_damage 
         <arguments>
           <argument>
             <kind>1</kind>
-            <string>inrange = false;
-if(((y &lt;= other.shooter.y + 32) &amp;&amp; (y &gt;= other.shooter.y - 32)) || y == other.shooter.y) {
-   inrange = true;
-}
-
-if(other.shooter.is_attacking == 1 &amp;&amp; inrange &amp;&amp; can_take_damage == 1) {
-   take_damage(other.shooter.image_xscale, other.damage, sounds);
+            <string>if(cpcs == 0) { 
+   exit;
+} else {
+   inrange = false;
+   if(((y &lt;= other.shooter.y + 32) &amp;&amp; (y &gt;= other.shooter.y - 32)) || y == other.shooter.y) {
+      inrange = true;
+   }
+   
+   if(other.shooter.is_attacking == 1 &amp;&amp; inrange &amp;&amp; can_take_damage == 1) {
+      hp = 0;
+      cpcs = 0;      
+      eye_index = 2;
+      alarm[7] = 180;
+      is_taking_damage = 1;
+      can_take_damage = 1;   
+      other.shooter.is_hitting = 1;
+      tix = other.shooter.image_xscale;
+      image_xscale = -1*tix;
+      x = other.x + (256 * other.image_xscale)
+      audio_play_sound(snd_wep09_empty, 0, false); 
+      audio_play_sound(snd_char01_chain_hit, 0, false);      
+   }
 }
 </string>
           </argument>

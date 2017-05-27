@@ -28,16 +28,20 @@
             <string>hand1 = create_zombie_hand(self, 256, 256, 0, obj_en02_hand01);
 hand2 = create_zombie_hand(self, 256, 256, 1, obj_en02_hand02);
 init_enemy(hand1, hand2, 100, obj_en02);
-
+hand1x = 0;
 hand2x = 0;
 eye_index = 0;
 chains = 2;
 chainsaw_raised = false;
 can_chain = true;
 is_chaining = true;
+is_hitting = 0;
 alarm[7] = 1;
 cpcs = true;
-audio_play_sound(weapon.reload_sound, 0, false);
+wepx = 0;
+wepy = 0;
+
+audio_play_sound(snd_wep09_reload, 0, false);
 </string>
           </argument>
         </arguments>
@@ -69,6 +73,11 @@ if(instance_exists(obj_en_gm1_gen)) {
       }      
    }
 }
+
+if(audio_is_playing(weapon.aim_sound) &amp;&amp; instance_number(obj_en02) &lt;= 1) {
+   audio_stop_sound(weapon.aim_sound);
+}
+
 with(weapon) {
    instance_destroy();
 }
@@ -96,23 +105,30 @@ siege_upgrades();
         <arguments>
           <argument>
             <kind>1</kind>
-            <string>if(attack_position &gt;= 15) {
-   alarm[3] = 1;
+            <string>if(is_hitting) {
+   exit;
 } else {
-   if(cpcs) {
-      audio_stop_sound(weapon.aim_sound);
-      audio_play_sound(weapon.firing_sound, 0, false);    
-      cpcs = false;
+   if(attack_position &gt;= 15) {
+      alarm[3] = 1;
+   } else {
+      if(cpcs) {
+         audio_stop_sound(weapon.aim_sound);
+         audio_play_sound(weapon.firing_sound, 0, false);    
+         cpcs = false;
+      }
+      chainsaw_raised = false;
+      handx ++;
+      hand2x += 7;
+      attack_position ++;   
+      alarm[9] = 1;
+      hand1y ++;
+      hand2y += 7;   
+      wepx ++;
+      wepy += 7;
+      hand1.image_angle -= 6*hand1.image_xscale;
+      hand2.image_angle -= 6 * image_xscale;
+      weapon.image_angle -= 6*weapon.image_xscale;  
    }
-   chainsaw_raised = false;
-   handx += 7;
-   hand2x += 6;
-   attack_position ++;   
-   alarm[9] = 1;
-   hand1y += 4;
-   hand2y += 2;   
-   hand1.image_angle -= 6*hand1.image_xscale;
-   hand2.image_angle -= 6*hand2.image_xscale;      
 }
 </string>
           </argument>
@@ -169,7 +185,7 @@ siege_upgrades();
             <string>if(chains &lt;=0) {
    weapon.image_speed = 1;
    is_chaining = false;
-   audio_play_sound(weapon.aim_sound, 0, true);
+   audio_play_sound(snd_wep09_aim, 0, true);
    can_move = 1; 
    can_attack = 1;   
    exit;
@@ -263,6 +279,7 @@ can_take_damage = 1;
 can_move = 1;
 is_attacking = 0;
 attack_position = 0;
+can_attack = 1;
 </string>
           </argument>
         </arguments>
@@ -285,22 +302,27 @@ attack_position = 0;
         <arguments>
           <argument>
             <kind>1</kind>
-            <string>if(attack_position &lt;= 0) {
-   alarm[4] = 15;
-   is_attacking = 0;
-   cpcs = true;
+            <string>if(is_hitting) {
+   exit;
 } else {
-   handx -=7;
-   hand2x -= 6;
-   attack_position --;   
-   alarm[3] = 1;
-   hand1y -= 4;
-   hand2y -= 2;      
-   hand1.image_angle += 6*hand1.image_xscale;
-   hand2.image_angle += 6*hand2.image_xscale;         
+   if(attack_position &lt;= 0) {
+      alarm[4] = 15;
+      is_attacking = 0;
+      cpcs = true;
+   } else {
+      handx --;
+      hand2x -= 7;
+      attack_position --;   
+      alarm[3] = 1;
+      hand1y --;
+      hand2y -= 7;     
+      wepx--;
+      wepy -= 7; 
+      hand1.image_angle += 6*hand1.image_xscale;
+      hand2.image_angle += 6*hand2.image_xscale;         
+      weapon.image_angle += 6*weapon.image_xscale;       
+   }
 }
-
-
 </string>
           </argument>
         </arguments>
@@ -410,9 +432,16 @@ alarm[9] = 30;
             <string>if(is_chaining) { 
    can_move = 0; 
    can_attack = 0;
+   is_attacking = 0;
 }
-basic_en_IA(3, false, 256);
+basic_en_IA(7, false, 256);
 eye_index = is_taking_damage;
+is_hitting = weapon.is_hitting;
+if(is_hitting == 1) {
+   can_move = 0;
+   can_attack = 0;
+   is_attacking = 0;
+}
 </string>
           </argument>
         </arguments>
