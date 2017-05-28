@@ -201,6 +201,7 @@
     <scripts name="animations">
       <scripts name="player">
         <script>scripts\draw_facial_expression.gml</script>
+        <script>scripts\chainsaw_death.gml</script>
       </scripts>
       <scripts name="weapon">
         <script>scripts\scp_wep00.gml</script>

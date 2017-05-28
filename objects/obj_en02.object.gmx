@@ -106,7 +106,7 @@ siege_upgrades();
           <argument>
             <kind>1</kind>
             <string>if(is_hitting) {
-   exit;
+    exit;     
 } else {
    if(attack_position &gt;= 15) {
       alarm[3] = 1;
@@ -501,6 +501,15 @@ if(is_hitting == 1) {
 } else {
    draw_sprite_ext(sprite_index, image_index, x, y, image_xscale, 1, 1, c_white, red_alpha);   
 }
+
+
+if(debug_mode) {
+    draw_self();
+    draw_text(view_xview + 0, view_yview + 0, "Chainsaw Raised: " + string(chainsaw_raised));
+    draw_text(view_xview + 0, view_yview + 32, "Is Hitting: " + string(is_hitting));    
+    draw_text(view_xview + 0, view_yview + 64, "Is attacking: " + string(is_attacking));    
+}
+
 </string>
           </argument>
         </arguments>

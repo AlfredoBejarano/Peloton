@@ -32,6 +32,29 @@ cpcs = 1;
         </arguments>
       </action>
     </event>
+    <event eventtype="2" enumb="8">
+      <action>
+        <libid>1</libid>
+        <id>603</id>
+        <kind>7</kind>
+        <userelative>0</userelative>
+        <isquestion>0</isquestion>
+        <useapplyto>-1</useapplyto>
+        <exetype>2</exetype>
+        <functionname></functionname>
+        <codestring></codestring>
+        <whoName>self</whoName>
+        <relative>0</relative>
+        <isnot>0</isnot>
+        <arguments>
+          <argument>
+            <kind>1</kind>
+            <string>chainsaw_death();
+</string>
+          </argument>
+        </arguments>
+      </action>
+    </event>
     <event eventtype="2" enumb="7">
       <action>
         <libid>1</libid>
@@ -49,7 +72,7 @@ cpcs = 1;
         <arguments>
           <argument>
             <kind>1</kind>
-            <string> take_damage(tix, hp, sounds);
+            <string>take_damage(tix, hp, sounds);
 </string>
           </argument>
         </arguments>
@@ -327,11 +350,13 @@ if(other.zombie.is_attacking == 1 &amp;&amp; inrange &amp;&amp; can_take_damage 
    inrange = false;
    if(((y &lt;= other.shooter.y + 32) &amp;&amp; (y &gt;= other.shooter.y - 32)) || y == other.shooter.y) {
       inrange = true;
+      other.is_hitting = 1;
    }
    
    if(other.shooter.is_attacking == 1 &amp;&amp; inrange &amp;&amp; can_take_damage == 1) {
       hp = 0;
       cpcs = 0;      
+      cplhps = 0;
       eye_index = 2;
       alarm[7] = 180;
       is_taking_damage = 1;
@@ -341,8 +366,9 @@ if(other.zombie.is_attacking == 1 &amp;&amp; inrange &amp;&amp; can_take_damage 
       image_xscale = -1*tix;
       x = other.x + (256 * other.image_xscale)
       audio_play_sound(snd_wep09_empty, 0, false); 
-      audio_play_sound(snd_char01_chain_hit, 0, false);      
-   }
+      audio_play_sound(snd_char01_chain_hit, 0, false);    
+      chainsaw_death();  
+    }
 }
 </string>
           </argument>
