@@ -40,6 +40,8 @@ reload_sound = snd_wep01_reload;
 name = ds_list_find_value(get_weapon_data(object_index), 0);
 
 /* upgradable values */ 
+critical = irandom_range(90, 100);
+stopping_power = irandom_range(90, 100);
 damage         = ds_map_find_value(global.upgrades,"wep01dmg");
 max_ammo       = ds_map_find_value(global.upgrades,"wep01ma");
 fire_speed     = ds_map_find_value(global.upgrades,"wep01fs");
@@ -98,7 +100,9 @@ ammo = ds_list_find_value(shooter.weapons_ammo, shooter.current_weapon);
         <arguments>
           <argument>
             <kind>1</kind>
-            <string>create_hitscan(x + (image_xscale * 64), y - 24, view_wview/2, 0, self, 0);
+            <string>critical = irandom_range(90, 100);
+stopping_power = irandom_range(90, 100);
+create_hitscan(x + (image_xscale * 64), y - 24, view_wview/2, 0, self, 0);
 </string>
           </argument>
         </arguments>
@@ -218,6 +222,7 @@ scp_wep01(shooter);
           <argument>
             <kind>1</kind>
             <string>draw_laser(self, view_wview/2, 58, -24, c_green, 24);
+draw_text(x,y, critical);
 </string>
           </argument>
         </arguments>

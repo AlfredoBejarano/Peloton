@@ -42,27 +42,24 @@ with(argument4) {
             if(target.can_get_hit == 1) {
                target.can_move = 1;
                create_blood_splat(target.x, argument1 + argument5, argument4, false, target.depth - 1);
-               if(target.hp != noone) {
-                  switch(argument4.ammo_type) {
-                     case 1:
-                        stopping_power = choose(true, false);  
-                     break;
-                     case 2:
-                        stopping_power = choose(true, false, false);  
-                     break;
-                     default:
-                        stopping_power = true;
-                     break;
+               if(target.hp != noone) {                                 
+                  if((argument4.stopping_power / 100) == 1) {
+                    stopping_power = true;
+                  } else {
+                    stopping_power = false;
                   }
-                     
+                  var mult = 1;
+                  if((argument4.critical / 100) == 1) {
+                    mult = 2;
+                    instance_create(0,0, obj_fx_critical);
+                  }
+                  
                   if(stopping_power) {
                      with(target) {
-                        mult = 1;
-                        if(argument4.ammo_type == 3) { mult = 5; }
                         take_damage(image_xscale * -1, argument4.damage * mult, dam_sound);
                      }
                   } else {
-                     target.hp -= argument4.damage;
+                     target.hp -= argument4.damage * mult;
                   }
                }
             }

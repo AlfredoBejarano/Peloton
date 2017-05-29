@@ -41,6 +41,8 @@ reload_sound = snd_wep03_reload;
 name = ds_list_find_value(get_weapon_data(object_index), 0);
 
 /* upgradable values */ 
+critical = irandom_range(70, 100);
+stopping_power = irandom_range(60, 100);
 damage         = ds_map_find_value(global.upgrades,"wep07dmg");
 max_ammo       = ds_map_find_value(global.upgrades,"wep07ma");
 fire_speed     = ds_map_find_value(global.upgrades,"wep07fs");
@@ -99,7 +101,9 @@ ammo = ds_list_find_value(shooter.weapons_ammo, shooter.current_weapon);
         <arguments>
           <argument>
             <kind>1</kind>
-            <string>create_sg_hitscans(angle);
+            <string>critical = irandom_range(70, 100);
+stopping_power = irandom_range(60, 100);
+create_sg_hitscans(angle);
 </string>
           </argument>
         </arguments>

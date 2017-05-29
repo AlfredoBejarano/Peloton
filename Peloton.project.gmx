@@ -353,6 +353,7 @@
       <object>objects\obj_fx_light_round_big</object>
       <object>objects\obj_fx_enemy_spawn</object>
       <object>objects\obj_fx_heal</object>
+      <object>objects\obj_fx_critical</object>
     </objects>
     <objects name="am">
       <object>objects\obj_antenna</object>
