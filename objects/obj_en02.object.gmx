@@ -88,6 +88,32 @@ siege_upgrades();
         </arguments>
       </action>
     </event>
+    <event eventtype="2" enumb="10">
+      <action>
+        <libid>1</libid>
+        <id>603</id>
+        <kind>7</kind>
+        <userelative>0</userelative>
+        <isquestion>0</isquestion>
+        <useapplyto>-1</useapplyto>
+        <exetype>2</exetype>
+        <functionname></functionname>
+        <codestring></codestring>
+        <whoName>self</whoName>
+        <relative>0</relative>
+        <isnot>0</isnot>
+        <arguments>
+          <argument>
+            <kind>1</kind>
+            <string>can_move = 1; 
+can_attack = 1;
+is_attacking = 0;
+weapon.is_hitting = 0;
+</string>
+          </argument>
+        </arguments>
+      </action>
+    </event>
     <event eventtype="2" enumb="9">
       <action>
         <libid>1</libid>
@@ -303,7 +329,8 @@ can_attack = 1;
           <argument>
             <kind>1</kind>
             <string>if(is_hitting) {
-   exit;
+    alarm[10] = 15;
+    exit;
 } else {
    if(attack_position &lt;= 0) {
       alarm[4] = 15;

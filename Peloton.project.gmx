@@ -293,6 +293,9 @@
       <script>scripts\perform_ia_reload.gml</script>
       <script>scripts\create_enemy_wave.gml</script>
     </scripts>
+    <scripts name="ui">
+      <script>scripts\draw_hud.gml</script>
+    </scripts>
   </scripts>
   <fonts name="fonts">
     <font>fonts\fnt_hud</font>

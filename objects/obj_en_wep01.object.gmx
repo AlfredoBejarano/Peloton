@@ -96,6 +96,7 @@ if(is_hitting == 1 &amp;&amp; cphs == 1) {
    audio_play_sound(snd_wep09_empty, 0, false);
    cphs = 0;
    shooter.chainsaw_raised = true;
+   shooter.alarm[10] = 180;
 }
 </string>
           </argument>
