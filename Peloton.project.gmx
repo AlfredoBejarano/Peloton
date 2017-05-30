@@ -201,7 +201,8 @@
     <scripts name="animations">
       <scripts name="player">
         <script>scripts\draw_facial_expression.gml</script>
-        <script>scripts\chainsaw_death.gml</script>
+        <script>scripts\chainsaw_dead_animation.gml</script>
+        <script>scripts\dead_animation.gml</script>
       </scripts>
       <scripts name="weapon">
         <script>scripts\scp_wep00.gml</script>
@@ -266,6 +267,7 @@
         <script>scripts\switch_controls.gml</script>
         <script>scripts\gamepad_anybutton.gml</script>
         <script>scripts\perform_healing.gml</script>
+        <script>scripts\chainsaw_collition.gml</script>
       </scripts>
       <scripts name="factory">
         <script>scripts\gamepad_factory.gml</script>
@@ -366,6 +368,7 @@
     <objects name="bd">
       <object>objects\obj_hbd</object>
       <object>objects\obj_vbd</object>
+      <object>objects\obj_wall_parent</object>
     </objects>
     <objects name="dp">
       <object>objects\obj_dp_parent</object>

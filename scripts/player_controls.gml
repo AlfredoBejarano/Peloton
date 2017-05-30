@@ -1,4 +1,4 @@
-if(is_taking_damage == 1 || being_attacked == 1) {exit;} else {
+if(is_taking_damage == 1 || being_attacked == 1 || is_dying == true) {exit;} else {
 var up, left, down, right, aim, shoot, action, reload;
 if(control) {    
     up = ds_list_find_value(controls, 0);

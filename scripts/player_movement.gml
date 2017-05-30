@@ -27,5 +27,5 @@ if(aim) {
 
 if((left  || upleft  || downleft ) && x > 128)    { x -= move;   }
 if((right || upright || downright) && x < (room_width - 128))   { x += move;   }
-if((up || upright || upleft) &&    y > 860)      { y -= move/2; }
+if((up || upright || upleft) &&    y > 870)      { y -= move/2; }
 if((down || downleft || downright) &&  y < 1075)    { y += move/2; }

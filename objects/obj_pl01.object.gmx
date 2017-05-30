@@ -32,6 +32,53 @@ cpcs = 1;
         </arguments>
       </action>
     </event>
+    <event eventtype="1" enumb="0">
+      <action>
+        <libid>1</libid>
+        <id>603</id>
+        <kind>7</kind>
+        <userelative>0</userelative>
+        <isquestion>0</isquestion>
+        <useapplyto>-1</useapplyto>
+        <exetype>2</exetype>
+        <functionname></functionname>
+        <codestring></codestring>
+        <whoName>self</whoName>
+        <relative>0</relative>
+        <isnot>0</isnot>
+        <arguments>
+          <argument>
+            <kind>1</kind>
+            <string>with(cweapon) {
+    instance_destroy();
+}
+
+with(hand1) {
+    instance_destroy();
+}
+
+with(hand2) {
+    instance_destroy();
+}
+
+with(picker) {
+    instance_destroy();
+}
+
+with(hud) {
+    instance_destroy();
+}
+
+with(healthhud) {
+    instance_destroy();
+}
+
+
+</string>
+          </argument>
+        </arguments>
+      </action>
+    </event>
     <event eventtype="2" enumb="8">
       <action>
         <libid>1</libid>
@@ -49,7 +96,17 @@ cpcs = 1;
         <arguments>
           <argument>
             <kind>1</kind>
-            <string>chainsaw_death();
+            <string>if(is_dying) {
+    dead_animation();
+    alarm[8] = 1; 
+    y ++;
+    image_alpha -= 0.1;
+    if(image_alpha &lt;= 0) {
+        instance_destroy();
+    }
+} else {
+    chainsaw_dead_animation();
+}
 </string>
           </argument>
         </arguments>
@@ -165,7 +222,7 @@ cpcs = 1;
           <argument>
             <kind>1</kind>
             <string>if(hp &lt;= 0) {
-   room_goto(room2);
+   is_dying = true;
 }
 
 if(hp &gt; 50) { 
@@ -344,32 +401,7 @@ if(other.zombie.is_attacking == 1 &amp;&amp; inrange &amp;&amp; can_take_damage 
         <arguments>
           <argument>
             <kind>1</kind>
-            <string>if(cpcs == 0) { 
-   exit;
-} else {
-   inrange = false;
-   if(((y &lt;= other.shooter.y + 32) &amp;&amp; (y &gt;= other.shooter.y - 32)) || y == other.shooter.y) {
-      inrange = true;
-      other.is_hitting = 1;
-   }
-   
-   if(other.shooter.is_attacking == 1 &amp;&amp; inrange &amp;&amp; can_take_damage == 1) {
-      hp = 0;
-      cpcs = 0;      
-      cplhps = 0;
-      eye_index = 2;
-      alarm[7] = 180;
-      is_taking_damage = 1;
-      can_take_damage = 1;   
-      other.shooter.is_hitting = 1;
-      tix = other.shooter.image_xscale;
-      image_xscale = -1*tix;
-      x = other.x + (256 * other.image_xscale)
-      audio_play_sound(snd_wep09_empty, 0, false); 
-      audio_play_sound(snd_char01_chain_hit, 0, false);    
-      chainsaw_death();  
-    }
-}
+            <string>chainsaw_collition();
 </string>
           </argument>
         </arguments>
@@ -393,33 +425,12 @@ if(other.zombie.is_attacking == 1 &amp;&amp; inrange &amp;&amp; can_take_damage 
           <argument>
             <kind>1</kind>
             <string>draw_self();
-
 draw_facial_expression();
-
 if(weapon == obj_wep00) {
-    draw_sprite_ext(
-        knife_sprite, 
-        1, 
-        x + (16 * image_xscale), 
-        y - 128 + 64, image_xscale,
-        image_yscale,
-        225 * image_xscale,
-        -1,
-        1
-    ); 
+    draw_sprite_ext(knife_sprite, 1, x + (16 * image_xscale), y - 128 + 64, image_xscale, image_yscale, 225 * image_xscale, -1, 1); 
 } else {
-    draw_sprite_ext(
-        knife_sprite, 
-        2, 
-        x + (16 * image_xscale), 
-        y -128 + 64, image_xscale,
-        image_yscale,
-        225 * image_xscale,
-        -1,
-        1
-    );
-}
-
+    draw_sprite_ext(knife_sprite, 2, (x + (16 * image_xscale)), (y -128 + 64), image_xscale, image_yscale, 225 * image_xscale, -1, 1);
+}  
 </string>
           </argument>
         </arguments>

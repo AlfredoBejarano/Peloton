@@ -5,7 +5,7 @@ xc = 0;
 yc = 900;
 times = argument[0];
 if(argument[0] > 20) { times = 20; }
-if(times % 5 == 0) {
+if(times % 10 == 0) {
    xc = irandom(room_width);
    yc = irandom_range(900, room_height);
    if(!place_free(xc, yc)) {

@@ -13,6 +13,7 @@ alarm[4] = 120;
 abutton = noone;
 ybutton = noone;
 is_shooting = 0;
+is_dying = false;
 can_knife = true;
 is_reloading = 0;
 is_switching = 0;
