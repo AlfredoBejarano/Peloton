@@ -347,8 +347,6 @@ if(y &gt; 1075) {
 if(y &lt; 900) {
    y = 900;
 }
-
-
 </string>
           </argument>
         </arguments>

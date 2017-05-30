@@ -3,6 +3,12 @@ if(can_take_damage == 0) {
    if(!is_enemy) { exit; }
 } else {
     is_taking_damage = 1;
+    
+    if(((hp - argument[1]) <= 0) && !is_enemy) {
+        is_dying = true;
+        alarm[8] = 60;
+    }
+    
     if((hp <= 50) && !is_enemy) {
         eye_index = 1;
         mouth_index = 1;
