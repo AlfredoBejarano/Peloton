@@ -48,7 +48,8 @@ ds_list_add(global.keybindings,
     ord('Q'),
     ord('R'),
     vk_tab,
-    vk_space   
+    vk_space,
+    vk_escape   
 );
 
 ds_list_add(global.pl01gp,
@@ -61,7 +62,8 @@ ds_list_add(global.pl01gp,
     gp_padl,
     gp_face3,
     gp_face4,
-    gp_shoulderr
+    gp_shoulderr,
+    gp_start
 );
 
 ds_list_add(global.pl02gp,
@@ -192,7 +194,7 @@ instance_create(room_width/2,1000, obj_pl01);</code>
     <instance objName="obj_fx_light_round_big" x="1360" y="567" name="inst_CF1CC9EB" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
     <instance objName="obj_fx_light_round_big" x="3173" y="584" name="inst_147D0CC6" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
     <instance objName="obj_am_lighting" x="-39" y="29" name="inst_978571A9" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
-    <instance objName="obj_en01" x="1416" y="1016" name="inst_4A8C033A" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
+    <instance objName="obj_en_gm1_gen" x="-24" y="64" name="inst_D27A44AE" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
   </instances>
   <tiles>
     <tile bgName="bck_pipes" x="0" y="360" w="120" h="120" xo="0" yo="0" id="10000012" name="inst_F16CD0E3" depth="10000001" locked="0" colour="4294967295" scaleX="1" scaleY="1"/>

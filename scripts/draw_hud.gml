@@ -21,11 +21,11 @@ if(argument[0]) {
     draw_set_font(fnt_hud);
     if(dwep.object_index != obj_wep00) {
         if(dwep.ammo < 10) { 
-            draw_text_outline(view_xview[0] + (view_wview[0] - (80 * xs)) , view_yview[0] + (view_hview[0] - 120 * (ys)), c_white, c_ltgray, dwep.ammo, image_alpha / 4);
+            draw_text_outline(view_xview[0] + (view_wview[0] - (84 * xs)) , view_yview[0] + (view_hview[0] - 128 * (ys)), c_white, c_ltgray, dwep.ammo, image_alpha / 4);
         } else if(dwep.ammo > 9 && dwep.ammo < 99) {
-            draw_text_outline(view_xview[0] + (view_wview[0] - (74 * xs)) , view_yview[0] + (view_hview[0] - 120 * (ys)), c_white, c_ltgray, dwep.ammo, image_alpha / 4);
+            draw_text_outline(view_xview[0] + (view_wview[0] - (84 * xs)) , view_yview[0] + (view_hview[0] - 128 * (ys)), c_white, c_ltgray, dwep.ammo, image_alpha / 4);
         } else {
-            draw_text_outline(view_xview[0] + (view_wview[0] - (68 * xs)), view_yview[0] + (view_hview[0] - 120 * (ys)), c_white, c_ltgray, dwep.ammo, image_alpha / 4);
+            draw_text_outline(view_xview[0] + (view_wview[0] - (84 * xs)),  view_yview[0] + (view_hview[0] - 128 * (ys)), c_white, c_ltgray, dwep.ammo, image_alpha / 4);
         }
         if(obj_pl01.current_ammo > 99) {
             draw_text_outline(view_xview[0] + (view_wview[0] - (144 * xs)) , view_yview[0] + (view_hview[0] - 100 * (ys)), c_white, c_ltgray, obj_pl01.current_ammo, image_alpha / 4);

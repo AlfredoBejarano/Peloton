@@ -1,3 +1,4 @@
+/// controls_consolidation_variables(Reload key (pressed), Aim key (check), Shoot key (pressed))
 // argument0 - Reload key (pressed).
 // argument1 - Aim key (check).
 // argument2 - Shoot key (pressed).

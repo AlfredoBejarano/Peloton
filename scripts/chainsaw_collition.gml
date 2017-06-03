@@ -20,8 +20,7 @@ if(cpcs == 0) {
       tix = other.shooter.image_xscale;
       image_xscale = -1*tix;
       x = other.x + (256 * other.image_xscale)
-      audio_play_sound(snd_wep09_empty, 0, false); 
-      audio_play_sound(snd_char01_chain_hit, 0, false);    
+      audio_play_sound(ds_list_find_value(sounds, 6), 0, false);    
       chainsaw_dead_animation(); 
     }
 }

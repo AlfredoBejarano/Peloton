@@ -53,6 +53,10 @@ cpcs = 1;
     instance_destroy();
 }
 
+with(weapon) {
+    instance_destroy();
+}
+
 with(hand1) {
     instance_destroy();
 }
@@ -72,8 +76,6 @@ with(hud) {
 with(healthhud) {
     instance_destroy();
 }
-
-
 </string>
           </argument>
         </arguments>
@@ -346,6 +348,11 @@ if(y &gt; 1075) {
 
 if(y &lt; 900) {
    y = 900;
+}
+
+if(is_dying) {
+    eye_index = 2;
+    can_take_damage = 0;
 }
 </string>
           </argument>

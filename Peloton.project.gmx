@@ -4,9 +4,7 @@
     <Config>Configs\Default</Config>
   </Configs>
   <datafiles number="1" name="datafiles"/>
-  <NewExtensions>
-    <extension index="0">extensions\FacebookExtension</extension>
-  </NewExtensions>
+  <NewExtensions/>
   <sounds name="sound">
     <sounds name="wep">
       <sounds name="wep0">
@@ -99,6 +97,7 @@
         <sound>sound\snd_char01_dam04</sound>
         <sound>sound\snd_char01_dam05</sound>
         <sound>sound\snd_char01_chain_hit</sound>
+        <sound>sound\snd_char01_death</sound>
       </sounds>
       <sound>sound\snd_healing</sound>
     </sounds>
@@ -185,6 +184,7 @@
       <sprite>sprites\spr_play</sprite>
       <sprite>sprites\spr_post</sprite>
     </sprites>
+    <sprite>sprites\sprite0</sprite>
   </sprites>
   <backgrounds name="background">
     <background>background\bck_basement1</background>
@@ -229,6 +229,7 @@
       <script>scripts\set_item_picker_data.gml</script>
       <script>scripts\draw_circle_bar.gml</script>
       <script>scripts\set_resolution.gml</script>
+      <script>scripts\screen_capture_background.gml</script>
     </scripts>
     <scripts name="weapon">
       <script>scripts\draw_laser.gml</script>
@@ -268,6 +269,7 @@
         <script>scripts\gamepad_anybutton.gml</script>
         <script>scripts\perform_healing.gml</script>
         <script>scripts\chainsaw_collition.gml</script>
+        <script>scripts\perform_pause.gml</script>
       </scripts>
       <scripts name="factory">
         <script>scripts\gamepad_factory.gml</script>
@@ -279,6 +281,9 @@
       <scripts name="initialization">
         <script>scripts\init_player.gml</script>
         <script>scripts\init_hand2.gml</script>
+        <script>scripts\controls_gamepad.gml</script>
+        <script>scripts\controls_keyboard.gml</script>
+        <script>scripts\init_pause.gml</script>
       </scripts>
       <script>scripts\player_controls.gml</script>
       <script>scripts\device_factory.gml</script>

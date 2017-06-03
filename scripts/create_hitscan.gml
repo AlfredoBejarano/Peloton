@@ -51,7 +51,7 @@ with(argument4) {
                   var mult = 1;
                   if((argument4.critical / 100) == 1) {
                     mult = 2;
-                    instance_create(0,0, obj_fx_critical);
+                    instance_create(target.x, argument1 + argument5, obj_fx_critical);
                   }
                   
                   if(stopping_power) {
