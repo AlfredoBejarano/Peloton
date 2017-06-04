@@ -166,6 +166,8 @@
       <sprite>sprites\spr_en02_hand01</sprite>
       <sprite>sprites\spr_en02_hand02</sprite>
       <sprite>sprites\spr_en02</sprite>
+      <sprite>sprites\spr_en_mouth</sprite>
+      <sprite>sprites\spr_en_hat</sprite>
     </sprites>
     <sprites name="bd">
       <sprite>sprites\spr_hbd</sprite>
@@ -184,7 +186,6 @@
       <sprite>sprites\spr_play</sprite>
       <sprite>sprites\spr_post</sprite>
     </sprites>
-    <sprite>sprites\sprite0</sprite>
   </sprites>
   <backgrounds name="background">
     <background>background\bck_basement1</background>
@@ -195,6 +196,7 @@
       <background>background\bck_betawarning</background>
       <background>background\bck_thanks</background>
     </backgrounds>
+    <background>background\bck_basement_tile</background>
   </backgrounds>
   <paths name="paths"/>
   <scripts name="scripts">

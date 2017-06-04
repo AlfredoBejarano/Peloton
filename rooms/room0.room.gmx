@@ -3,8 +3,8 @@
   <caption></caption>
   <width>3840</width>
   <height>1080</height>
-  <vsnap>8</vsnap>
-  <hsnap>8</hsnap>
+  <vsnap>81</vsnap>
+  <hsnap>730</hsnap>
   <isometric>0</isometric>
   <speed>60</speed>
   <persistent>0</persistent>
@@ -213,6 +213,12 @@ instance_create(room_width/2,1000, obj_pl01);</code>
     <tile bgName="bck_pipes" x="2160" y="360" w="120" h="120" xo="240" yo="0" id="10000042" name="inst_1A8FFC70" depth="10000001" locked="0" colour="4294967295" scaleX="1" scaleY="1"/>
     <tile bgName="bck_pipes" x="3120" y="480" w="120" h="120" xo="360" yo="0" id="10000043" name="inst_72BD3DC3" depth="10000001" locked="0" colour="4294967295" scaleX="1" scaleY="1"/>
     <tile bgName="bck_pipes" x="3120" y="360" w="120" h="120" xo="480" yo="0" id="10000044" name="inst_282EE7BA" depth="10000001" locked="0" colour="4294967295" scaleX="1" scaleY="1"/>
+    <tile bgName="bck_basement_tile" x="0" y="162" w="730" h="810" xo="0" yo="0" id="10000046" name="inst_5B0DC9DC" depth="9999999" locked="0" colour="4294967295" scaleX="1" scaleY="1"/>
+    <tile bgName="bck_basement_tile" x="1460" y="162" w="730" h="810" xo="730" yo="0" id="10000048" name="inst_A71580CD" depth="9999999" locked="0" colour="4294967295" scaleX="1" scaleY="1"/>
+    <tile bgName="bck_basement_tile" x="730" y="162" w="730" h="810" xo="1460" yo="0" id="10000049" name="inst_D5325B06" depth="9999999" locked="0" colour="4294967295" scaleX="1" scaleY="1"/>
+    <tile bgName="bck_basement_tile" x="2920" y="162" w="730" h="810" xo="1460" yo="0" id="10000050" name="inst_436FC940" depth="9999999" locked="0" colour="4294967295" scaleX="1" scaleY="1"/>
+    <tile bgName="bck_basement_tile" x="2190" y="162" w="730" h="810" xo="730" yo="0" id="10000051" name="inst_1361C930" depth="9999999" locked="0" colour="4294967295" scaleX="1" scaleY="1"/>
+    <tile bgName="bck_basement_tile" x="3650" y="162" w="730" h="810" xo="0" yo="0" id="10000052" name="inst_419331F7" depth="9999999" locked="0" colour="4294967295" scaleX="1" scaleY="1"/>
     <tile bgName="bck_basement2" x="0" y="240" w="960" h="1080" xo="0" yo="0" id="10000003" name="inst_B6DCFC8E" depth="1000000" locked="0" colour="4294967295" scaleX="1" scaleY="1"/>
     <tile bgName="bck_basement2" x="240" y="240" w="960" h="1080" xo="0" yo="0" id="10000004" name="inst_4A183099" depth="1000000" locked="0" colour="4294967295" scaleX="1" scaleY="1"/>
     <tile bgName="bck_basement2" x="960" y="240" w="960" h="1080" xo="0" yo="0" id="10000005" name="inst_41F0EFC6" depth="1000000" locked="0" colour="4294967295" scaleX="1" scaleY="1"/>

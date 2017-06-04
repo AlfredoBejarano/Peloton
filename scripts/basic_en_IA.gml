@@ -1,5 +1,11 @@
 ///basic_en_IA(movement speed, can be idle, attack distance, attack_alarm)
-   if(is_taking_damage == 1) { exit; }
+if(is_taking_damage == 1) { 
+    exit; 
+}
+
+if(hp <= 0) {
+    eye_index = 1;
+}
 
 /// Enemy basic IA
 depth = -y;

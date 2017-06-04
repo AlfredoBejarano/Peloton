@@ -14,16 +14,17 @@ if(can_take_damage == 0) {
     hspeed = 30*argument[0];
     image_angle = 15*argument[0];
     if(is_enemy) {
-      alarm[5] = 5;
+        eye_index = 1;
+        alarm[5] = 5;
     } else {
       eye_index = 2;
       alarm[3] = 15;    
     }
     
     if(is_enemy) {
-      if(!audio_is_playing(argument[2])) {
-         audio_play_sound(argument[2], 0, false);
-      }
+        if(!audio_is_playing(argument[2])) {
+            audio_play_sound(argument[2], 0, false);
+        }
     } else {
         if((hp - argument[1]) <= 0) {
             is_dying = true;

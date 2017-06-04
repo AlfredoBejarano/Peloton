@@ -10,5 +10,6 @@ if(argument0 && (hp < 100 && heals > 0) && can_heal = 1) {
    alarm[5] = 60;
    eye_index = 0;
    mouth_index = 0;
+   cplhps = 1;
    audio_play_sound(snd_healing, 0, false);
 }

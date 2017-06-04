@@ -76,6 +76,8 @@ with(hud) {
 with(healthhud) {
     instance_destroy();
 }
+
+room_goto_next();
 </string>
           </argument>
         </arguments>

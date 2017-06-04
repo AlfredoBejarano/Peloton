@@ -29,7 +29,7 @@
 ammo_type = 2;
 picked = false;
 item_type = "ammo"
-alarm[3] = room_speed * 5;
+alarm[3] = room_speed * 30;
 </string>
           </argument>
         </arguments>

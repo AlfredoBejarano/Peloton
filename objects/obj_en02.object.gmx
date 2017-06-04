@@ -276,6 +276,7 @@ if(!audio_is_playing(weapon.aim_sound,)) {
           <argument>
             <kind>1</kind>
             <string>hspeed = 0;
+eye_index = 0;
 image_angle = 0;
 is_taking_damage = 0;
 can_take_damage = 1;
@@ -469,6 +470,10 @@ if(is_hitting == 1) {
    can_attack = 0;
    is_attacking = 0;
 }
+
+if(dying == 1) {
+    eye_index = 1;
+}
 </string>
           </argument>
         </arguments>
@@ -519,16 +524,15 @@ if(is_hitting == 1) {
         <arguments>
           <argument>
             <kind>1</kind>
-            <string>if(dying == 0) {
-   draw_self();
-   draw_sprite_ext(spr_eye, 3 + eye_index, x + (60*image_xscale ) , y - 176,  image_xscale, image_yscale, 0, c_white, 1);
-   draw_sprite_ext(spr_eye, 3 + eye_index, x + (95* image_xscale) , y - 176, -image_xscale, image_yscale, 0, c_white, 1);   
+            <string>draw_self();
+if(dying == 0) {
    draw_set_alpha(1);
    draw_enemy_healthbar(gp_red);
 } else {
    draw_sprite_ext(sprite_index, image_index, x, y, image_xscale, 1, 1, c_white, red_alpha);   
 }
-
+draw_sprite_ext(spr_eye, 3 + eye_index, x + (60*image_xscale ) , y - 176,  image_xscale, image_yscale, 0, c_white, 1);
+draw_sprite_ext(spr_eye, 3 + eye_index, x + (95* image_xscale) , y - 176, -image_xscale, image_yscale, 0, c_white, 1);   
 </string>
           </argument>
         </arguments>

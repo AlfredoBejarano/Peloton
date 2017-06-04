@@ -21,10 +21,11 @@ death_position = 0;
 attack_position = 0;
 can_take_damage = 1;
 is_taking_damage = 0;
-image_index = choose(0, 1, 2);
+image_index = irandom_range(0, image_number);
 hand1 = argument[0];
 hand2 = argument[1];
 is_hitting = 0;
+eye_index = 0;
 
 if(argument[3] == obj_en02) {
    att_sound = snd_en02_attack;

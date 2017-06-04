@@ -28,7 +28,7 @@
             <string>quantity = 4;
 ammo_type = 3;
 item_type = "ammo"
-alarm[3] = room_speed * 5;
+alarm[3] = room_speed * 30;
 </string>
           </argument>
         </arguments>

@@ -27,7 +27,8 @@
             <kind>1</kind>
             <string>hand1 = create_zombie_hand(self, 256, 256, 0, obj_en01_arm);
 hand2 = create_zombie_hand(self, 256, 256, 1, obj_en01_arm);
-init_enemy(hand1, hand2, 20, obj_en01);
+hat_index = irandom_range(0, 2);
+init_enemy(hand1, hand2, 10, obj_en01);
 </string>
           </argument>
         </arguments>
@@ -107,6 +108,7 @@ siege_upgrades();
           <argument>
             <kind>1</kind>
             <string>hspeed = 0;
+eye_index = 0;
 image_angle = 0;
 is_taking_damage = 0;
 can_take_damage = 1;
@@ -338,12 +340,21 @@ attack_position = 0;
         <arguments>
           <argument>
             <kind>1</kind>
-            <string>if(dying == 0) {
-   draw_self();
+            <string>draw_self();
+if(dying == 0) {
    draw_set_alpha(1);
    draw_enemy_healthbar(gp_yellow);
 } else {
     draw_sprite_ext(sprite_index, image_index, x, y, image_xscale, 1, 1, c_white, red_alpha);
+}
+
+if(image_index != image_number - 1) {
+    draw_sprite_ext(spr_en_mouth, 0, x + (60 * image_xscale ) , y - 144,  image_xscale, image_yscale, 0, c_white, 1);
+    draw_sprite_ext(spr_eye, 3 + eye_index, x + (60*image_xscale ) , y - 176,  image_xscale, image_yscale, 0, c_white, 1);
+    draw_sprite_ext(spr_eye, 3 + eye_index, x + (95* image_xscale) , y - 176, -image_xscale, image_yscale, 0, c_white, 1);   
+    if(image_index != 0) {
+        draw_sprite_ext(spr_en_hat, hat_index, x, (y - 240), image_xscale, 1, 0, c_white, 1);
+    }
 }
 </string>
           </argument>
