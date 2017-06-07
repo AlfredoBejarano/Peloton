@@ -135,7 +135,7 @@ alarm[3] = room_speed * 30;
             <kind>1</kind>
             <string>target = instance_nearest(x, y, obj_player_parent);
 if(distance_to_object(target) &lt;  32) {
-    depth = -1081;
+    depth = -1200;
    pl_position = true;
    abutton = target.abutton;
    with(target) {
