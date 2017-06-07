@@ -3,7 +3,7 @@
   <spriteName>spr_heal_fx</spriteName>
   <solid>0</solid>
   <visible>-1</visible>
-  <depth>-1085</depth>
+  <depth>-1201</depth>
   <persistent>0</persistent>
   <parentName>&lt;undefined&gt;</parentName>
   <maskName>&lt;undefined&gt;</maskName>
