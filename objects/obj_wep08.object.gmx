@@ -40,7 +40,7 @@ reload_sound = snd_wep04_reload;
 name = ds_list_find_value(get_weapon_data(object_index), 0);
 
 /* upgradable values */ 
-critical = 100;
+critical = irandom_range(98, 100);
 stopping_power = irandom_range(50, 100);
 damage         = ds_map_find_value(global.upgrades,"wep08dmg");
 max_ammo       = ds_map_find_value(global.upgrades,"wep08ma");

@@ -1,32 +1,12 @@
 /// Calculates which ammo must be dropped from an enemy, depending on players inventory.
 
-var ammo = ds_list_create();
-ds_list_add(ammo, 0);
+randomize();
+list = global.pl01wi;
+list_size = ds_list_size(list) - 1;
+list_index = irandom_range(0, list_size);
+chance = irandom_range(1,4);
+drop_item = droppable_factory(ds_list_find_value(list, list_index));
 
-for(i = 0; i < ds_list_size(global.pl01wi); i++) {
-   if(ds_list_find_value(ammo, i) == noone) {
-      ds_list_add(ammo, ds_list_find_value(global.pl01wi, i).ammo_type);
-   }
-}
-
-switch(ds_list_size(ammo)) {
-   case 0:
-      drop_item = choose(obj_dp_heal);
-   case 1:
-      drop_item = choose(obj_dp_heal, obj_dp_handgun, obj_dp_handgun);
-   break;
-   case 2:
-      drop_item = choose(obj_dp_heal, obj_dp_handgun, obj_dp_machinegun);
-   break;
-   case 3:
-      drop_item = choose(obj_dp_heal, obj_dp_handgun, obj_dp_machinegun, obj_dp_shotgun);
-   break;
-   default:
-      drop_item = choose(obj_dp_heal, obj_dp_handgun, obj_dp_machinegun, obj_dp_shotgun, obj_dp_rifle);
-   break;
-}
-ds_list_destroy(ammo);
-
-if(choose(true, false) == true) {
-   instance_create(x, y, drop_item);
+if(choose(true, false)) {
+   instance_create(x, y, choose(drop_item, drop_item, drop_item, drop_item, obj_dp_heal));
 }

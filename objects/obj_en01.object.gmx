@@ -27,8 +27,8 @@
             <kind>1</kind>
             <string>hand1 = create_zombie_hand(self, 256, 256, 0, obj_en01_arm);
 hand2 = create_zombie_hand(self, 256, 256, 1, obj_en01_arm);
-hat_index = irandom_range(0, 2);
-init_enemy(hand1, hand2, 10, obj_en01);
+init_enemy(hand1, hand2, 15, obj_en01);
+hat_index = hat_factory(image_index);
 </string>
           </argument>
         </arguments>
@@ -61,7 +61,7 @@ if(instance_exists(obj_en_gm1_gen)) {
    }
 }
 calculate_drop();
-siege_upgrades();
+siege_upgrades(global.hg, global.mg, global.sg, global.rf);
 </string>
           </argument>
         </arguments>
@@ -348,13 +348,12 @@ if(dying == 0) {
     draw_sprite_ext(sprite_index, image_index, x, y, image_xscale, 1, 1, c_white, red_alpha);
 }
 
-if(image_index != image_number - 1) {
+draw_sprite_ext(spr_en_hat, hat_index, x - (16 * image_xscale), (y - 220), image_xscale, 1, 0, c_white, 1);
+
+if(image_index != 4) {
     draw_sprite_ext(spr_en_mouth, 0, x + (60 * image_xscale ) , y - 144,  image_xscale, image_yscale, 0, c_white, 1);
     draw_sprite_ext(spr_eye, 3 + eye_index, x + (60*image_xscale ) , y - 176,  image_xscale, image_yscale, 0, c_white, 1);
     draw_sprite_ext(spr_eye, 3 + eye_index, x + (95* image_xscale) , y - 176, -image_xscale, image_yscale, 0, c_white, 1);   
-    if(image_index != 0) {
-        draw_sprite_ext(spr_en_hat, hat_index, x, (y - 240), image_xscale, 1, 0, c_white, 1);
-    }
 }
 </string>
           </argument>

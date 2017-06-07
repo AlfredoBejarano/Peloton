@@ -181,6 +181,7 @@
     <sprites name="dp">
       <sprite>sprites\spr_antenna</sprite>
       <sprite>sprites\spr_droppables</sprite>
+      <sprite>sprites\spr_dropabbles_en</sprite>
     </sprites>
     <sprites name="openBeta">
       <sprite>sprites\spr_play</sprite>
@@ -232,6 +233,9 @@
       <script>scripts\draw_circle_bar.gml</script>
       <script>scripts\set_resolution.gml</script>
       <script>scripts\screen_capture_background.gml</script>
+      <scripts name="factory">
+        <script>scripts\droppable_factory.gml</script>
+      </scripts>
     </scripts>
     <scripts name="weapon">
       <script>scripts\draw_laser.gml</script>
@@ -296,6 +300,7 @@
       <script>scripts\basic_en_IA.gml</script>
       <script>scripts\create_zombie_hand.gml</script>
       <script>scripts\draw_enemy_healthbar.gml</script>
+      <script>scripts\hat_factory.gml</script>
     </scripts>
     <scripts name="IA">
       <script>scripts\init_ia.gml</script>
@@ -345,13 +350,13 @@
       <object>objects\obj_shot</object>
     </objects>
     <objects name="en">
+      <object>objects\obj_en_gm1_gen</object>
       <object>objects\obj_barrel</object>
       <object>objects\obj_target_parent</object>
       <objects name="en01">
         <object>objects\obj_en01</object>
         <object>objects\obj_en01_arm</object>
       </objects>
-      <object>objects\obj_en_gm1_gen</object>
       <objects name="en02">
         <object>objects\obj_en02</object>
         <object>objects\obj_en02_hand01</object>
@@ -366,6 +371,7 @@
       <object>objects\obj_fx_enemy_spawn</object>
       <object>objects\obj_fx_heal</object>
       <object>objects\obj_fx_critical</object>
+      <object>objects\obj_fx_low_health</object>
     </objects>
     <objects name="am">
       <object>objects\obj_antenna</object>
@@ -379,8 +385,8 @@
     </objects>
     <objects name="dp">
       <object>objects\obj_dp_parent</object>
-      <object>objects\obj_dp_handgun</object>
       <object>objects\obj_dp_heal</object>
+      <object>objects\obj_dp_handgun</object>
       <object>objects\obj_dp_machinegun</object>
       <object>objects\obj_dp_shotgun</object>
       <object>objects\obj_dp_rifle</object>

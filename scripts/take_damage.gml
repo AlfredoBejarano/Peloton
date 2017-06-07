@@ -4,6 +4,7 @@ if(can_take_damage == 0) {
     exit; 
    }
 } else {
+    var damcalc = hp - argument[1];
     is_taking_damage = 1;
     if(argument[0] == image_xscale) {
         damage_direction = 1;
@@ -26,17 +27,21 @@ if(can_take_damage == 0) {
             audio_play_sound(argument[2], 0, false);
         }
     } else {
-        if((hp - argument[1]) <= 0) {
+        if(damcalc <= 0) {
             is_dying = true;
             alarm[8] = 60;
             audio_play_sound(ds_list_find_value(sounds, 7), 0, false); 
-        } else if(hp  <= 50) {
+        } else if(damcalc  <= 25) {
             eye_index = 1;
             mouth_index = 1;
             if(cplhps == 1) {
+                instance_create(-64, -64, obj_fx_low_health);
                 audio_play_sound(ds_list_find_value(sounds, 5), 0, false); 
                 cplhps = 0;
-            }    
+            } else {
+                sound = ds_list_find_value(sounds, irandom(4));
+                audio_play_sound(sound, 0, false);         
+            }
         } else {
             sound = ds_list_find_value(sounds, irandom(4));
             audio_play_sound(sound, 0, false);         

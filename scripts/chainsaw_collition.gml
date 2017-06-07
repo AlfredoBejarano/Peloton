@@ -9,6 +9,7 @@ if(cpcs == 0) {
    }
    
    if(other.shooter.is_attacking == 1 && inrange && can_take_damage == 1) {
+      instance_create(-64, -64, obj_fx_low_health);
       hp = 0;
       cpcs = 0;      
       cplhps = 0;

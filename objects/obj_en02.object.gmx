@@ -82,7 +82,7 @@ with(weapon) {
    instance_destroy();
 }
 calculate_drop();
-siege_upgrades();
+siege_upgrades(global.hg, global.mg, global.sg, global.rf);
 </string>
           </argument>
         </arguments>
