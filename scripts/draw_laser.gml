@@ -8,6 +8,10 @@
 // argument5 - hitscan delta respect to y origin.
 draw_self();
 
+if(global.control) {
+    exit;
+}
+
 ox = argument0.x;
 oy = argument0.y;
 distance = argument1;

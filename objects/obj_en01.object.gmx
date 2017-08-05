@@ -27,7 +27,7 @@
             <kind>1</kind>
             <string>hand1 = create_zombie_hand(self, 256, 256, 0, obj_en01_arm);
 hand2 = create_zombie_hand(self, 256, 256, 1, obj_en01_arm);
-init_enemy(hand1, hand2, 15, obj_en01);
+init_enemy(hand1, hand2, 18, obj_en01);
 hat_index = hat_factory(image_index);
 </string>
           </argument>

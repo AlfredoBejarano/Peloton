@@ -73,7 +73,7 @@ if(image_alpha &lt;= 0) { instance_destroy();}
         <arguments>
           <argument>
             <kind>1</kind>
-            <string>draw_set_alpha(image_alpha);
+            <string>draw_set_alpha(image_alpha );
 draw_line_width_colour(x1,y1,x2,y2,2,c_yellow, c_yellow);
 draw_set_alpha(1);
 </string>

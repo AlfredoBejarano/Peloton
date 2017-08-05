@@ -29,6 +29,7 @@ if(argument1) {
 
 // Weapon aiming (hold).
 if(argument0 && player.is_switching == 0) {
+
     player.is_aiming = 1;
     player.hud.alarm[0] = 1;
     

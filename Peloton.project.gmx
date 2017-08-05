@@ -154,6 +154,7 @@
       <sprite>sprites\spr_light_round_fx_micro</sprite>
       <sprite>sprites\spr_health</sprite>
       <sprite>sprites\spr_bullet_fx</sprite>
+      <sprite>sprites\spr_fx_sparkle_light</sprite>
       <sprite>sprites\spr_blood_fx</sprite>
       <sprite>sprites\spr_blood_floor_fx</sprite>
       <sprite>sprites\spr_fire_fx</sprite>
@@ -189,15 +190,13 @@
     </sprites>
   </sprites>
   <backgrounds name="background">
-    <background>background\bck_basement1</background>
-    <background>background\bck_basement2</background>
-    <background>background\bck_basement3</background>
     <background>background\bck_pipes</background>
     <backgrounds name="openBeta">
-      <background>background\bck_betawarning</background>
       <background>background\bck_thanks</background>
     </backgrounds>
-    <background>background\bck_basement_tile</background>
+    <backgrounds name="chapter1">
+      <background>background\bck_chapter1a</background>
+    </backgrounds>
   </backgrounds>
   <paths name="paths"/>
   <scripts name="scripts">

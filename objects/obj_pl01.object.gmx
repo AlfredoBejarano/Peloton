@@ -4,7 +4,7 @@
   <solid>0</solid>
   <visible>-1</visible>
   <depth>0</depth>
-  <persistent>0</persistent>
+  <persistent>-1</persistent>
   <parentName>obj_player_parent</parentName>
   <maskName>&lt;undefined&gt;</maskName>
   <events>
@@ -344,8 +344,8 @@ if(x &gt; room_width) {
    x = room_width;
 }
 
-if(y &gt; 1075) {
-   y = 1075;
+if(y &gt; 1750) {
+   y = 1750;
 }
 
 if(y &lt; 900) {

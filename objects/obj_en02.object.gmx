@@ -27,7 +27,7 @@
             <kind>1</kind>
             <string>hand1 = create_zombie_hand(self, 256, 256, 0, obj_en02_hand01);
 hand2 = create_zombie_hand(self, 256, 256, 1, obj_en02_hand02);
-init_enemy(hand1, hand2, 100, obj_en02);
+init_enemy(hand1, hand2, 200, obj_en02);
 hand1x = 0;
 hand2x = 0;
 eye_index = 0;

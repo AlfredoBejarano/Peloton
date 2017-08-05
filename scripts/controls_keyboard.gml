@@ -27,6 +27,14 @@ if(global.touch) {
         perform_reload(self);
     }
 } else {
+    if(mouse_check_button(aim)) {
+        if(mouse_x > x) {
+            image_xscale = 1;
+        } else {
+            image_xscale = -1;
+        }
+        
+    }
     perform_aim(mouse_check_button(aim), mouse_check_button_pressed(aim), mouse_check_button(shoot), mouse_check_button_pressed(shoot), mouse_check_button_released(aim), keyboard_check_pressed(reload), self); 
 }
 /* AIMING AND SHOOTING ENDS */
