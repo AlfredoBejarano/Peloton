@@ -157,7 +157,7 @@ ds_map_add(global.upgrades, "wep09dmg", 100);
 
 // Player's objects must be created at the end
 instance_create(room_width/2,1000, obj_pl01);
-set_item_picker_data(ds_list_find_value(get_weapon_data(global.hg), 0), real(real(ds_map_find_value(global.upgrades, ds_list_find_value(siege_keys_factory(global.hg), 2))) * 4), ds_list_find_value(get_weapon_data(global.hg), 2), snd_weapon_add);</code>
+//set_item_picker_data(ds_list_find_value(get_weapon_data(global.hg), 0), real(real(ds_map_find_value(global.upgrades, ds_list_find_value(siege_keys_factory(global.hg), 2))) * 4), ds_list_find_value(get_weapon_data(global.hg), 2), snd_weapon_add);</code>
   <enableViews>-1</enableViews>
   <clearViewBackground>-1</clearViewBackground>
   <clearDisplayBuffer>0</clearDisplayBuffer>
@@ -199,10 +199,15 @@ set_item_picker_data(ds_list_find_value(get_weapon_data(global.hg), 0), real(rea
   </views>
   <instances>
     <instance objName="obj_am_lighting" x="0" y="0" name="inst_978571A9" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
+    <instance objName="obj_switch" x="815" y="683" name="inst_D3FD84E0" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
   </instances>
   <tiles>
     <tile bgName="bck_pipes" x="882" y="346" w="120" h="120" xo="360" yo="0" id="10000094" name="inst_02F1394A" depth="1000000" locked="0" colour="4294967295" scaleX="1" scaleY="1"/>
     <tile bgName="bck_pipes" x="882" y="230" w="120" h="120" xo="480" yo="0" id="10000095" name="inst_4CE4B028" depth="1000000" locked="0" colour="4294967295" scaleX="1" scaleY="1"/>
+    <tile bgName="bck_pipes" x="757" y="548" w="120" h="120" xo="480" yo="0" id="10000096" name="inst_79BD68E5" depth="1000000" locked="0" colour="4294967295" scaleX="1" scaleY="1"/>
+    <tile bgName="bck_pipes" x="757" y="431" w="120" h="120" xo="480" yo="0" id="10000097" name="inst_F494386E" depth="1000000" locked="0" colour="4294967295" scaleX="1" scaleY="1"/>
+    <tile bgName="bck_pipes" x="757" y="311" w="120" h="120" xo="480" yo="0" id="10000098" name="inst_D5FE8934" depth="1000000" locked="0" colour="4294967295" scaleX="1" scaleY="1"/>
+    <tile bgName="bck_pipes" x="757" y="230" w="120" h="120" xo="480" yo="0" id="10000099" name="inst_1CAF64BE" depth="1000000" locked="0" colour="4294967295" scaleX="1" scaleY="1"/>
   </tiles>
   <PhysicsWorld>0</PhysicsWorld>
   <PhysicsWorldTop>0</PhysicsWorldTop>

@@ -170,10 +170,6 @@
       <sprite>sprites\spr_en_mouth</sprite>
       <sprite>sprites\spr_en_hat</sprite>
     </sprites>
-    <sprites name="bd">
-      <sprite>sprites\spr_hbd</sprite>
-      <sprite>sprites\spr_vbd</sprite>
-    </sprites>
     <sprites name="gu">
       <sprite>sprites\spr_gp_buttons</sprite>
       <sprite>sprites\spr_device_gamepad</sprite>
@@ -187,6 +183,10 @@
     <sprites name="openBeta">
       <sprite>sprites\spr_play</sprite>
       <sprite>sprites\spr_post</sprite>
+    </sprites>
+    <sprites name="obj">
+      <sprite>sprites\spr_switch</sprite>
+      <sprite>sprites\spr_ground_entrance</sprite>
     </sprites>
   </sprites>
   <backgrounds name="background">
@@ -376,11 +376,7 @@
       <object>objects\obj_antenna</object>
       <object>objects\obj_music_player</object>
       <object>objects\obj_am_lighting</object>
-    </objects>
-    <objects name="bd">
-      <object>objects\obj_hbd</object>
-      <object>objects\obj_vbd</object>
-      <object>objects\obj_wall_parent</object>
+      <object>objects\obj_switch</object>
     </objects>
     <objects name="dp">
       <object>objects\obj_dp_parent</object>
