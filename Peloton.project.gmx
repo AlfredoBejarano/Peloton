@@ -105,6 +105,9 @@
       <sound>sound\snd_dp_bullet</sound>
       <sound>sound\snd_dp_heal</sound>
     </sounds>
+    <sounds name="am">
+      <sound>sound\snd_am_switch</sound>
+    </sounds>
   </sounds>
   <sprites name="sprites">
     <sprites name="pl">
@@ -187,6 +190,7 @@
     <sprites name="obj">
       <sprite>sprites\spr_switch</sprite>
       <sprite>sprites\spr_ground_entrance</sprite>
+      <sprite>sprites\spr_am_carpet</sprite>
     </sprites>
   </sprites>
   <backgrounds name="background">
@@ -196,6 +200,7 @@
     </backgrounds>
     <backgrounds name="chapter1">
       <background>background\bck_chapter1a</background>
+      <background>background\bck_chapter1b</background>
     </backgrounds>
   </backgrounds>
   <paths name="paths"/>
@@ -375,8 +380,8 @@
     <objects name="am">
       <object>objects\obj_antenna</object>
       <object>objects\obj_music_player</object>
+      <object>objects\obj_am_switch</object>
       <object>objects\obj_am_lighting</object>
-      <object>objects\obj_switch</object>
     </objects>
     <objects name="dp">
       <object>objects\obj_dp_parent</object>
@@ -389,6 +394,9 @@
     </objects>
     <object>objects\obj_play</object>
     <object>objects\obj_share</object>
+    <objects name="ui">
+      <object>objects\obj_text</object>
+    </objects>
   </objects>
   <rooms name="rooms">
     <room>rooms\room0</room>
