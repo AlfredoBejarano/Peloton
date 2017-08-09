@@ -50,20 +50,7 @@ investigated = false;
         <arguments>
           <argument>
             <kind>1</kind>
-            <string>if(on) {
-    if(room == room0) {
-        image_yscale = 1;    
-        background_index[0] = bck_chapter1a;
-    }
-} else {
-    if(room == room0) {
-        image_yscale = -1;
-        background_index[0] = bck_chapter1b;
-    }
-}
-
-depth = -y;
-
+            <string>depth = -y;
 target = instance_nearest(x, y, obj_player_parent);
 if(distance_to_object(target) &lt; 64) {
     button = target.abutton;
@@ -72,16 +59,22 @@ if(distance_to_object(target) &lt; 64) {
             audio_play_sound(snd_am_switch, 0, false);
             on = !on;
             if(on) { 
+                if(room == room0) {
+                    image_yscale = 1;    
+                    background_index[0] = bck_chapter1a;
+                }
                 instance_create(938, 447, obj_fx_light_round_big); 
             } else {
+                if(room == room0) {
+                    image_yscale = -1;
+                    background_index[0] = bck_chapter1c;
+                }
                 with(obj_fx_light_round_big) {
                     instance_destroy();
                 }
             } 
         } else {
-            txt = instance_create(x, y, obj_text);
-            txt.text = "There is a switch here, it may turn the lights on";
-            investigated = true;
+            investigated = display_investigating_text("There is a switch here, it may turn the lights on");
         }
     }
 }

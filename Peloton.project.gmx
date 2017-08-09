@@ -107,6 +107,9 @@
     </sounds>
     <sounds name="am">
       <sound>sound\snd_am_switch</sound>
+      <sound>sound\snd_am_tv_static</sound>
+      <sound>sound\snd_am_tv_break</sound>
+      <sound>sound\snd_am_wind</sound>
     </sounds>
   </sounds>
   <sprites name="sprites">
@@ -153,6 +156,7 @@
       <sprite>sprites\spr_player_light</sprite>
       <sprite>sprites\spr_light_round_fx</sprite>
       <sprite>sprites\spr_light_round_fx_big</sprite>
+      <sprite>sprites\spr_light_round_fx_medium</sprite>
       <sprite>sprites\spr_light_round_fx_small</sprite>
       <sprite>sprites\spr_light_round_fx_micro</sprite>
       <sprite>sprites\spr_health</sprite>
@@ -191,6 +195,8 @@
       <sprite>sprites\spr_switch</sprite>
       <sprite>sprites\spr_ground_entrance</sprite>
       <sprite>sprites\spr_am_carpet</sprite>
+      <sprite>sprites\spr_tv</sprite>
+      <sprite>sprites\spr_tv_broken</sprite>
     </sprites>
   </sprites>
   <backgrounds name="background">
@@ -201,6 +207,7 @@
     <backgrounds name="chapter1">
       <background>background\bck_chapter1a</background>
       <background>background\bck_chapter1b</background>
+      <background>background\bck_chapter1c</background>
     </backgrounds>
   </backgrounds>
   <paths name="paths"/>
@@ -240,6 +247,7 @@
       <scripts name="factory">
         <script>scripts\droppable_factory.gml</script>
       </scripts>
+      <script>scripts\display_investigating_text.gml</script>
     </scripts>
     <scripts name="weapon">
       <script>scripts\draw_laser.gml</script>
@@ -372,6 +380,7 @@
       <object>objects\obj_fx_blood</object>
       <object>objects\obj_blood_floor</object>
       <object>objects\obj_fx_light_round_big</object>
+      <object>objects\obj_fx_light_round_medium</object>
       <object>objects\obj_fx_enemy_spawn</object>
       <object>objects\obj_fx_heal</object>
       <object>objects\obj_fx_critical</object>
@@ -382,6 +391,7 @@
       <object>objects\obj_music_player</object>
       <object>objects\obj_am_switch</object>
       <object>objects\obj_am_lighting</object>
+      <object>objects\obj_tv_old</object>
     </objects>
     <objects name="dp">
       <object>objects\obj_dp_parent</object>

@@ -64,6 +64,7 @@ with(argument4) {
                }
             }
          } else {
+             target.hp -= argument4.damage;
             create_bullet_sparkle(target.x, argument1 + argument5, argument4, target.depth -1);
          }
          x2 = target.x;
