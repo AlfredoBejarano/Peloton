@@ -1,6 +1,6 @@
 /// take_damage(damage_direction, damage_amount, damage sound);
 if(can_take_damage == 0) { 
-   if(!is_enemy) { 
+   if(is_enemy == false) { 
     exit; 
    }
 } else {
@@ -31,7 +31,7 @@ if(can_take_damage == 0) {
             is_dying = true;
             alarm[8] = 60;
             audio_play_sound(ds_list_find_value(sounds, 7), 0, false); 
-        } else if(damcalc  <= 25) {
+        } else if(damcalc  <= 50) {
             eye_index = 1;
             mouth_index = 1;
             if(cplhps == 1) {

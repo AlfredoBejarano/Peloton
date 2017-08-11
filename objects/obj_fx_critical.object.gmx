@@ -48,7 +48,9 @@
         <arguments>
           <argument>
             <kind>1</kind>
-            <string>instance_destroy();
+            <string>draw_set_blend_mode(bm_normal);
+draw_set_alpha(1);
+instance_destroy();
 </string>
           </argument>
         </arguments>

@@ -59,13 +59,13 @@ if(distance_to_object(target) &lt; 64) {
             audio_play_sound(snd_am_switch, 0, false);
             on = !on;
             if(on) { 
-                if(room == room0) {
+                if(room == rm_campaign1a) {
                     image_yscale = 1;    
                     background_index[0] = bck_chapter1a;
                 }
                 instance_create(938, 447, obj_fx_light_round_big); 
             } else {
-                if(room == room0) {
+                if(room == rm_campaign1a) {
                     image_yscale = -1;
                     background_index[0] = bck_chapter1c;
                 }

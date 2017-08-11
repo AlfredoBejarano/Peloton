@@ -27,7 +27,7 @@
             <kind>1</kind>
             <string>hand1 = create_zombie_hand(self, 256, 256, 0, obj_en01_arm);
 hand2 = create_zombie_hand(self, 256, 256, 1, obj_en01_arm);
-init_enemy(hand1, hand2, 18, obj_en01);
+init_enemy(hand1, hand2, 200, obj_en01, 60);
 hat_index = hat_factory(image_index);
 </string>
           </argument>
@@ -343,7 +343,7 @@ attack_position = 0;
             <string>draw_self();
 if(dying == 0) {
    draw_set_alpha(1);
-   draw_enemy_healthbar(gp_yellow);
+   //draw_enemy_healthbar(gp_yellow);
 } else {
     draw_sprite_ext(sprite_index, image_index, x, y, image_xscale, 1, 1, c_white, red_alpha);
 }

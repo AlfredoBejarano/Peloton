@@ -1,4 +1,4 @@
-///init_enemy(arm 1 object, arm2 object, HP, enemy object)
+///init_enemy(arm 1 object, arm2 object, HP, enemy object, damage)
 handx = 0;
 dying = 0;
 cplhps = 0;
@@ -6,7 +6,7 @@ hand1y = 0;
 hand2y = 0;
 max_hp = argument[2];
 hp = max_hp;
-damage = 20;
+damage = argument[4];
 can_move = 0;
 red_alpha = 1;
 can_attack = 1;

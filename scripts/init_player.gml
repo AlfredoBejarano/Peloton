@@ -4,7 +4,7 @@
 image_index = 0;
 image_speed = 0;
 
-hp = 100;
+hp = 200;
 cplhps = 1;
 can_heal = 1;
 is_aiming = 0;

@@ -83,9 +83,8 @@
       </sounds>
     </sounds>
     <sounds name="music">
-      <sounds name="siege">
-        <sound>sound\snd_siege_intro</sound>
-        <sound>sound\snd_siege_loop</sound>
+      <sounds name="menu">
+        <sound>sound\snd_menu</sound>
       </sounds>
     </sounds>
     <sounds name="char">
@@ -110,6 +109,11 @@
       <sound>sound\snd_am_tv_static</sound>
       <sound>sound\snd_am_tv_break</sound>
       <sound>sound\snd_am_wind</sound>
+    </sounds>
+    <sounds name="ui">
+      <sound>sound\snd_menu_accept</sound>
+      <sound>sound\snd_menu_cancel</sound>
+      <sound>sound\snd_menu_cursor</sound>
     </sounds>
   </sounds>
   <sprites name="sprites">
@@ -198,6 +202,11 @@
       <sprite>sprites\spr_tv</sprite>
       <sprite>sprites\spr_tv_broken</sprite>
     </sprites>
+    <sprites name="ui">
+      <sprites name="menu">
+        <sprite>sprites\spr_menu_selected</sprite>
+      </sprites>
+    </sprites>
   </sprites>
   <backgrounds name="background">
     <background>background\bck_pipes</background>
@@ -208,6 +217,9 @@
       <background>background\bck_chapter1a</background>
       <background>background\bck_chapter1b</background>
       <background>background\bck_chapter1c</background>
+    </backgrounds>
+    <backgrounds name="menu">
+      <background>background\bck_main</background>
     </backgrounds>
   </backgrounds>
   <paths name="paths"/>
@@ -327,6 +339,7 @@
     <font>fonts\fnt_hud</font>
     <font>fonts\fnt_weapon_name</font>
     <font>fonts\fnt_upgrades</font>
+    <font>fonts\fnt_menu</font>
   </fonts>
   <objects name="objects">
     <objects name="pl">
@@ -338,10 +351,10 @@
         <object>objects\obj_pl01_wep_hud</object>
         <object>objects\obj_plhealth</object>
       </objects>
-      <object>objects\obj_player_parent</object>
       <objects name="IA">
         <object>objects\obj_plIA</object>
       </objects>
+      <object>objects\obj_player_parent</object>
     </objects>
     <objects name="wp">
       <object>objects\obj_wep00</object>
@@ -402,15 +415,18 @@
       <object>objects\obj_dp_rifle</object>
       <object>objects\obj_item_picker</object>
     </objects>
-    <object>objects\obj_play</object>
-    <object>objects\obj_share</object>
     <objects name="ui">
       <object>objects\obj_text</object>
+      <object>objects\obj_control_indicator</object>
+      <objects name="menu">
+        <object>objects\obj_menu_handler</object>
+        <object>objects\obj_selected_indicator</object>
+      </objects>
     </objects>
   </objects>
   <rooms name="rooms">
-    <room>rooms\room0</room>
-    <room>rooms\room2</room>
+    <room>rooms\rm_main</room>
+    <room>rooms\rm_campaign1a</room>
   </rooms>
   <constants number="13">
     <constant name="type_height">1</constant>
