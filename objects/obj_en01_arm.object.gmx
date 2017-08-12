@@ -84,7 +84,10 @@ is_attacking = 0;
         <arguments>
           <argument>
             <kind>1</kind>
-            <string>draw_self();
+            <string>if(room == rm_main) {
+    image_blend = c_black;
+}
+draw_self();
 </string>
           </argument>
         </arguments>

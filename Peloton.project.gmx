@@ -419,9 +419,10 @@
       <object>objects\obj_text</object>
       <object>objects\obj_control_indicator</object>
       <objects name="menu">
-        <object>objects\obj_menu_handler</object>
         <object>objects\obj_selected_indicator</object>
+        <object>objects\obj_menu_handler</object>
         <object>objects\obj_loader</object>
+        <object>objects\obj_charmenu</object>
       </objects>
     </objects>
   </objects>
@@ -429,6 +430,7 @@
     <room>rooms\rm_loading</room>
     <room>rooms\rm_main</room>
     <room>rooms\rm_campaign1a</room>
+    <room>rooms\rm_capaign1b</room>
   </rooms>
   <constants number="13">
     <constant name="type_height">1</constant>
@@ -451,6 +453,7 @@
   <audiogroups name="audiogroups">
     <audiogroup name="audiogroup_default"/>
     <audiogroup name="audiogroup_music"/>
+    <audiogroup name="audiogroup_weapons"/>
   </audiogroups>
   <TutorialState>
     <IsTutorial>0</IsTutorial>

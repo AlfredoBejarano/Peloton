@@ -26,6 +26,7 @@
           <argument>
             <kind>1</kind>
             <string>audio_group_load(audiogroup_music);
+audio_group_load(audiogroup_weapons);
 </string>
           </argument>
         </arguments>
@@ -48,7 +49,7 @@
         <arguments>
           <argument>
             <kind>1</kind>
-            <string>loading_progress = audio_group_load_progress(audiogroup_music);
+            <string>loading_progress = audio_group_load_progress(audiogroup_music) + audio_group_load_progress(audiogroup_weapons);
 
 if(audio_group_is_loaded(audiogroup_music)) {
     room_goto_next();
@@ -79,8 +80,10 @@ if(audio_group_is_loaded(audiogroup_music)) {
 draw_set_halign(fa_center);
 draw_set_valign(fa_center);
 draw_text_colour(room_width / 2, room_height / 2, "Loading", c_white, c_white, c_white, c_white, 1);
-draw_rectangle_colour(room_width / 2 - 512, room_height / 2, loading_progress * 10.24 , (room_height / 2) + 96, c_white, c_white, c_white, c_white, false);
+draw_rectangle_colour(room_width / 2 - 512, (room_height / 2) + 64, loading_progress * 5.12, (room_height / 2) + 96, c_white, c_white, c_white, c_white, false);
 draw_set_font(-1);
+draw_set_halign(-1);
+draw_set_valign(-1);
 </string>
           </argument>
         </arguments>

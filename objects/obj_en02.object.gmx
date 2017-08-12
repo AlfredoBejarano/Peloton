@@ -41,7 +41,9 @@ cpcs = true;
 wepx = 0;
 wepy = 0;
 
-audio_play_sound(snd_wep09_reload, 0, false);
+if(room != rm_main) {
+    audio_play_sound(snd_wep09_reload, 0, false);
+}
 </string>
           </argument>
         </arguments>
@@ -211,7 +213,9 @@ weapon.is_hitting = 0;
             <string>if(chains &lt;=0) {
    weapon.image_speed = 1;
    is_chaining = false;
-   audio_play_sound(snd_wep09_aim, 0, true);
+   if(room != rm_main) {
+       audio_play_sound(snd_wep09_aim, 0, true);
+   }
    can_move = 1; 
    can_attack = 1;   
    exit;
@@ -462,7 +466,13 @@ alarm[9] = 30;
    can_attack = 0;
    is_attacking = 0;
 }
-basic_en_IA(7, false, 256);
+if(room != rm_main) {
+    basic_en_IA(7, false, 256);
+} else {
+    hspeed = 6 * image_xscale;
+    depth = 10005;
+    move_wrap(room_width, room_height, sprite_width);
+}
 eye_index = is_taking_damage;
 is_hitting = weapon.is_hitting;
 if(is_hitting == 1) {
@@ -525,6 +535,9 @@ if(dying == 1) {
           <argument>
             <kind>1</kind>
             <string>draw_self();
+if(room == rm_main) {
+    image_blend = c_black;
+}
 if(dying == 0) {
    draw_set_alpha(1);
    //draw_enemy_healthbar(gp_red);
