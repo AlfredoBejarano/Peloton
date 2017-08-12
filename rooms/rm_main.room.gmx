@@ -10,16 +10,7 @@
   <persistent>0</persistent>
   <colour>2621440</colour>
   <showcolour>-1</showcolour>
-  <code>global.control = true;
-if(os_type ==  os_android || os_type == os_ios) {
-    set_resolution(0.8);
-    global.touch = true;
-} else {
-    set_resolution(1);
-    global.touch = false;
-}
-
-audio_play_sound(snd_menu, 0, true);</code>
+  <code>audio_play_sound(snd_menu, 1, true);</code>
   <enableViews>0</enableViews>
   <clearViewBackground>-1</clearViewBackground>
   <clearDisplayBuffer>-1</clearDisplayBuffer>

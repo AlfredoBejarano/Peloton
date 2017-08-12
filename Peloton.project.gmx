@@ -421,10 +421,12 @@
       <objects name="menu">
         <object>objects\obj_menu_handler</object>
         <object>objects\obj_selected_indicator</object>
+        <object>objects\obj_loader</object>
       </objects>
     </objects>
   </objects>
   <rooms name="rooms">
+    <room>rooms\rm_loading</room>
     <room>rooms\rm_main</room>
     <room>rooms\rm_campaign1a</room>
   </rooms>
@@ -446,6 +448,10 @@
   <help>
     <rtf>help.rtf</rtf>
   </help>
+  <audiogroups name="audiogroups">
+    <audiogroup name="audiogroup_default"/>
+    <audiogroup name="audiogroup_music"/>
+  </audiogroups>
   <TutorialState>
     <IsTutorial>0</IsTutorial>
     <TutorialName></TutorialName>
