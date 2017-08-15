@@ -93,11 +93,15 @@ if(recalpha &lt; 1) {
 } else {
     if(position == 1) {
         if(screen ==1) {
-            room_goto(rm_campaign1a);
+            global.gamemode =  "campaign";
+            room_goto_next();
         }
     } else if(position == 2) {
         if(screen == 1) {
             screen = 2;         
+        } else if(screen == 2) {
+            global.gamemode =  "horde";
+            room_goto_next();       
         }
     }else if(position == 3) {
         if(screen == 1) {

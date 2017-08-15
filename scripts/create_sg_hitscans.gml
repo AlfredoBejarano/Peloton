@@ -1,4 +1,4 @@
-// argument0 - shotgun angle
+/// argument0 - shotgun angle
 
 an = argument0;
 an2 = an/2

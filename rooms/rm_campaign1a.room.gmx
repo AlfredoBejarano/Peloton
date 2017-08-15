@@ -10,146 +10,9 @@
   <persistent>0</persistent>
   <colour>2621440</colour>
   <showcolour>-1</showcolour>
-  <code>if(audio_is_playing(snd_menu)) {
-    audio_stop_sound(snd_menu);
-}
-
-global.hg = obj_wep01
-global.mg = obj_wep02
-global.sg = obj_wep03
-global.rf = obj_wep04
-
-global.kills = 0;
-
-global.pl01_character = 1;
-global.pl02_character = 2;
-global.keybindings = ds_list_create();
-
-global.pl01gp = ds_list_create();
-global.pl01wi = ds_list_create();
-
-global.pl02gp = ds_list_create();
-global.pl02wi = ds_list_create();
-
-global.level_music = ds_list_create();
-
-//instance_create(x,y, obj_music_player);
-
-ds_list_add(global.keybindings,
-    ord('W'),
-    ord('A'),
-    ord('S'),
-    ord('D'),
-    mb_right,
-    mb_left,
-    ord('F'),
-    ord('E'),
-    ord('Q'),
-    ord('R'),
-    vk_tab,
-    vk_space,
-    vk_escape   
-);
-
-ds_list_add(global.pl01gp,
-    gp_axislv,
-    gp_axislh,
-    gp_shoulderlb,
-    gp_shoulderrb,
-    gp_face1,
-    gp_padr,
-    gp_padl,
-    gp_face3,
-    gp_face4,
-    gp_shoulderr,
-    gp_start
-);
-
-ds_list_add(global.pl02gp,
-    gp_axislv,
-    gp_axislh,
-    gp_shoulderlb,
-    gp_shoulderrb,
-    gp_face2,
-    gp_padr,
-    gp_padl,
-    gp_face1,
-    gp_face4,
-    gp_shoulderr
-);
-ds_list_add(global.pl01wi, global.hg);
-
-ds_list_add(global.pl02wi,
-    obj_wep06
-);
-
-global.upgrade = 0;
-
-global.wepnames = ds_list_create();
-ds_list_add(global.wepnames, 
-   "Knife",
-   "Handgun P07",
-   "Machinegun X05",
-   "Shotgun 870",
-   "Rifle G05",
-   "Handgun P57",
-   "Machinegun A47",
-   "Shotgun 500",
-   "Rifle B82",
-   "Chainsaw"
-);
-
-
-global.upgrades = ds_map_create();
-/* weapons upgrades */
-ds_map_add(global.upgrades, "wep01ma", 8);
-ds_map_add(global.upgrades, "wep01fs", 30);
-ds_map_add(global.upgrades, "wep01rs", 60);
-ds_map_add(global.upgrades, "wep01dmg", 14);
-
-ds_map_add(global.upgrades, "wep02ma", 30);
-ds_map_add(global.upgrades, "wep02fs", 10);
-ds_map_add(global.upgrades, "wep02rs", 60);
-ds_map_add(global.upgrades, "wep02dmg", 13);
-
-ds_map_add(global.upgrades, "wep03ma", 4);
-ds_map_add(global.upgrades, "wep03fs", 60);
-ds_map_add(global.upgrades, "wep03rs", 180);
-ds_map_add(global.upgrades, "wep03dmg", 15);
-
-ds_map_add(global.upgrades, "wep04ma", 5);
-ds_map_add(global.upgrades, "wep04fs", 80);
-ds_map_add(global.upgrades, "wep04rs", 80);
-ds_map_add(global.upgrades, "wep04dmg", 120);
-
-ds_map_add(global.upgrades, "wep05ma", 10);
-ds_map_add(global.upgrades, "wep05fs", 35);
-ds_map_add(global.upgrades, "wep05rs", 60);
-ds_map_add(global.upgrades, "wep05dmg", 20);
-
-ds_map_add(global.upgrades, "wep06ma", 20);
-ds_map_add(global.upgrades, "wep06fs", 12);
-ds_map_add(global.upgrades, "wep06rs", 60);
-ds_map_add(global.upgrades, "wep06dmg", 19);
-
-ds_map_add(global.upgrades, "wep07ma", 4);
-ds_map_add(global.upgrades, "wep07fs", 45);
-ds_map_add(global.upgrades, "wep07rs", 160);
-ds_map_add(global.upgrades, "wep07dmg", 6);
-
-ds_map_add(global.upgrades, "wep08ma", 8);
-ds_map_add(global.upgrades, "wep08fs", 60);
-ds_map_add(global.upgrades, "wep08rs", 70);
-ds_map_add(global.upgrades, "wep08dmg", 125);
-
-ds_map_add(global.upgrades, "wep09ma", 10);
-ds_map_add(global.upgrades, "wep09fs", 1);
-ds_map_add(global.upgrades, "wep09rs", 120);
-ds_map_add(global.upgrades, "wep09dmg", 200);
-
-// Player's objects must be created at the end
+  <code>// Player's objects must be created at the end
 instance_create(room_width/2,1000, obj_pl01);
-//set_item_picker_data(ds_list_find_value(get_weapon_data(global.hg), 0), real(real(ds_map_find_value(global.upgrades, ds_list_find_value(siege_keys_factory(global.hg), 2))) * 4), ds_list_find_value(get_weapon_data(global.hg), 2), snd_weapon_add);
+obj_am_lighting.dark_factor = 0.8;
 audio_play_sound(snd_am_wind, 0 ,true);</code>
   <enableViews>-1</enableViews>
   <clearViewBackground>-1</clearViewBackground>
@@ -194,6 +57,7 @@ audio_play_sound(snd_am_wind, 0 ,true);</code>
     <instance objName="obj_am_lighting" x="0" y="0" name="inst_978571A9" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
     <instance objName="obj_am_switch" x="815" y="683" name="inst_32937205" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
     <instance objName="obj_tv_old" x="262" y="805" name="inst_F5756295" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
+    <instance objName="obj_ground_exit" x="1644" y="964" name="inst_5AE87256" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
   </instances>
   <tiles>
     <tile bgName="bck_pipes" x="882" y="346" w="120" h="120" xo="360" yo="0" id="10000094" name="inst_02F1394A" depth="1000000" locked="0" colour="4294967295" scaleX="1" scaleY="1"/>

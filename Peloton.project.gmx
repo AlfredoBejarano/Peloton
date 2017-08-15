@@ -201,6 +201,8 @@
       <sprite>sprites\spr_am_carpet</sprite>
       <sprite>sprites\spr_tv</sprite>
       <sprite>sprites\spr_tv_broken</sprite>
+      <sprite>sprites\spr_ground_exit</sprite>
+      <sprite>sprites\obj_raise_stairs</sprite>
     </sprites>
     <sprites name="ui">
       <sprites name="menu">
@@ -213,13 +215,17 @@
     <backgrounds name="openBeta">
       <background>background\bck_thanks</background>
     </backgrounds>
-    <backgrounds name="chapter1">
-      <background>background\bck_chapter1a</background>
-      <background>background\bck_chapter1b</background>
-      <background>background\bck_chapter1c</background>
-    </backgrounds>
     <backgrounds name="menu">
       <background>background\bck_main</background>
+    </backgrounds>
+    <backgrounds name="campaign">
+      <backgrounds name="chapter1">
+        <background>background\bck_chapter1a</background>
+        <background>background\bck_chapter1b</background>
+        <background>background\bck_chapter1c</background>
+        <background>background\bck_chapter1d</background>
+        <background>background\bck_chapter1e</background>
+      </backgrounds>
     </backgrounds>
   </backgrounds>
   <paths name="paths"/>
@@ -394,6 +400,7 @@
       <object>objects\obj_blood_floor</object>
       <object>objects\obj_fx_light_round_big</object>
       <object>objects\obj_fx_light_round_medium</object>
+      <object>objects\obj_fx_light_round_small</object>
       <object>objects\obj_fx_enemy_spawn</object>
       <object>objects\obj_fx_heal</object>
       <object>objects\obj_fx_critical</object>
@@ -403,8 +410,11 @@
       <object>objects\obj_antenna</object>
       <object>objects\obj_music_player</object>
       <object>objects\obj_am_switch</object>
+      <object>objects\obj_ground_exit</object>
+      <object>objects\obj_ground_entrance</object>
       <object>objects\obj_am_lighting</object>
       <object>objects\obj_tv_old</object>
+      <object>objects\obj_am_ladder</object>
     </objects>
     <objects name="dp">
       <object>objects\obj_dp_parent</object>
@@ -429,8 +439,10 @@
   <rooms name="rooms">
     <room>rooms\rm_loading</room>
     <room>rooms\rm_main</room>
+    <room>rooms\rm_gm_loading</room>
     <room>rooms\rm_campaign1a</room>
-    <room>rooms\rm_capaign1b</room>
+    <room>rooms\rm_campaign1b</room>
+    <room>rooms\rm_campaign1c</room>
   </rooms>
   <constants number="13">
     <constant name="type_height">1</constant>

@@ -2,7 +2,7 @@
 // This script allows the player use bandages to heal himself
 if(argument0 && (hp < 100 && heals > 0) && can_heal = 1) {
    instance_create(x, y, obj_fx_heal);
-   hp = 100;
+   hp = 200;
    heals --;
    ds_list_replace(ammo_inventory, 0, heals);
    heals = ds_list_find_value(ammo_inventory, 0);

@@ -26,8 +26,6 @@
           <argument>
             <kind>1</kind>
             <string>image_alpha = 0;
-lastx = mouse_x;
-lasty = mouse_y;
 </string>
           </argument>
         </arguments>
@@ -130,17 +128,7 @@ lasty = mouse_y;
         <arguments>
           <argument>
             <kind>1</kind>
-            <string>// Check if mouse position has been changed since the previous step.
-if(((mouse_x != lastx) || (mouse_y != lasty))  &amp;&amp; global.control == false) {
-    global.control = true;
-    alarm[1] = 1;    
-}
-
-// Set mouse coordinates into the previous step ones.
-lastx = mouse_x;
-lasty = mouse_y;
-
-// Switch controls depending on the input
+            <string>// Switch controls depending on the input
 if(keyboard_check_pressed(vk_anykey) &amp;&amp; global.control == false) { 
     global.control = true; 
     alarm[1] = 1;
@@ -158,7 +146,7 @@ if(global.control) {
     window_set_cursor(cr_none);
 }
 
-if keyboard_check_pressed(ord("S")) {
+if keyboard_check_pressed(vk_f12) {
     screen_save(working_directory + "\Screens\Screen_"+string(0)+".png")
 }
 </string>

@@ -25,7 +25,7 @@
         <arguments>
           <argument>
             <kind>1</kind>
-            <string>obj_am_lighting.dark_factor -= 0.1;
+            <string>obj_am_lighting.dark_factor -= 0.025;
 </string>
           </argument>
         </arguments>
@@ -48,7 +48,7 @@
         <arguments>
           <argument>
             <kind>1</kind>
-            <string>obj_am_lighting.dark_factor += 0.1;
+            <string>obj_am_lighting.dark_factor += 0.025;
 </string>
           </argument>
         </arguments>
@@ -72,7 +72,7 @@
           <argument>
             <kind>1</kind>
             <string>draw_set_blend_mode(bm_add);
-draw_sprite_ext(spr_light_round_fx_medium, 0, x, y, 2, 2, 0, c_white, 1);
+draw_sprite_ext(spr_light_round_fx_medium, 0, x, y, 0.25, 0.25, 0, c_white, 1);
 draw_set_blend_mode(bm_normal); 
 </string>
           </argument>

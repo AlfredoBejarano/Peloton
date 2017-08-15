@@ -27,6 +27,7 @@
             <kind>1</kind>
             <string>position = 0;
 recoil = false;
+hp = 0;
 image_speed = 0;
 shooter = false;
 is_enemy = false;
