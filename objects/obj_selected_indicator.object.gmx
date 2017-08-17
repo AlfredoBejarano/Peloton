@@ -49,16 +49,35 @@ screeny = room_height / 2;
         <arguments>
           <argument>
             <kind>1</kind>
-            <string>x = screenx;
-if(obj_menu_handler.position == 1) {
-    y = screeny;
-} else if(obj_menu_handler.position == 2) {
-    y = screeny + 48;
-} if(obj_menu_handler.position == 3) {
-    y = screeny + 48*2;
-} if(obj_menu_handler.position == 4) {
-    y = screeny + 48*3;
-} 
+            <string>if(instance_exists(obj_menu_handler)) {
+    x = screenx;
+    if(obj_menu_handler.position == 1) {
+        y = screeny;
+    } else if(obj_menu_handler.position == 2) {
+        y = screeny + 48;
+    } if(obj_menu_handler.position == 3) {
+        y = screeny + 48*2;
+    } if(obj_menu_handler.position == 4) {
+        y = screeny + 48*3;
+    } 
+} else if(instance_exists(obj_menu_extras_handler)){
+    x = 355;
+    if(obj_menu_extras_handler.position == 1) {
+        y = 256;
+    } else if(obj_menu_extras_handler.position == 2) {
+        y = 346;
+    } else if(obj_menu_extras_handler.position == 3) {
+        y = 436;
+        x = 395;
+    } else if(obj_menu_extras_handler.position == 4) {
+        y = 526;
+        x = 395;        
+    } else if(obj_menu_extras_handler.position == 5) {
+        y = 616;    
+    } else if(obj_menu_extras_handler.position == 6) {
+        y = 706;    
+    } 
+}
 </string>
           </argument>
         </arguments>

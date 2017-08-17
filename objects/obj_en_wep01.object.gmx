@@ -121,10 +121,7 @@ if(is_hitting == 1 &amp;&amp; cphs == 1) {
         <arguments>
           <argument>
             <kind>1</kind>
-            <string>if(room == rm_main) {
-    image_blend = c_black;
-}
-draw_self();
+            <string>draw_self();
 </string>
           </argument>
         </arguments>

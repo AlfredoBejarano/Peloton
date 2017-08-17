@@ -25,8 +25,12 @@
         <arguments>
           <argument>
             <kind>1</kind>
-            <string>instance_create(room_width / 2, (room_height / 2) + 256, obj_en02);
-instance_create(room_width / 2 + choose(-512 , -128, 0 , 128, 512), (room_height / 2) + 256, obj_en01);
+            <string>instance_create(room_width / 2, (room_height / 2) + 512, obj_en02);
+repeat(5) {
+    with(instance_create(room_width / 2 + irandom_range(-512, 512), (room_height / 2) + irandom_range(386, 512), obj_en01)) {
+        image_xscale = choose(1, -1);
+    }
+}
 </string>
           </argument>
         </arguments>

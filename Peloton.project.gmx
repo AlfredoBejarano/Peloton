@@ -85,6 +85,7 @@
     <sounds name="music">
       <sounds name="menu">
         <sound>sound\snd_menu</sound>
+        <sound>sound\snd_menu_extras</sound>
       </sounds>
     </sounds>
     <sounds name="char">
@@ -217,6 +218,7 @@
     </backgrounds>
     <backgrounds name="menu">
       <background>background\bck_main</background>
+      <background>background\bck_extras</background>
     </backgrounds>
     <backgrounds name="campaign">
       <backgrounds name="chapter1">
@@ -431,6 +433,7 @@
       <objects name="menu">
         <object>objects\obj_selected_indicator</object>
         <object>objects\obj_menu_handler</object>
+        <object>objects\obj_menu_extras_handler</object>
         <object>objects\obj_loader</object>
         <object>objects\obj_charmenu</object>
       </objects>

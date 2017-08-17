@@ -469,8 +469,8 @@ alarm[9] = 30;
 if(room != rm_main) {
     basic_en_IA(7, false, 256);
 } else {
+    depth = -y;
     hspeed = 6 * image_xscale;
-    depth = 10005;
     move_wrap(room_width, room_height, sprite_width);
 }
 eye_index = is_taking_damage;
@@ -535,9 +535,6 @@ if(dying == 1) {
           <argument>
             <kind>1</kind>
             <string>draw_self();
-if(room == rm_main) {
-    image_blend = c_black;
-}
 if(dying == 0) {
    draw_set_alpha(1);
    //draw_enemy_healthbar(gp_red);
