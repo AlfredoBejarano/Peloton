@@ -219,20 +219,20 @@ if(global.control) {
             position = 4;         
         }
     }
-} else {
-    // Allows gamepad movement through the menus
-    if(gamepad_axis_value(0, gp_axislv) &lt; -0.5 &amp;&amp; can_switch == true) {
-        can_switch = false;
-        position --;
-        alarm[0] = 15;
-        audio_play_sound(snd_menu_cursor, 0, false);
-    } else if(gamepad_axis_value(0, gp_axislv) &gt; 0.5 &amp;&amp; can_switch == true) {
-        can_switch = false;
-        position ++;
-        alarm[0] = 15;
-        audio_play_sound(snd_menu_cursor, 0, false);    
-    } 
 }
+
+// Allows gamepad movement through the menus
+if((gamepad_axis_value(0, gp_axislv) &lt; -0.5 || keyboard_check_pressed(vk_up) || keyboard_check_pressed(ord('W'))) &amp;&amp; can_switch == true) {
+    can_switch = false;
+    position --;
+    alarm[0] = 15;
+    audio_play_sound(snd_menu_cursor, 0, false);
+} else if((gamepad_axis_value(0, gp_axislv) &gt; 0.5 || keyboard_check_pressed(vk_down) || keyboard_check_pressed(ord('S'))) &amp;&amp; can_switch == true) {
+    can_switch = false;
+    position ++;
+    alarm[0] = 15;
+    audio_play_sound(snd_menu_cursor, 0, false);
+} 
 
 // Responds to which element of the menu is selected when pressing the A button or the left click.
 if(gamepad_button_check_pressed(0, gp_face1) || mouse_check_button_pressed(mb_left)) {
