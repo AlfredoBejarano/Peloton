@@ -54,7 +54,6 @@ audio_play_sound(snd_am_wind, 0 ,true);</code>
     <view visible="0" objName="&lt;undefined&gt;" xview="0" yview="0" wview="1024" hview="768" xport="0" yport="0" wport="1024" hport="768" hborder="32" vborder="32" hspeed="-1" vspeed="-1"/>
   </views>
   <instances>
-    <instance objName="obj_am_lighting" x="0" y="0" name="inst_978571A9" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
     <instance objName="obj_am_switch" x="815" y="683" name="inst_32937205" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
     <instance objName="obj_tv_old" x="262" y="805" name="inst_F5756295" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
     <instance objName="obj_ground_exit" x="1644" y="964" name="inst_5AE87256" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>

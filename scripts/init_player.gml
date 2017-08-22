@@ -95,7 +95,9 @@ with (hand2) {
 current_ammo = ds_list_find_value(ammo_inventory, weapon.ammo_type);
 
 // Creates the HUD for the player.
-instance_create(x,y, hud);
+with(instance_create(x,y, hud)) {
+    player = argument1;
+}
 
 // Sets knife sprite for the player
 knife_sprite = ds_list_find_value(player_skin_factory(character), 3);

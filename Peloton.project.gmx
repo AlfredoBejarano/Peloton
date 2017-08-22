@@ -3,7 +3,25 @@
   <Configs name="configs">
     <Config>Configs\Default</Config>
   </Configs>
-  <datafiles number="1" name="datafiles"/>
+  <datafiles number="2" name="datafiles">
+    <datafile>
+      <name>strings.ini</name>
+      <exists>-1</exists>
+      <size>0</size>
+      <exportAction>2</exportAction>
+      <exportDir></exportDir>
+      <overwrite>0</overwrite>
+      <freeData>-1</freeData>
+      <removeEnd>0</removeEnd>
+      <store>0</store>
+      <ConfigOptions>
+        <Config name="Default">
+          <CopyToMask>105553895391470</CopyToMask>
+        </Config>
+      </ConfigOptions>
+      <filename>strings.ini</filename>
+    </datafile>
+  </datafiles>
   <NewExtensions/>
   <sounds name="sound">
     <sounds name="wep">
@@ -209,6 +227,11 @@
       <sprites name="menu">
         <sprite>sprites\spr_menu_selected</sprite>
       </sprites>
+      <sprites name="extras">
+        <sprites name="gamemodes">
+          <sprite>sprites\spr_gmthumbs</sprite>
+        </sprites>
+      </sprites>
     </sprites>
   </sprites>
   <backgrounds name="background">
@@ -266,8 +289,12 @@
       <script>scripts\screen_capture_background.gml</script>
       <scripts name="factory">
         <script>scripts\droppable_factory.gml</script>
+        <script>scripts\create_weapon_names_list.gml</script>
+        <script>scripts\gamemode_name_factory.gml</script>
       </scripts>
       <script>scripts\display_investigating_text.gml</script>
+      <script>scripts\getString.gml</script>
+      <script>scripts\new_array.gml</script>
     </scripts>
     <scripts name="weapon">
       <script>scripts\draw_laser.gml</script>
@@ -341,6 +368,7 @@
     </scripts>
     <scripts name="ui">
       <script>scripts\draw_hud.gml</script>
+      <script>scripts\draw_menu_indicator.gml</script>
     </scripts>
   </scripts>
   <fonts name="fonts">
@@ -447,7 +475,12 @@
     <room>rooms\rm_campaign1b</room>
     <room>rooms\rm_campaign1c</room>
   </rooms>
-  <constants number="13">
+  <constants number="19">
+    <constant name="locale_en">"EN"</constant>
+    <constant name="gm_campaign">0</constant>
+    <constant name="gm_hitman_mode">3</constant>
+    <constant name="gm_siege_mode">2</constant>
+    <constant name="gm_raid_mode">1</constant>
     <constant name="type_height">1</constant>
     <constant name="type_width">0</constant>
     <constant name="up_damage">3</constant>
@@ -461,6 +494,7 @@
     <constant name="gp_blue">make_color_rgb(0, 129, 198)</constant>
     <constant name="gp_red">make_color_rgb(197, 34, 37)</constant>
     <constant name="gp_green">make_color_rgb(75, 169, 52)</constant>
+    <constant name="locale_es_mx">"MX"</constant>
   </constants>
   <help>
     <rtf>help.rtf</rtf>

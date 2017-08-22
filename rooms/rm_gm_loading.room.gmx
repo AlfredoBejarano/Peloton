@@ -85,6 +85,7 @@ ds_list_add(global.pl02wi,
 
 global.upgrade = 0;
 
+
 global.wepnames = ds_list_create();
 ds_list_add(global.wepnames, 
    "Knife",
@@ -147,7 +148,7 @@ ds_map_add(global.upgrades, "wep09fs", 1);
 ds_map_add(global.upgrades, "wep09rs", 120);
 ds_map_add(global.upgrades, "wep09dmg", 200);
 
-if(global.gamemode == "campaign") {
+if(global.gamemode == gm_campaign) {
     room_goto_next();
 } else {
     room_goto(rm_campaign1c);

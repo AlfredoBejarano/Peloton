@@ -2,8 +2,8 @@
 // argument0 - player object
 
 player = argument0.object_index;
-wep = instance_find(player.weapon, player.weapon_id);
-hnd2 = instance_find(obj_hand2, player.hand2id);
+wep = cweapon;
+hnd2 = hand2;
 
 if(player.reload_condition1 && (player.reload_condition2 || player.reload_condition3)) {
     player.is_reloading = 1;      

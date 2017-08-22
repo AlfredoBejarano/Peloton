@@ -10,7 +10,8 @@
   <persistent>0</persistent>
   <colour>0</colour>
   <showcolour>-1</showcolour>
-  <code>global.gamemode = noone;
+  <code>global.locale = os_get_language();
+global.gamemode = noone;
 global.fx_volume = 1;
 global.music_volume = 1;
 global.control = true;

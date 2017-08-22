@@ -1,11 +1,6 @@
-// argument0 - Aim key (check).
-// argument1 - Aim key (pressed).
-// argument2 - Shoot key (check).
-// argument3 - Shoot key (pressed).
-// argument4 - Aim key (released).
-// argument5 - Reload key (pressed).
-// argument6 - Player object.
+/// perform_touch_aim(Aim key (check), Aim key (pressed), Shoot key (check), Shoot key (pressed), Aim key (released), Reload key (pressed), Player object)
 
+var unused = argument0
 var player = argument6;
 
 // HUD transparency effect

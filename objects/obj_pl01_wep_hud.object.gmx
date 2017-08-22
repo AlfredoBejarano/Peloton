@@ -28,7 +28,7 @@
             <string>image_alpha = 0;
 xs = (display_get_width()    /   1920);
 ys = (display_get_height()   /   1080);
-dwep = instance_find(obj_pl01.weapon, obj_pl01.weapon_id);
+dwep = obj_pl01.weapon;
 </string>
           </argument>
         </arguments>
@@ -105,7 +105,7 @@ dwep = instance_find(obj_pl01.weapon, obj_pl01.weapon_id);
             <kind>1</kind>
             <string>xs = view_wview[0]    /   1920;
 ys = view_hview[0]   /   1080;
-dwep = instance_find(obj_pl01.weapon, obj_pl01.weapon_id);
+dwep = obj_pl01.weapon;
 if(image_alpha &gt; 1) { 
     image_alpha = 1; 
 } else if(image_alpha &lt; 0) { 
