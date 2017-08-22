@@ -244,7 +244,8 @@ can_read_mouse = true;
             <kind>1</kind>
             <string>if(screen == 1) {
     max_option = 6;
-} else {
+} else if(screen == 2) {
+    global.gamemode = position;
     max_option = 3;
 }
 
@@ -287,7 +288,17 @@ if(global.control) {
 // Allows gamepad movement through the menus
 if((gamepad_axis_value(0, gp_axislv) &lt; -0.5 || keyboard_check_pressed(vk_up) || keyboard_check_pressed(ord('W'))) &amp;&amp; can_switch == true) {
     can_switch = false;
-    position --;
+    if(global.gamemode == gm_hitman_mode &amp;&amp; screen == 1) {
+        position --;
+    } else {
+        if(screen == 1) {
+            if(position == 6) {
+                 position -= 3;   
+            } else {
+                position --;
+            }
+        }
+    }
     alarm[0] = 15;
     audio_play_sound(snd_menu_cursor, 0, false);
 } else if((gamepad_axis_value(0, gp_axislv) &gt; 0.5 || keyboard_check_pressed(vk_down) || keyboard_check_pressed(ord('S'))) &amp;&amp; can_switch == true) {

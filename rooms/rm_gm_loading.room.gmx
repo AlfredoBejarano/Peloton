@@ -77,7 +77,7 @@ ds_list_add(global.pl02gp,
     gp_face4,
     gp_shoulderr
 );
-ds_list_add(global.pl01wi, global.hg);
+ds_list_add(global.pl01wi, global.hg, global.sg);
 
 ds_list_add(global.pl02wi,
     obj_wep06
@@ -86,6 +86,8 @@ ds_list_add(global.pl02wi,
 global.upgrade = 0;
 
 
+global.wepnames = create_weapon_names_list();
+/*
 global.wepnames = ds_list_create();
 ds_list_add(global.wepnames, 
    "Knife",
@@ -98,8 +100,7 @@ ds_list_add(global.wepnames,
    "Shotgun 500",
    "Rifle B82",
    "Chainsaw"
-);
-
+);*/
 
 global.upgrades = ds_map_create();
 /* weapons upgrades */

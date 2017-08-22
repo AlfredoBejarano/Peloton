@@ -59,7 +59,7 @@ if(distance_to_object(target) &lt; 64) {
             audio_stop_sound(snd_am_tv_static);
             room_goto_next();
         } else {
-            investigated = display_investigating_text("There is an iron ladder, I wonder where does it takes");
+            investigated = display_investigating_text(getString("text_iron_ladder"));
         }
     }
 }
