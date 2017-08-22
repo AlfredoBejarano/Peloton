@@ -1,5 +1,5 @@
 /// Draws menu controls and option descriptions
-
+draw_set_halign(fa_center);
 // Draws the option description.
 draw_text_colour(screenx, room_height - 128, text, c_white, c_white, c_white, c_white, 1);
 draw_set_halign(-1); // Resets all the drawing settings.
