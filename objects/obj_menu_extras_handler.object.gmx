@@ -297,6 +297,8 @@ if((gamepad_axis_value(0, gp_axislv) &lt; -0.5 || keyboard_check_pressed(vk_up) 
             } else {
                 position --;
             }
+        } else {
+            position --;
         }
     }
     alarm[0] = 15;
