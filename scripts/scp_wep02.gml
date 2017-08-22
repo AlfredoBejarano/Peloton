@@ -3,7 +3,7 @@
 
 //Switching animation
 
-wp = instance_find(argument0.weapon, argument0.weapon_id);
+wp = argument0.weapon
 with(wp) {
    // display empty weapon or firing weapon
    if(ammo > 0) {

@@ -21,7 +21,52 @@ if(os_type ==  os_android || os_type == os_ios) {
 } else {
     set_resolution(1);
     global.touch = false;
-}</code>
+}
+global.keybindings = ds_list_create();
+ds_list_add(global.keybindings,
+    ord('W'),
+    ord('A'),
+    ord('S'),
+    ord('D'),
+    mb_right,
+    mb_left,
+    ord('F'),
+    ord('E'),
+    ord('Q'),
+    ord('R'),
+    vk_tab,
+    vk_space,
+    vk_escape   
+);
+global.pl01gp = ds_list_create();
+ds_list_add(global.pl01gp,
+    gp_axislv,
+    gp_axislh,
+    gp_shoulderlb,
+    gp_shoulderrb,
+    gp_face1,
+    gp_padr,
+    gp_padl,
+    gp_face3,
+    gp_face4,
+    gp_shoulderr,
+    gp_start
+);
+global.pl02gp = ds_list_create();
+ds_list_add(global.pl02gp,
+    gp_axislv,
+    gp_axislh,
+    gp_shoulderlb,
+    gp_shoulderrb,
+    gp_face2,
+    gp_padr,
+    gp_padl,
+    gp_face1,
+    gp_face4,
+    gp_shoulderr
+);
+
+global.wepnames = create_weapon_names_list();</code>
   <enableViews>0</enableViews>
   <clearViewBackground>-1</clearViewBackground>
   <clearDisplayBuffer>-1</clearDisplayBuffer>

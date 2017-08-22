@@ -2,7 +2,7 @@
 // argument0 - player object
 
 player = argument0.object_index;
-wep = cweapon;
+wep = argument0.weapon;
 hnd2 = hand2;
 
 if(player.reload_condition1 && (player.reload_condition2 || player.reload_condition3)) {

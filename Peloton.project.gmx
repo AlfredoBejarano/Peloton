@@ -230,6 +230,7 @@
       <sprites name="extras">
         <sprites name="gamemodes">
           <sprite>sprites\spr_gmthumbs</sprite>
+          <sprite>sprites\spr_map_thumbs</sprite>
         </sprites>
       </sprites>
     </sprites>
@@ -291,6 +292,7 @@
         <script>scripts\droppable_factory.gml</script>
         <script>scripts\create_weapon_names_list.gml</script>
         <script>scripts\gamemode_name_factory.gml</script>
+        <script>scripts\gamemode_map_name_factory.gml</script>
       </scripts>
       <script>scripts\display_investigating_text.gml</script>
       <script>scripts\getString.gml</script>

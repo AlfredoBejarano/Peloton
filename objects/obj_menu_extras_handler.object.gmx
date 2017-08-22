@@ -26,6 +26,7 @@
           <argument>
             <kind>1</kind>
             <string>global.gamemode = gm_hitman_mode;
+global.map = 0;
 text = "";
 can_read_mouse = true;
 screen = 1;
@@ -178,7 +179,7 @@ if(recalpha &lt; 1) {
         }
     } else if(position == 2) {
         if(screen == 1) {
-
+            screen = 3;
         } else if(screen == 2) {
             global.gamemode = gm_siege_mode;
             screen = 1;
@@ -192,7 +193,11 @@ if(recalpha &lt; 1) {
         }    
     } else if(position == 4) {
     } else if(position == 5) {
-    } else if(position == 6) {}
+    } else if(position == 6) {
+        if(screen == 1) {
+            room_goto(rm_gm_loading);
+        }
+    }
     alarm[2] = 1;  
 }
 
@@ -247,6 +252,9 @@ can_read_mouse = true;
 } else if(screen == 2) {
     global.gamemode = position;
     max_option = 3;
+} else if(screen == 3) {
+    global.map = position-1;
+    max_option = 1;
 }
 
 if(global.gamemode == gm_hitman_mode &amp;&amp; screen == 1) {
@@ -346,6 +354,8 @@ if(position == 1) {
         text = getString("menu_extras_description_1");
     } else if(screen == 2) {
         text = getString("menu_extras_mode_1");  
+    } else if(screen == 3) {
+        text = "";      
     }
 } else if(position == 2) {
     c1 = c_olive;
@@ -474,6 +484,8 @@ if(screen == 1) {
     draw_text_colour(300, 256, getString("gm_mode_2"), c1, c1, c1, c1, 1);
     draw_text_colour(300, 346, getString("gm_mode_3"), c2, c2, c2, c2, 1);
     draw_text_colour(300, 436, getString("gm_mode_4"), c3, c3, c3, c3, 1);
+} else if(screen == 3) {
+    draw_text_colour(300, 256, getString("extras_map_1"), c1, c1, c1, c1, 1);
 }
 
 draw_menu_indicator();
@@ -483,12 +495,17 @@ draw_set_font(fnt_upgrades);
 draw_set_color(c_white);
 draw_set_halign(fa_right);
 draw_text(1367, 210, gamemode_name_factory());
+draw_text(1367, 248, gamemode_map_name_factory());
 draw_set_color(-1);
 draw_set_halign(-1);
 draw_set_font(-1);
 
 // Draw game data thumbnail
-draw_sprite(spr_gmthumbs, global.gamemode - 1, 1375, 219);
+if(screen == 2) {
+    draw_sprite(spr_gmthumbs, global.gamemode - 1, 1375, 219);
+} else if(screen == 3 || screen == 1) {
+    draw_sprite(spr_map_thumbs, global.map, 1375, 219);
+}
 
 </string>
           </argument>
