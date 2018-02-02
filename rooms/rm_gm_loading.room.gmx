@@ -35,7 +35,7 @@ global.pl02wi = ds_list_create();
 global.level_music = ds_list_create();
 
 //instance_create(x,y, obj_music_player);
-ds_list_add(global.pl01wi, global.hg);
+ds_list_add(global.pl01wi, global.hg, global.sg, global.mg, global.rf);
 
 ds_list_add(global.pl02wi,
     obj_wep06

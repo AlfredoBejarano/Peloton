@@ -35,9 +35,10 @@ if(argument[0]) {
             draw_text_outline(view_xview[0] + (view_wview[0] - (112 * xs)) , view_yview[0] + (view_hview[0] - 100 * (ys)), c_white, c_ltgray, obj_pl01.current_ammo, image_alpha / 4);
         }
     }
-    draw_sprite_ext(spr_heal, 0, view_xview[0] + ((view_wview - 80) * (xs)), view_yview[0] + (view_hview[0] - (216 * ys)), 1, 1, 0, c_white, 1);
+    draw_sprite_ext(spr_heal, 0, view_xview[0] + ((view_wview - 80) * (xs)), view_yview[0] + (view_hview[0] - (238 * ys)), 2, 2, 0, c_white, 1);
     draw_set_font(fnt_weapon_name);
     draw_text_outline(view_xview[0] + (view_wview[0] - (232 * xs)), view_yview[0] + (view_hview[0] - 64 * (ys)), c_white, c_ltgray, dwep.name, image_alpha / 4);
-    draw_text_outline(view_xview[0] + ((view_wview - 96) * (xs)), view_yview[0] + (view_hview[0] - (216 * ys)), c_white, c_ltgray, obj_pl01.heals, 0.5);
+    draw_set_font(fnt_menu);
+    draw_text_outline(view_xview[0] + ((view_wview - 96) * (xs)), view_yview[0] + (view_hview[0] - (238 * ys)), c_white, c_ltgray, obj_pl01.heals, 0.5);
     draw_set_font(-1);
 }

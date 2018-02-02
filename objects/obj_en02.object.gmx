@@ -537,7 +537,7 @@ if(dying == 1) {
             <string>draw_self();
 if(dying == 0) {
    draw_set_alpha(1);
-   //draw_enemy_healthbar(gp_red);
+   draw_enemy_healthbar(c_orange);
 } else {
    draw_sprite_ext(sprite_index, image_index, x, y, image_xscale, 1, 1, c_white, red_alpha);   
 }

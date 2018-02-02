@@ -40,8 +40,8 @@ if(global.touch) {
 /* AIMING AND SHOOTING ENDS */
 
 /* WEAPON SWITCHING BEGINS */
-if((keyboard_check_pressed(weaponnext) || keyboard_check_pressed(weaponprevious)) && not_reloading_shooting_knife) { 
-    switch_weapon(keyboard_check_pressed(weaponnext), keyboard_check_pressed(weaponprevious), self);
+if(mouse_wheel_up() || mouse_wheel_down() && not_reloading_shooting_knife) { 
+    switch_weapon(mouse_wheel_up(), mouse_wheel_down(), self);
 }
 /* WEAPON SWITCHING ENDS */
 

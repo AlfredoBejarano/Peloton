@@ -26,8 +26,9 @@ if(player.is_aiming == 1 && player.is_shooting == 0 && player.is_reloading == 0)
    target = collision_line(ox, oy, ox + (distance*ixs), oy-delta, obj_target_parent, true, true);    
    if(target != noone) {   
       draw_set_alpha(0.5);
-      draw_circle_colour(target.x, (y + argument3)-delta, 5, color, color, false);;
+      draw_circle_colour(target.x, (y + argument3)-delta, 5, color, color, false);
       draw_line_width_colour(ox + (argument2 * image_xscale), (oy + argument3), target.x, (oy + argument3)-delta, 4, color, color);
+      draw_set_alpha(1);      
    } else {
       draw_set_alpha(0.2);
       draw_line_width_colour(ox + (argument2 * image_xscale), (oy + argument3), x2, (oy + argument3)-delta, 4, color, color);

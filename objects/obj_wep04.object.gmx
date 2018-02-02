@@ -222,11 +222,7 @@ scp_wep04(shooter);
         <arguments>
           <argument>
             <kind>1</kind>
-            <string>if(shooter.is_switching == 0) {
-    draw_scope_item(self, room_width, x+(image_xscale * 287),y - 24);
-} else {
-    draw_self();
-}  
+            <string>draw_scope_item();
 </string>
           </argument>
         </arguments>

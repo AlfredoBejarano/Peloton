@@ -350,6 +350,7 @@ if(screen == 1) {
 }
 
 draw_menu_indicator();
+draw_set_alpha(1);
 </string>
           </argument>
         </arguments>

@@ -507,6 +507,8 @@ if(screen == 2) {
     draw_sprite(spr_map_thumbs, global.map, 1375, 219);
 }
 
+draw_set_alpha(1);
+
 </string>
           </argument>
         </arguments>
