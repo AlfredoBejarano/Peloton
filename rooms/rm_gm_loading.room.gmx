@@ -19,10 +19,10 @@ if(audio_is_playing(snd_menu_extras)) {
 }
 
 
-global.hg = obj_wep01
-global.mg = obj_wep02
-global.sg = obj_wep03
-global.rf = obj_wep04
+global.hg = obj_wep05
+global.mg = obj_wep06
+global.sg = obj_wep07
+global.rf = obj_wep08
 
 global.kills = 0;
 

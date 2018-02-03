@@ -56,6 +56,7 @@ obj_am_lighting.dark_factor = 0.8;</code>
     <instance objName="obj_dp_handgun" x="6572" y="866" name="inst_C99BD39B" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
     <instance objName="obj_am_ladder" x="7552" y="880" name="inst_D3F21E56" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
     <instance objName="obj_am_ladder" x="110" y="890" name="inst_211E76E9" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
+    <instance objName="obj_en01" x="2980" y="970" name="inst_4D6217AA" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
   </instances>
   <tiles>
     <tile bgName="bck_chapter1d" x="0" y="0" w="240" h="1080" xo="480" yo="0" id="10000127" name="inst_A90ED077" depth="1000000" locked="0" colour="4294967295" scaleX="1" scaleY="1"/>

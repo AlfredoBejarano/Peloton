@@ -222,7 +222,7 @@ scp_wep04(shooter);
         <arguments>
           <argument>
             <kind>1</kind>
-            <string>draw_scope_item();
+            <string>draw_scope_item(x+(image_xscale * 287),y - 24);
 </string>
           </argument>
         </arguments>

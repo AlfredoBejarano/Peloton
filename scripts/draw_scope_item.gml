@@ -1,14 +1,37 @@
-/// draw_scope_item(x, y)
-// argument[0] - x delta from gun origin.
-// argument[1] - y delta from gun origin.
-// Check if the shooter is aiming only.
+///draw_scope_item(x, y)
+
 draw_self();
-var size = 48;
-if(shooter.is_aiming == 1 && shooter.is_shooting == 0 && shooter.is_reloading == 0) {
-    var target = collision_line(x, y, (x + room_width) * image_xscale, y, obj_target_parent, true, true);
-    draw_set_alpha(1)
-    if(target != noone) {
-        draw_sprite_stretched(target.sprite_index, target.image_index, x, y, size * target.sprite_width / target.sprite_height, size * target.sprite_height / target.sprite_width);
+
+size = 48;
+ox = x;
+oy = y;
+distance = room_width;
+player = shooter;
+ixs = image_xscale;
+ww = 1;
+hh = 1;
+
+x1 = argument0;
+y1 = argument1;
+
+if(sprite_width > sprite_height) { 
+    hh = 1;     
+    ww = (sprite_width * 1) / sprite_height;
+} else { 
+    ww = 1;     
+    hh = (sprite_height * 1) / sprite_width;
+};
+target = collision_line(x1, y1, x1 + (distance*ixs), y1, obj_target_parent, true, true);
+if(object_index == obj_wep04) { 
+    wx = 35; wy = -128; 
+} else { 
+    wx = 40; wy = -128; 
+}
+
+if(player.is_aiming == 1 && player.is_shooting == 0 && player.is_reloading == 0) {
+    draw_set_alpha(1);
+    if(target != noone) {  
+        draw_sprite_stretched(target.sprite_index, target.image_index, (ox + (wx * ixs)) - (size/2), ((oy + wy)) - (size/2), size, size);
     }
-    draw_sprite(spr_wep_scope, 0, x, y);
+    draw_sprite(spr_wep_scope, 0, ox + (wx * ixs), (oy + wy));
 }
