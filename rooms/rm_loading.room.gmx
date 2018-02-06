@@ -6,7 +6,7 @@
   <vsnap>32</vsnap>
   <hsnap>32</hsnap>
   <isometric>0</isometric>
-  <speed>30</speed>
+  <speed>60</speed>
   <persistent>0</persistent>
   <colour>0</colour>
   <showcolour>-1</showcolour>
@@ -34,7 +34,7 @@ ds_list_add(global.keybindings,
     ord('E'),
     ord('Q'),
     ord('R'),
-    vk_tab,
+    ord('V'),
     vk_space,
     vk_escape   
 );
@@ -66,7 +66,91 @@ ds_list_add(global.pl02gp,
     gp_shoulderr
 );
 
-global.wepnames = create_weapon_names_list();</code>
+global.wepnames = create_weapon_names_list();
+
+global.gamemode = gm_siege_mode
+
+// Initialization before menus
+if(audio_is_playing(snd_menu)) {
+    audio_stop_sound(snd_menu);
+}
+
+if(audio_is_playing(snd_menu_extras)) {
+    audio_stop_sound(snd_menu_extras);
+}
+
+
+global.hg = obj_wep05
+global.mg = obj_wep02
+global.sg = obj_wep03
+global.rf = obj_wep04
+
+global.kills = 0;
+
+global.pl01_character = 1;
+global.pl02_character = 2;
+
+global.pl01wi = ds_list_create();
+global.pl02wi = ds_list_create();
+
+global.level_music = ds_list_create();
+
+//instance_create(x,y, obj_music_player);
+
+ds_list_add(global.pl02wi,
+    obj_wep06
+);
+
+global.upgrade = 0;
+
+global.upgrades = ds_map_create();
+/* weapons upgrades */
+ds_map_add(global.upgrades, "wep01ma", 8);
+ds_map_add(global.upgrades, "wep01fs", 30);
+ds_map_add(global.upgrades, "wep01rs", 60);
+ds_map_add(global.upgrades, "wep01dmg", 26);
+
+ds_map_add(global.upgrades, "wep02ma", 30);
+ds_map_add(global.upgrades, "wep02fs", 10);
+ds_map_add(global.upgrades, "wep02rs", 60);
+ds_map_add(global.upgrades, "wep02dmg", 13);
+
+ds_map_add(global.upgrades, "wep03ma", 4);
+ds_map_add(global.upgrades, "wep03fs", 60);
+ds_map_add(global.upgrades, "wep03rs", 180);
+ds_map_add(global.upgrades, "wep03dmg", 15);
+
+ds_map_add(global.upgrades, "wep04ma", 5);
+ds_map_add(global.upgrades, "wep04fs", 80);
+ds_map_add(global.upgrades, "wep04rs", 80);
+ds_map_add(global.upgrades, "wep04dmg", 120);
+
+ds_map_add(global.upgrades, "wep05ma", 10);
+ds_map_add(global.upgrades, "wep05fs", 35);
+ds_map_add(global.upgrades, "wep05rs", 60);
+ds_map_add(global.upgrades, "wep05dmg", 40);
+
+ds_map_add(global.upgrades, "wep06ma", 20);
+ds_map_add(global.upgrades, "wep06fs", 12);
+ds_map_add(global.upgrades, "wep06rs", 60);
+ds_map_add(global.upgrades, "wep06dmg", 19);
+
+ds_map_add(global.upgrades, "wep07ma", 4);
+ds_map_add(global.upgrades, "wep07fs", 45);
+ds_map_add(global.upgrades, "wep07rs", 160);
+ds_map_add(global.upgrades, "wep07dmg", 12);
+
+ds_map_add(global.upgrades, "wep08ma", 8);
+ds_map_add(global.upgrades, "wep08fs", 60);
+ds_map_add(global.upgrades, "wep08rs", 70);
+ds_map_add(global.upgrades, "wep08dmg", 125);
+
+ds_map_add(global.upgrades, "wep09ma", 10);
+ds_map_add(global.upgrades, "wep09fs", 1);
+ds_map_add(global.upgrades, "wep09rs", 120);
+ds_map_add(global.upgrades, "wep09dmg", 200);
+
+ds_list_add(global.pl01wi, global.hg, global.rf);</code>
   <enableViews>0</enableViews>
   <clearViewBackground>-1</clearViewBackground>
   <clearDisplayBuffer>-1</clearDisplayBuffer>
@@ -107,7 +191,7 @@ global.wepnames = create_weapon_names_list();</code>
     <view visible="0" objName="&lt;undefined&gt;" xview="0" yview="0" wview="1024" hview="768" xport="0" yport="0" wport="1024" hport="768" hborder="32" vborder="32" hspeed="-1" vspeed="-1"/>
   </views>
   <instances>
-    <instance objName="obj_loader" x="0" y="0" name="inst_5269474A" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
+    <instance objName="obj_loader" x="1856" y="992" name="inst_5269474A" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
   </instances>
   <tiles/>
   <PhysicsWorld>0</PhysicsWorld>

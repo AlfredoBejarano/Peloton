@@ -289,13 +289,7 @@ attack_position = 0;
         <arguments>
           <argument>
             <kind>1</kind>
-            <string>if(room == rm_main) {
-    depth = -y;
-    hspeed = 3 * image_xscale;
-    move_wrap(room_width, room_height, sprite_width * image_xscale);
-} else {
-    basic_en_IA(4, false, 16);
-}
+            <string>basic_en_IA(4, false, 16);
 </string>
           </argument>
         </arguments>
@@ -350,7 +344,6 @@ attack_position = 0;
 draw_sprite_ext(spr_en_hat, hat_index, x - (16 * image_xscale), (y - 220), image_xscale, 1, 0, c_white, 1);
 if(dying == 0) {
    draw_set_alpha(1);
-   draw_enemy_healthbar(c_orange);
 } else {
     draw_sprite_ext(sprite_index, image_index, x, y, image_xscale, 1, 1, c_white, red_alpha);
 }

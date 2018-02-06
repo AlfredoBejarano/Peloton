@@ -31,7 +31,7 @@ if(ammo_available && is_reloading == 0) {
     reload_condition1 = false; 
 }
 
-if(argument0 && is_shooting == 0 && is_switching == 0) { 
+if((argument0 || (argument2 && argument1 && weapon.ammo == 0)) && is_shooting == 0 && is_switching == 0) { 
     reload_condition2 = true; 
 } else { 
     reload_condition2 = false; 

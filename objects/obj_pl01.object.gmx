@@ -354,6 +354,10 @@ if(is_dying) {
     eye_index = 2;
     can_take_damage = 0;
 }
+
+if(hp &lt;= 0) {
+    hp = 0;
+}
 </string>
           </argument>
         </arguments>

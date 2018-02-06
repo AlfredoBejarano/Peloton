@@ -3,8 +3,8 @@
 
 image_index = 0;
 image_speed = 0;
-
-hp = 200;
+basehp = 200;
+hp = basehp;
 cplhps = 1;
 can_heal = 1;
 is_aiming = 0;
@@ -95,8 +95,12 @@ with (hand2) {
 current_ammo = ds_list_find_value(ammo_inventory, weapon.ammo_type);
 
 // Creates the HUD for the player.
-with(instance_create(x,y, hud)) {
+with(instance_create(x,y, hud)) {    
+    image_alpha = 0;
     player = argument1;
+    xs = (display_get_width()    /   1920);
+    ys = (display_get_height()   /   1080);
+    dwep = player.weapon;
 }
 
 // Sets knife sprite for the player

@@ -233,6 +233,9 @@
           <sprite>sprites\spr_map_thumbs</sprite>
         </sprites>
       </sprites>
+      <sprites name="gameplay">
+        <sprite>sprites\spr_hud</sprite>
+      </sprites>
     </sprites>
   </sprites>
   <backgrounds name="background">
@@ -297,6 +300,7 @@
       <script>scripts\display_investigating_text.gml</script>
       <script>scripts\getString.gml</script>
       <script>scripts\new_array.gml</script>
+      <script>scripts\draw_ring_bar.gml</script>
     </scripts>
     <scripts name="weapon">
       <script>scripts\draw_laser.gml</script>
@@ -362,6 +366,7 @@
       <script>scripts\create_zombie_hand.gml</script>
       <script>scripts\draw_enemy_healthbar.gml</script>
       <script>scripts\hat_factory.gml</script>
+      <script>scripts\draw_target_health.gml</script>
     </scripts>
     <scripts name="IA">
       <script>scripts\init_ia.gml</script>
@@ -374,7 +379,7 @@
     </scripts>
   </scripts>
   <fonts name="fonts">
-    <font>fonts\fnt_hud</font>
+    <font>fonts\fnt_health</font>
     <font>fonts\fnt_weapon_name</font>
     <font>fonts\fnt_upgrades</font>
     <font>fonts\fnt_menu</font>
@@ -386,7 +391,7 @@
         <object>objects\obj_pl02</object>
         <object>objects\obj_hand1</object>
         <object>objects\obj_hand2</object>
-        <object>objects\obj_pl01_wep_hud</object>
+        <object>objects\obj_wep_hud</object>
         <object>objects\obj_plhealth</object>
       </objects>
       <objects name="IA">
@@ -471,10 +476,6 @@
   </objects>
   <rooms name="rooms">
     <room>rooms\rm_loading</room>
-    <room>rooms\rm_main</room>
-    <room>rooms\rm_gm_loading</room>
-    <room>rooms\rm_campaign1a</room>
-    <room>rooms\rm_campaign1b</room>
     <room>rooms\rm_campaign1c</room>
   </rooms>
   <constants number="19">
@@ -505,6 +506,8 @@
     <audiogroup name="audiogroup_default"/>
     <audiogroup name="audiogroup_music"/>
     <audiogroup name="audiogroup_weapons"/>
+    <audiogroup name="audiogroup_enemy"/>
+    <audiogroup name="audiogroup_characters"/>
   </audiogroups>
   <TutorialState>
     <IsTutorial>0</IsTutorial>

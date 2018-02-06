@@ -205,7 +205,9 @@
     <option_argumenterrors>True</option_argumenterrors>
     <option_audioGroup1_targets>9223372036854775807</option_audioGroup1_targets>
     <option_audioGroup2_targets>9223372036854775807</option_audioGroup2_targets>
-    <option_audioGroupCount>3</option_audioGroupCount>
+    <option_audioGroup3_targets>9223372036854775807</option_audioGroup3_targets>
+    <option_audioGroup4_targets>9223372036854775807</option_audioGroup4_targets>
+    <option_audioGroupCount>5</option_audioGroupCount>
     <option_author></option_author>
     <option_backimage>nil</option_backimage>
     <option_borderless>False</option_borderless>

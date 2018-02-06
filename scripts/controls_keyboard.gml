@@ -22,8 +22,8 @@ player_movement(is_aiming, keyboard_check(up), keyboard_check(down), keyboard_ch
 
 /* AIMING AND SHOOTING BEGINS */
 if(global.touch) {
-    perform_touch_aim(keyboard_check(aim), keyboard_check_pressed(aim), keyboard_check(shoot), keyboard_check_pressed(shoot), keyboard_check_released(aim), keyboard_check_pressed(reload), self); 
-    if(keyboard_check(shoot) && weapon.ammo == 0){
+    perform_touch_aim(keyboard_check(vk_shift), keyboard_check_pressed(vk_shift), keyboard_check(ord('F')), keyboard_check_pressed(ord('F')), keyboard_check_released(vk_shift), keyboard_check_pressed(ord('R')), self); 
+    if(keyboard_check(ord('F')) && weapon.ammo == 0){
         perform_reload(self);
     }
 } else {
@@ -46,7 +46,7 @@ if(mouse_wheel_up() || mouse_wheel_down() && not_reloading_shooting_knife) {
 /* WEAPON SWITCHING ENDS */
 
 /* RELOAD BEGINS */
-perform_reload(self);
+perform_reload(keyboard_check_pressed(reload), mouse_check_button(shoot));
 /* RELOAD ENDS */
 
 /*KNIFE BEGINS */

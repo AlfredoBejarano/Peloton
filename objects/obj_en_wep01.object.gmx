@@ -38,7 +38,7 @@ reload_sound = snd_wep09_reload;
 name = "Chainsaw";
 is_hitting = 0;
 cphs = 1;
-
+max_hp = 0;
 /* upgradable values */ 
 damage         = 20;
 max_ammo       = 100;

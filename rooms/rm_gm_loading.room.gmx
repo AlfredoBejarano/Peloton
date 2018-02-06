@@ -20,9 +20,9 @@ if(audio_is_playing(snd_menu_extras)) {
 
 
 global.hg = obj_wep05
-global.mg = obj_wep06
-global.sg = obj_wep07
-global.rf = obj_wep08
+global.mg = obj_wep02
+global.sg = obj_wep03
+global.rf = obj_wep04
 
 global.kills = 0;
 
@@ -35,7 +35,6 @@ global.pl02wi = ds_list_create();
 global.level_music = ds_list_create();
 
 //instance_create(x,y, obj_music_player);
-ds_list_add(global.pl01wi, global.hg, global.sg, global.mg, global.rf);
 
 ds_list_add(global.pl02wi,
     obj_wep06
@@ -78,7 +77,7 @@ ds_map_add(global.upgrades, "wep06dmg", 19);
 ds_map_add(global.upgrades, "wep07ma", 4);
 ds_map_add(global.upgrades, "wep07fs", 45);
 ds_map_add(global.upgrades, "wep07rs", 160);
-ds_map_add(global.upgrades, "wep07dmg", 6);
+ds_map_add(global.upgrades, "wep07dmg", 12);
 
 ds_map_add(global.upgrades, "wep08ma", 8);
 ds_map_add(global.upgrades, "wep08fs", 60);
@@ -91,8 +90,10 @@ ds_map_add(global.upgrades, "wep09rs", 120);
 ds_map_add(global.upgrades, "wep09dmg", 200);
 
 if(global.gamemode == gm_campaign) {
+    ds_list_add(global.pl01wi, global.hg, global.sg, global.mg, global.rf);
     room_goto_next();
 } else if(global.gamemode == gm_siege_mode){
+    ds_list_add(global.pl01wi, global.hg);
     room_goto(rm_campaign1c);
 }</code>
   <enableViews>0</enableViews>
