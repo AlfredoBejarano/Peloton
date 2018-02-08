@@ -108,7 +108,3 @@ knife_sprite = ds_list_find_value(player_skin_factory(character), 3);
 
 // Sets mouth sprite
 mouth_sprite = ds_list_find_value(player_skin_factory(character), 4);
-
-// Sets health hud
-healthhud = instance_create(x,y, obj_plhealth);
-with(healthhud) { player = argument1; }

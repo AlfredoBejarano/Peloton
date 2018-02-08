@@ -4,13 +4,11 @@ left = ds_list_find_value(controls, 1);
 down = ds_list_find_value(controls, 2);
 right = ds_list_find_value(controls, 3);
 shoot = ds_list_find_value(controls, 5);
-heal = ds_list_find_value(controls, 10);
-knife = ds_list_find_value(controls, 11);
-reload = ds_list_find_value(controls, 9); 
+heal = ds_list_find_value(controls, 8);
+knife = ds_list_find_value(controls, 9);
+reload = ds_list_find_value(controls, 7); 
 action = ds_list_find_value(controls, 6);
-pause = ds_list_find_value(controls, 12); 
-weaponnext = ds_list_find_value(controls, 7);
-weaponprevious = ds_list_find_value(controls, 8);
+pause = ds_list_find_value(controls, 10); 
 
 /* CONSOLIDATION BEGINS */
 controls_consolidation_variables(keyboard_check_pressed(reload),keyboard_check(aim),keyboard_check_pressed(shoot));
@@ -40,8 +38,8 @@ if(global.touch) {
 /* AIMING AND SHOOTING ENDS */
 
 /* WEAPON SWITCHING BEGINS */
-if(mouse_wheel_up() || mouse_wheel_down() && not_reloading_shooting_knife) { 
-    switch_weapon(mouse_wheel_up(), mouse_wheel_down(), self);
+if((mouse_wheel_up() || keyboard_check_pressed(ord('1'))  || mouse_wheel_down()) && not_reloading_shooting_knife) { 
+    switch_weapon(mouse_wheel_up() || keyboard_check_pressed(ord('1')), mouse_wheel_down(), self);
 }
 /* WEAPON SWITCHING ENDS */
 

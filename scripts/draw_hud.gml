@@ -1,8 +1,8 @@
 ///draw_hud()
 var color = gp_green;
-var radius = 64 * xs;
-var hudy = (128 * ys);
-var thickness = 16 * xs;
+var radius = 64;
+var hudy = 128;
+var thickness = 16;
 var segments = player.hp;
 var total_segments = player.basehp // Total segments of the HUD healthbar.
 var current_hp = player.hp / player.basehp; // Player current HP.
@@ -25,9 +25,9 @@ draw_ring_bar(hudx, hudy, radius, thickness, total_segments, total_segments, 0, 
 draw_ring_bar(hudx, hudy, radius, thickness, total_segments, total_segments, 0, 270, -1, gp_bt_inner); // Draw blank health ring.
 draw_ring_bar(hudx, hudy, radius, thickness, total_segments, segments, 0, 270, -1, color); // Draw health ring.
 draw_set_font(fnt_hud_ammo)
-draw_text_outline(display_get_gui_width() - (104 * xs), (48 * ys), c_black, gp_yellow, string(player.heals), 0.75); // Draw player health items quantity.
+draw_text_outline(display_get_gui_width() - 104, 48, c_black, gp_yellow, string(player.heals), 0.75); // Draw player health items quantity.
 if(dwep.object_index != obj_wep00) { // Don't draw knife's ammo because it doesn't use ammo.
-    draw_text_outline(display_get_gui_width() - (88 * xs), (130 * ys), c_black, c_white, string(dwep.ammo), 1); // Draw the weapon ammo.
-    draw_text_outline(display_get_gui_width() - (88 * xs), (168 * ys), c_black, c_white, string(player.current_ammo), 1); // Draw the current type of ammo
+    draw_text_outline(display_get_gui_width() - 88, 130, c_black, c_white, string(dwep.ammo), 1); // Draw the weapon ammo.
+    draw_text_outline(display_get_gui_width() - 88, 168, c_black, c_white, string(player.current_ammo), 1); // Draw the current type of ammo
 }
 draw_sprite(spr_weapon_hud, dwep.hud_image, hudx, hudy); // Draws the weapon icon.

@@ -27,7 +27,7 @@
             <kind>1</kind>
             <string>wave = 0;
 reset = false;
-base_time = 10; // Set ten seconds of rest time.
+base_time = 5; // Set ten seconds of rest time.
 curr_time = base_time; // Set the time to the base time.
 alarm[0] = room_speed;
 </string>
@@ -59,6 +59,7 @@ alarm[0] = room_speed;
 } else {
     curr_time --
     alarm[0] = room_speed
+    audio_play_sound(snd_time_tick, 0, false);
 }
 </string>
           </argument>
@@ -110,7 +111,7 @@ alarm[0] = room_speed;
           <argument>
             <kind>1</kind>
             <string>draw_set_alpha(0.75);
-draw_circle_colour(display_get_width() / 2, 64, 32,c_black, gp_bt_inner, false);
+draw_circle_colour(display_get_width() / 2, 64, 34,c_black, gp_bt_inner, false);
 draw_set_alpha(1);
 draw_ring_bar(display_get_width() / 2, 64, 32, 8, base_time * 360, base_time * 360, 0, 360, 1, gp_bt_inner);
 draw_ring_bar(display_get_width() / 2, 64, 32, 8, base_time * 360, curr_time * 360, 90, 360, 1, gp_red);

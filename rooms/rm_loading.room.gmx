@@ -31,10 +31,8 @@ ds_list_add(global.keybindings,
     mb_right,
     mb_left,
     ord('F'),
-    ord('E'),
-    ord('Q'),
     ord('R'),
-    ord('V'),
+    ord('Q'),
     vk_space,
     vk_escape   
 );

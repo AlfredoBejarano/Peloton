@@ -28,7 +28,7 @@ if(player.is_aiming == 1) { // Check if the player is aiming.
             draw_line_width_colour(ox + (argument2 * image_xscale), (oy + argument3), target.x, (oy + argument3)-delta, 4, color, color);
             draw_set_alpha(1);
         }        
-    } else {
+    } else if(player.is_reloading == 0){
     // Draw the laser when aiming.
         draw_set_alpha(0.2);
         draw_line_width_colour(ox + (argument2 * image_xscale), (oy + argument3), x2, (oy + argument3)-delta, 4, color, color);

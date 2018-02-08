@@ -72,10 +72,6 @@ with(picker) {
 with(hud) {
     instance_destroy();
 }
-
-with(healthhud) {
-    instance_destroy();
-}
 </string>
           </argument>
         </arguments>
@@ -386,6 +382,7 @@ if(((y &lt;= other.zombie.y + 32) &amp;&amp; (y &gt;= other.zombie.y - 32)) || y
 }
 
 if(other.zombie.is_attacking == 1 &amp;&amp; inrange &amp;&amp; can_take_damage == 1 &amp;&amp; is_taking_damage == 0) {
+    audio_play_sound(snd_en_hit, 0, false);
    take_damage(other.zombie.image_xscale, other.zombie.damage, sounds);
 }
 </string>

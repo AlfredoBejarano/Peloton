@@ -111,6 +111,7 @@ image_alpha = 0.5;
           <argument>
             <kind>1</kind>
             <string>draw_hud();
+draw_sprite_stretched_ext(spr_health, 0, 0, 0, display_get_width(), display_get_height(), gp_red, 1 - (player.hp / player.basehp));
 if(global.touch) {
    /* movement keys */
    up =     virtual_key_add(160, display_get_gui_height() - 384 - 32, 128, 128, ord('W'));
@@ -129,8 +130,8 @@ if(global.touch) {
    knife =  virtual_key_add(display_get_gui_width() - 288, display_get_gui_height() - (416),   128,  128, vk_space);
    reload = virtual_key_add(display_get_gui_width() - 416, display_get_gui_height() - (288),   128,  128, ord('R'));
  
-   healing =   virtual_key_add(display_get_gui_width()- (256), 0, 256, 256, ord('V'));   
-   swich =     virtual_key_add(0, 0, 256, 256, ord('E'));   
+   healing =   virtual_key_add(display_get_gui_width()- (256), 0, 256, 256, ord('Q'));   
+   swich =     virtual_key_add(0, 0, 256, 256, ord('1'));   
    
    /* draw virtual keys */    
    draw_sprite_ext(spr_device_gamepad, 0, 32, display_get_gui_height() - 384 - 32, 1.3, 1.3, 0, c_white, 0.2);

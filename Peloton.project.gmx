@@ -92,6 +92,7 @@
         <sound>sound\snd_en_hit02</sound>
         <sound>sound\snd_en_hit03</sound>
         <sound>sound\snd_en_appear</sound>
+        <sound>sound\snd_en_hit</sound>
       </sounds>
       <sounds name="en01">
         <sound>sound\snd_en01_attack</sound>
@@ -130,6 +131,7 @@
       <sound>sound\snd_am_tv_static</sound>
       <sound>sound\snd_am_tv_break</sound>
       <sound>sound\snd_am_wind</sound>
+      <sound>sound\snd_time_tick</sound>
     </sounds>
     <sounds name="ui">
       <sound>sound\snd_menu_accept</sound>
@@ -395,7 +397,6 @@
         <object>objects\obj_hand1</object>
         <object>objects\obj_hand2</object>
         <object>objects\obj_wep_hud</object>
-        <object>objects\obj_plhealth</object>
       </objects>
       <objects name="IA">
         <object>objects\obj_plIA</object>
