@@ -64,14 +64,6 @@ audio_play_sound(snd_wep09_reload, 0, false);
           <argument>
             <kind>1</kind>
             <string>global.kills ++;
-if(instance_exists(obj_en_gm1_gen)) {
-   with(obj_en_gm1_gen) {
-      if(instance_number(obj_en01) &lt;= 1) {
-         timer = 2.5;
-         alarm[0] = 60/100;
-      }      
-   }
-}
 
 if(audio_is_playing(weapon.aim_sound) &amp;&amp; instance_number(obj_en02) &lt;= 1) {
    audio_stop_sound(weapon.aim_sound);
@@ -81,7 +73,7 @@ with(weapon) {
    instance_destroy();
 }
 calculate_drop();
-siege_upgrades(global.hg, global.mg, global.sg, global.rf);
+siege_upgrades();
 </string>
           </argument>
         </arguments>

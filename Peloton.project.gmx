@@ -22,7 +22,9 @@
       <filename>strings.ini</filename>
     </datafile>
   </datafiles>
-  <NewExtensions/>
+  <NewExtensions>
+    <extension index="0">extensions\FacebookExtension</extension>
+  </NewExtensions>
   <sounds name="sound">
     <sounds name="wep">
       <sounds name="wep0">
@@ -419,7 +421,6 @@
       <object>objects\obj_shot</object>
     </objects>
     <objects name="en">
-      <object>objects\obj_en_gm1_gen</object>
       <object>objects\obj_barrel</object>
       <object>objects\obj_target_parent</object>
       <objects name="en01">
@@ -431,6 +432,7 @@
         <object>objects\obj_en02_hand01</object>
         <object>objects\obj_en02_hand02</object>
       </objects>
+      <object>objects\obj_enemy_generator</object>
     </objects>
     <objects name="fx">
       <object>objects\obj_fx_bullet</object>

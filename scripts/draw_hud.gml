@@ -24,8 +24,9 @@ draw_set_alpha(1)
 draw_ring_bar(hudx, hudy, radius, thickness, total_segments, total_segments, 0, 360, -1, c_black); // Draw black ring behind the hud.
 draw_ring_bar(hudx, hudy, radius, thickness, total_segments, total_segments, 0, 270, -1, gp_bt_inner); // Draw blank health ring.
 draw_ring_bar(hudx, hudy, radius, thickness, total_segments, segments, 0, 270, -1, color); // Draw health ring.
+draw_set_font(fnt_hud_ammo)
+draw_text_outline(display_get_gui_width() - (104 * xs), (48 * ys), c_black, gp_yellow, string(player.heals), 0.75); // Draw player health items quantity.
 if(dwep.object_index != obj_wep00) { // Don't draw knife's ammo because it doesn't use ammo.
-    draw_set_font(fnt_hud_ammo)
     draw_text_outline(display_get_gui_width() - (88 * xs), (130 * ys), c_black, c_white, string(dwep.ammo), 1); // Draw the weapon ammo.
     draw_text_outline(display_get_gui_width() - (88 * xs), (168 * ys), c_black, c_white, string(player.current_ammo), 1); // Draw the current type of ammo
 }

@@ -26,8 +26,8 @@
           <argument>
             <kind>1</kind>
             <string>wave = 0;
-timer = 2.5;
-alarm[0] = 60/100;
+timer = 5 * room_speed;
+alarm[0] = 1;
 </string>
           </argument>
         </arguments>
@@ -51,13 +51,38 @@ alarm[0] = 60/100;
           <argument>
             <kind>1</kind>
             <string>if(timer &gt; 0) {
-   timer -= 1/100;
-   alarm[0] = room_speed/100;
+   timer -= 1;
+   alarm[0] = 1;
 } else {
-   if(!instance_exists(obj_en01)) {
+   if(!instance_exists(obj_en01) &amp; !instance_exists(obj_en02)) {
       wave ++;
       create_enemy_wave(wave);      
    }
+}
+</string>
+          </argument>
+        </arguments>
+      </action>
+    </event>
+    <event eventtype="3" enumb="1">
+      <action>
+        <libid>1</libid>
+        <id>603</id>
+        <kind>7</kind>
+        <userelative>0</userelative>
+        <isquestion>0</isquestion>
+        <useapplyto>-1</useapplyto>
+        <exetype>2</exetype>
+        <functionname></functionname>
+        <codestring></codestring>
+        <whoName>self</whoName>
+        <relative>0</relative>
+        <isnot>0</isnot>
+        <arguments>
+          <argument>
+            <kind>1</kind>
+            <string>if(!object_exists(obj_en01) &amp;&amp; !object_exists(obj_en02)) {
+    timer = room_speed * 5;
 }
 </string>
           </argument>
@@ -81,8 +106,8 @@ alarm[0] = 60/100;
         <arguments>
           <argument>
             <kind>1</kind>
-            <string>draw_ring_bar(display_get_width() / 2, 64, 32, 8, 250, timer * 100, 90, 360, -1, c_blue)
-
+            <string>draw_ring_bar(display_get_width() / 2, 64, 32, 8, 300, 300, 90, 360, -1, gp_bt_inner)
+draw_ring_bar(display_get_width() / 2, 64, 32, 8, 300, timer, 90, 360, -1, gp_green)
 </string>
           </argument>
         </arguments>

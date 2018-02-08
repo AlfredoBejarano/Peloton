@@ -25,10 +25,9 @@
         <arguments>
           <argument>
             <kind>1</kind>
-            <string>xs = 0;
-ys = 0;
+            <string>ys = 0;
 alarm[0] = 1;
-image_alpha = 1;
+image_alpha = 0.75;
 </string>
           </argument>
         </arguments>
@@ -54,11 +53,8 @@ image_alpha = 1;
             <string>if(image_alpha &lt;= 0) {
    instance_destroy();
 } else {
-   xs ++;
-   ys ++;
+   ys += display_get_height() / 60;
    image_alpha -= 1/60;
-   xs ++;
-   ys ++;
    alarm[0] = 1;
 }
 </string>
@@ -66,7 +62,7 @@ image_alpha = 1;
         </arguments>
       </action>
     </event>
-    <event eventtype="8" enumb="0">
+    <event eventtype="8" enumb="64">
       <action>
         <libid>1</libid>
         <id>603</id>
@@ -83,7 +79,10 @@ image_alpha = 1;
         <arguments>
           <argument>
             <kind>1</kind>
-            <string>draw_sprite_ext(sprite_index, image_index, view_xview + (view_wview/2), view_yview + (view_hview/2), xs, ys, 0 , c_white, image_alpha);
+            <string>draw_set_alpha(image_alpha);
+draw_rectangle_colour(0, 0, display_get_width(), display_get_height(), gp_yellow, gp_yellow, gp_yellow, gp_yellow, false);
+draw_set_alpha(1);
+draw_sprite_stretched_ext(sprite_index, 0, 0, display_get_height() - ys, display_get_width(), sprite_height, gp_yellow, image_alpha);
 </string>
           </argument>
         </arguments>
