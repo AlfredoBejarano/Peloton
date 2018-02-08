@@ -383,6 +383,7 @@
     <font>fonts\fnt_weapon_name</font>
     <font>fonts\fnt_upgrades</font>
     <font>fonts\fnt_menu</font>
+    <font>fonts\fnt_hud_ammo</font>
   </fonts>
   <objects name="objects">
     <objects name="pl">
@@ -490,7 +491,7 @@
     <constant name="up_maxammo">2</constant>
     <constant name="up_reloadspeed">1</constant>
     <constant name="up_firespeed">0</constant>
-    <constant name="gp_bt_inner">make_color_rgb(18,18,18)</constant>
+    <constant name="gp_bt_inner">make_color_rgb(9,9,9)</constant>
     <constant name="gp_bt_outline">make_color_rgb(59,59,56)</constant>
     <constant name="gp_white">make_color_rgb(249, 249, 249)</constant>
     <constant name="gp_yellow">make_color_rgb(233, 211, 0)</constant>

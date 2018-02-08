@@ -81,13 +81,7 @@ alarm[0] = 60/100;
         <arguments>
           <argument>
             <kind>1</kind>
-            <string>if(timer == 0) {
-   draw_text_outline(160, (display_get_gui_height()/2)-64, gp_red, gp_white, string(global.kills), 1);
-   ap = 0.8;
-} else { ap = 0.2; }
-
-draw_sprite_ext(spr_en01,0, 80, (display_get_gui_height()/2), 0.5, 0.5, 0, c_white, ap);
-draw_circle_bar(80, (display_get_gui_height()/2)-64, 64, 250, timer * 100, 90, 360, -1, gp_red);
+            <string>draw_ring_bar(display_get_width() / 2, 64, 32, 8, 250, timer * 100, 90, 360, -1, c_blue)
 
 </string>
           </argument>

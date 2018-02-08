@@ -50,7 +50,7 @@ if((gamepad_button_check_pressed(device, weaponnext) || gamepad_button_check_pre
 /* WEAPON SWITCHING ENDS */
 
 /* RELOAD BEGINS */
-perform_reload(gamepad_button_check_pressed(device, reload), gamepad_button_check(device, shoot));
+perform_reload(gamepad_button_check_pressed(device, reload), gamepad_button_check_pressed(device, shoot));
 /* RELOAD ENDS */
 
 /*  KNIFE BEGINS */

@@ -150,7 +150,7 @@ ds_map_add(global.upgrades, "wep09fs", 1);
 ds_map_add(global.upgrades, "wep09rs", 120);
 ds_map_add(global.upgrades, "wep09dmg", 200);
 
-ds_list_add(global.pl01wi, global.hg, global.rf);</code>
+ds_list_add(global.pl01wi, global.hg);</code>
   <enableViews>0</enableViews>
   <clearViewBackground>-1</clearViewBackground>
   <clearDisplayBuffer>-1</clearDisplayBuffer>

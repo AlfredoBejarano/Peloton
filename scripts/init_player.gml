@@ -70,7 +70,7 @@ heals = ds_list_find_value(ammo_inventory, 0);
 cweapon = instance_create(x, y, weapon);
 weapon_id = cweapon.id;
 with (cweapon) {
-    shooter = argument1;
+    shooter = argument1.id;
 }
 
 // Hands require a weapon to be attached with.

@@ -46,7 +46,7 @@ if(mouse_wheel_up() || mouse_wheel_down() && not_reloading_shooting_knife) {
 /* WEAPON SWITCHING ENDS */
 
 /* RELOAD BEGINS */
-perform_reload(keyboard_check_pressed(reload), mouse_check_button(shoot));
+perform_reload(keyboard_check_pressed(reload), mouse_check_button_pressed(shoot));
 /* RELOAD ENDS */
 
 /*KNIFE BEGINS */

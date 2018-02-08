@@ -1,33 +1,35 @@
 ///draw_hud()
-var xp = view_xview[0] + (145 * xs);
-var yp = view_yview[0] + (75 * ys);
-var color = c_green;
-var chp = player.hp / player.basehp; // Player current HP.
-if(chp >= 1 && chp <= 0.75) {
-    color = c_green;
-} else if(chp <= 0.75 && chp >= 0.50) {
-    color = c_yellow;
-} else if(chp <= 0.50 && chp >= 0.25) {
-    color = c_orange;
-} else if(chp <= 0.25) {
-    color = c_red;
-}
-var health_to_draw = "(" + string(player.hp) + "/" + string(player.basehp) + ")";
-var aspect_ratio = abs(dwep.sprite_width) / dwep.sprite_height;
+var color = gp_green;
+var radius = 64 * xs;
+var hudy = (128 * ys);
+var thickness = 16 * xs;
+var segments = player.hp;
+var total_segments = player.basehp // Total segments of the HUD healthbar.
+var current_hp = player.hp / player.basehp; // Player current HP.
+var hudx = display_get_gui_width() - (188 * xs) // Hud draw center in X
 
-/*=== HUD drawing ==*/
-draw_sprite(spr_hud, 0, xp, yp); // Draws the HUD image.
-if(player.hp >= 0) { // Don't draw the healthbar when hp is below 0.
-    draw_rectangle_colour(xp + (72 * xs), yp + (64 * ys), (xp + (72 * xs)) + ((330 * xs) * chp), yp + (71 * ys), color, color, color, color, false); // Draws the player health.
+
+if(current_hp >= 1 && current_hp <= 0.75) { // Set the health color to green if is between 100% and 75%.
+    color = gp_green;
+} else if(current_hp <= 0.75 && current_hp >= 0.50) { // Set the health color to yellow if is between 75% and 50%.
+    color = gp_yellow;
+} else if(current_hp <= 0.50 && current_hp >= 0.25) { // Set the health color to orange if is between 50% and 25%.
+    color = c_orange;
+} else if(current_hp <= 0.25) { // Set the health color to red if it falls below 25%.
+    color = gp_red;
 }
-draw_sprite(spr_weapon_hud, dwep.hud_image, xp + (5 * xs), yp + (13 * ys)); // Draws the weapon.
-draw_set_font(fnt_weapon_name);
-draw_text_colour(view_xview[0] + (216 * xs), view_yview[0] + (151 * ys), dwep.name, c_white, c_white, c_white, c_white, 1); //Draws weapon name.
+draw_set_alpha(0.5)
+draw_circle_colour(hudx, hudy, radius, c_black, c_black, false); // Draw the HUD backplate.
+draw_set_alpha(1)
+draw_ring_bar(hudx, hudy, radius, thickness, total_segments, total_segments, 0, 360, -1, c_black); // Draw black ring behind the hud.
+draw_ring_bar(hudx, hudy, radius, thickness, total_segments, total_segments, 0, 270, -1, gp_bt_inner); // Draw blank health ring.
+draw_ring_bar(hudx, hudy, radius, thickness, total_segments, segments, 0, 270, -1, color); // Draw health ring.
 if(dwep.object_index != obj_wep00) { // Don't draw knife's ammo because it doesn't use ammo.
-    draw_text_colour(view_xview[0] + (256 * xs), yp + (30 * ys), string(dwep.ammo) + "/" + string(player.current_ammo), c_white, c_white, c_white, c_white, 1); //Draws weapon ammo.
+    draw_set_font(fnt_hud_ammo)
+    draw_text_outline(display_get_gui_width() - (88 * xs), (130 * ys), c_black, c_white, string(dwep.ammo), 1); // Draw the weapon ammo.
+    draw_text_outline(display_get_gui_width() - (88 * xs), (168 * ys), c_black, c_white, string(player.current_ammo), 1); // Draw the current type of ammo
 }
-draw_set_font(fnt_health);
-draw_text_colour(xp + ((430 * xs) - ((string_length(health_to_draw) * 12)*xs)), view_yview[0] + (151 * ys), health_to_draw, color, color, color, color, 1); //Draws player health.
-draw_sprite_ext(spr_dropabbles_en, 0, xp + (482 * xs), yp + (43 * ys), 1, 1, 0, c_white, 1);
-draw_set_font(fnt_menu);
-draw_text_colour(xp + (462 * xs), yp + (56 * ys), string(player.heals), c_red, c_red, c_red, c_red, 1);
+draw_sprite(spr_weapon_hud, dwep.hud_image, hudx, hudy); // Draws the weapon icon.
+draw_set_alpha(0.06)
+draw_circle_colour(hudx, hudy, radius + thickness, c_blue, gp_blue, false); // Draw the "glass" effect on the HUD.
+draw_set_alpha(1)
