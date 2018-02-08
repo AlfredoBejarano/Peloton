@@ -30,6 +30,3 @@ if(dwep.object_index != obj_wep00) { // Don't draw knife's ammo because it doesn
     draw_text_outline(display_get_gui_width() - (88 * xs), (168 * ys), c_black, c_white, string(player.current_ammo), 1); // Draw the current type of ammo
 }
 draw_sprite(spr_weapon_hud, dwep.hud_image, hudx, hudy); // Draws the weapon icon.
-draw_set_alpha(0.06)
-draw_circle_colour(hudx, hudy, radius + thickness, c_blue, gp_blue, false); // Draw the "glass" effect on the HUD.
-draw_set_alpha(1)
