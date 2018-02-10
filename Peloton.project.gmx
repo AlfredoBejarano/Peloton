@@ -85,6 +85,12 @@
         <sound>sound\snd_upgrade_add</sound>
         <sound>sound\snd_weapon_add</sound>
       </sounds>
+      <sounds name="wep_hg">
+        <sound>sound\snd_hg_shot</sound>
+      </sounds>
+      <sounds name="wep_mg">
+        <sound>sound\snd_mg_shot</sound>
+      </sounds>
     </sounds>
     <sounds name="en">
       <sounds name="common">
@@ -218,15 +224,6 @@
       <sprite>sprites\spr_play</sprite>
       <sprite>sprites\spr_post</sprite>
     </sprites>
-    <sprites name="obj">
-      <sprite>sprites\spr_switch</sprite>
-      <sprite>sprites\spr_ground_entrance</sprite>
-      <sprite>sprites\spr_am_carpet</sprite>
-      <sprite>sprites\spr_tv</sprite>
-      <sprite>sprites\spr_tv_broken</sprite>
-      <sprite>sprites\spr_ground_exit</sprite>
-      <sprite>sprites\obj_raise_stairs</sprite>
-    </sprites>
     <sprites name="ui">
       <sprites name="menu">
         <sprite>sprites\spr_menu_selected</sprite>
@@ -271,10 +268,10 @@
       </scripts>
       <scripts name="weapon">
         <script>scripts\scp_wep00.gml</script>
-        <script>scripts\scp_wep01.gml</script>
-        <script>scripts\scp_wep02.gml</script>
-        <script>scripts\scp_wep03.gml</script>
-        <script>scripts\scp_wep04.gml</script>
+        <script>scripts\hg_wep_animations.gml</script>
+        <script>scripts\mg_wep_animations.gml</script>
+        <script>scripts\sg_wep_animations.gml</script>
+        <script>scripts\rf_wep_animations.gml</script>
         <script>scripts\scp_wep_dam.gml</script>
         <script>scripts\scp_en_wep01.gml</script>
       </scripts>
@@ -307,7 +304,7 @@
       <script>scripts\draw_ring_bar.gml</script>
     </scripts>
     <scripts name="weapon">
-      <script>scripts\draw_laser.gml</script>
+      <script>scripts\draw_aiming_enemy_health.gml</script>
       <script>scripts\create_hitscan.gml</script>
       <script>scripts\calculate_ammo.gml</script>
       <script>scripts\create_projectile.gml</script>
@@ -344,7 +341,6 @@
         <script>scripts\gamepad_anybutton.gml</script>
         <script>scripts\perform_healing.gml</script>
         <script>scripts\chainsaw_collition.gml</script>
-        <script>scripts\perform_pause.gml</script>
       </scripts>
       <scripts name="factory">
         <script>scripts\gamepad_factory.gml</script>
@@ -379,7 +375,6 @@
     </scripts>
     <scripts name="ui">
       <script>scripts\draw_hud.gml</script>
-      <script>scripts\draw_menu_indicator.gml</script>
     </scripts>
   </scripts>
   <fonts name="fonts">
@@ -404,22 +399,36 @@
       <object>objects\obj_player_parent</object>
     </objects>
     <objects name="wp">
-      <object>objects\obj_wep00</object>
-      <object>objects\obj_wep01</object>
-      <object>objects\obj_wep02</object>
-      <object>objects\obj_wep03</object>
-      <object>objects\obj_wep04</object>
-      <object>objects\obj_wep05</object>
-      <object>objects\obj_wep06</object>
-      <object>objects\obj_wep07</object>
-      <object>objects\obj_wep08</object>
-      <object>objects\obj_en_wep01</object>
-      <object>objects\obj_shell</object>
-      <object>objects\obj_sgshell</object>
-      <object>objects\obj_magazine</object>
-      <object>objects\obj_muzzle_flash</object>
-      <object>objects\obj_muzzle_flash_small</object>
-      <object>objects\obj_shot</object>
+      <objects name="melee">
+        <object>objects\obj_en_wep01</object>
+        <object>objects\obj_wep00</object>
+      </objects>
+      <objects name="parent">
+        <object>objects\obj_wep_hg_parent</object>
+        <object>objects\obj_wep_mg_parent</object>
+        <object>objects\obj_wep_sg_parent</object>
+        <object>objects\obj_wep_rf_parent</object>
+        <object>objects\obj_shot</object>
+        <object>objects\obj_magazine</object>
+        <object>objects\obj_shell</object>
+        <object>objects\obj_sgshell</object>
+      </objects>
+      <objects name="hg">
+        <object>objects\obj_wep01</object>
+        <object>objects\obj_wep05</object>
+      </objects>
+      <objects name="mg">
+        <object>objects\obj_wep02</object>
+        <object>objects\obj_wep06</object>
+      </objects>
+      <objects name="sg">
+        <object>objects\obj_wep03</object>
+        <object>objects\obj_wep07</object>
+      </objects>
+      <objects name="rf">
+        <object>objects\obj_wep04</object>
+        <object>objects\obj_wep08</object>
+      </objects>
     </objects>
     <objects name="en">
       <object>objects\obj_barrel</object>
@@ -435,6 +444,7 @@
       </objects>
       <object>objects\obj_enemy_generator</object>
     </objects>
+    <object>objects\obj_muzzle_flash_small</object>
     <objects name="fx">
       <object>objects\obj_fx_bullet</object>
       <object>objects\obj_fx_blood</object>
@@ -446,16 +456,11 @@
       <object>objects\obj_fx_heal</object>
       <object>objects\obj_fx_critical</object>
       <object>objects\obj_fx_low_health</object>
+      <object>objects\obj_muzzle_flash</object>
     </objects>
     <objects name="am">
-      <object>objects\obj_antenna</object>
       <object>objects\obj_music_player</object>
-      <object>objects\obj_am_switch</object>
-      <object>objects\obj_ground_exit</object>
-      <object>objects\obj_ground_entrance</object>
       <object>objects\obj_am_lighting</object>
-      <object>objects\obj_tv_old</object>
-      <object>objects\obj_am_ladder</object>
     </objects>
     <objects name="dp">
       <object>objects\obj_dp_parent</object>
@@ -470,11 +475,7 @@
       <object>objects\obj_text</object>
       <object>objects\obj_control_indicator</object>
       <objects name="menu">
-        <object>objects\obj_selected_indicator</object>
-        <object>objects\obj_menu_handler</object>
-        <object>objects\obj_menu_extras_handler</object>
         <object>objects\obj_loader</object>
-        <object>objects\obj_charmenu</object>
       </objects>
     </objects>
   </objects>

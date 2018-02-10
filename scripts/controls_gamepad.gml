@@ -40,7 +40,7 @@ player_movement(is_aiming, up, down, left, right);
 /* MOVEMENT ENDS */ 
 
 /* AIMING AND SHOOTING BEGINS */
-perform_aim(gamepad_button_check(device, aim), gamepad_button_check_pressed(device, aim), gamepad_button_check(device, shoot), gamepad_button_check_pressed(device, shoot), gamepad_button_check_released(device, aim), gamepad_button_check_pressed(device, reload), self); 
+perform_aim(gamepad_button_check(device, aim), gamepad_button_check_pressed(device, aim), gamepad_button_check(device, shoot), gamepad_button_check_pressed(device, shoot)); 
 /* AIMING AND SHOOTING ENDS */
 
 /* WEAPON SWITCHING BEGINS */

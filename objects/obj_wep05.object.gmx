@@ -5,7 +5,7 @@
   <visible>-1</visible>
   <depth>-2</depth>
   <persistent>0</persistent>
-  <parentName>&lt;undefined&gt;</parentName>
+  <parentName>obj_wep_hg_parent</parentName>
   <maskName>&lt;undefined&gt;</maskName>
   <events>
     <event eventtype="0" enumb="0">
@@ -25,203 +25,22 @@
         <arguments>
           <argument>
             <kind>1</kind>
-            <string>pump = 0;
-position = 0;
-ammo_type = 1;
+            <string>/// Set the individual values for this gun.
+// Laser origins.
 hud_image = 5;
-recoil = false;
-image_speed = 0;
-shooter = false;
-has_magazine = true;
-aim_sound = snd_wep01_aim;
-empty_sound = snd_wep01_empty;
-firing_sound = snd_wep05_shot;
-reload_sound = snd_wep01_reload;
-name = ds_list_find_value(get_weapon_data(object_index), 0);
-
-/* upgradable values */ 
-critical = irandom_range(95, 100);
-stopping_power = irandom_range(80, 100);
+// Individual values
+shotx = 120;
+shoty = 9;
+min_critical = 95;
+max_critical = 100;
+min_stopping = 80;
+max_stopping = 100;
 damage         = ds_map_find_value(global.upgrades,"wep05dmg");
 max_ammo       = ds_map_find_value(global.upgrades,"wep05ma");
 fire_speed     = ds_map_find_value(global.upgrades,"wep05fs");
 reload_speed   = ds_map_find_value(global.upgrades,"wep05rs");
-
-// Getting ammo from player's object inventory
-ammo = ds_list_find_value(shooter.weapons_ammo, shooter.current_weapon);
-</string>
-          </argument>
-        </arguments>
-      </action>
-    </event>
-    <event eventtype="2" enumb="5">
-      <action>
-        <libid>1</libid>
-        <id>603</id>
-        <kind>7</kind>
-        <userelative>0</userelative>
-        <isquestion>0</isquestion>
-        <useapplyto>-1</useapplyto>
-        <exetype>2</exetype>
-        <functionname></functionname>
-        <codestring></codestring>
-        <whoName>self</whoName>
-        <relative>0</relative>
-        <isnot>0</isnot>
-        <arguments>
-          <argument>
-            <kind>1</kind>
-            <string>if(position == 6) {
-    position = 0;
-    shooter.is_switching = 0;
-} else {
-    position ++;
-    alarm[5] = 1;
-}
-</string>
-          </argument>
-        </arguments>
-      </action>
-    </event>
-    <event eventtype="2" enumb="4">
-      <action>
-        <libid>1</libid>
-        <id>603</id>
-        <kind>7</kind>
-        <userelative>0</userelative>
-        <isquestion>0</isquestion>
-        <useapplyto>-1</useapplyto>
-        <exetype>2</exetype>
-        <functionname></functionname>
-        <codestring></codestring>
-        <whoName>self</whoName>
-        <relative>0</relative>
-        <isnot>0</isnot>
-        <arguments>
-          <argument>
-            <kind>1</kind>
-            <string>critical = irandom_range(95, 100);
-stopping_power = irandom_range(80, 100);
-create_hitscan(x + (image_xscale * 75), y - 19, view_wview/2,0, self, 0);
-</string>
-          </argument>
-        </arguments>
-      </action>
-    </event>
-    <event eventtype="2" enumb="2">
-      <action>
-        <libid>1</libid>
-        <id>603</id>
-        <kind>7</kind>
-        <userelative>0</userelative>
-        <isquestion>0</isquestion>
-        <useapplyto>-1</useapplyto>
-        <exetype>2</exetype>
-        <functionname></functionname>
-        <codestring></codestring>
-        <whoName>self</whoName>
-        <relative>0</relative>
-        <isnot>0</isnot>
-        <arguments>
-          <argument>
-            <kind>1</kind>
-            <string>calculate_ammo();
-
-</string>
-          </argument>
-        </arguments>
-      </action>
-    </event>
-    <event eventtype="2" enumb="1">
-      <action>
-        <libid>1</libid>
-        <id>603</id>
-        <kind>7</kind>
-        <userelative>0</userelative>
-        <isquestion>0</isquestion>
-        <useapplyto>-1</useapplyto>
-        <exetype>2</exetype>
-        <functionname></functionname>
-        <codestring></codestring>
-        <whoName>self</whoName>
-        <relative>0</relative>
-        <isnot>0</isnot>
-        <arguments>
-          <argument>
-            <kind>1</kind>
-            <string>create_dropable_fx(x * image_xscale, y -15, obj_magazine, false, 10, 15, true, sprite_index, self);    
-</string>
-          </argument>
-        </arguments>
-      </action>
-    </event>
-    <event eventtype="2" enumb="0">
-      <action>
-        <libid>1</libid>
-        <id>603</id>
-        <kind>7</kind>
-        <userelative>0</userelative>
-        <isquestion>0</isquestion>
-        <useapplyto>-1</useapplyto>
-        <exetype>2</exetype>
-        <functionname></functionname>
-        <codestring></codestring>
-        <whoName>self</whoName>
-        <relative>0</relative>
-        <isnot>0</isnot>
-        <arguments>
-          <argument>
-            <kind>1</kind>
-            <string>create_dropable_fx(x+(image_xscale * 70), y - 24, obj_shell, true, 12, 15, false, false, obj_wep01);    
-recoil = false;
-
-</string>
-          </argument>
-        </arguments>
-      </action>
-    </event>
-    <event eventtype="3" enumb="0">
-      <action>
-        <libid>1</libid>
-        <id>603</id>
-        <kind>7</kind>
-        <userelative>0</userelative>
-        <isquestion>0</isquestion>
-        <useapplyto>-1</useapplyto>
-        <exetype>2</exetype>
-        <functionname></functionname>
-        <codestring></codestring>
-        <whoName>self</whoName>
-        <relative>0</relative>
-        <isnot>0</isnot>
-        <arguments>
-          <argument>
-            <kind>1</kind>
-            <string>depth = shooter.depth - 1;
-scp_wep01(shooter); 
-</string>
-          </argument>
-        </arguments>
-      </action>
-    </event>
-    <event eventtype="8" enumb="0">
-      <action>
-        <libid>1</libid>
-        <id>603</id>
-        <kind>7</kind>
-        <userelative>0</userelative>
-        <isquestion>0</isquestion>
-        <useapplyto>-1</useapplyto>
-        <exetype>2</exetype>
-        <functionname></functionname>
-        <codestring></codestring>
-        <whoName>self</whoName>
-        <relative>0</relative>
-        <isnot>0</isnot>
-        <arguments>
-          <argument>
-            <kind>1</kind>
-            <string>draw_laser(self, view_wview/2, 62, -19, c_green, 19);
+// inherited event
+event_inherited();
 </string>
           </argument>
         </arguments>

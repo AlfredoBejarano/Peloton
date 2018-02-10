@@ -29,13 +29,13 @@ if(object_index == obj_wep04) {
 }
 
 if(player.is_aiming == 1) {
-    if(player.is_reloading == 0) { // Draw scope sprite while aiming.
-        draw_sprite(spr_wep_scope, 0, ox + (wx * ixs), (oy + wy));
-    }
     target = collision_line(x1, y1, x1 + (distance*ixs), y1, obj_target_parent, true, true); // Retrieve the target from aiming.
     draw_set_alpha(1); // Set the drawing alpha to 1.
     if(target != noone) {
         draw_target_health(target);    
         draw_sprite_stretched(target.sprite_index, target.image_index, (ox + (wx * ixs)) - (size/2), ((oy + wy)) - (size/2), size, size); // Draw the enemy sprite in the scope.
+    }
+    if(player.is_reloading == 0) { // Draw scope sprite while aiming.
+        draw_sprite(spr_wep_scope, 0, ox + (wx * ixs), (oy + wy));
     }
 }
