@@ -76,20 +76,9 @@ with (cweapon) {
 // Hands require a weapon to be attached with.
 
 // Creates hand 1.
-hand1 = instance_create(x, y, obj_hand1);
-hand1id = hand1.id;
-with (hand1) {
-    player = argument1;
-    sprite_index = ds_list_find_value(player_skin_factory(player.character), 1);
-}
-
+hand1 = ds_list_find_value(player_skin_factory(character), 1);
 // Creates hand 2.
-hand2 = instance_create(x, y, obj_hand2);
-hand2id = hand2.id;
-with (hand2) {
-    player = argument1;
-    init_hand2(argument1);
-}
+hand2 = ds_list_find_value(player_skin_factory(character), 2);
 
 // Sets the current ammo being used.
 current_ammo = ds_list_find_value(ammo_inventory, weapon.ammo_type);
