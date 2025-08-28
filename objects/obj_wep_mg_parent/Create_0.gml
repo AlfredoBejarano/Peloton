@@ -14,6 +14,4 @@ min_critical = 0;
 max_critical = 0;
 min_stopping = 0;
 max_stopping = 0;
-// Getting ammo from player's object inventory
-ammo = ds_list_find_value(shooter.weapons_ammo, shooter.current_weapon);
-
+event_inherited()

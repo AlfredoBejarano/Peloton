@@ -87,7 +87,7 @@ ds_list_add(global.pl02wi,
     obj_wep06
 );
 
-global.upgrade = 0;
+global.upgrade = -1;
 
 global.upgrades = ds_map_create();
 /* weapons upgrades */
@@ -137,4 +137,3 @@ ds_map_add(global.upgrades, "wep09rs", 120);
 ds_map_add(global.upgrades, "wep09dmg", 200);
 
 //ds_list_add(global.pl01wi, obj_wep01, obj_wep05, obj_wep02, obj_wep06, obj_wep03, obj_wep07, obj_wep04, obj_wep08);
-ds_list_add(global.pl01wi, obj_wep01);

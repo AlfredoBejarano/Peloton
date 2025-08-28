@@ -15,7 +15,6 @@ min_critical = 0;
 max_critical = 0;
 min_stopping = 0;
 max_stopping = 0;
-
 /* upgradable values */ 
 critical = irandom_range(min_critical, max_critical);
 stopping_power = irandom_range(min_stopping, max_stopping);
@@ -23,10 +22,4 @@ damage         = ds_map_find_value(global.upgrades,"wep04dmg");
 max_ammo       = ds_map_find_value(global.upgrades,"wep04ma");
 fire_speed     = ds_map_find_value(global.upgrades,"wep04fs");
 reload_speed   = ds_map_find_value(global.upgrades,"wep04rs");
-
-
-// Getting ammo from player's object inventory
-ammo = ds_list_find_value(shooter.weapons_ammo, shooter.current_weapon);
-
-/* */
-/*  */
+event_inherited()

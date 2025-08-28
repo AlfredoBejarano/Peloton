@@ -7,13 +7,10 @@ recoil = false;
 fire_speed = 6;
 image_speed = 0;
 image_index = 0;
-shooter = false;
+shooter = noone;
 reload_speed = 0;
 ammo_type = false;
 has_magazine = false;
-
-/* load character's knife */
-sprite_index = shooter.knife_sprite;
 
 /* usage animation positions */
 position = 0;

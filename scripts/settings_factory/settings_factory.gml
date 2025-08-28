@@ -29,7 +29,4 @@ function settings_factory(argument0, argument1) {
 	   ds_list_add(settings, global.pl01gp, global.pl01wi, obj_wep_hud, global.pl01_character, sounds); 
 	}
 	return settings;
-
-
-
 }

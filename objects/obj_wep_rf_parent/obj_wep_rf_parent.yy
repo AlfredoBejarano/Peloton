@@ -18,7 +18,10 @@
     "name":"parent",
     "path":"folders/Objects/wp/parent.yy",
   },
-  "parentObjectId":null,
+  "parentObjectId":{
+    "name":"obj_weapon_parent",
+    "path":"objects/obj_weapon_parent/obj_weapon_parent.yy",
+  },
   "persistent":false,
   "physicsAngularDamping":0.1,
   "physicsDensity":0.5,

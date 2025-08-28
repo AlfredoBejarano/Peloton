@@ -11,7 +11,4 @@ function init_weapon_ammo(argument0) {
 	}
 
 	return wa;
-
-
-
 }

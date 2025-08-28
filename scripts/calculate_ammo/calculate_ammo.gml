@@ -1,5 +1,4 @@
 function calculate_ammo() {
-	if(shooter.object_index == obj_plIA) { exit; } else {
 	if(has_magazine) {
 	    ammo_nedeed = max_ammo - ammo;
 
@@ -18,8 +17,5 @@ function calculate_ammo() {
 	        shooter.current_ammo --;
 	        ds_list_replace(shooter.ammo_inventory, ammo_type, shooter.current_ammo);    
 	    }
-	}}
-
-
-
+	}
 }

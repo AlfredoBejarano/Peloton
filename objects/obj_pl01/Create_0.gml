@@ -1,4 +1,4 @@
-with (other) {
-	init_player(global.control);
+with (other) {	
 	cpcs = 1;
 }
+event_inherited()
