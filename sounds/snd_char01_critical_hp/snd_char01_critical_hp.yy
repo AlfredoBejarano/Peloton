@@ -1,0 +1,25 @@
+{
+  "$GMSound": "",
+  "%Name": "snd_char01_critical_hp",
+  "audioGroupId": {
+    "name": "audiogroup_characters",
+    "path": "audiogroups/audiogroup_characters",
+  },
+  "bitDepth": 1,
+  "bitRate": 256,
+  "compression": 1,
+  "conversionMode": 0,
+  "duration": 0.0,
+  "name": "snd_char01_critical_hp",
+  "parent": {
+    "name": "char01",
+    "path": "folders/Sounds/char/char01.yy",
+  },
+  "preload": true,
+  "resourceType": "GMSound",
+  "resourceVersion": "2.0",
+  "sampleRate": 44100,
+  "soundFile": "snd_char01_critical_hp",
+  "type": 0,
+  "volume": 0.13,
+}

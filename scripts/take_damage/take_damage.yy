@@ -1,0 +1,13 @@
+{
+  "$GMScript":"v1",
+  "%Name":"take_damage",
+  "isCompatibility":false,
+  "isDnD":false,
+  "name":"take_damage",
+  "parent":{
+    "name":"actions",
+    "path":"folders/Scripts/player/actions.yy",
+  },
+  "resourceType":"GMScript",
+  "resourceVersion":"2.0",
+}

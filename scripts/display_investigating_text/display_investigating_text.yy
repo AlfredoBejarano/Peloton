@@ -1,0 +1,13 @@
+{
+  "$GMScript":"v1",
+  "%Name":"display_investigating_text",
+  "isCompatibility":false,
+  "isDnD":false,
+  "name":"display_investigating_text",
+  "parent":{
+    "name":"common",
+    "path":"folders/Scripts/common.yy",
+  },
+  "resourceType":"GMScript",
+  "resourceVersion":"2.0",
+}

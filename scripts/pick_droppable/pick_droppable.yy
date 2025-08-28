@@ -1,0 +1,13 @@
+{
+  "$GMScript":"v1",
+  "%Name":"pick_droppable",
+  "isCompatibility":false,
+  "isDnD":false,
+  "name":"pick_droppable",
+  "parent":{
+    "name":"common",
+    "path":"folders/Scripts/common.yy",
+  },
+  "resourceType":"GMScript",
+  "resourceVersion":"2.0",
+}

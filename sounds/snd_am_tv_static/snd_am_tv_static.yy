@@ -1,0 +1,25 @@
+{
+  "$GMSound": "",
+  "%Name": "snd_am_tv_static",
+  "audioGroupId": {
+    "name": "audiogroup_default",
+    "path": "audiogroups/audiogroup_default",
+  },
+  "bitDepth": 1,
+  "bitRate": 192,
+  "compression": 1,
+  "conversionMode": 0,
+  "duration": 0.0,
+  "name": "snd_am_tv_static",
+  "parent": {
+    "name": "am",
+    "path": "folders/Sounds/am.yy",
+  },
+  "preload": true,
+  "resourceType": "GMSound",
+  "resourceVersion": "2.0",
+  "sampleRate": 44100,
+  "soundFile": "snd_am_tv_static",
+  "type": 0,
+  "volume": 0.12,
+}

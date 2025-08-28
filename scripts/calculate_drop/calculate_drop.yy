@@ -1,0 +1,13 @@
+{
+  "$GMScript":"v1",
+  "%Name":"calculate_drop",
+  "isCompatibility":false,
+  "isDnD":false,
+  "name":"calculate_drop",
+  "parent":{
+    "name":"common",
+    "path":"folders/Scripts/common.yy",
+  },
+  "resourceType":"GMScript",
+  "resourceVersion":"2.0",
+}

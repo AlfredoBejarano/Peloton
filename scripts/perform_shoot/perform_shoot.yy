@@ -1,0 +1,13 @@
+{
+  "$GMScript":"v1",
+  "%Name":"perform_shoot",
+  "isCompatibility":false,
+  "isDnD":false,
+  "name":"perform_shoot",
+  "parent":{
+    "name":"actions",
+    "path":"folders/Scripts/player/actions.yy",
+  },
+  "resourceType":"GMScript",
+  "resourceVersion":"2.0",
+}

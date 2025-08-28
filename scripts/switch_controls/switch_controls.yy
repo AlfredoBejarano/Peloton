@@ -1,0 +1,13 @@
+{
+  "$GMScript":"v1",
+  "%Name":"switch_controls",
+  "isCompatibility":false,
+  "isDnD":false,
+  "name":"switch_controls",
+  "parent":{
+    "name":"actions",
+    "path":"folders/Scripts/player/actions.yy",
+  },
+  "resourceType":"GMScript",
+  "resourceVersion":"2.0",
+}

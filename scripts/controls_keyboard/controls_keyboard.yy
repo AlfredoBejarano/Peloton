@@ -1,0 +1,13 @@
+{
+  "$GMScript":"v1",
+  "%Name":"controls_keyboard",
+  "isCompatibility":false,
+  "isDnD":false,
+  "name":"controls_keyboard",
+  "parent":{
+    "name":"initialization",
+    "path":"folders/Scripts/player/initialization.yy",
+  },
+  "resourceType":"GMScript",
+  "resourceVersion":"2.0",
+}

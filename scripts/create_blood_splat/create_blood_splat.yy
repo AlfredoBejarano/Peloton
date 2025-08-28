@@ -1,0 +1,13 @@
+{
+  "$GMScript":"v1",
+  "%Name":"create_blood_splat",
+  "isCompatibility":false,
+  "isDnD":false,
+  "name":"create_blood_splat",
+  "parent":{
+    "name":"weapon",
+    "path":"folders/Scripts/weapon.yy",
+  },
+  "resourceType":"GMScript",
+  "resourceVersion":"2.0",
+}

@@ -1,0 +1,25 @@
+{
+  "$GMSound": "",
+  "%Name": "snd_shell_fall",
+  "audioGroupId": {
+    "name": "audiogroup_weapons",
+    "path": "audiogroups/audiogroup_weapons",
+  },
+  "bitDepth": 1,
+  "bitRate": 192,
+  "compression": 1,
+  "conversionMode": 0,
+  "duration": 0.0,
+  "name": "snd_shell_fall",
+  "parent": {
+    "name": "wep",
+    "path": "folders/Sounds/wep.yy",
+  },
+  "preload": true,
+  "resourceType": "GMSound",
+  "resourceVersion": "2.0",
+  "sampleRate": 44100,
+  "soundFile": "snd_shell_fall",
+  "type": 0,
+  "volume": 0.1,
+}

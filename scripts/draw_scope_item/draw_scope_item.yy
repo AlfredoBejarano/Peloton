@@ -1,0 +1,13 @@
+{
+  "$GMScript":"v1",
+  "%Name":"draw_scope_item",
+  "isCompatibility":false,
+  "isDnD":false,
+  "name":"draw_scope_item",
+  "parent":{
+    "name":"weapon",
+    "path":"folders/Scripts/weapon.yy",
+  },
+  "resourceType":"GMScript",
+  "resourceVersion":"2.0",
+}

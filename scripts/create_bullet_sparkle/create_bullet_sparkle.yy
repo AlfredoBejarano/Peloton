@@ -1,0 +1,13 @@
+{
+  "$GMScript":"v1",
+  "%Name":"create_bullet_sparkle",
+  "isCompatibility":false,
+  "isDnD":false,
+  "name":"create_bullet_sparkle",
+  "parent":{
+    "name":"weapon",
+    "path":"folders/Scripts/weapon.yy",
+  },
+  "resourceType":"GMScript",
+  "resourceVersion":"2.0",
+}

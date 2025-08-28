@@ -1,0 +1,13 @@
+{
+  "$GMScript":"v1",
+  "%Name":"scp_en_wep01",
+  "isCompatibility":false,
+  "isDnD":false,
+  "name":"scp_en_wep01",
+  "parent":{
+    "name":"weapon",
+    "path":"folders/Scripts/animations/weapon.yy",
+  },
+  "resourceType":"GMScript",
+  "resourceVersion":"2.0",
+}

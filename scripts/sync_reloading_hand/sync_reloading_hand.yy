@@ -1,0 +1,13 @@
+{
+  "$GMScript":"v1",
+  "%Name":"sync_reloading_hand",
+  "isCompatibility":false,
+  "isDnD":false,
+  "name":"sync_reloading_hand",
+  "parent":{
+    "name":"animations",
+    "path":"folders/Scripts/animations.yy",
+  },
+  "resourceType":"GMScript",
+  "resourceVersion":"2.0",
+}

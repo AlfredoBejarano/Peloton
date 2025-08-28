@@ -1,0 +1,13 @@
+{
+  "$GMScript":"v1",
+  "%Name":"init_inventory_ammo",
+  "isCompatibility":false,
+  "isDnD":false,
+  "name":"init_inventory_ammo",
+  "parent":{
+    "name":"weapon",
+    "path":"folders/Scripts/weapon.yy",
+  },
+  "resourceType":"GMScript",
+  "resourceVersion":"2.0",
+}

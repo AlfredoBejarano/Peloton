@@ -1,0 +1,13 @@
+{
+  "$GMScript":"v1",
+  "%Name":"save_chamber_ammo",
+  "isCompatibility":false,
+  "isDnD":false,
+  "name":"save_chamber_ammo",
+  "parent":{
+    "name":"weapon",
+    "path":"folders/Scripts/weapon.yy",
+  },
+  "resourceType":"GMScript",
+  "resourceVersion":"2.0",
+}

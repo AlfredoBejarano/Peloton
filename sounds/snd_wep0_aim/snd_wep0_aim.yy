@@ -1,0 +1,25 @@
+{
+  "$GMSound": "",
+  "%Name": "snd_wep0_aim",
+  "audioGroupId": {
+    "name": "audiogroup_weapons",
+    "path": "audiogroups/audiogroup_weapons",
+  },
+  "bitDepth": 1,
+  "bitRate": 256,
+  "compression": 0,
+  "conversionMode": 0,
+  "duration": 0.0,
+  "name": "snd_wep0_aim",
+  "parent": {
+    "name": "wep0",
+    "path": "folders/Sounds/wep/wep0.yy",
+  },
+  "preload": true,
+  "resourceType": "GMSound",
+  "resourceVersion": "2.0",
+  "sampleRate": 44100,
+  "soundFile": "snd_wep0_aim",
+  "type": 1,
+  "volume": 0.33,
+}

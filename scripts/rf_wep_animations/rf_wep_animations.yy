@@ -1,0 +1,13 @@
+{
+  "$GMScript":"v1",
+  "%Name":"rf_wep_animations",
+  "isCompatibility":false,
+  "isDnD":false,
+  "name":"rf_wep_animations",
+  "parent":{
+    "name":"weapon",
+    "path":"folders/Scripts/animations/weapon.yy",
+  },
+  "resourceType":"GMScript",
+  "resourceVersion":"2.0",
+}

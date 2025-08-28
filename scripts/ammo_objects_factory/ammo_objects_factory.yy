@@ -1,0 +1,13 @@
+{
+  "$GMScript":"v1",
+  "%Name":"ammo_objects_factory",
+  "isCompatibility":false,
+  "isDnD":false,
+  "name":"ammo_objects_factory",
+  "parent":{
+    "name":"factory",
+    "path":"folders/Scripts/weapon/factory.yy",
+  },
+  "resourceType":"GMScript",
+  "resourceVersion":"2.0",
+}

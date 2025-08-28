@@ -1,0 +1,13 @@
+{
+  "$GMScript":"v1",
+  "%Name":"sync_to_object",
+  "isCompatibility":false,
+  "isDnD":false,
+  "name":"sync_to_object",
+  "parent":{
+    "name":"common",
+    "path":"folders/Scripts/common.yy",
+  },
+  "resourceType":"GMScript",
+  "resourceVersion":"2.0",
+}

@@ -1,0 +1,25 @@
+{
+  "$GMSound": "",
+  "%Name": "snd_en_hit02",
+  "audioGroupId": {
+    "name": "audiogroup_enemy",
+    "path": "audiogroups/audiogroup_enemy",
+  },
+  "bitDepth": 1,
+  "bitRate": 256,
+  "compression": 1,
+  "conversionMode": 0,
+  "duration": 0.0,
+  "name": "snd_en_hit02",
+  "parent": {
+    "name": "common",
+    "path": "folders/Sounds/en/common.yy",
+  },
+  "preload": true,
+  "resourceType": "GMSound",
+  "resourceVersion": "2.0",
+  "sampleRate": 44100,
+  "soundFile": "snd_en_hit02",
+  "type": 1,
+  "volume": 0.1,
+}

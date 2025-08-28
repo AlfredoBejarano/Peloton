@@ -1,0 +1,13 @@
+{
+  "$GMScript":"v1",
+  "%Name":"switch_weapon_animation",
+  "isCompatibility":false,
+  "isDnD":false,
+  "name":"switch_weapon_animation",
+  "parent":{
+    "name":"animations",
+    "path":"folders/Scripts/animations.yy",
+  },
+  "resourceType":"GMScript",
+  "resourceVersion":"2.0",
+}

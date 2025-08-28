@@ -1,0 +1,25 @@
+{
+  "$GMSound": "",
+  "%Name": "snd_dp_bullet",
+  "audioGroupId": {
+    "name": "audiogroup_weapons",
+    "path": "audiogroups/audiogroup_weapons",
+  },
+  "bitDepth": 1,
+  "bitRate": 192,
+  "compression": 1,
+  "conversionMode": 0,
+  "duration": 0.0,
+  "name": "snd_dp_bullet",
+  "parent": {
+    "name": "dp",
+    "path": "folders/Sounds/dp.yy",
+  },
+  "preload": true,
+  "resourceType": "GMSound",
+  "resourceVersion": "2.0",
+  "sampleRate": 44100,
+  "soundFile": "snd_dp_bullet",
+  "type": 0,
+  "volume": 1.0,
+}

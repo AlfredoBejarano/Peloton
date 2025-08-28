@@ -1,0 +1,13 @@
+{
+  "$GMScript":"v1",
+  "%Name":"device_factory",
+  "isCompatibility":false,
+  "isDnD":false,
+  "name":"device_factory",
+  "parent":{
+    "name":"player",
+    "path":"folders/Scripts/player.yy",
+  },
+  "resourceType":"GMScript",
+  "resourceVersion":"2.0",
+}

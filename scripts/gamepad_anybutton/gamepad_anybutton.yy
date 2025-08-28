@@ -1,0 +1,13 @@
+{
+  "$GMScript":"v1",
+  "%Name":"gamepad_anybutton",
+  "isCompatibility":false,
+  "isDnD":false,
+  "name":"gamepad_anybutton",
+  "parent":{
+    "name":"actions",
+    "path":"folders/Scripts/player/actions.yy",
+  },
+  "resourceType":"GMScript",
+  "resourceVersion":"2.0",
+}

@@ -1,0 +1,25 @@
+{
+  "$GMSound": "",
+  "%Name": "snd_upgrade_add",
+  "audioGroupId": {
+    "name": "audiogroup_weapons",
+    "path": "audiogroups/audiogroup_weapons",
+  },
+  "bitDepth": 1,
+  "bitRate": 224,
+  "compression": 1,
+  "conversionMode": 0,
+  "duration": 0.0,
+  "name": "snd_upgrade_add",
+  "parent": {
+    "name": "siege mode",
+    "path": "folders/Sounds/wep/siege mode.yy",
+  },
+  "preload": true,
+  "resourceType": "GMSound",
+  "resourceVersion": "2.0",
+  "sampleRate": 44100,
+  "soundFile": "snd_upgrade_add",
+  "type": 1,
+  "volume": 1.0,
+}

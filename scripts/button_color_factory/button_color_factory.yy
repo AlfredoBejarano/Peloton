@@ -1,0 +1,13 @@
+{
+  "$GMScript":"v1",
+  "%Name":"button_color_factory",
+  "isCompatibility":false,
+  "isDnD":false,
+  "name":"button_color_factory",
+  "parent":{
+    "name":"factory",
+    "path":"folders/Scripts/player/factory.yy",
+  },
+  "resourceType":"GMScript",
+  "resourceVersion":"2.0",
+}

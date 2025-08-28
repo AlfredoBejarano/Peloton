@@ -1,0 +1,38 @@
+{
+  "$GMTileSet":"v1",
+  "%Name":"bck_chapter1d_tileset",
+  "autoTileSets":[],
+  "macroPageTiles":{
+    "SerialiseHeight":0,
+    "SerialiseWidth":0,
+    "TileSerialiseData":[],
+  },
+  "name":"bck_chapter1d_tileset",
+  "out_columns":5,
+  "out_tilehborder":2,
+  "out_tilevborder":2,
+  "parent":{
+    "name":"chapter1",
+    "path":"folders/Tile Sets/campaign/chapter1.yy",
+  },
+  "resourceType":"GMTileSet",
+  "resourceVersion":"2.0",
+  "spriteId":{
+    "name":"bck_chapter1d",
+    "path":"sprites/bck_chapter1d/bck_chapter1d.yy",
+  },
+  "spriteNoExport":false,
+  "textureGroupId":{
+    "name":"Default",
+    "path":"texturegroups/Default",
+  },
+  "tileAnimationFrames":[],
+  "tileAnimationSpeed":15.0,
+  "tileHeight":1080,
+  "tilehsep":0,
+  "tilevsep":0,
+  "tileWidth":240,
+  "tilexoff":0,
+  "tileyoff":0,
+  "tile_count":9,
+}

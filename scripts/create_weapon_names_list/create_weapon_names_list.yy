@@ -1,0 +1,13 @@
+{
+  "$GMScript":"v1",
+  "%Name":"create_weapon_names_list",
+  "isCompatibility":false,
+  "isDnD":false,
+  "name":"create_weapon_names_list",
+  "parent":{
+    "name":"factory",
+    "path":"folders/Scripts/common/factory.yy",
+  },
+  "resourceType":"GMScript",
+  "resourceVersion":"2.0",
+}

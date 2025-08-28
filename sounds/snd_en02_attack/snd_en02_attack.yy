@@ -1,0 +1,25 @@
+{
+  "$GMSound": "",
+  "%Name": "snd_en02_attack",
+  "audioGroupId": {
+    "name": "audiogroup_enemy",
+    "path": "audiogroups/audiogroup_enemy",
+  },
+  "bitDepth": 1,
+  "bitRate": 192,
+  "compression": 1,
+  "conversionMode": 0,
+  "duration": 0.0,
+  "name": "snd_en02_attack",
+  "parent": {
+    "name": "en02",
+    "path": "folders/Sounds/en/en02.yy",
+  },
+  "preload": true,
+  "resourceType": "GMSound",
+  "resourceVersion": "2.0",
+  "sampleRate": 44100,
+  "soundFile": "snd_en02_attack",
+  "type": 0,
+  "volume": 0.44,
+}

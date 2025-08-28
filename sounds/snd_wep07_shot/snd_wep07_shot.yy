@@ -1,0 +1,25 @@
+{
+  "$GMSound": "",
+  "%Name": "snd_wep07_shot",
+  "audioGroupId": {
+    "name": "audiogroup_weapons",
+    "path": "audiogroups/audiogroup_weapons",
+  },
+  "bitDepth": 1,
+  "bitRate": 192,
+  "compression": 1,
+  "conversionMode": 0,
+  "duration": 0.0,
+  "name": "snd_wep07_shot",
+  "parent": {
+    "name": "wep07",
+    "path": "folders/Sounds/wep/wep07.yy",
+  },
+  "preload": true,
+  "resourceType": "GMSound",
+  "resourceVersion": "2.0",
+  "sampleRate": 44100,
+  "soundFile": "snd_wep07_shot",
+  "type": 1,
+  "volume": 0.1,
+}

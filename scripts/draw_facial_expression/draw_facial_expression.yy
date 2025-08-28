@@ -1,0 +1,13 @@
+{
+  "$GMScript":"v1",
+  "%Name":"draw_facial_expression",
+  "isCompatibility":false,
+  "isDnD":false,
+  "name":"draw_facial_expression",
+  "parent":{
+    "name":"player",
+    "path":"folders/Scripts/animations/player.yy",
+  },
+  "resourceType":"GMScript",
+  "resourceVersion":"2.0",
+}

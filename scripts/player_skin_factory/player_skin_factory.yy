@@ -1,0 +1,13 @@
+{
+  "$GMScript":"v1",
+  "%Name":"player_skin_factory",
+  "isCompatibility":false,
+  "isDnD":false,
+  "name":"player_skin_factory",
+  "parent":{
+    "name":"factory",
+    "path":"folders/Scripts/player/factory.yy",
+  },
+  "resourceType":"GMScript",
+  "resourceVersion":"2.0",
+}

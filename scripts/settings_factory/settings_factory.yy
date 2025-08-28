@@ -1,0 +1,13 @@
+{
+  "$GMScript":"v1",
+  "%Name":"settings_factory",
+  "isCompatibility":false,
+  "isDnD":false,
+  "name":"settings_factory",
+  "parent":{
+    "name":"factory",
+    "path":"folders/Scripts/player/factory.yy",
+  },
+  "resourceType":"GMScript",
+  "resourceVersion":"2.0",
+}

@@ -1,0 +1,13 @@
+{
+  "$GMScript":"v1",
+  "%Name":"perform_ia_reload",
+  "isCompatibility":false,
+  "isDnD":false,
+  "name":"perform_ia_reload",
+  "parent":{
+    "name":"IA",
+    "path":"folders/Scripts/IA.yy",
+  },
+  "resourceType":"GMScript",
+  "resourceVersion":"2.0",
+}

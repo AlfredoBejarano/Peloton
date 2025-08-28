@@ -1,0 +1,13 @@
+{
+  "$GMScript":"v1",
+  "%Name":"create_sg_hitscans",
+  "isCompatibility":false,
+  "isDnD":false,
+  "name":"create_sg_hitscans",
+  "parent":{
+    "name":"weapon",
+    "path":"folders/Scripts/weapon.yy",
+  },
+  "resourceType":"GMScript",
+  "resourceVersion":"2.0",
+}

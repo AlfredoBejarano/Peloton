@@ -1,0 +1,13 @@
+{
+  "$GMScript":"v1",
+  "%Name":"controls_gamepad",
+  "isCompatibility":false,
+  "isDnD":false,
+  "name":"controls_gamepad",
+  "parent":{
+    "name":"initialization",
+    "path":"folders/Scripts/player/initialization.yy",
+  },
+  "resourceType":"GMScript",
+  "resourceVersion":"2.0",
+}

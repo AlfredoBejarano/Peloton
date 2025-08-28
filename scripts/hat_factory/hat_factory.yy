@@ -1,0 +1,13 @@
+{
+  "$GMScript":"v1",
+  "%Name":"hat_factory",
+  "isCompatibility":false,
+  "isDnD":false,
+  "name":"hat_factory",
+  "parent":{
+    "name":"enemy",
+    "path":"folders/Scripts/enemy.yy",
+  },
+  "resourceType":"GMScript",
+  "resourceVersion":"2.0",
+}

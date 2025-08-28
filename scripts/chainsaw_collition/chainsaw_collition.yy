@@ -1,0 +1,13 @@
+{
+  "$GMScript":"v1",
+  "%Name":"chainsaw_collition",
+  "isCompatibility":false,
+  "isDnD":false,
+  "name":"chainsaw_collition",
+  "parent":{
+    "name":"actions",
+    "path":"folders/Scripts/player/actions.yy",
+  },
+  "resourceType":"GMScript",
+  "resourceVersion":"2.0",
+}

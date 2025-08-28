@@ -1,0 +1,13 @@
+{
+  "$GMScript":"v1",
+  "%Name":"droppable_factory",
+  "isCompatibility":false,
+  "isDnD":false,
+  "name":"droppable_factory",
+  "parent":{
+    "name":"factory",
+    "path":"folders/Scripts/common/factory.yy",
+  },
+  "resourceType":"GMScript",
+  "resourceVersion":"2.0",
+}

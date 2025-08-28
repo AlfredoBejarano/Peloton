@@ -1,0 +1,13 @@
+{
+  "$GMScript":"v1",
+  "%Name":"create_muzzle_flash",
+  "isCompatibility":false,
+  "isDnD":false,
+  "name":"create_muzzle_flash",
+  "parent":{
+    "name":"weapon",
+    "path":"folders/Scripts/weapon.yy",
+  },
+  "resourceType":"GMScript",
+  "resourceVersion":"2.0",
+}

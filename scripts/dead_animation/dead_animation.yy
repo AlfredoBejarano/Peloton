@@ -1,0 +1,13 @@
+{
+  "$GMScript":"v1",
+  "%Name":"dead_animation",
+  "isCompatibility":false,
+  "isDnD":false,
+  "name":"dead_animation",
+  "parent":{
+    "name":"player",
+    "path":"folders/Scripts/animations/player.yy",
+  },
+  "resourceType":"GMScript",
+  "resourceVersion":"2.0",
+}

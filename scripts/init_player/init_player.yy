@@ -1,0 +1,13 @@
+{
+  "$GMScript":"v1",
+  "%Name":"init_player",
+  "isCompatibility":false,
+  "isDnD":false,
+  "name":"init_player",
+  "parent":{
+    "name":"initialization",
+    "path":"folders/Scripts/player/initialization.yy",
+  },
+  "resourceType":"GMScript",
+  "resourceVersion":"2.0",
+}

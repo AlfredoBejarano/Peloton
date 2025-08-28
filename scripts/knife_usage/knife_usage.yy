@@ -1,0 +1,13 @@
+{
+  "$GMScript":"v1",
+  "%Name":"knife_usage",
+  "isCompatibility":false,
+  "isDnD":false,
+  "name":"knife_usage",
+  "parent":{
+    "name":"actions",
+    "path":"folders/Scripts/player/actions.yy",
+  },
+  "resourceType":"GMScript",
+  "resourceVersion":"2.0",
+}

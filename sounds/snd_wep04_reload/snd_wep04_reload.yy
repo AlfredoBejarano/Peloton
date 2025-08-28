@@ -1,0 +1,25 @@
+{
+  "$GMSound": "",
+  "%Name": "snd_wep04_reload",
+  "audioGroupId": {
+    "name": "audiogroup_weapons",
+    "path": "audiogroups/audiogroup_weapons",
+  },
+  "bitDepth": 1,
+  "bitRate": 256,
+  "compression": 1,
+  "conversionMode": 0,
+  "duration": 0.0,
+  "name": "snd_wep04_reload",
+  "parent": {
+    "name": "wep04",
+    "path": "folders/Sounds/wep/wep04.yy",
+  },
+  "preload": true,
+  "resourceType": "GMSound",
+  "resourceVersion": "2.0",
+  "sampleRate": 44100,
+  "soundFile": "snd_wep04_reload",
+  "type": 1,
+  "volume": 0.1,
+}

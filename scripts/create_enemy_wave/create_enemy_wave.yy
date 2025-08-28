@@ -1,0 +1,13 @@
+{
+  "$GMScript":"v1",
+  "%Name":"create_enemy_wave",
+  "isCompatibility":false,
+  "isDnD":false,
+  "name":"create_enemy_wave",
+  "parent":{
+    "name":"IA",
+    "path":"folders/Scripts/IA.yy",
+  },
+  "resourceType":"GMScript",
+  "resourceVersion":"2.0",
+}

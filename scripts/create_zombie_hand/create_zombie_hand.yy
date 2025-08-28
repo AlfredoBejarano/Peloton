@@ -1,0 +1,13 @@
+{
+  "$GMScript":"v1",
+  "%Name":"create_zombie_hand",
+  "isCompatibility":false,
+  "isDnD":false,
+  "name":"create_zombie_hand",
+  "parent":{
+    "name":"enemy",
+    "path":"folders/Scripts/enemy.yy",
+  },
+  "resourceType":"GMScript",
+  "resourceVersion":"2.0",
+}
