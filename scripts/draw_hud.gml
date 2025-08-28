@@ -19,11 +19,11 @@ if(current_hp >= 1 && current_hp <= 0.75) { // Set the health color to green if 
     color = gp_red;
 }
 draw_set_alpha(0.5)
-draw_circle_colour(hudx, hudy, radius, c_black, c_black, false); // Draw the HUD backplate.
+//draw_circle_colour(hudx, hudy, radius, c_black, c_black, false); // Draw the HUD backplate.
 draw_set_alpha(1)
-draw_ring_bar(hudx, hudy, radius, thickness, total_segments, total_segments, 0, 360, -1, c_black); // Draw black ring behind the hud.
-draw_ring_bar(hudx, hudy, radius, thickness, total_segments, total_segments, 0, 270, -1, gp_bt_inner); // Draw blank health ring.
-draw_ring_bar(hudx, hudy, radius, thickness, total_segments, segments, 0, 270, -1, color); // Draw health ring.
+//draw_ring_bar(hudx, hudy, radius, thickness, total_segments, total_segments, 0, 360, -1, c_black); // Draw black ring behind the hud.
+//draw_ring_bar(hudx, hudy, radius, thickness, total_segments, total_segments, 0, 270, -1, gp_bt_inner); // Draw blank health ring.
+//draw_ring_bar(hudx, hudy, radius, thickness, total_segments, segments, 0, 270, -1, color); // Draw health ring.
 draw_set_font(fnt_hud_ammo)
 draw_text_outline(display_get_gui_width() - 104, 48, c_black, gp_yellow, string(player.heals), 0.75); // Draw player health items quantity.
 if(dwep.object_index != obj_wep00) { // Don't draw knife's ammo because it doesn't use ammo.

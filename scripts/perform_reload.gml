@@ -10,7 +10,7 @@ if((argument[0] || weapon_empty) && is_ammo_available && weapon_is_not_full && i
         if(has_magazine) {
             alarm[1] = 1;
         } else {
-            alarm[3] = reload_speed / weapon.max_ammo;
+            alarm[3] = reload_speed / max_ammo;
         }
     }   
 } else {

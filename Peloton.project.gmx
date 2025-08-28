@@ -388,7 +388,6 @@
     <objects name="pl">
       <objects name="pl01">
         <object>objects\obj_pl01</object>
-        <object>objects\obj_pl02</object>
         <object>objects\obj_hand1</object>
         <object>objects\obj_hand2</object>
         <object>objects\obj_wep_hud</object>
