@@ -33,7 +33,7 @@ function controls_gamepad() {
 	weaponprevious = ds_list_find_value(controls, 6);
 
 	/* CONSOLIDATION BEGINS */
-	controls_consolidation_variables(gamepad_button_check_pressed(device, reload),gamepad_button_check(device, aim),gamepad_button_check_pressed(device, shoot));
+	controls_consolidation_variables();
 	/* CONSOLIDATION ENDS */
 
 	/* MOVEMENT BEGINS */

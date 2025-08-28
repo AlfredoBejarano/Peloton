@@ -1,2 +1,0 @@
-init_ia(self);
-

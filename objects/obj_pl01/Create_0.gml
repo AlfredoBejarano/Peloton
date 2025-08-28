@@ -1,5 +1,4 @@
 with (other) {
-init_player(global.control, self);
-cpcs = 1;
-
+	init_player(global.control);
+	cpcs = 1;
 }

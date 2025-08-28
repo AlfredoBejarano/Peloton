@@ -1,6 +1,5 @@
-function init_player(argument0, argument1) {
+function init_player(argument0) {
 	// argument0 - If keyboard is in use (true) or not (false).
-	// argument1 - Player's object.
 
 	image_index = 0;
 	image_speed = 0;
@@ -69,24 +68,23 @@ function init_player(argument0, argument1) {
 
 	// Creates the weapon
 	cweapon = instance_create(x, y, weapon);
+	cweapon.ammo =  ds_list_find_value(weapons_ammo, current_weapon);
+	cweapon.shooter = self;
 	weapon_id = cweapon.id;
-	with (cweapon) {
-	    shooter = argument1.id;
-	}
 
 	// Hands require a weapon to be attached with.
 
 	// Creates hand 1.
 	hand1 = instance_create(x, y, obj_hand1);
 	with(hand1) {
-	    player = argument1.id;
+	    player = id;
 	    sprite_index = ds_list_find_value(player_skin_factory(player.character), 1);
 	}
 
 	// Creates hand 2.
 	hand2 = instance_create(x, y, obj_hand2);
 	with(hand2) {
-	    init_hand2(argument1);
+	    init_hand2(self);
 	}
 
 	// Sets the current ammo being used.
@@ -95,7 +93,7 @@ function init_player(argument0, argument1) {
 	// Creates the HUD for the player.
 	with(instance_create(x,y, hud)) {    
 	    image_alpha = 0;
-	    player = argument1;
+	    player = self;
 	    xs = (display_get_width()    /   1920);
 	    ys = (display_get_height()   /   1080);
 	    dwep = player.weapon;

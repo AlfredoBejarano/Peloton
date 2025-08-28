@@ -5,7 +5,4 @@ function shooter_factory(argument0) {
 	   case obj_plIA: return 0;
 	   default : return 1;
 	}
-
-
-
 }

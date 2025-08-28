@@ -112,17 +112,8 @@ function get_keyname(argument0) {
 	       case vk_numpad8:   { return 66;}
 	       case vk_numpad9:   { return 67;}
 	       case vk_numpad0:   { return 68;}    
-       
+		   
 	       default: {return 100;}
 	   }
-   
-	   if(mouse_wheel_up()) {
-	      return 98;
-	   } else {
-	      return 99;
-	   }
 	}
-
-
-
 }

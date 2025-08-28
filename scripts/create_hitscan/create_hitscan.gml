@@ -28,9 +28,8 @@ function create_hitscan(argument0, argument1, argument2, argument3, argument4, a
 	   // calculate distance relative to the player
    
 	   if(argument4.object_index != obj_wep03 && argument4.object_index != obj_wep07) { 
-	    with(create_muzzle_flash(x1, y1, argument4)) {
-	        image_xscale = argument4.image_xscale;
-	    }         
+		   muzzle = create_muzzle_flash(x1, y1, argument4);
+		   muzzle.image_xscale = argument4.image_xscale;
 	   }
 	   while(x2 != distance) {
 	      target = collision_line(x1, y1, x1 + (distance*image_xscale), y1 + argument3, obj_target_parent, true, true);

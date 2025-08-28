@@ -169,7 +169,6 @@
     {"id":{"name":"obj_muzzle_flash","path":"objects/obj_muzzle_flash/obj_muzzle_flash.yy",},},
     {"id":{"name":"obj_pl01","path":"objects/obj_pl01/obj_pl01.yy",},},
     {"id":{"name":"obj_player_parent","path":"objects/obj_player_parent/obj_player_parent.yy",},},
-    {"id":{"name":"obj_plIA","path":"objects/obj_plIA/obj_plIA.yy",},},
     {"id":{"name":"obj_sgshell","path":"objects/obj_sgshell/obj_sgshell.yy",},},
     {"id":{"name":"obj_shell","path":"objects/obj_shell/obj_shell.yy",},},
     {"id":{"name":"obj_shot","path":"objects/obj_shot/obj_shot.yy",},},

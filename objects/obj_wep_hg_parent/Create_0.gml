@@ -3,7 +3,7 @@ position = 0;
 ammo_type = 1;
 recoil = false;
 image_speed = 0;
-shooter = false;
+shooter = null;
 has_magazine = true;
 aim_sound = snd_wep01_aim;
 empty_sound = snd_wep01_empty;
@@ -17,5 +17,5 @@ max_stopping = 0;
 critical = irandom_range(min_critical, max_critical);
 stopping_power = irandom_range(min_stopping, max_stopping);
 // Getting ammo from player's object inventory
-ammo = ds_list_find_value(shooter.weapons_ammo, shooter.current_weapon);
+ammo = 0;
 

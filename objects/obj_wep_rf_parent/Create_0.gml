@@ -11,6 +11,10 @@ empty_sound = snd_wep03_empty;
 firing_sound = snd_wep04_shot;
 reload_sound = snd_wep04_reload;
 name = ds_list_find_value(get_weapon_data(object_index), 0);
+min_critical = 0;
+max_critical = 0;
+min_stopping = 0;
+max_stopping = 0;
 
 /* upgradable values */ 
 critical = irandom_range(min_critical, max_critical);

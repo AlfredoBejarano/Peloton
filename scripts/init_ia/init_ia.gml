@@ -36,7 +36,7 @@ function init_ia(argument0) {
 	hand1id = hand1.id;
 	with (hand1) {
 	    player = argument0;
-	    player_id = shooter_factory(player);
+	    playerId = shooter_factory(player);
 	    sprite_index = ds_list_find_value(player_skin_factory(player.character), 1);
 	}
 
@@ -45,7 +45,7 @@ function init_ia(argument0) {
 	hand2id = hand2.id;
 	with (hand2) {
 	    player = argument0;
-	    player_id = shooter_factory(player);    
+	    playerId = shooter_factory(player);    
 	    init_hand2(argument0);
 	}
 

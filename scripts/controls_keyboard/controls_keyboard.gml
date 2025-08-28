@@ -12,7 +12,7 @@ function controls_keyboard() {
 	pause = ds_list_find_value(controls, 10); 
 
 	/* CONSOLIDATION BEGINS */
-	controls_consolidation_variables(keyboard_check_pressed(reload),keyboard_check(aim),keyboard_check_pressed(shoot));
+	controls_consolidation_variables();
 	/* CONSOLIDATION ENDS */
 
 	/* MOVEMENT BEGINS */

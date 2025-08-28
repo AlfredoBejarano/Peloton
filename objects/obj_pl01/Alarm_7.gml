@@ -1,2 +1,2 @@
-take_damage(tix, hp, sounds);
+take_damage();
 
