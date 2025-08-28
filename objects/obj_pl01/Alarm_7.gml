@@ -1,2 +1,0 @@
-take_damage();
-

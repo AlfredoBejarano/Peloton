@@ -1,384 +1,0 @@
-Converting GML script: C:\Users\jacbe\Documents\GitHub\Peloton\mvc\scripts\hg_wep_animations\hg_wep_animations.gml
-Converted description /// @description  Animation positions for handguns
-
-Converting GML script: C:\Users\jacbe\Documents\GitHub\Peloton\mvc\scripts\mg_wep_animations\mg_wep_animations.gml
-Converted description /// @description mg_wep_animations()
-
-Converting GML script: C:\Users\jacbe\Documents\GitHub\Peloton\mvc\scripts\scp_wep_dam\scp_wep_dam.gml
-Converted description /// @description scp_wep_dam(player);/// @param player
-
-Converting GML script: C:\Users\jacbe\Documents\GitHub\Peloton\mvc\scripts\scp_en_wep01\scp_en_wep01.gml
-Converted description /// @description scp_en_wep01(zombie object)/// @param zombie object
-
-Converting GML script: C:\Users\jacbe\Documents\GitHub\Peloton\mvc\scripts\sync_reloading_hand\sync_reloading_hand.gml
-Converted description /// @description sync_reloading_hand(Player object)/// @param Player object
-
-Converting GML script: C:\Users\jacbe\Documents\GitHub\Peloton\mvc\scripts\get_keyname\get_keyname.gml
-Converted description /// @description get_keyname(key constant)/// @param key constant
-String not found: ConversionLog_ConvertedString 61 '1' "1"
-String not found: ConversionLog_ConvertedString 62 '2' "2"
-String not found: ConversionLog_ConvertedString 63 '3' "3"
-String not found: ConversionLog_ConvertedString 64 '4' "4"
-String not found: ConversionLog_ConvertedString 65 '5' "5"
-String not found: ConversionLog_ConvertedString 66 '6' "6"
-String not found: ConversionLog_ConvertedString 67 '7' "7"
-String not found: ConversionLog_ConvertedString 68 '8' "8"
-String not found: ConversionLog_ConvertedString 69 '9' "9"
-String not found: ConversionLog_ConvertedString 70 '0' "0"
-String not found: ConversionLog_ConvertedString 71 'A' "A"
-String not found: ConversionLog_ConvertedString 72 'B' "B"
-String not found: ConversionLog_ConvertedString 73 'C' "C"
-String not found: ConversionLog_ConvertedString 74 'D' "D"
-String not found: ConversionLog_ConvertedString 75 'E' "E"
-String not found: ConversionLog_ConvertedString 76 'F' "F"
-String not found: ConversionLog_ConvertedString 77 'G' "G"
-String not found: ConversionLog_ConvertedString 78 'H' "H"
-String not found: ConversionLog_ConvertedString 79 'I' "I"
-String not found: ConversionLog_ConvertedString 80 'J' "J"
-String not found: ConversionLog_ConvertedString 81 'K' "K"
-String not found: ConversionLog_ConvertedString 82 'L' "L"
-String not found: ConversionLog_ConvertedString 83 'M' "M"
-String not found: ConversionLog_ConvertedString 84 'N' "N"
-String not found: ConversionLog_ConvertedString 85 'O' "O"
-String not found: ConversionLog_ConvertedString 86 'P' "P"
-String not found: ConversionLog_ConvertedString 87 'Q' "Q"
-String not found: ConversionLog_ConvertedString 88 'R' "R"
-String not found: ConversionLog_ConvertedString 89 'S' "S"
-String not found: ConversionLog_ConvertedString 90 'T' "T"
-String not found: ConversionLog_ConvertedString 91 'U' "U"
-String not found: ConversionLog_ConvertedString 92 'V' "V"
-String not found: ConversionLog_ConvertedString 93 'W' "W"
-String not found: ConversionLog_ConvertedString 94 'X' "X"
-String not found: ConversionLog_ConvertedString 95 'Y' "Y"
-String not found: ConversionLog_ConvertedString 96 'Z' "Z"
-
-Converting GML script: C:\Users\jacbe\Documents\GitHub\Peloton\mvc\scripts\sync_to_object\sync_to_object.gml
-Converted description /// @description sync_to_object(object, x, y, image_xscale preserve, image_yscale preserve, image_angle preserve)/// @param object
-/// @param  x
-/// @param  y
-/// @param  image_xscale preserve
-/// @param  image_yscale preserve
-/// @param  image_angle preserve
-
-Converting GML script: C:\Users\jacbe\Documents\GitHub\Peloton\mvc\scripts\draw_text_outline\draw_text_outline.gml
-Converted description /// @description draw_text_outline(x, y, outline color, string color, string, alpha)  /// @param x
-/// @param  y
-/// @param  outline color
-/// @param  string color
-/// @param  string
-/// @param  alpha
-
-Converting GML script: C:\Users\jacbe\Documents\GitHub\Peloton\mvc\scripts\draw_action_button\draw_action_button.gml
-Converted description /// @description  draw_action_button(x, y, key/button);/// @param x
-/// @param  y
-/// @param  key/button
-
-Converting GML script: C:\Users\jacbe\Documents\GitHub\Peloton\mvc\scripts\pick_droppable\pick_droppable.gml
-Converted description /// @description  pick_droppable()
-
-Converting GML script: C:\Users\jacbe\Documents\GitHub\Peloton\mvc\scripts\calculate_drop\calculate_drop.gml
-Converted description /// @description  Calculates which ammo must be dropped from an enemy, depending on players inventory.
-
-Converting GML script: C:\Users\jacbe\Documents\GitHub\Peloton\mvc\scripts\set_item_picker_data\set_item_picker_data.gml
-Converted description /// @description set_item_picker_data(name to show, quantity to show, dropable subimage, sound);/// @param name to show
-/// @param  quantity to show
-/// @param  dropable subimage
-/// @param  sound
-
-Converting GML script: C:\Users\jacbe\Documents\GitHub\Peloton\mvc\scripts\draw_circle_bar\draw_circle_bar.gml
-Converted description /// @description draw_circle_bar(x,y,radius,maxsegments,segments,startangle,totalangle,direction,colour)/// @param x
-/// @param y
-/// @param radius
-/// @param maxsegments
-/// @param segments
-/// @param startangle
-/// @param totalangle
-/// @param direction
-/// @param colour
-
-Converting GML script: C:\Users\jacbe\Documents\GitHub\Peloton\mvc\scripts\set_resolution\set_resolution.gml
-Converted description /// @description set_resolution(percentage)/// @param percentage
-
-Converting GML script: C:\Users\jacbe\Documents\GitHub\Peloton\mvc\scripts\droppable_factory\droppable_factory.gml
-Converted description /// @description  dropable_factory(object name) - returns an objects Id based on a number./// @param object name
-
-Converting GML script: C:\Users\jacbe\Documents\GitHub\Peloton\mvc\scripts\create_weapon_names_list\create_weapon_names_list.gml
-Converted description /// @description  create_weapon_names_list
-
-Converting GML script: C:\Users\jacbe\Documents\GitHub\Peloton\mvc\scripts\gamemode_name_factory\gamemode_name_factory.gml
-Converted description /// @description  gamemode_name_factory(game mode constant)/// @param game mode constant
-
-Converting GML script: C:\Users\jacbe\Documents\GitHub\Peloton\mvc\scripts\gamemode_map_name_factory\gamemode_map_name_factory.gml
-Converted description /// @description  gamemode_name_factory()
-
-Converting GML script: C:\Users\jacbe\Documents\GitHub\Peloton\mvc\scripts\display_investigating_text\display_investigating_text.gml
-Converted description /// @description  display_investigating_text(text);/// @param text
-
-Converting GML script: C:\Users\jacbe\Documents\GitHub\Peloton\mvc\scripts\new_array\new_array.gml
-Converted description /// @description  new_array(args)/// @param args
-
-Converting GML script: C:\Users\jacbe\Documents\GitHub\Peloton\mvc\scripts\draw_ring_bar\draw_ring_bar.gml
-Converted description /// @description draw_ring_bar(x,y,radius,thickness,maxsegments,segments,startangle,totalangle,direction,colour)/// @param x
-/// @param y
-/// @param radius
-/// @param thickness
-/// @param maxsegments
-/// @param segments
-/// @param startangle
-/// @param totalangle
-/// @param direction
-/// @param colour
-
-Converting GML script: C:\Users\jacbe\Documents\GitHub\Peloton\mvc\scripts\draw_aiming_enemy_health\draw_aiming_enemy_health.gml
-Converted description /// @description  draw_aiming_enemy_health(distance);/// @param distance
-
-Converting GML script: C:\Users\jacbe\Documents\GitHub\Peloton\mvc\scripts\create_hitscan\create_hitscan.gml
-Converted description /// @description create_hitscan(x, y, distance, hitscan y, emitter object, y delta)/// @param x
-/// @param  y
-/// @param  distance
-/// @param  hitscan y
-/// @param  emitter object
-/// @param  y delta
-
-Converting GML script: C:\Users\jacbe\Documents\GitHub\Peloton\mvc\scripts\draw_scope_item\draw_scope_item.gml
-Converted description /// @description draw_scope_item(x, y)/// @param x
-/// @param  y
-
-Converting GML script: C:\Users\jacbe\Documents\GitHub\Peloton\mvc\scripts\create_blood_splat\create_blood_splat.gml
-Converted description /// @description create_blood_splat(x, y, hitscan_emitter, is_knife, depth)/// @param x
-/// @param  y
-/// @param  hitscan_emitter
-/// @param  is_knife
-/// @param  depth
-
-Converting GML script: C:\Users\jacbe\Documents\GitHub\Peloton\mvc\scripts\create_sg_hitscans\create_sg_hitscans.gml
-Converted builtin - line 21: view_wview -> __view_get( e__VW.WView, 0 )
-Converted builtin - line 22: view_wview -> __view_get( e__VW.WView, 0 )
-Converted builtin - line 23: view_wview -> __view_get( e__VW.WView, 0 )
-Converted builtin - line 24: view_wview -> __view_get( e__VW.WView, 0 )
-Converted builtin - line 25: view_wview -> __view_get( e__VW.WView, 0 )
-Converted builtin - line 26: view_wview -> __view_get( e__VW.WView, 0 )
-Converted builtin - line 27: view_wview -> __view_get( e__VW.WView, 0 )
-Converted builtin - line 28: view_wview -> __view_get( e__VW.WView, 0 )
-Converted builtin - line 29: view_wview -> __view_get( e__VW.WView, 0 )
-Converted builtin - line 30: view_wview -> __view_get( e__VW.WView, 0 )
-Converted builtin - line 31: view_wview -> __view_get( e__VW.WView, 0 )
-Converted builtin - line 32: view_wview -> __view_get( e__VW.WView, 0 )
-Converted description /// @description  argument0 - shotgun angle
-
-Converting GML script: C:\Users\jacbe\Documents\GitHub\Peloton\mvc\scripts\create_muzzle_flash\create_muzzle_flash.gml
-Converted description /// @description  create_muzzle_flash(x, y, self);/// @param x
-/// @param  y
-/// @param  self
-
-Converting GML script: C:\Users\jacbe\Documents\GitHub\Peloton\mvc\scripts\save_chamber_ammo\save_chamber_ammo.gml
-Converted description /// @description save_chamber_ammo(player, gun object)/// @param player
-/// @param  gun object
-
-Converting GML script: C:\Users\jacbe\Documents\GitHub\Peloton\mvc\scripts\ammo_objects_factory\ammo_objects_factory.gml
-Converted description /// @description  ammo_objects_factory(ammo type id)/// @param ammo type id
-
-Converting GML script: C:\Users\jacbe\Documents\GitHub\Peloton\mvc\scripts\siege_upgrades\siege_upgrades.gml
-Converted description /// @description siege_upgrades()
-
-Converting GML script: C:\Users\jacbe\Documents\GitHub\Peloton\mvc\scripts\get_weapon_data\get_weapon_data.gml
-Converted description /// @description get_weapon_data(weapon)/// @param weapon
-
-Converting GML script: C:\Users\jacbe\Documents\GitHub\Peloton\mvc\scripts\siege_keys_factory\siege_keys_factory.gml
-Converted description /// @description siege_keys_factory(weapon)/// @param weapon
-
-Converting GML script: C:\Users\jacbe\Documents\GitHub\Peloton\mvc\scripts\siege_weapon_add\siege_weapon_add.gml
-Converted description /// @description siege_weapon_add(weapon)/// @param weapon
-
-Converting GML script: C:\Users\jacbe\Documents\GitHub\Peloton\mvc\scripts\siege_weapon_upgrade\siege_weapon_upgrade.gml
-Converted description /// @description siege_weapon_upgrade(weapon, upgrade quantity, upgrade type)/// @param weapon
-/// @param  upgrade quantity
-/// @param  upgrade type
-
-Converting GML script: C:\Users\jacbe\Documents\GitHub\Peloton\mvc\scripts\perform_touch_aim\perform_touch_aim.gml
-Converted description /// @description  perform_touch_aim(Aim key (check), Aim key (pressed), Shoot key (check), Shoot key (pressed), Aim key (released), Reload key (pressed), Player object)/// @param Aim key (check
-
-Converting GML script: C:\Users\jacbe\Documents\GitHub\Peloton\mvc\scripts\take_damage\take_damage.gml
-Converted description /// @description  take_damage(damage_direction, damage_amount, damage sound);/// @param damage_direction
-/// @param  damage_amount
-/// @param  damage sound
-
-Converting GML script: C:\Users\jacbe\Documents\GitHub\Peloton\mvc\scripts\perform_shoot\perform_shoot.gml
-Converted description /// @description perform_shoot(player object, wep object)/// @param player object
-/// @param  wep object
-
-Converting GML script: C:\Users\jacbe\Documents\GitHub\Peloton\mvc\scripts\perform_reload\perform_reload.gml
-Converted description /// @description  perform_reload(reload button pressed, shoot button pressed)/// @param reload button pressed
-/// @param  shoot button pressed
-
-Converting GML script: C:\Users\jacbe\Documents\GitHub\Peloton\mvc\scripts\switch_weapon\switch_weapon.gml
-Converted description /// @description switch_weapon(next weapon key/button (pressed), previous weapon key/button (pressed), Player object);/// @param next weapon key/button (pressed
-
-Converting GML script: C:\Users\jacbe\Documents\GitHub\Peloton\mvc\scripts\player_movement\player_movement.gml
-String not found: ConversionLog_ConvertedString 15 'I' "I"
-String not found: ConversionLog_ConvertedString 16 'J' "J"
-String not found: ConversionLog_ConvertedString 17 'K' "K"
-String not found: ConversionLog_ConvertedString 18 'L' "L"
-
-Converting GML script: C:\Users\jacbe\Documents\GitHub\Peloton\mvc\scripts\perform_healing\perform_healing.gml
-Converted description /// @description perform_healing(healing button/key (pressed));/// @param healing button/key (pressed
-
-Converting GML script: C:\Users\jacbe\Documents\GitHub\Peloton\mvc\scripts\chainsaw_collition\chainsaw_collition.gml
-Converted description /// @description  This script muts be called when there is a collition with a Zombie Chainsaw
-
-Converting GML script: C:\Users\jacbe\Documents\GitHub\Peloton\mvc\scripts\shooter_factory\shooter_factory.gml
-Converted description /// @description shooter_factory(player object)/// @param player object
-
-Converting GML script: C:\Users\jacbe\Documents\GitHub\Peloton\mvc\scripts\controls_gamepad\controls_gamepad.gml
-Converted description /// @description  controls_gamepad()
-
-Converting GML script: C:\Users\jacbe\Documents\GitHub\Peloton\mvc\scripts\controls_keyboard\controls_keyboard.gml
-String not found: ConversionLog_ConvertedString 33 '1' "1"
-
-Converting GML script: C:\Users\jacbe\Documents\GitHub\Peloton\mvc\scripts\player_controls\player_controls.gml
-Converted description /// @description player_controls()
-
-Converting GML script: C:\Users\jacbe\Documents\GitHub\Peloton\mvc\scripts\device_factory\device_factory.gml
-Converted description /// @description device_factory(player object)/// @param player object
-
-Converting GML script: C:\Users\jacbe\Documents\GitHub\Peloton\mvc\scripts\controls_consolidation_variables\controls_consolidation_variables.gml
-Converted description /// @description  controls_consolidation_variables(Reload key (pressed), Aim key (check), Shoot key (pressed))/// @param Reload key (pressed
-
-Converting GML script: C:\Users\jacbe\Documents\GitHub\Peloton\mvc\scripts\init_enemy\init_enemy.gml
-Converted description /// @description init_enemy(arm 1 object, arm2 object, HP, enemy object, damage)/// @param arm 1 object
-/// @param  arm2 object
-/// @param  HP
-/// @param  enemy object
-/// @param  damage
-
-Converting GML script: C:\Users\jacbe\Documents\GitHub\Peloton\mvc\scripts\basic_en_IA\basic_en_IA.gml
-Converted description /// @description basic_en_IA(movement speed, can be idle, attack distance, attack_alarm)/// @param movement speed
-/// @param  can be idle
-/// @param  attack distance
-/// @param  attack_alarm
-
-Converting GML script: C:\Users\jacbe\Documents\GitHub\Peloton\mvc\scripts\draw_enemy_healthbar\draw_enemy_healthbar.gml
-Converted description /// @description draw_enemy_healthbar(color)/// @param color
-
-Converting GML script: C:\Users\jacbe\Documents\GitHub\Peloton\mvc\scripts\hat_factory\hat_factory.gml
-Converted description /// @description  hat_factory(image_index) - it returns the hats depending on the subimage./// @param image_index
-
-Converting GML script: C:\Users\jacbe\Documents\GitHub\Peloton\mvc\scripts\draw_target_health\draw_target_health.gml
-Converted description /// @description draw_target_health(target)/// @param target
-
-Converting GML script: C:\Users\jacbe\Documents\GitHub\Peloton\mvc\scripts\perform_ia_reload\perform_ia_reload.gml
-Converted description /// @description perform_ia_reload(ia_object);/// @param ia_object
-
-Converting GML script: C:\Users\jacbe\Documents\GitHub\Peloton\mvc\scripts\create_enemy_wave\create_enemy_wave.gml
-Converted description /// @description create_enemy_wave(wave number)/// @param wave number
-
-Converting GML script: C:\Users\jacbe\Documents\GitHub\Peloton\mvc\scripts\draw_hud\draw_hud.gml
-Converted description /// @description draw_hud()
-
-GameMaker Studio 1 font texture has been backed up at C:\Users\jacbe\Documents\GitHub\Peloton\mvc\fonts\fnt_health\fnt_health.gms1.png
-GameMaker Studio 1 font texture has been backed up at C:\Users\jacbe\Documents\GitHub\Peloton\mvc\fonts\fnt_weapon_name\fnt_weapon_name.gms1.png
-GameMaker Studio 1 font texture has been backed up at C:\Users\jacbe\Documents\GitHub\Peloton\mvc\fonts\fnt_upgrades\fnt_upgrades.gms1.png
-GameMaker Studio 1 font texture has been backed up at C:\Users\jacbe\Documents\GitHub\Peloton\mvc\fonts\fnt_menu\fnt_menu.gms1.png
-GameMaker Studio 1 font texture has been backed up at C:\Users\jacbe\Documents\GitHub\Peloton\mvc\fonts\fnt_hud_ammo\fnt_hud_ammo.gms1.png
-Converting GML script: C:\Users\jacbe\Documents\GitHub\Peloton\mvc\objects\obj_hand2\Alarm_4.gml
-Converted description /// @description  Alarm for sync hand with sg's reloading pump action
-
-Converting GML script: C:\Users\jacbe\Documents\GitHub\Peloton\mvc\objects\obj_wep_hud\Step_0.gml
-Converted builtin - line 1: view_wview[0] -> __view_get( e__VW.WView, 0 )
-Converted builtin - line 2: view_hview[0] -> __view_get( e__VW.HView, 0 )
-
-Converting GML script: C:\Users\jacbe\Documents\GitHub\Peloton\mvc\objects\obj_wep_hud\Draw_64.gml
-String not found: ConversionLog_ConvertedString 4 'W' "W"
-String not found: ConversionLog_ConvertedString 5 'S' "S"
-String not found: ConversionLog_ConvertedString 6 'A' "A"
-String not found: ConversionLog_ConvertedString 7 'D' "D"
-String not found: ConversionLog_ConvertedString 9 'I' "I"
-String not found: ConversionLog_ConvertedString 10 'J' "J"
-String not found: ConversionLog_ConvertedString 12 'K' "K"
-String not found: ConversionLog_ConvertedString 13 'L' "L"
-String not found: ConversionLog_ConvertedString 16 'F' "F"
-String not found: ConversionLog_ConvertedString 18 'R' "R"
-String not found: ConversionLog_ConvertedString 20 'Q' "Q"
-String not found: ConversionLog_ConvertedString 21 '1' "1"
-
-Converting GML script: C:\Users\jacbe\Documents\GitHub\Peloton\mvc\objects\obj_wep_hg_parent\Alarm_4.gml
-Converted builtin - line 3: view_wview -> __view_get( e__VW.WView, 0 )
-
-Converting GML script: C:\Users\jacbe\Documents\GitHub\Peloton\mvc\objects\obj_wep_hg_parent\Draw_0.gml
-Converted builtin - line 1: view_wview -> __view_get( e__VW.WView, 0 )
-
-Converting GML script: C:\Users\jacbe\Documents\GitHub\Peloton\mvc\objects\obj_wep_mg_parent\Alarm_4.gml
-Converted builtin - line 3: view_wview -> __view_get( e__VW.WView, 0 )
-
-Converting GML script: C:\Users\jacbe\Documents\GitHub\Peloton\mvc\objects\obj_wep_mg_parent\Draw_0.gml
-Converted builtin - line 1: view_wview -> __view_get( e__VW.WView, 0 )
-
-Converting GML script: C:\Users\jacbe\Documents\GitHub\Peloton\mvc\objects\obj_wep_sg_parent\Draw_0.gml
-Converted builtin - line 1: view_wview -> __view_get( e__VW.WView, 0 )
-
-Converting GML script: C:\Users\jacbe\Documents\GitHub\Peloton\mvc\objects\obj_wep01\Create_0.gml
-Converted description /// @description  Set the individual values for this gun.
-
-Converting GML script: C:\Users\jacbe\Documents\GitHub\Peloton\mvc\objects\obj_wep05\Create_0.gml
-Converted description /// @description  Set the individual values for this gun.
-
-Converting GML script: C:\Users\jacbe\Documents\GitHub\Peloton\mvc\objects\obj_wep02\Create_0.gml
-Converted description /// @description  Inherit the parent MachineGun values.
-
-Converting GML script: C:\Users\jacbe\Documents\GitHub\Peloton\mvc\objects\obj_wep06\Create_0.gml
-Converted description /// @description  Inherit the parent MachineGun values.
-
-Converting GML script: C:\Users\jacbe\Documents\GitHub\Peloton\mvc\objects\obj_wep03\Create_0.gml
-Converted description /// @description  Individual values
-
-Converting GML script: C:\Users\jacbe\Documents\GitHub\Peloton\mvc\objects\obj_wep07\Create_0.gml
-Converted description /// @description  Individual values
-
-Converting GML script: C:\Users\jacbe\Documents\GitHub\Peloton\mvc\objects\obj_wep04\Create_0.gml
-Converted description /// @description  Individual values
-
-Converting GML script: C:\Users\jacbe\Documents\GitHub\Peloton\mvc\objects\obj_wep08\Create_0.gml
-Converted description /// @description  Individual values
-
-Converting GML script: C:\Users\jacbe\Documents\GitHub\Peloton\mvc\objects\obj_barrel\Step_0.gml
-Converted builtin - line 2: view_xview -> __view_get( e__VW.XView, 0 )
-
-Converting GML script: C:\Users\jacbe\Documents\GitHub\Peloton\mvc\objects\obj_text\Create_0.gml
-Converted builtin - line 2: view_wview -> __view_get( e__VW.WView, 0 )
-
-Converting GML script: C:\Users\jacbe\Documents\GitHub\Peloton\mvc\objects\obj_text\Draw_0.gml
-Converted builtin - line 3: view_xview[0] -> __view_get( e__VW.XView, 0 )
-Converted builtin - line 3: view_yview[0] -> __view_get( e__VW.YView, 0 )
-Converted builtin - line 3: view_wview[0] -> __view_get( e__VW.WView, 0 )
-Converted builtin - line 3: view_hview[0] -> __view_get( e__VW.HView, 0 )
-
-Converting GML script: C:\Users\jacbe\Documents\GitHub\Peloton\mvc\objects\obj_control_indicator\Step_0.gml
-String not found: ConversionLog_ConvertedString 20 "\Screens\Screen_" "\\Screens\\Screen_"
-
-Converting GML script: C:\Users\jacbe\Documents\GitHub\Peloton\mvc\objects\obj_control_indicator\Draw_0.gml
-Converted builtin - line 5: view_xview[0] -> __view_get( e__VW.XView, 0 )
-Converted builtin - line 7: view_xview[0] -> __view_get( e__VW.XView, 0 )
-Converted builtin - line 5: view_yview[0] -> __view_get( e__VW.YView, 0 )
-Converted builtin - line 7: view_yview[0] -> __view_get( e__VW.YView, 0 )
-
-Converting GML script: C:\Users\jacbe\Documents\GitHub\Peloton\mvc\rooms\rm_loading\RoomCreationCode.gml
-String not found: ConversionLog_ConvertedString 15 'W' "W"
-String not found: ConversionLog_ConvertedString 16 'A' "A"
-String not found: ConversionLog_ConvertedString 17 'S' "S"
-String not found: ConversionLog_ConvertedString 18 'D' "D"
-String not found: ConversionLog_ConvertedString 21 'F' "F"
-String not found: ConversionLog_ConvertedString 22 'R' "R"
-String not found: ConversionLog_ConvertedString 23 'Q' "Q"
-
-Game speed set to 60
-Added compatibility script 'background\background_create_from_surface.gml'
-Added compatibility script 'draw\draw_set_blend_mode.gml'
-Added compatibility script 'draw\draw_set_blend_mode_ext.gml'
-Added compatibility script 'draw\draw_set_colour_write_enable.gml'
-Added compatibility script 'instance\instance_create.gml'
-Added compatibility script 'object\object_get_depth.gml'
-Added compatibility script 'view\__view_get.gml'
-Added compatibility script 'background\__init_background.gml'
-Added compatibility script 'view\__init_view.gml'
-Added compatibility script '__init_global.gml'
-Added compatibility script '__global_object_depths.gml'
