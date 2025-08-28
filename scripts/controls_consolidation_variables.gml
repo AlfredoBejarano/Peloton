@@ -1,12 +1,10 @@
+/// controls_consolidation_variables(Reload key (pressed), Aim key (check), Shoot key (pressed))
 // argument0 - Reload key (pressed).
 // argument1 - Aim key (check).
 // argument2 - Shoot key (pressed).
 
 knife_restrict = false;
 ammo_available = false;
-reload_condition1 = false;
-reload_condition2 = false;
-reload_condition3 = false;
 not_shooting_knife = false;
 empty_ammo_and_aiming = false;
 not_reloading_shooting_knife = false;
@@ -22,24 +20,6 @@ if(is_shooting == 1 || is_reloading == 1 || is_switching == 1) {
     knife_restrict = true; 
 } else { 
     knife_restrict = false; 
-}
-
-if(ammo_available && is_reloading == 0) { 
-    reload_condition1 = true; 
-} else { 
-    reload_condition1 = false; 
-}
-
-if(argument0 && is_shooting == 0 && is_switching == 0) { 
-    reload_condition2 = true; 
-} else { 
-    reload_condition2 = false; 
-}
-
-if(weapon.ammo == 0 && argument1 && argument2) { 
-    reload_condition3 = true; 
-} else { 
-    reload_condition3 = false; 
 }
 
 if(is_shooting == 0 && weapon != obj_wep00) { 

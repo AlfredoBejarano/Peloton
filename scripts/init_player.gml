@@ -3,8 +3,8 @@
 
 image_index = 0;
 image_speed = 0;
-
-hp = 100;
+basehp = 200;
+hp = basehp;
 cplhps = 1;
 can_heal = 1;
 is_aiming = 0;
@@ -13,6 +13,7 @@ alarm[4] = 120;
 abutton = noone;
 ybutton = noone;
 is_shooting = 0;
+is_dying = false;
 can_knife = true;
 is_reloading = 0;
 is_switching = 0;
@@ -27,6 +28,7 @@ picker = instance_create(0,0,obj_item_picker);
 
 settings = settings_factory(control, obj_pl01);
 controls = ds_list_find_value(settings, 0);
+sounds = ds_list_find_value(settings, 4);
 
 // Damage variables
 can_take_damage = 1;
@@ -68,24 +70,21 @@ heals = ds_list_find_value(ammo_inventory, 0);
 cweapon = instance_create(x, y, weapon);
 weapon_id = cweapon.id;
 with (cweapon) {
-    shooter = argument1;
+    shooter = argument1.id;
 }
 
 // Hands require a weapon to be attached with.
 
 // Creates hand 1.
 hand1 = instance_create(x, y, obj_hand1);
-hand1id = hand1.id;
-with (hand1) {
-    player = argument1;
+with(hand1) {
+    player = argument1.id;
     sprite_index = ds_list_find_value(player_skin_factory(player.character), 1);
 }
 
 // Creates hand 2.
 hand2 = instance_create(x, y, obj_hand2);
-hand2id = hand2.id;
-with (hand2) {
-    player = argument1;
+with(hand2) {
     init_hand2(argument1);
 }
 
@@ -93,14 +92,16 @@ with (hand2) {
 current_ammo = ds_list_find_value(ammo_inventory, weapon.ammo_type);
 
 // Creates the HUD for the player.
-instance_create(x,y, hud);
+with(instance_create(x,y, hud)) {    
+    image_alpha = 0;
+    player = argument1;
+    xs = (display_get_width()    /   1920);
+    ys = (display_get_height()   /   1080);
+    dwep = player.weapon;
+}
 
 // Sets knife sprite for the player
 knife_sprite = ds_list_find_value(player_skin_factory(character), 3);
 
 // Sets mouth sprite
 mouth_sprite = ds_list_find_value(player_skin_factory(character), 4);
-
-// Sets health hud
-healthhud = instance_create(x,y, obj_plhealth);
-with(healthhud) { player = argument1; }

@@ -1,0 +1,2 @@
+init_ia(self);
+

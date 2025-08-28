@@ -1,4 +1,4 @@
-// create_muzzle_flash(x, y, self);
+/// create_muzzle_flash(x, y, self);
 xx = argument0;
 yy = argument1;
 wep = argument2;

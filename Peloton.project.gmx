@@ -3,7 +3,25 @@
   <Configs name="configs">
     <Config>Configs\Default</Config>
   </Configs>
-  <datafiles number="1" name="datafiles"/>
+  <datafiles number="2" name="datafiles">
+    <datafile>
+      <name>strings.ini</name>
+      <exists>-1</exists>
+      <size>0</size>
+      <exportAction>2</exportAction>
+      <exportDir></exportDir>
+      <overwrite>0</overwrite>
+      <freeData>-1</freeData>
+      <removeEnd>0</removeEnd>
+      <store>0</store>
+      <ConfigOptions>
+        <Config name="Default">
+          <CopyToMask>105553895391470</CopyToMask>
+        </Config>
+      </ConfigOptions>
+      <filename>strings.ini</filename>
+    </datafile>
+  </datafiles>
   <NewExtensions>
     <extension index="0">extensions\FacebookExtension</extension>
   </NewExtensions>
@@ -52,6 +70,12 @@
       <sounds name="wep08">
         <sound>sound\snd_wep08_shot</sound>
       </sounds>
+      <sounds name="wep09">
+        <sound>sound\snd_wep09_shot</sound>
+        <sound>sound\snd_wep09_aim</sound>
+        <sound>sound\snd_wep09_reload</sound>
+        <sound>sound\snd_wep09_empty</sound>
+      </sounds>
       <sound>sound\snd_blank</sound>
       <sound>sound\snd_shell_fall</sound>
       <sound>sound\snd_wep_switch</sound>
@@ -61,6 +85,12 @@
         <sound>sound\snd_upgrade_add</sound>
         <sound>sound\snd_weapon_add</sound>
       </sounds>
+      <sounds name="wep_hg">
+        <sound>sound\snd_hg_shot</sound>
+      </sounds>
+      <sounds name="wep_mg">
+        <sound>sound\snd_mg_shot</sound>
+      </sounds>
     </sounds>
     <sounds name="en">
       <sounds name="common">
@@ -68,15 +98,21 @@
         <sound>sound\snd_en_hit02</sound>
         <sound>sound\snd_en_hit03</sound>
         <sound>sound\snd_en_appear</sound>
+        <sound>sound\snd_en_hit</sound>
       </sounds>
       <sounds name="en01">
         <sound>sound\snd_en01_attack</sound>
+        <sound>sound\snd_en01_damage</sound>
+      </sounds>
+      <sounds name="en02">
+        <sound>sound\snd_en02_attack</sound>
+        <sound>sound\snd_en02_damage</sound>
       </sounds>
     </sounds>
     <sounds name="music">
-      <sounds name="lvl_helipad">
-        <sound>sound\snd_helipad_intro</sound>
-        <sound>sound\snd_helipad_music</sound>
+      <sounds name="menu">
+        <sound>sound\snd_menu</sound>
+        <sound>sound\snd_menu_extras</sound>
       </sounds>
     </sounds>
     <sounds name="char">
@@ -87,12 +123,26 @@
         <sound>sound\snd_char01_dam03</sound>
         <sound>sound\snd_char01_dam04</sound>
         <sound>sound\snd_char01_dam05</sound>
+        <sound>sound\snd_char01_chain_hit</sound>
+        <sound>sound\snd_char01_death</sound>
       </sounds>
       <sound>sound\snd_healing</sound>
     </sounds>
     <sounds name="dp">
       <sound>sound\snd_dp_bullet</sound>
       <sound>sound\snd_dp_heal</sound>
+    </sounds>
+    <sounds name="am">
+      <sound>sound\snd_am_switch</sound>
+      <sound>sound\snd_am_tv_static</sound>
+      <sound>sound\snd_am_tv_break</sound>
+      <sound>sound\snd_am_wind</sound>
+      <sound>sound\snd_time_tick</sound>
+    </sounds>
+    <sounds name="ui">
+      <sound>sound\snd_menu_accept</sound>
+      <sound>sound\snd_menu_cancel</sound>
+      <sound>sound\snd_menu_cursor</sound>
     </sounds>
   </sounds>
   <sprites name="sprites">
@@ -131,6 +181,7 @@
       <sprite>sprites\spr_weapon_hud</sprite>
       <sprite>sprites\spr_wep_scope</sprite>
       <sprite>sprites\spr_heal</sprite>
+      <sprite>sprites\spr_en_wep01</sprite>
     </sprites>
     <sprites name="fx">
       <sprite>sprites\spr_muzzle_flash</sprite>
@@ -138,10 +189,12 @@
       <sprite>sprites\spr_player_light</sprite>
       <sprite>sprites\spr_light_round_fx</sprite>
       <sprite>sprites\spr_light_round_fx_big</sprite>
+      <sprite>sprites\spr_light_round_fx_medium</sprite>
       <sprite>sprites\spr_light_round_fx_small</sprite>
       <sprite>sprites\spr_light_round_fx_micro</sprite>
       <sprite>sprites\spr_health</sprite>
       <sprite>sprites\spr_bullet_fx</sprite>
+      <sprite>sprites\spr_fx_sparkle_light</sprite>
       <sprite>sprites\spr_blood_fx</sprite>
       <sprite>sprites\spr_blood_floor_fx</sprite>
       <sprite>sprites\spr_fire_fx</sprite>
@@ -151,10 +204,11 @@
       <sprite>sprites\spr_en01</sprite>
       <sprite>sprites\spr_en01_arm</sprite>
       <sprite>sprites\spr_dummy_target</sprite>
-    </sprites>
-    <sprites name="bd">
-      <sprite>sprites\spr_hbd</sprite>
-      <sprite>sprites\spr_vbd</sprite>
+      <sprite>sprites\spr_en02_hand01</sprite>
+      <sprite>sprites\spr_en02_hand02</sprite>
+      <sprite>sprites\spr_en02</sprite>
+      <sprite>sprites\spr_en_mouth</sprite>
+      <sprite>sprites\spr_en_hat</sprite>
     </sprites>
     <sprites name="gu">
       <sprite>sprites\spr_gp_buttons</sprite>
@@ -164,20 +218,44 @@
     <sprites name="dp">
       <sprite>sprites\spr_antenna</sprite>
       <sprite>sprites\spr_droppables</sprite>
+      <sprite>sprites\spr_dropabbles_en</sprite>
     </sprites>
     <sprites name="openBeta">
       <sprite>sprites\spr_play</sprite>
       <sprite>sprites\spr_post</sprite>
     </sprites>
+    <sprites name="ui">
+      <sprites name="menu">
+        <sprite>sprites\spr_menu_selected</sprite>
+      </sprites>
+      <sprites name="extras">
+        <sprites name="gamemodes">
+          <sprite>sprites\spr_gmthumbs</sprite>
+          <sprite>sprites\spr_map_thumbs</sprite>
+        </sprites>
+      </sprites>
+      <sprites name="gameplay">
+        <sprite>sprites\spr_hud</sprite>
+      </sprites>
+    </sprites>
   </sprites>
   <backgrounds name="background">
-    <background>background\bck_basement1</background>
-    <background>background\bck_basement2</background>
-    <background>background\bck_basement3</background>
     <background>background\bck_pipes</background>
     <backgrounds name="openBeta">
-      <background>background\bck_betawarning</background>
       <background>background\bck_thanks</background>
+    </backgrounds>
+    <backgrounds name="menu">
+      <background>background\bck_main</background>
+      <background>background\bck_extras</background>
+    </backgrounds>
+    <backgrounds name="campaign">
+      <backgrounds name="chapter1">
+        <background>background\bck_chapter1a</background>
+        <background>background\bck_chapter1b</background>
+        <background>background\bck_chapter1c</background>
+        <background>background\bck_chapter1d</background>
+        <background>background\bck_chapter1e</background>
+      </backgrounds>
     </backgrounds>
   </backgrounds>
   <paths name="paths"/>
@@ -185,14 +263,17 @@
     <scripts name="animations">
       <scripts name="player">
         <script>scripts\draw_facial_expression.gml</script>
+        <script>scripts\chainsaw_dead_animation.gml</script>
+        <script>scripts\dead_animation.gml</script>
       </scripts>
       <scripts name="weapon">
         <script>scripts\scp_wep00.gml</script>
-        <script>scripts\scp_wep01.gml</script>
-        <script>scripts\scp_wep02.gml</script>
-        <script>scripts\scp_wep03.gml</script>
-        <script>scripts\scp_wep04.gml</script>
+        <script>scripts\hg_wep_animations.gml</script>
+        <script>scripts\mg_wep_animations.gml</script>
+        <script>scripts\sg_wep_animations.gml</script>
+        <script>scripts\rf_wep_animations.gml</script>
         <script>scripts\scp_wep_dam.gml</script>
+        <script>scripts\scp_en_wep01.gml</script>
       </scripts>
       <script>scripts\sync_reloading_hand.gml</script>
       <script>scripts\sync_reloading_magazine.gml</script>
@@ -208,9 +289,22 @@
       <script>scripts\pick_droppable.gml</script>
       <script>scripts\calculate_drop.gml</script>
       <script>scripts\set_item_picker_data.gml</script>
+      <script>scripts\draw_circle_bar.gml</script>
+      <script>scripts\set_resolution.gml</script>
+      <script>scripts\screen_capture_background.gml</script>
+      <scripts name="factory">
+        <script>scripts\droppable_factory.gml</script>
+        <script>scripts\create_weapon_names_list.gml</script>
+        <script>scripts\gamemode_name_factory.gml</script>
+        <script>scripts\gamemode_map_name_factory.gml</script>
+      </scripts>
+      <script>scripts\display_investigating_text.gml</script>
+      <script>scripts\getString.gml</script>
+      <script>scripts\new_array.gml</script>
+      <script>scripts\draw_ring_bar.gml</script>
     </scripts>
     <scripts name="weapon">
-      <script>scripts\draw_laser.gml</script>
+      <script>scripts\draw_aiming_enemy_health.gml</script>
       <script>scripts\create_hitscan.gml</script>
       <script>scripts\calculate_ammo.gml</script>
       <script>scripts\create_projectile.gml</script>
@@ -227,6 +321,10 @@
       </scripts>
       <scripts name="siege mode">
         <script>scripts\siege_upgrades.gml</script>
+        <script>scripts\get_weapon_data.gml</script>
+        <script>scripts\siege_keys_factory.gml</script>
+        <script>scripts\siege_weapon_add.gml</script>
+        <script>scripts\siege_weapon_upgrade.gml</script>
       </scripts>
     </scripts>
     <scripts name="player">
@@ -242,6 +340,7 @@
         <script>scripts\switch_controls.gml</script>
         <script>scripts\gamepad_anybutton.gml</script>
         <script>scripts\perform_healing.gml</script>
+        <script>scripts\chainsaw_collition.gml</script>
       </scripts>
       <scripts name="factory">
         <script>scripts\gamepad_factory.gml</script>
@@ -253,55 +352,82 @@
       <scripts name="initialization">
         <script>scripts\init_player.gml</script>
         <script>scripts\init_hand2.gml</script>
+        <script>scripts\controls_gamepad.gml</script>
+        <script>scripts\controls_keyboard.gml</script>
+        <script>scripts\init_pause.gml</script>
       </scripts>
       <script>scripts\player_controls.gml</script>
-      <script>scripts\controls_consolidation_variables.gml</script>
       <script>scripts\device_factory.gml</script>
+      <script>scripts\controls_consolidation_variables.gml</script>
     </scripts>
     <scripts name="enemy">
+      <script>scripts\init_enemy.gml</script>
+      <script>scripts\basic_en_IA.gml</script>
       <script>scripts\create_zombie_hand.gml</script>
+      <script>scripts\draw_enemy_healthbar.gml</script>
+      <script>scripts\hat_factory.gml</script>
+      <script>scripts\draw_target_health.gml</script>
     </scripts>
     <scripts name="IA">
       <script>scripts\init_ia.gml</script>
       <script>scripts\perform_ia_reload.gml</script>
       <script>scripts\create_enemy_wave.gml</script>
     </scripts>
+    <scripts name="ui">
+      <script>scripts\draw_hud.gml</script>
+    </scripts>
   </scripts>
   <fonts name="fonts">
-    <font>fonts\fnt_hud</font>
+    <font>fonts\fnt_health</font>
+    <font>fonts\fnt_weapon_name</font>
     <font>fonts\fnt_upgrades</font>
+    <font>fonts\fnt_menu</font>
+    <font>fonts\fnt_hud_ammo</font>
   </fonts>
   <objects name="objects">
     <objects name="pl">
       <objects name="pl01">
         <object>objects\obj_pl01</object>
-        <object>objects\obj_pl02</object>
         <object>objects\obj_hand1</object>
         <object>objects\obj_hand2</object>
-        <object>objects\obj_pl01_wep_hud</object>
-        <object>objects\obj_plhealth</object>
+        <object>objects\obj_wep_hud</object>
       </objects>
-      <object>objects\obj_player_parent</object>
       <objects name="IA">
         <object>objects\obj_plIA</object>
       </objects>
+      <object>objects\obj_player_parent</object>
     </objects>
     <objects name="wp">
-      <object>objects\obj_wep00</object>
-      <object>objects\obj_wep01</object>
-      <object>objects\obj_wep02</object>
-      <object>objects\obj_wep03</object>
-      <object>objects\obj_wep04</object>
-      <object>objects\obj_wep05</object>
-      <object>objects\obj_wep06</object>
-      <object>objects\obj_wep07</object>
-      <object>objects\obj_wep08</object>
-      <object>objects\obj_shell</object>
-      <object>objects\obj_sgshell</object>
-      <object>objects\obj_magazine</object>
-      <object>objects\obj_muzzle_flash</object>
-      <object>objects\obj_muzzle_flash_small</object>
-      <object>objects\obj_shot</object>
+      <objects name="melee">
+        <object>objects\obj_en_wep01</object>
+        <object>objects\obj_wep00</object>
+      </objects>
+      <objects name="parent">
+        <object>objects\obj_wep_hg_parent</object>
+        <object>objects\obj_wep_mg_parent</object>
+        <object>objects\obj_wep_sg_parent</object>
+        <object>objects\obj_wep_rf_parent</object>
+        <object>objects\obj_shot</object>
+        <object>objects\obj_magazine</object>
+        <object>objects\obj_shell</object>
+        <object>objects\obj_sgshell</object>
+      </objects>
+      <objects name="hg">
+        <object>objects\obj_wep01</object>
+        <object>objects\obj_wep05</object>
+      </objects>
+      <objects name="mg">
+        <object>objects\obj_wep02</object>
+        <object>objects\obj_wep06</object>
+      </objects>
+      <objects name="sg">
+        <object>objects\obj_wep03</object>
+        <object>objects\obj_wep07</object>
+      </objects>
+      <objects name="rf">
+        <object>objects\obj_wep04</object>
+        <object>objects\obj_wep08</object>
+      </objects>
     </objects>
     <objects name="en">
       <object>objects\obj_barrel</object>
@@ -310,54 +436,83 @@
         <object>objects\obj_en01</object>
         <object>objects\obj_en01_arm</object>
       </objects>
-      <object>objects\obj_en_gm1_gen</object>
+      <objects name="en02">
+        <object>objects\obj_en02</object>
+        <object>objects\obj_en02_hand01</object>
+        <object>objects\obj_en02_hand02</object>
+      </objects>
+      <object>objects\obj_enemy_generator</object>
     </objects>
+    <object>objects\obj_muzzle_flash_small</object>
     <objects name="fx">
       <object>objects\obj_fx_bullet</object>
       <object>objects\obj_fx_blood</object>
       <object>objects\obj_blood_floor</object>
       <object>objects\obj_fx_light_round_big</object>
+      <object>objects\obj_fx_light_round_medium</object>
+      <object>objects\obj_fx_light_round_small</object>
       <object>objects\obj_fx_enemy_spawn</object>
       <object>objects\obj_fx_heal</object>
+      <object>objects\obj_fx_critical</object>
+      <object>objects\obj_fx_low_health</object>
+      <object>objects\obj_muzzle_flash</object>
     </objects>
     <objects name="am">
-      <object>objects\obj_antenna</object>
       <object>objects\obj_music_player</object>
       <object>objects\obj_am_lighting</object>
     </objects>
-    <objects name="bd">
-      <object>objects\obj_hbd</object>
-      <object>objects\obj_vbd</object>
-    </objects>
     <objects name="dp">
       <object>objects\obj_dp_parent</object>
-      <object>objects\obj_dp_handgun</object>
       <object>objects\obj_dp_heal</object>
+      <object>objects\obj_dp_handgun</object>
       <object>objects\obj_dp_machinegun</object>
       <object>objects\obj_dp_shotgun</object>
       <object>objects\obj_dp_rifle</object>
       <object>objects\obj_item_picker</object>
     </objects>
-    <object>objects\obj_play</object>
-    <object>objects\obj_share</object>
+    <objects name="ui">
+      <object>objects\obj_text</object>
+      <object>objects\obj_control_indicator</object>
+      <objects name="menu">
+        <object>objects\obj_loader</object>
+      </objects>
+    </objects>
   </objects>
   <rooms name="rooms">
-    <room>rooms\room1</room>
-    <room>rooms\room0</room>
-    <room>rooms\room2</room>
+    <room>rooms\rm_loading</room>
+    <room>rooms\rm_campaign1c</room>
   </rooms>
-  <constants number="7">
-    <constant name="gp_bt_inner">make_color_rgb(18,18,18)</constant>
+  <constants number="19">
+    <constant name="locale_en">"EN"</constant>
+    <constant name="gm_campaign">0</constant>
+    <constant name="gm_hitman_mode">3</constant>
+    <constant name="gm_siege_mode">2</constant>
+    <constant name="gm_raid_mode">1</constant>
+    <constant name="type_height">1</constant>
+    <constant name="type_width">0</constant>
+    <constant name="up_damage">3</constant>
+    <constant name="up_maxammo">2</constant>
+    <constant name="up_reloadspeed">1</constant>
+    <constant name="up_firespeed">0</constant>
+    <constant name="gp_bt_inner">make_color_rgb(9,9,9)</constant>
     <constant name="gp_bt_outline">make_color_rgb(59,59,56)</constant>
     <constant name="gp_white">make_color_rgb(249, 249, 249)</constant>
     <constant name="gp_yellow">make_color_rgb(233, 211, 0)</constant>
     <constant name="gp_blue">make_color_rgb(0, 129, 198)</constant>
     <constant name="gp_red">make_color_rgb(197, 34, 37)</constant>
     <constant name="gp_green">make_color_rgb(75, 169, 52)</constant>
+    <constant name="locale_es_mx">"MX"</constant>
   </constants>
   <help>
     <rtf>help.rtf</rtf>
   </help>
+  <audiogroups name="audiogroups">
+    <audiogroup name="audiogroup_default"/>
+    <audiogroup name="audiogroup_music"/>
+    <audiogroup name="audiogroup_weapons"/>
+    <audiogroup name="audiogroup_enemy"/>
+    <audiogroup name="audiogroup_characters"/>
+  </audiogroups>
   <TutorialState>
     <IsTutorial>0</IsTutorial>
     <TutorialName></TutorialName>

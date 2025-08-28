@@ -4,9 +4,8 @@ player = argument2;
 
 if(ds_list_size(weapons_inventory) <= 1) {
    exit;
-} else {
+} else if(argument0 || argument1){
    save_chamber_ammo(player);
-   
    if(argument0) {
        if(player.current_weapon == (ds_list_size(player.weapons_inventory) - 1)) {
           player.current_weapon = 0; 

@@ -224,7 +224,7 @@ if(hp &lt;= 0) {game_end();}
           <argument>
             <kind>1</kind>
             <string>if(other.zombie.is_attacking == 1) {
-   take_damage(other.zombie.image_xscale, other.zombie.damage);
+   take_damage(other.zombie.image_xscale, other.zombie.damage, sounds);
 }
 </string>
           </argument>

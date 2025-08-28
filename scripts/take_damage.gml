@@ -1,34 +1,51 @@
-/// take_damage(damage_direction, damage_amount);
+/// take_damage(damage_direction, damage_amount, damage sound);
 if(can_take_damage == 0) { 
-   if(!is_enemy) { exit; }
+   if(is_enemy == false) { 
+    exit; 
+   }
 } else {
+    var damcalc = hp - argument[1];
     is_taking_damage = 1;
-    if((hp <= 50) && !is_enemy) {
-        eye_index = 1;
-        mouth_index = 1;
-        
-        if(cplhps = 1) {
-            audio_play_sound(snd_char01_critical_hp, 1, false);
-            cplhps = 0;
-        }    
-    }
-    if(argument0 == image_xscale) {
+    if(argument[0] == image_xscale) {
         damage_direction = 1;
     } else {
         damage_direction = 0;
     }    
-    hp -= argument1;
-    hspeed = 30*argument0;
-    image_angle = 15*argument0;
+    hp -= argument[1];
+    hspeed = 30*argument[0];
+    image_angle = 15*argument[0];
     if(is_enemy) {
-      alarm[5] = 5;
+        eye_index = 1;
+        alarm[5] = 5;
     } else {
       eye_index = 2;
-      alarm[3] = 10;    
+      alarm[3] = 15;    
     }
-    if(!(hp <= 25 && cplhps = 1) && !audio_is_playing(snd_char01_critical_hp) && !is_enemy) {
-        sound = choose(snd_char01_dam01, snd_char01_dam02,snd_char01_dam03, snd_char01_dam04, snd_char01_dam05);
-        audio_play_sound(sound,1,false);    
+    
+    if(is_enemy) {
+        if(!audio_is_playing(argument[2])) {
+            audio_play_sound(argument[2], 0, false);
+        }
+    } else {
+        if(damcalc <= 0) {
+            is_dying = true;
+            alarm[8] = 60;
+            audio_play_sound(ds_list_find_value(sounds, 7), 0, false); 
+        } else if(damcalc  <= 50) {
+            eye_index = 1;
+            mouth_index = 1;
+            if(cplhps == 1) {
+                instance_create(-64, -64, obj_fx_low_health);
+                audio_play_sound(ds_list_find_value(sounds, 5), 0, false); 
+                cplhps = 0;
+            } else {
+                sound = ds_list_find_value(sounds, irandom(4));
+                audio_play_sound(sound, 0, false);         
+            }
+        } else {
+            sound = ds_list_find_value(sounds, irandom(4));
+            audio_play_sound(sound, 0, false);         
+        }
     }
     can_take_damage = 0;
 }

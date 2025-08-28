@@ -26,8 +26,8 @@
           <argument>
             <kind>1</kind>
             <string>wave = 0;
-timer = 5;
-alarm[0] = 60;
+timer = 5 * room_speed;
+alarm[0] = 1;
 </string>
           </argument>
         </arguments>
@@ -52,9 +52,9 @@ alarm[0] = 60;
             <kind>1</kind>
             <string>if(timer &gt; 0) {
    timer -= 1;
-   alarm[0] = room_speed;
+   alarm[0] = 1;
 } else {
-   if(!instance_exists(obj_en01)) {
+   if(!instance_exists(obj_en01) &amp; !instance_exists(obj_en02)) {
       wave ++;
       create_enemy_wave(wave);      
    }
@@ -64,7 +64,7 @@ alarm[0] = 60;
         </arguments>
       </action>
     </event>
-    <event eventtype="3" enumb="0">
+    <event eventtype="3" enumb="1">
       <action>
         <libid>1</libid>
         <id>603</id>
@@ -81,13 +81,15 @@ alarm[0] = 60;
         <arguments>
           <argument>
             <kind>1</kind>
-            <string>siege_upgrades();
+            <string>if(!object_exists(obj_en01) &amp;&amp; !object_exists(obj_en02)) {
+    timer = room_speed * 5;
+}
 </string>
           </argument>
         </arguments>
       </action>
     </event>
-    <event eventtype="8" enumb="0">
+    <event eventtype="8" enumb="64">
       <action>
         <libid>1</libid>
         <id>603</id>
@@ -104,17 +106,8 @@ alarm[0] = 60;
         <arguments>
           <argument>
             <kind>1</kind>
-            <string>if(timer != 0) {
-   str = "Attack incoming in: " + string(timer) + "s";
-   color = gp_yellow;
-} else {
-   str = "Wave: " + string(wave);
-   color = gp_red;   
-}
-str2 = "Kills: "+string(global.kills);
-
-draw_text_colour(view_xview + ((view_wview / 2)- ((string_length(str)*48)/4)), view_yview + 8, str, color, color, color, color, 1);
-draw_text_colour(view_xview + ((view_wview / 2)- ((string_length(str2)*48)/2)), view_yview + 64, str2, gp_red, gp_red, gp_red, gp_red, 1);
+            <string>draw_ring_bar(display_get_width() / 2, 64, 32, 8, 300, 300, 90, 360, -1, gp_bt_inner)
+draw_ring_bar(display_get_width() / 2, 64, 32, 8, 300, timer, 90, 360, -1, gp_green)
 </string>
           </argument>
         </arguments>

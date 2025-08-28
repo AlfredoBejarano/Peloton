@@ -1,24 +1,12 @@
 /// Calculates which ammo must be dropped from an enemy, depending on players inventory.
 
-dropable[0] = obj_dp_heal;
-dropable[1] = noone;
-dropable[2] = noone;
-dropable[3] = noone;
-dropable[4] = noone;
-dropables = 0;
-for(i = 0; i < ds_list_size(obj_pl01.ammo_inventory); i ++) {
-   bullets = ds_list_find_value(obj_pl01.ammo_inventory, i);
-   if(bullets != 0) {
-      ammo_tp = ds_list_find_index(obj_pl01.ammo_inventory, bullets);
-      dropable[ammo_tp] = ammo_objects_factory(ammo_tp);
-      dropables ++;
-   }
-}
+randomize();
+list = global.pl01wi;
+list_size = ds_list_size(list) - 1;
+list_index = irandom_range(0, list_size);
+chance = irandom_range(1,4);
+drop_item = droppable_factory(ds_list_find_value(list, list_index));
 
-drop_item = choose(dropable[0], dropable[1], dropable[2], dropable[3], dropable[4]);
-if(drop_item != noone) {
-   instance_create(x, y, drop_item);
-} else {
-   instance_create(x, y, choose(obj_dp_heal, obj_dp_handgun));
+if(choose(true, false)) {
+   instance_create(x, y, choose(drop_item, drop_item, drop_item, drop_item, obj_dp_heal));
 }
-

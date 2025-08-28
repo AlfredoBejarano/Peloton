@@ -51,6 +51,8 @@ is_attacking = 0;
           <argument>
             <kind>1</kind>
             <string>if(zombie != noone) {
+   image_speed = 0;
+   image_index = zombie.image_index;
     is_attacking = zombie.is_attacking;
     if(position == 0) {
         depth = zombie.depth + 1;

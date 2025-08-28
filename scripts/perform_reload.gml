@@ -1,20 +1,18 @@
-///perform_reload(player object)
-// argument0 - player object
-
-player = argument0.object_index;
-wep = instance_find(player.weapon, player.weapon_id);
-hnd2 = instance_find(obj_hand2, player.hand2id);
-
-if(player.reload_condition1 && (player.reload_condition2 || player.reload_condition3)) {
-    player.is_reloading = 1;      
-    alarm[1] = wep.reload_speed;
-    wep.alarm[2] = wep.reload_speed;
-    
-    if(wep.has_magazine == true) {
-        wep.alarm[1] = 1;  
-        hnd2.alarm[0] = (wep.reload_speed / 4);
-    } else {
-        hnd2.alarm[0] = hnd2.time / 2;
-        wep.alarm[3] = hnd2.time;
-    }
+/// perform_reload(reload button pressed, shoot button pressed)
+var is_ammo_available = current_ammo > 0;
+var weapon_is_not_full = weapon.ammo < weapon.max_ammo;
+var weapon_empty = is_aiming == 1 && argument[1] && weapon.ammo == 0;
+if((argument[0] || weapon_empty) && is_ammo_available && weapon_is_not_full && is_reloading == 0) {
+    is_reloading = 1; // Set the reload flag.
+    alarm[1] = weapon.reload_speed;
+    with(weapon) {
+        alarm[2] = reload_speed;
+        if(has_magazine) {
+            alarm[1] = 1;
+        } else {
+            alarm[3] = reload_speed / max_ammo;
+        }
+    }   
+} else {
+    exit;
 }

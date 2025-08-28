@@ -27,7 +27,7 @@
             <kind>1</kind>
             <string>ammo = 0;
 pump = 0;
-damage = 4;
+damage = 30;
 max_ammo = 0;
 hud_image = 0;
 recoil = false;
@@ -51,7 +51,7 @@ empty_sound = snd_blank;
 aim_sound = snd_wep0_aim;
 reload_sound = firing_sound;
 
-name = "Knife"
+name = ds_list_find_value(get_weapon_data(self), 0);
 </string>
           </argument>
         </arguments>

@@ -231,7 +231,7 @@ if(distance_to_object(target) &lt; 256) {
           <argument>
             <kind>1</kind>
             <string>if(other.zombie.is_attacking == 1) {
-   take_damage(other.zombie.image_xscale, 0);
+   take_damage(other.zombie.image_xscale, 0, sounds);
 }
 </string>
           </argument>

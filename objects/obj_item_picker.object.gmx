@@ -3,7 +3,7 @@
   <spriteName>&lt;undefined&gt;</spriteName>
   <solid>0</solid>
   <visible>-1</visible>
-  <depth>-1920</depth>
+  <depth>-1200</depth>
   <persistent>0</persistent>
   <parentName>&lt;undefined&gt;</parentName>
   <maskName>&lt;undefined&gt;</maskName>
@@ -134,9 +134,10 @@ yy = 60;
             <string>str = "+"+string(quantity)+" "+name;
 draw_set_alpha(image_alpha);
 draw_set_font(fnt_upgrades);
-draw_text((display_get_gui_width() / 2) - ((string_length(str) / 2) * 20), (((display_get_gui_height() / 3)*2) + yy) + 50, str);
-draw_set_font(fnt_hud);
+draw_text_colour((display_get_gui_width() / 2) - ((string_length(str) / 2) * 20), (((display_get_gui_height() / 3)*2) + yy) + 50, str, c_white, c_white, c_white, c_white, image_alpha);
+draw_set_font(fnt_health);
 draw_sprite(spr_droppables, subimage, display_get_gui_width() / 2, ((display_get_gui_height() / 3)*2) + yy);
+draw_set_alpha(1);
 </string>
           </argument>
         </arguments>
